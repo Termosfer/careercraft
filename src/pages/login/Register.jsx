@@ -172,7 +172,7 @@ function Register() {
                   />
                 </Form.Group>
                 <Button type="submit" className="w-100">
-                  Registration
+                  Create account
                 </Button>
               </Form>
             </Col>
