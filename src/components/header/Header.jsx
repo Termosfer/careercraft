@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { MdLogin } from "react-icons/md";
 import "./style.css";
-import Login from "../login/Login";
+import Login from "../../pages/login/Login";
 import Button from "react-bootstrap/esm/Button";
 function CollapsibleExample() {
   return (
@@ -20,7 +20,7 @@ function CollapsibleExample() {
             <Nav.Link href="/solutions">Solutions</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/resources">Resources</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
           <Nav className="">
             <Nav.Link href="/register">

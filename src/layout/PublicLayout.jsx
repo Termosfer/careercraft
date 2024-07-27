@@ -4,7 +4,7 @@ import Footer from '../components/footer/Footer'
 
 const PublicLayout = (props) => {
   return (
-    <div>
+    <div className='d-flex flex-column justify-content-between' style={{height:"100vh"}}>
         {<Header/>}
         <main>{props.children}</main>
         <Footer/>
