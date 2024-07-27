@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube} from "react-icons/fa";
 const Footer = () => {
   return (
-    <Footer style={{background: "#086EFF"
+    <div style={{background: "#086EFF"
 }}>
 
     <Container>
@@ -30,7 +30,7 @@ const Footer = () => {
         <Col></Col>
       </Row>
     </Container>
-    </Footer>
+    </div>
   );
 };
 
