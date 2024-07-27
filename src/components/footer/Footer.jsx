@@ -76,7 +76,7 @@ const Footer = () => {
         </Row>
         <div className="pt-5"></div>
         <div
-          className="d-flex justify-content-between text-light pt-2 border-top"
+          className="d-flex justify-content-between text-light py-3 border-top"
           style={{ fontSize: "12px" }}
         >
           <span>©{new Date().getFullYear()}– CareerCraft LLC</span>
