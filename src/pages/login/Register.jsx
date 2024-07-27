@@ -12,24 +12,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 function Register() {
   const [validated, setValidated] = useState(false);
-
-  const handleSubmit = (e) => {
-    const form = e.currentTarget;
-    if (form.checkValidity() === false) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    try {
-      axios.post("http://44.203.152.52:8080/registration", register);
-      console.log(register, "register");
-      toast.success("Successfully toasted!");
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
-
-    setValidated(true);
-  };
+  const navigate = useNavigate();
   const [register, setRegister] = useState({
     name: "",
     surname: "",
@@ -37,24 +20,31 @@ function Register() {
     address: "",
     password: "",
   });
-  const navigate = useNavigate();
 
-  /* const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    if (form.checkValidity() === false) {
+      e.stopPropagation();
+      setValidated(true);
+      return;
+    }
 
     try {
-      axios.post("http://44.203.152.52:8080/registration", register);
-      console.log(register, "register");
-      toast.success('Successfully toasted!')
+      await axios.post("http://44.203.152.52:8080/registration", register);
+      toast.success("Successfully registered!");
       navigate("/");
     } catch (error) {
-      console.log(error);
+      toast.error("Registration failed.");
     }
-  }; */
+
+    setValidated(true);
+  };
 
   return (
     <div className="bg-img">
-      <img src={img} alt="bg-img" />
+      <img className="register-img" src={img} alt="bg-img" />
       <div className="bg-img-cover">
         <Container className="mt-5">
           <Row className="d-flex align-items-center justify-content-center">
