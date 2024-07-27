@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div style={{ background: "#086EFF" }} className="py-4">
+    <div style={{ background: "#086EFF" }} /* className="py-4" */>
       <Container>
         <Row>
           <Col>

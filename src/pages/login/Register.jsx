@@ -22,15 +22,15 @@ function Register() {
     try {
       axios.post("http://44.203.152.52:8080/registration", register);
       console.log(register, "register");
-      toast.success('Successfully toasted!')
+      toast.success("Successfully toasted!");
       navigate("/");
     } catch (error) {
       console.log(error);
     }
-    
+
     setValidated(true);
   };
-   const [register, setRegister] = useState({
+  const [register, setRegister] = useState({
     name: "",
     surname: "",
     email: "",
@@ -104,10 +104,15 @@ function Register() {
                   controlId="validationCustom01"
                 >
                   <Form.Label>First Name</Form.Label>
-                  <Form.Control required type="text" placeholder="First Name" onChange={(e) =>
-                setRegister({ ...register, name: e.target.value })
-              }
-              value={register.name}/>
+                  <Form.Control
+                    required
+                    type="text"
+                    placeholder="First Name"
+                    onChange={(e) =>
+                      setRegister({ ...register, name: e.target.value })
+                    }
+                    value={register.name}
+                  />
                   {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 </Form.Group>
                 <Form.Group
@@ -115,10 +120,15 @@ function Register() {
                   controlId="validationCustom02"
                 >
                   <Form.Label>Last Name</Form.Label>
-                  <Form.Control required type="text" placeholder="Last name" onChange={(e) =>
-                setRegister({ ...register, surname: e.target.value })
-              }
-              value={register.surname}/>
+                  <Form.Control
+                    required
+                    type="text"
+                    placeholder="Last name"
+                    onChange={(e) =>
+                      setRegister({ ...register, surname: e.target.value })
+                    }
+                    value={register.surname}
+                  />
                   {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 </Form.Group>
                 <Form.Group
@@ -157,7 +167,6 @@ function Register() {
                       setRegister({ ...register, password: e.target.value })
                     }
                     value={register.password}
-                  
                   />
                   {/*  <Form.Control.Feedback type="invalid">
                       Please provide a valid password.
@@ -180,83 +189,6 @@ function Register() {
         </Container>
       </div>
     </div>
-
-    /* <div className="register">
-          <form action="" className="w-75" onSubmit={handleSubmit}>
-            <h3 className="text-center">Create an Account</h3>
-            <label htmlFor="name" className="fs-5">
-              Name:
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="w-100 mb-2 py-2 ps-2 border rounded "
-              required
-              onChange={(e) =>
-                setRegister({ ...register, name: e.target.value })
-              }
-              value={register.name}
-            />
-            <label htmlFor="surname" className="fs-5">
-              Surname:
-            </label>
-            <input
-              type="text"
-              name="surname"
-              placeholder="Your surname"
-              className="w-100 mb-2 py-2 ps-2 border rounded"
-              required
-              onChange={(e) =>
-                setRegister({ ...register, surname: e.target.value })
-              }
-              value={register.surname}
-            />
-            <label htmlFor="email" className="fs-5">
-              Email:
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="w-100 mb-2 py-2 ps-2 border rounded"
-              required
-              onChange={(e) =>
-                setRegister({ ...register, email: e.target.value })
-              }
-              value={register.email}
-            />
-            <label htmlFor="address" className="fs-5">
-              Address:
-            </label>
-            <input
-              type="text"
-              name="address"
-              placeholder="Your Address"
-              className="w-100 mb-2 py-2 ps-2 border rounded"
-              required
-              onChange={(e) =>
-                setRegister({ ...register, address: e.target.value })
-              }
-              value={register.address}
-            />
-            <label htmlFor="password" className="fs-5">
-              Password:
-            </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Your Password"
-              className="w-100 mb-4 py-2 ps-2 border rounded"
-              required
-              onChange={(e) =>
-                setRegister({ ...register, password: e.target.value })
-              }
-              value={register.password}
-            />
-            <button className="btn btn-success w-100 py-2">Register</button>
-          </form>
-        </div> */
   );
 }
 
