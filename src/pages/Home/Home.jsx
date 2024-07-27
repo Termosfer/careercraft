@@ -27,7 +27,7 @@ const Home = () => {
           <button className="btn btn-outline-primary px-3">
             Explore Courses
           </button>
-          <p>
+          <p style={{ marginBottom: "0" }}>
             <img className="w-75" src={image} alt="/" />
           </p>
         </div>

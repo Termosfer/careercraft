@@ -1,7 +1,7 @@
 .section1 {
-  height: 103.2vh;
   background: url(../../assets/img/img1.png);
   background-attachment: fixed;
+  overflow: hidden;
 }
 .section2 {
   background-color: #eef2f8;
