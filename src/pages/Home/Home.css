@@ -1,16 +1,95 @@
-.section1{
-    height: 103vh;
-    background: url(https://s3-alpha-sig.figma.com/img/6f66/226d/cad24ecdd969f6284c86ed26b9e8e764?Expires=1722816000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dRLQ648L5sZDKabvTThmNN3vO2Lt3BQ-8Oyh5u1hFdpKK9aYnmeyFGrzb9cHWGGrZDBHeNNBByM92ukvS1fKfIi7ahiFWUiT~~XoPUcbN7~A19SNf0aLeiOrLli8d2oDNoA8fILVU3oMALfM98DhNs9yi780jO-H5Fx0odyTewf8AHXv1vd~OjqUczVGx3QN1QuzqlIq3PeVbPF1tpDy1tj9KjKHIZy~dD5gb6zYwaudH8NNWywcISx-5g6hf6fXAeyeRGRJfDnj~588uz9ik~QwLCnY4YpFx61DW7xSSfpmA8hCAbbe1s7ayjKSk49P5STfba02i0QpuzwbFgn57Q__);
+.section1 {
+  height: 103.2vh;
+  background: url(../../assets/img/img1.png);
+  background-attachment: fixed;
 }
-.section2{
-    background-color: #EEF2F8;
-    .box1{
-        padding: 15px 20px 0 20px;
-        border-radius: 20px;
-        background-color: #fff;
+.section2 {
+  background-color: #eef2f8;
+  .boxone {
+    padding: 0 9%;
+    .box {
+      padding: 15px 20px 0 20px;
+      border-radius: 20px;
+      background-color: #fff;
+      width: 450px;
+      img {
         width: 400px;
-        img{
-            width: 400px;
-        }
+      }
     }
+  }
+  .boxtwo {
+    padding: 0 11%;
+    .box {
+      width: 300px;
+      img {
+        border-radius: 15px;
+      }
+    }
+  }
+}
+.section3 {
+  background-color: #f7f7f7;
+  .boxone {
+    padding: 100px 0;
+    .box {
+      border-radius: 15px;
+      background-color: #fff;
+      width: 350px;
+      padding: 15px;
+      img {
+        border-radius: 15px;
+      }
+    }
+  }
+}
+.section4 {
+  background-color: #086eff;
+  p {
+    color: #fff;
+  }
+  .d-grid {
+    grid-template-columns: auto auto;
+    gap: 25px;
+    .box {
+      padding: 25px 15px;
+      border-radius: 5px;
+      width: 200px;
+      height: 170px;
+      background-color: #fff;
+      .num {
+        color: #086eff;
+        font-weight: 600;
+        text-align: center;
+        width: 40px;
+        padding: 7px 0;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        background-color: #f0f5ff;
+      }
+      p {
+        font-weight: 400;
+        font-size: 15px;
+        color: #000;
+      }
+    }
+  }
+}
+.section5 {
+  .box {
+    position: relative;
+  }
+  .boxone {
+    background-color: hsla(215, 100%, 52%, 0.7);
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+  .boxtext {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+  }
 }
