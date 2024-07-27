@@ -19,10 +19,18 @@ function Register() {
       e.preventDefault();
       e.stopPropagation();
     }
-
+    try {
+      axios.post("http://44.203.152.52:8080/registration", register);
+      console.log(register, "register");
+      toast.success('Successfully toasted!')
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+    
     setValidated(true);
   };
-  /*  const [register, setRegister] = useState({
+   const [register, setRegister] = useState({
     name: "",
     surname: "",
     email: "",
@@ -31,7 +39,7 @@ function Register() {
   });
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  /* const handleSubmit = (e) => {
     e.preventDefault();
 
     try {
@@ -96,7 +104,10 @@ function Register() {
                   controlId="validationCustom01"
                 >
                   <Form.Label>First Name</Form.Label>
-                  <Form.Control required type="text" placeholder="First Name" />
+                  <Form.Control required type="text" placeholder="First Name" onChange={(e) =>
+                setRegister({ ...register, name: e.target.value })
+              }
+              value={register.name}/>
                   {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 </Form.Group>
                 <Form.Group
@@ -104,7 +115,10 @@ function Register() {
                   controlId="validationCustom02"
                 >
                   <Form.Label>Last Name</Form.Label>
-                  <Form.Control required type="text" placeholder="Last name" />
+                  <Form.Control required type="text" placeholder="Last name" onChange={(e) =>
+                setRegister({ ...register, surname: e.target.value })
+              }
+              value={register.surname}/>
                   {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 </Form.Group>
                 <Form.Group
@@ -121,6 +135,10 @@ function Register() {
                     type="email"
                     placeholder="example@gmail.com"
                     required
+                    onChange={(e) =>
+                      setRegister({ ...register, email: e.target.value })
+                    }
+                    value={register.email}
                   />
                   {/* <Form.Control.Feedback type="invalid">
                       Please provide a valid email.
@@ -135,6 +153,11 @@ function Register() {
                     type="password"
                     placeholder="Password"
                     required
+                    onChange={(e) =>
+                      setRegister({ ...register, password: e.target.value })
+                    }
+                    value={register.password}
+                  
                   />
                   {/*  <Form.Control.Feedback type="invalid">
                       Please provide a valid password.
