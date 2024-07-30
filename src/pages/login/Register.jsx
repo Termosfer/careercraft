@@ -46,7 +46,7 @@ function Register() {
     <div className="bg-img">
       <img className="register-img" src={img} alt="bg-img" />
       <div className="bg-img-cover">
-        <Container className="mt-5">
+        <Container className="my-5">
           <Row className="d-flex align-items-center justify-content-center">
             <Col>
               <div className="d-flex flex-column">

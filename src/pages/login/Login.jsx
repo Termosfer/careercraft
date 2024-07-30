@@ -3,7 +3,8 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -12,7 +13,7 @@ const Login = () => {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>Login</Button>
+      <NavLink to="/login" className="login text-decoration-none" onClick={handleShow}>Login</NavLink>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
