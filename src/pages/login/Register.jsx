@@ -21,6 +21,9 @@ function Register() {
     password: "",
   });
 
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
