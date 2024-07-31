@@ -11,10 +11,9 @@ import Button from "react-bootstrap/esm/Button";
 function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container className="d-flex align-items-center justify-content-center w-75 px-5" >
-        <Navbar.Brand href="/">
+      <Container className="d-flex align-items-center justify-content-center w-75 px-5">
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <Image src={logo} className="logo" alt="logo" />
-
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -30,7 +29,7 @@ function CollapsibleExample() {
             <NavLink to="/register" className="text-decoration-none signup">
               Sign Up
             </NavLink>
-            <Login  />
+            <Login />
           </Nav>
         </Navbar.Collapse>
       </Container>
