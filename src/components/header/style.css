@@ -5,6 +5,9 @@
   border-radius: 5px;
 }
 
+a{
+  text-decoration: none;
+}
 .login {
   font-size: 20px;
 }
