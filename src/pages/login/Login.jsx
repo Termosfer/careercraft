@@ -3,10 +3,9 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./style.css";
-import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { Container } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -21,7 +20,14 @@ const Login = () => {
   }, [email, password]);
 
   return (
-    <div className="login-pg">
+    <div>
+      {/* <Button variant="primary" onClick={handleShow}>Login</Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Welcome back!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body> */}
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">

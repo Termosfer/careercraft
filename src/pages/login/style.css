@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .bg-img {
-  height: 70vh;
+  height: 75vh;
   position: relative;
 }
 .register-img {
   width: 100%;
-  height: 70vh;
+  height: 75vh;
 }
 
 .bg-img-cover {
@@ -14,7 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   background-color: rgba(6, 120, 219, 0.5);
 }
 
@@ -25,6 +25,12 @@
 .text-width {
   width: 70%;
 }
+
+
+.registration-btn{
+  background-color: #0084FF;
+}
+
 
 /* login css */
 #login-f {
