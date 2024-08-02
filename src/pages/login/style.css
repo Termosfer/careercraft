@@ -26,8 +26,9 @@
 
 
 .registration-btn{
-  background-color: #0084FF;
+  background-color: #0084FF !important;
 }
+
 
 
 /* login css */

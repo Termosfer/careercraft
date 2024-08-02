@@ -12,9 +12,9 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container className="d-flex align-items-center justify-content-center w-75 px-5">
-        <Navbar.Brand href="/" className="d-flex align-items-center">
+        <Link to="/" className="d-flex align-items-center">
           <Image src={logo} className="logo" alt="logo" />
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto d-flex justify-content-between column-gap-4 ">
@@ -27,10 +27,10 @@ function CollapsibleExample() {
           </Nav>
           <Nav className="">
             <Link to="/register">
-              <Button variant="primary" className="me-1">Sign Up</Button>
+              <Button className="me-1 sign-up">Sign Up</Button>
             </Link>
             <Link to="/login">
-              <Button variant="primary" className="ms-1">Login</Button>
+              <Button className="ms-1">Login</Button>
             </Link>
           </Nav>
         </Navbar.Collapse>
