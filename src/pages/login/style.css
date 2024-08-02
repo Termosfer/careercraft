@@ -23,3 +23,18 @@
 .text-width {
   width: 70%;
 }
+
+/* login css */
+#login-f {
+  max-width: 552px;
+  max-height: 552px;
+  padding: 48px 72px !important;
+  background-color: white;
+}
+
+.cont-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

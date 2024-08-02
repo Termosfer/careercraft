@@ -29,8 +29,8 @@ function CollapsibleExample() {
             <Nav.Link href="/register">
               <Button variant="primary">Sign Up</Button>
             </Nav.Link>
-            <Nav.Link>
-              <Login />
+            <Nav.Link href="/login">
+              <Button variant="primary">Login</Button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
