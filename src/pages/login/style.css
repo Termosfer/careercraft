@@ -24,6 +24,23 @@
   width: 70%;
 }
 
+
 .registration-btn{
   background-color: #0084FF;
+}
+
+
+/* login css */
+#login-f {
+  max-width: 552px;
+  max-height: 552px;
+  padding: 48px 72px !important;
+  background-color: white;
+}
+
+.cont-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

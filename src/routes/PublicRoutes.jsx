@@ -8,6 +8,8 @@ import Contact from '../pages/Contact/Contact'
 import Resources from '../pages/Resources/Resources'
 import Services from '../pages/Services/Services'
 import Solution from '../pages/Solution/Solution'
+import Login from '../pages/login/Login'
+
 const PublicRoutes = () => {
   return (
     <PublicLayout>
@@ -19,7 +21,7 @@ const PublicRoutes = () => {
             <Route path='/services' element={<Services/>}/>
             <Route path='/solutions' element={<Solution/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route/>
+            <Route path='/login' element={<Login/>}/>
         </Routes>
     </PublicLayout>
   )

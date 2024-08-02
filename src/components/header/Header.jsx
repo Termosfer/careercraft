@@ -25,11 +25,13 @@ function CollapsibleExample() {
             <Link to="/resources" className="text-decoration-none text-dark">Resources</Link>
             <Link to="/contact" className="text-decoration-none text-dark">Contacts</Link>
           </Nav>
-          <Nav className="d-flex align-items-center column-gap-3">
-            <NavLink to="/register" className="text-decoration-none signup">
-              Sign Up
-            </NavLink>
-            <Login />
+          <Nav className="">
+            <Nav.Link href="/register">
+              <Button variant="primary">Sign Up</Button>
+            </Nav.Link>
+            <Nav.Link href="/login">
+              <Button variant="primary">Login</Button>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
