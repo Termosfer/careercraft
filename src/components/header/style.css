@@ -1,9 +1,9 @@
-/* .active {
+.active:hover {
   background-color: #0084FF;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-} */
+}
 
 a{
   text-decoration: none;

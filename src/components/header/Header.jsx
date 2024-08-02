@@ -27,7 +27,7 @@ function CollapsibleExample() {
           </Nav>
           <Nav className="">
             <Link to="/register">
-              <Button className="me-1 sign-up">Sign Up</Button>
+              <Button className="me-1 sign-up bg-light border-0 text-primary">Sign Up</Button>
             </Link>
             <Link to="/login">
               <Button className="ms-1">Login</Button>
