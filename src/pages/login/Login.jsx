@@ -20,14 +20,8 @@ const Login = () => {
   }, [email, password]);
 
   return (
-    <div>
-      {/* <Button variant="primary" onClick={handleShow}>Login</Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Welcome back!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body> */}
+    <div className="login-pg">
+      
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">
