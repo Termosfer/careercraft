@@ -1,62 +1,85 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
+import "./style.css";
+import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
+import { Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
 
 const Login = () => {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  return (
-    <div>
-      <NavLink to="/login" className="login text-decoration-none" onClick={handleShow}>Login</NavLink>
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Welcome back!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                style={{ outline: "none", boxShadow: "none" }}
-                type="email"
-                placeholder="Email..."
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group className="mb-2" controlId="exampleForm.ControlInput2">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                style={{ outline: "none", boxShadow: "none" }}
-                type="password"
-                placeholder="Password..."
-                autoFocus
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button className="w-100" variant="primary" onClick={handleClose}>
-            Login
-          </Button>
-        </Modal.Footer>
-        <span className="text-center pb-2">
-          Don't have an account?{" "}
-          <Link
-            to="/register"
-            onClick={handleClose}
-            className="text-decoration-none pb-2"
-          >
-            Register
-          </Link>
-        </span>
-      </Modal>
+  const handleForgot = () => {};
+
+  useEffect(() => {
+    console.log(email, ":email", password, ":password");
+  }, [email, password]);
+
+  return (
+    <div className="login-pg">
+      
+      <div className="bg-img ">
+        <img className="register-img " src={img} alt="bg-img" />
+        <div className="bg-img-cover">
+          <Container className="cont-login">
+            <Form className=" border rounded-4 p-3" id="login-f">
+              <h2 className="login-header">Login to your account</h2>
+              <Form.Group
+                className="mb-2"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  style={{ outline: "none", boxShadow: "none" }}
+                  type="email"
+                  placeholder="Enter your email"
+                  autoFocus
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-2"
+                controlId="exampleForm.ControlInput2"
+              >
+                <Form.Label className="form-label-pass d-flex justify-content-between align-items-center">
+                  <span>Password</span>
+                  <span>
+                    <Button
+                      onClick={handleForgot}
+                      className="p-0 border-0 bg-transparent text-primary text-decoration-none"
+                    >
+                      Forgot Password?
+                    </Button>
+                  </span>
+                </Form.Label>
+
+                <Form.Control
+                  style={{ outline: "none", boxShadow: "none" }}
+                  type="password"
+                  placeholder="Enter your password"
+                  autoFocus
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Group>
+
+              <Button className="w-100 log-btn" variant="primary">
+                Login now
+              </Button>
+
+              <div className="text-center dont-acc pb-2">
+                Don't Have An Account?{" "}
+                <Link to="/register" className="text-decoration-none pb-2">
+                  Sign Up
+                </Link>
+              </div>
+            </Form>
+          </Container>
+        </div>
+      </div>
     </div>
   );
 };

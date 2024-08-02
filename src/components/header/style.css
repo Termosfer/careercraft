@@ -1,17 +1,14 @@
-.active {
+/* .active {
   background-color: #0084FF;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+} */
+
+a{
+  text-decoration: none;
 }
 
-.login {
-  font-size: 20px;
-}
-
-.signup{
-    font-size: 18px;
-}
 
 .navbar-brand{
   height: 55px;
@@ -23,3 +20,4 @@ height: 62px;
 width: 130px;
 object-fit: contain;
 }
+

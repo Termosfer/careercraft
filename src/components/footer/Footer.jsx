@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./style.css";
+import logo from "../../assets/footerLogo.png";
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
 import {
@@ -19,7 +20,7 @@ const Footer = () => {
         <Row>
           <Col>
             <div className="d-flex flex-column text-light">
-              <h3 className="fst-italic mt-2 footer-logo">CareerCraft</h3>
+              <img src={logo} className="logo mb-3" alt="logo" />
               <div className="d-flex flex-column text">
                 <p className="my-0">Empowering Growth Through </p>
                 <p>Personalized Learning Solutions</p>
@@ -70,37 +71,6 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          {/* <Col>
-            <div className="d-flex flex-column text-light text">
-              <h4 className="mb-4">Company</h4>
-              <span>About</span>
-              <span>Contact us</span>
-              <span>Blog</span>
-            </div>
-          </Col>
-          <Col>
-            <div className="d-flex flex-column text-light text">
-              <h4 className="mb-4">Support</h4>
-              <span>Getting Started</span>
-              <span>Help Center</span>
-              <span>Report a bug</span>
-              <span>Chat support</span>
-            </div>
-          </Col>
-          <Col>
-            <div className="d-flex flex-column text-light text">
-              <h4 className="mb-4">Contacts us</h4>
-              <span>
-                <CiMail /> contact@company.com
-              </span>
-              <span>
-                <BsTelephone /> (+994)000 00 00
-              </span>
-              <span>
-                <CiLocationOn /> Baku, Azerbaijan
-              </span>
-            </div>
-          </Col> */}
         </Row>
         <div className="pt-5"></div>
         <div

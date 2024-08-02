@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .bg-img {
   height: 75vh;
   position: relative;
@@ -24,6 +26,42 @@
   width: 70%;
 }
 
+
 .registration-btn{
-  background-color: #0084FF;
+  background-color: #0084FF !important;
+}
+
+
+
+/* login css */
+#login-f {
+  max-width: 552px;
+  max-height: 552px;
+  padding: 48px 72px !important;
+  background-color: white;
+}
+
+.cont-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.log-btn{
+  background-color: #0084FF !important;
+  margin-bottom: 24px;
+}
+
+.btn-primary:hover{
+  background-color: #0d6efd;
+}
+
+.dont-acc{
+  color: #98A2B3 !important;
+}
+
+.login-pg{
+  font-family: "Open Sans", sans-serif;
 }
