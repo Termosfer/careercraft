@@ -3,7 +3,7 @@
   background-attachment: fixed;
   overflow: hidden;
 }
-.section2 {
+/* .section2 {
   background-color: #eef2f8;
   .boxone {
     .box {
@@ -113,5 +113,21 @@
     .boxtext {
       top: 0 !important;
     }
+  }
+} */
+
+.section2 {
+  background-color: #f5f5f7;
+  padding-top: 100px;
+  h4 {
+    span {
+      color: #2d84ff;
+    }
+  }
+  .container {
+    padding: 0 140px;
+  }
+  .rounded {
+    border-radius: 18px !important;
   }
 }

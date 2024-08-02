@@ -3,14 +3,14 @@ import "./Home.css";
 import "axios";
 import axios from "axios";
 import image from "../../assets/img/7f9f8a75fed290e7cf1f91b9c71d3685.png";
-import img1 from "../../assets/img/box1.png";
-import img2 from "../../assets/img/box2.png";
-import img2_1 from "../../assets/img/box1.1.jpg";
-import img2_2 from "../../assets/img/box1.2.jpg";
-import img2_3 from "../../assets/img/box1.3.jpg";
-import img3_1 from "../../assets/img/box3.1.jpg";
-import img3_2 from "../../assets/img/box3.2.jpg";
-import img4 from "../../assets/img/box4.jpg";
+import S_2_img1 from "../../assets/img/S-2-img1.png";
+// import img2 from "../../assets/img/box2.png";
+// import img2_1 from "../../assets/img/box1.1.jpg";
+// import img2_2 from "../../assets/img/box1.2.jpg";
+// import img2_3 from "../../assets/img/box1.3.jpg";
+// import img3_1 from "../../assets/img/box3.1.jpg";
+// import img3_2 from "../../assets/img/box3.2.jpg";
+// import img4 from "../../assets/img/box4.jpg";
 
 const Home = () => {
   return (
@@ -33,6 +33,36 @@ const Home = () => {
         </div>
       </section>
       <section className="section2">
+        <div className="container">
+          <div className="pb-3">
+            <h4 className="text-center fw-semibold">
+              Maximize Your Growth with <br /> Our{" "}
+              <span>Powerful Solutions</span>
+            </h4>
+          </div>
+          <div className="">
+            <div className="bg-white rounded d-flex p-5">
+              <div className="w-50 pe-4">
+                <span className="fw-medium fs-3">
+                  AI-Driven Performance Analysis and Recommendations 
+                </span>
+                <hr />
+                <span>
+                  We tailor exercises based on user progress for continuous
+                  improvement. This adaptive learning approach ensures that each
+                  user receives the most relevant and effective training,
+                  maximizing their skill development potential.
+                </span>
+              </div>
+              <div className="w-75 ps-4">
+                <img className="w-100" src={S_2_img1} alt="" />
+              </div>
+            </div>
+            <div className=""></div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="section2">
         <div className="boxone py-5 d-flex justify-content-evenly container">
           <div className="box">
             <p className="fw-bold">AI-Powered Personalization</p>
@@ -172,7 +202,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
