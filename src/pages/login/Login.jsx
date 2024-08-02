@@ -3,10 +3,9 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./style.css";
-import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { Container } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -26,13 +25,6 @@ const Login = () => {
 
   return (
     <div>
-      {/* <Button variant="primary" onClick={handleShow}>Login</Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Welcome back!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body> */}
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">
@@ -84,14 +76,6 @@ const Login = () => {
           </Container>
         </div>
       </div>
-      {/* </Modal.Body>
-        <Modal.Footer>
-          <Button className="w-100" variant="primary" onClick={handleClose}>
-            Login
-          </Button>
-        </Modal.Footer>
-        
-      </Modal> */}
     </div>
   );
 };

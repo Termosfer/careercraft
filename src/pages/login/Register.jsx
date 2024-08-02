@@ -21,6 +21,9 @@ function Register() {
     password: "",
   });
 
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -46,23 +49,21 @@ function Register() {
     <div className="bg-img">
       <img className="register-img" src={img} alt="bg-img" />
       <div className="bg-img-cover">
-        <Container className="mt-5">
-          <Row className="d-flex align-items-center justify-content-center">
-            <Col>
+        <Container className="w-75 p-5">
+          <Row /* className="d-flex align-items-center justify-content-center" */
+          >
+            <Col xs={6}>
               <div className="d-flex flex-column">
-                <div className="text-width mb-5">
+                <div className="text-width mb-5 w-100">
                   <h1 className="color">Join CareerCraft Today!</h1>
                   <span className="color ">
-                    Unlock your potential and transform your career with
-                    cutting-edge soft skills training. By registering with us,
-                    you'll gain access to personalized evaluations, tailored
-                    courses, and exclusive resources designed to help you excel
-                    in your field.
+                  Unlock your potential with cutting-edge soft skills training. Register to access
+                   personalized evaluations, tailored courses, and exclusive resources designed to help you excel.
                   </span>
                 </div>
 
                 <h6 className="color mb-4">Sign Up Now:</h6>
-                <ul className="color text-width">
+                <ul className="color text-width w-100">
                   <li>
                     Create Your Account: Fill in your details to get started.
                   </li>
@@ -75,20 +76,20 @@ function Register() {
                     of tools and resources to boost your professional growth.
                   </li>
                 </ul>
-                <span className="color text-width">
+                <span className="color text-width w-100">
                   Ready to take the next step in your career? Register now and
                   start your journey to success with CareerCraft!
                 </span>
               </div>
             </Col>
-            <Col>
+            <Col xs={6}>
               <Form
                 noValidate
                 validated={validated}
                 onSubmit={handleSubmit}
-                className="bg-light border rounded-4 p-3 w-75"
+                className="bg-light border rounded-4 px-5 py-4 w-100"
               >
-                <h2 className="border-bottom fw-bold pb-2">Registration</h2>
+                <h2 className="border-bottom fw-bold pb-2">Create an account</h2>
                 <Form.Group
                   /* as={Col} */ md="4"
                   controlId="validationCustom01"
@@ -103,7 +104,6 @@ function Register() {
                     }
                     value={register.name}
                   />
-                  {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 </Form.Group>
                 <Form.Group
                   /* as={Col} */ md="4"
@@ -119,7 +119,7 @@ function Register() {
                     }
                     value={register.surname}
                   />
-                  {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
+                 
                 </Form.Group>
                 <Form.Group
                   /* as={Col} */
@@ -140,9 +140,7 @@ function Register() {
                     }
                     value={register.email}
                   />
-                  {/* <Form.Control.Feedback type="invalid">
-                      Please provide a valid email.
-                    </Form.Control.Feedback> */}
+                  
                 </Form.Group>
                 <Form.Group
                   /* as={Col} */ md="3"
@@ -158,19 +156,16 @@ function Register() {
                     }
                     value={register.password}
                   />
-                  {/*  <Form.Control.Feedback type="invalid">
-                      Please provide a valid password.
-                    </Form.Control.Feedback> */}
+                 
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Check
                     required
                     label="Agree to terms and conditions"
-                    /* feedback="You must agree before submitting." */
                     feedbackType="invalid"
                   />
                 </Form.Group>
-                <Button type="submit" className="w-100">
+                <Button type="submit" className="w-100 registration-btn">
                   Create account
                 </Button>
               </Form>
