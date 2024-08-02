@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .bg-img {
   height: 70vh;
   position: relative;
@@ -37,4 +39,22 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+
+.log-btn{
+  background-color: #0084FF !important;
+  margin-bottom: 24px;
+}
+
+.btn-primary:hover{
+  background-color: #0d6efd;
+}
+
+.dont-acc{
+  color: #98A2B3 !important;
+}
+
+.login-pg{
+  font-family: "Open Sans", sans-serif;
 }

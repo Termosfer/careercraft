@@ -14,25 +14,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleForgot=()=>{
-
-    
-  }
-
+  const handleForgot = () => {};
 
   useEffect(() => {
     console.log(email, ":email", password, ":password");
   }, [email, password]);
 
   return (
-    <div>
-      {/* <Button variant="primary" onClick={handleShow}>Login</Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Welcome back!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body> */}
+    <div className="login-pg">
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">
@@ -59,7 +48,10 @@ const Login = () => {
                 <Form.Label className="form-label-pass d-flex justify-content-between align-items-center">
                   <span>Password</span>
                   <span>
-                    <Button onClick={handleForgot} className="p-0 border-0 bg-transparent text-primary text-decoration-none">
+                    <Button
+                      onClick={handleForgot}
+                      className="p-0 border-0 bg-transparent text-primary text-decoration-none"
+                    >
                       Forgot Password?
                     </Button>
                   </span>
@@ -74,24 +66,20 @@ const Login = () => {
                 />
               </Form.Group>
 
-              <span className="text-center pb-2">
+              <Button className="w-100 log-btn" variant="primary">
+                Login now
+              </Button>
+
+              <div className="text-center dont-acc pb-2">
                 Don't Have An Account?{" "}
                 <Link to="/register" className="text-decoration-none pb-2">
                   Sign Up
                 </Link>
-              </span>
+              </div>
             </Form>
           </Container>
         </div>
       </div>
-      {/* </Modal.Body>
-        <Modal.Footer>
-          <Button className="w-100" variant="primary" onClick={handleClose}>
-            Login
-          </Button>
-        </Modal.Footer>
-        
-      </Modal> */}
     </div>
   );
 };
