@@ -6,22 +6,23 @@ import "./style.css";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Login = () => {
   const [show, setShow] = useState(false);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [userLogged, setUserLogged] = useState({
+    email: "",
+    password: "",
+  });
   const handleForgot = () => {};
 
-  useEffect(() => {
-    console.log(email, ":email", password, ":password");
-  }, [email, password]);
+  const handlePassword = () => {
+    setShow(!show);
+  };
 
   return (
     <div className="login-pg">
-      
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">
@@ -34,15 +35,18 @@ const Login = () => {
               >
                 <Form.Label>Email</Form.Label>
                 <Form.Control
+                  className="field-input"
                   style={{ outline: "none", boxShadow: "none" }}
                   type="email"
                   placeholder="Enter your email"
                   autoFocus
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) =>
+                    setUserLogged({ ...userLogged, email: e.target.value })
+                  }
                 />
               </Form.Group>
               <Form.Group
-                className="mb-2"
+                className="mb-2 pass-form-part"
                 controlId="exampleForm.ControlInput2"
               >
                 <Form.Label className="form-label-pass d-flex justify-content-between align-items-center">
@@ -58,12 +62,22 @@ const Login = () => {
                 </Form.Label>
 
                 <Form.Control
+                  className="field-input"
                   style={{ outline: "none", boxShadow: "none" }}
-                  type="password"
+                  type={show ? "text" : "password"}
                   placeholder="Enter your password"
                   autoFocus
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) =>
+                    setUserLogged({ ...userLogged, password: e.target.value })
+                  }
                 />
+                <div className="icon-cont" onClick={handlePassword}>
+                  {show ? (
+                    <IoEyeOffOutline color="#98A2B3" />
+                  ) : (
+                    <IoEyeOutline color="#98A2B3" />
+                  )}
+                </div>
               </Form.Group>
 
               <Button className="w-100 log-btn" variant="primary">
