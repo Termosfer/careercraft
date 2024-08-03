@@ -5,21 +5,58 @@ import Form from "react-bootstrap/Form";
 import "./style.css";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { Container } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import axios from "axios";
 
 const Login = () => {
+
+  const navigate=useNavigate()
   const [show, setShow] = useState(false);
+  const [token,setToken]=useState(localStorage.getItem("token") || "") 
 
   const [userLogged, setUserLogged] = useState({
     email: "",
     password: "",
   });
-  const handleForgot = () => {};
+
+  const [email, setEmail]=useState(JSON.parse(localStorage.getItem("email")))
+
+  useEffect(() => {
+    
+    localStorage.setItem("email",JSON.stringify(userLogged.email))
+    setEmail(JSON.parse(localStorage.getItem("email")))
+    
+  }, [userLogged]);
 
   const handlePassword = () => {
     setShow(!show);
   };
+
+  const handleForgot = async () => {
+    try {
+      await axios.post(`http://44.203.152.52:8080/api/password/reset-request?email=${email}`)
+      console.log("sent mail");
+      navigate("/checkMail")
+    } catch (error) {
+      console.log(error.response.data.message);
+      
+    }
+  }
+
+  const handleLogin= async()=>{
+    try {
+     const {data}= await axios.post("http://44.203.152.52:8080/api/auth/login",userLogged)
+     localStorage.setItem("token", JSON.stringify(data.accessToken));
+     navigate("/")
+     console.log(data.accessToken);
+     
+    } catch (error) {
+      console.log(error.response);
+      
+    }
+  }
+
 
   return (
     <div className="login-pg">
@@ -80,7 +117,7 @@ const Login = () => {
                 </div>
               </Form.Group>
 
-              <Button className="w-100 log-btn" variant="primary">
+              <Button onClick={handleLogin} className="w-100 log-btn" variant="primary">
                 Login now
               </Button>
 

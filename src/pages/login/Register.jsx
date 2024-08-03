@@ -37,7 +37,8 @@ function Register() {
     try {
       await axios.post("http://44.203.152.52:8080/registration", register);
       toast.success("Successfully registered!");
-      navigate("/");
+      navigate("/login");
+      
     } catch (error) {
       toast.error("Registration failed.");
     }
