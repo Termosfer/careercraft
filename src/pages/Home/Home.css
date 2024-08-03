@@ -6,7 +6,6 @@
 .section2 {
   background-color: #eef2f8;
   .boxone {
-    padding: 0 9%;
     .box {
       padding: 15px 20px 0 20px;
       border-radius: 20px;
@@ -18,12 +17,30 @@
     }
   }
   .boxtwo {
-    padding: 0 11%;
     .box {
       width: 300px;
       img {
         border-radius: 15px;
       }
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .boxone {
+      padding: 0 9%;
+    }
+    .boxtwo {
+      padding: 0 11%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .boxone {
+      justify-content: center !important;
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    .boxone {
+      display: grid !important;
+      row-gap: 10px;
     }
   }
 }
@@ -91,5 +108,10 @@
     top: 25%;
     width: 100%;
     text-align: center;
+  }
+  @media only screen and (max-width: 825px) {
+    .boxtext {
+      top: 0 !important;
+    }
   }
 }

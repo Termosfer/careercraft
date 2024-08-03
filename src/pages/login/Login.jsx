@@ -32,7 +32,7 @@ const Login = () => {
   }, [email, password]);
 
   return (
-    <div>
+    <div className="login-pg">
       <div className="bg-img ">
         <img className="register-img " src={img} alt="bg-img" />
         <div className="bg-img-cover">
@@ -49,20 +49,27 @@ const Login = () => {
               >
                 <Form.Label>Email</Form.Label>
                 <Form.Control
+                  className="field-input"
                   style={{ outline: "none", boxShadow: "none" }}
                   type="email"
                   placeholder="Enter your email"
                   autoFocus
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) =>
+                    setUserLogged({ ...userLogged, email: e.target.value })
+                  }
                 />
               </Form.Group>
               <Form.Group
-                className="mb-2"
+                className="mb-2 pass-form-part"
                 controlId="exampleForm.ControlInput2"
               >
                 <Form.Label className="form-label-pass d-flex justify-content-between align-items-center">
                   <span>Password</span>
                   <span>
+                    <Button
+                      onClick={handleForgot}
+                      className="p-0 border-0 bg-transparent text-primary text-decoration-none"
+                    >
                     <Button
                       onClick={handleForgot}
                       className="p-0 border-0 bg-transparent text-primary text-decoration-none"
@@ -73,20 +80,34 @@ const Login = () => {
                 </Form.Label>
 
                 <Form.Control
+                  className="field-input"
                   style={{ outline: "none", boxShadow: "none" }}
-                  type="password"
+                  type={show ? "text" : "password"}
                   placeholder="Enter your password"
                   autoFocus
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) =>
+                    setUserLogged({ ...userLogged, password: e.target.value })
+                  }
                 />
+                <div className="icon-cont" onClick={handlePassword}>
+                  {show ? (
+                    <IoEyeOffOutline color="#98A2B3" />
+                  ) : (
+                    <IoEyeOutline color="#98A2B3" />
+                  )}
+                </div>
               </Form.Group>
 
-              <span className="text-center pb-2">
+              <Button className="w-100 log-btn" variant="primary">
+                Login now
+              </Button>
+
+              <div className="text-center dont-acc pb-2">
                 Don't Have An Account?{" "}
                 <Link to="/register" className="text-decoration-none pb-2">
                   Sign Up
                 </Link>
-              </span>
+              </div>
             </Form>
           </Container>
         </div>
