@@ -7,57 +7,41 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import "./style.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
+import { register } from "../../features/authRegister";
 import {
   changeName,
   changeLastName,
   changeEmail,
   changePassword,
-  register
 } from "../../features/authSlice";
 function Register() {
-  const dispatch =  useDispatch()
+  const dispatch = useDispatch();
   const name = useSelector((state) => state.auth.name);
   const surname = useSelector((state) => state.auth.surname);
   const email = useSelector((state) => state.auth.email);
   const password = useSelector((state) => state.auth.password);
 
-  const handlerChangeName = (e) => {
-    const value = e.target.value;
-    console.log(value)
-    /* setRegister((prev) => ({ ...prev, name: value })); */
-    dispatch(changeName(value));
+  const handleChangeName = (e) => {
+    dispatch(changeName(e.currentTarget.value));
   };
-const handlerChangeLastName = (e)=>{
-dispatch(changeLastName(e.currentTarget.value))
-}
-const handlerChangeEmail = (e)=>{
-dispatch(changeEmail(e.currentTarget.value))
-}
-const handlerChangePassword = (e)=>{
-dispatch(changePassword(e.currentTarget.value))
-}
-
-
+  const handleChangeLastName = (e) => {
+    dispatch(changeLastName(e.currentTarget.value));
+  };
+  const handleChangeEmail = (e) => {
+    dispatch(changeEmail(e.currentTarget.value));
+  };
+  const handleChangePassword = (e) => {
+    dispatch(changePassword(e.currentTarget.value));
+  };
 
   const [validated, setValidated] = useState(false);
   const navigate = useNavigate();
-  /* const [register, setRegister] = useState({
-    name: "",
-    surname: "",
-    email: "",
-    address: "",
-    password: "",
-  }); */
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(register())
     const form = e.currentTarget;
 
     if (form.checkValidity() === false) {
@@ -65,14 +49,15 @@ dispatch(changePassword(e.currentTarget.value))
       setValidated(true);
       return;
     }
-/* 
+
     try {
-      await axios.post("http://44.203.152.52:8080/registration", register);
+      const userData = { name, surname, email, password };
+      await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
       navigate("/");
     } catch (error) {
       toast.error("Registration failed.");
-    } */
+    }
 
     setValidated(true);
   };
@@ -135,12 +120,8 @@ dispatch(changePassword(e.currentTarget.value))
                     required
                     type="text"
                     placeholder="First Name"
-                    /* onChange={(e) =>
-                      setRegister({ ...register, name: e.target.value })
-                    } */
-                   onChange={handlerChangeName}
-                   value={name} 
-                  
+                    onChange={handleChangeName}
+                    value={name}
                   />
                 </Form.Group>
                 <Form.Group
@@ -152,12 +133,8 @@ dispatch(changePassword(e.currentTarget.value))
                     required
                     type="text"
                     placeholder="Last name"
-                    onChange={handlerChangeLastName}
-                    value={surname} 
-                   /*  onChange={(e) =>
-                      setRegister({ ...register, surname: e.target.value })
-                    }
-                    */
+                    onChange={handleChangeLastName}
+                    value={surname}
                   />
                 </Form.Group>
                 <Form.Group
@@ -174,12 +151,8 @@ dispatch(changePassword(e.currentTarget.value))
                     type="email"
                     placeholder="example@gmail.com"
                     required
-                    onChange={handlerChangeEmail}
+                    onChange={handleChangeEmail}
                     value={email}
-                    /* onChange={(e) =>
-                      setRegister({ ...register, email: e.target.value })
-                    }
-                    */
                   />
                 </Form.Group>
                 <Form.Group
@@ -191,12 +164,8 @@ dispatch(changePassword(e.currentTarget.value))
                     type="password"
                     placeholder="Password"
                     required
-                    onChange={handlerChangePassword}
+                    onChange={handleChangePassword}
                     value={password}
-                    /* onChange={(e) =>
-                      setRegister({ ...register, password: e.target.value })
-                    }
-                     */
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -212,6 +181,7 @@ dispatch(changePassword(e.currentTarget.value))
               </Form>
             </Col>
           </Row>
+          <Toaster position="top-center" reverseOrder={false} />
         </Container>
       </div>
     </div>

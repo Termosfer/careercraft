@@ -27,9 +27,9 @@ const Home = () => {
           <button className="btn btn-outline-primary px-3">
             Explore Courses
           </button>
-          <p style={{ marginBottom: "0" }}>
+          <div style={{ marginBottom: "0" }}>
             <img className="w-75" src={image} alt="/" />
-          </p>
+          </div>
         </div>
       </section>
       <section className="section2">
@@ -95,7 +95,8 @@ const Home = () => {
                 to drive better teamwork, innovation, and adaptability within
                 organization.
                 <br />
-                <p></p> Boost Organizational Success: Cultivate a workforce
+                </p>
+                <p> Boost Organizational Success: Cultivate a workforce
                 equipped with strong soft skills, leading to improved
                 productivity and performance.
               </p>
@@ -108,8 +109,7 @@ const Home = () => {
                 Tailored Growth Opportunities: Experience personalized
                 development plans tailored to unique skill set and career goals.
                 <br />
-                <p></p>
-                <br />
+              <br/>
                 Enhanced Job Satisfaction: Develop crucial soft skills, leading
                 to increased job satisfaction and fulfillment in role.
               </p>
