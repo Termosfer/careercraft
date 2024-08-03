@@ -10,17 +10,47 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  changeName,
+  changeLastName,
+  changeEmail,
+  changePassword,
+} from "../../features/authSlice";
 function Register() {
+  const dispatch =  useDispatch()
+  const name = useSelector((state) => state.auth.name);
+  const lastName = useSelector((state) => state.auth.surname);
+  const email = useSelector((state) => state.auth.email);
+  const password = useSelector((state) => state.auth.password);
+
+  const handlerChangeName = (e) => {
+    const value = e.target.value;
+    console.log(value)
+    /* setRegister((prev) => ({ ...prev, name: value })); */
+    dispatch(changeName(value));
+  };
+const handlerChangeLastName = (e)=>{
+dispatch(changeLastName(e.currentTarget.value))
+}
+const handlerChangeEmail = (e)=>{
+dispatch(changeEmail(e.currentTarget.value))
+}
+const handlerChangePassword = (e)=>{
+dispatch(changePassword(e.currentTarget.value))
+}
+
+
+
   const [validated, setValidated] = useState(false);
   const navigate = useNavigate();
-  const [register, setRegister] = useState({
+  /* const [register, setRegister] = useState({
     name: "",
     surname: "",
     email: "",
     address: "",
     password: "",
-  });
-
+  }); */
 
 
 
@@ -33,14 +63,14 @@ function Register() {
       setValidated(true);
       return;
     }
-
+/* 
     try {
       await axios.post("http://44.203.152.52:8080/registration", register);
       toast.success("Successfully registered!");
       navigate("/");
     } catch (error) {
       toast.error("Registration failed.");
-    }
+    } */
 
     setValidated(true);
   };
@@ -57,8 +87,10 @@ function Register() {
                 <div className="text-width mb-5 w-100">
                   <h1 className="color">Join CareerCraft Today!</h1>
                   <span className="color ">
-                  Unlock your potential with cutting-edge soft skills training. Register to access
-                   personalized evaluations, tailored courses, and exclusive resources designed to help you excel.
+                    Unlock your potential with cutting-edge soft skills
+                    training. Register to access personalized evaluations,
+                    tailored courses, and exclusive resources designed to help
+                    you excel.
                   </span>
                 </div>
 
@@ -89,7 +121,9 @@ function Register() {
                 onSubmit={handleSubmit}
                 className="bg-light border rounded-4 px-5 py-4 w-100"
               >
-                <h2 className="border-bottom fw-bold pb-2">Create an account</h2>
+                <h2 className="border-bottom fw-bold pb-2">
+                  Create an account
+                </h2>
                 <Form.Group
                   /* as={Col} */ md="4"
                   controlId="validationCustom01"
@@ -99,10 +133,11 @@ function Register() {
                     required
                     type="text"
                     placeholder="First Name"
-                    onChange={(e) =>
+                    /* onChange={(e) =>
                       setRegister({ ...register, name: e.target.value })
-                    }
-                    value={register.name}
+                    } */
+                   onChange={handlerChangeName}
+                    /* value={register.name} */
                   />
                 </Form.Group>
                 <Form.Group
@@ -114,12 +149,11 @@ function Register() {
                     required
                     type="text"
                     placeholder="Last name"
-                    onChange={(e) =>
+                   /*  onChange={(e) =>
                       setRegister({ ...register, surname: e.target.value })
                     }
-                    value={register.surname}
+                    value={register.surname} */
                   />
-                 
                 </Form.Group>
                 <Form.Group
                   /* as={Col} */
@@ -135,12 +169,11 @@ function Register() {
                     type="email"
                     placeholder="example@gmail.com"
                     required
-                    onChange={(e) =>
+                    /* onChange={(e) =>
                       setRegister({ ...register, email: e.target.value })
                     }
-                    value={register.email}
+                    value={register.email} */
                   />
-                  
                 </Form.Group>
                 <Form.Group
                   /* as={Col} */ md="3"
@@ -151,12 +184,11 @@ function Register() {
                     type="password"
                     placeholder="Password"
                     required
-                    onChange={(e) =>
+                    /* onChange={(e) =>
                       setRegister({ ...register, password: e.target.value })
                     }
-                    value={register.password}
+                    value={register.password} */
                   />
-                 
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Check
