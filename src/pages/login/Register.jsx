@@ -16,11 +16,12 @@ import {
   changeLastName,
   changeEmail,
   changePassword,
+  register
 } from "../../features/authSlice";
 function Register() {
   const dispatch =  useDispatch()
   const name = useSelector((state) => state.auth.name);
-  const lastName = useSelector((state) => state.auth.surname);
+  const surname = useSelector((state) => state.auth.surname);
   const email = useSelector((state) => state.auth.email);
   const password = useSelector((state) => state.auth.password);
 
@@ -56,6 +57,7 @@ dispatch(changePassword(e.currentTarget.value))
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(register())
     const form = e.currentTarget;
 
     if (form.checkValidity() === false) {
@@ -137,7 +139,8 @@ dispatch(changePassword(e.currentTarget.value))
                       setRegister({ ...register, name: e.target.value })
                     } */
                    onChange={handlerChangeName}
-                    /* value={register.name} */
+                   value={name} 
+                  
                   />
                 </Form.Group>
                 <Form.Group
@@ -149,10 +152,12 @@ dispatch(changePassword(e.currentTarget.value))
                     required
                     type="text"
                     placeholder="Last name"
+                    onChange={handlerChangeLastName}
+                    value={surname} 
                    /*  onChange={(e) =>
                       setRegister({ ...register, surname: e.target.value })
                     }
-                    value={register.surname} */
+                    */
                   />
                 </Form.Group>
                 <Form.Group
@@ -169,10 +174,12 @@ dispatch(changePassword(e.currentTarget.value))
                     type="email"
                     placeholder="example@gmail.com"
                     required
+                    onChange={handlerChangeEmail}
+                    value={email}
                     /* onChange={(e) =>
                       setRegister({ ...register, email: e.target.value })
                     }
-                    value={register.email} */
+                    */
                   />
                 </Form.Group>
                 <Form.Group
@@ -184,10 +191,12 @@ dispatch(changePassword(e.currentTarget.value))
                     type="password"
                     placeholder="Password"
                     required
+                    onChange={handlerChangePassword}
+                    value={password}
                     /* onChange={(e) =>
                       setRegister({ ...register, password: e.target.value })
                     }
-                    value={register.password} */
+                     */
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
