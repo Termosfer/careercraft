@@ -57,7 +57,7 @@ const Footer = () => {
                 <span>Report a bug</span>
                 <span>Chat support</span>
               </div>
-              <div className="d-flex flex-column text-dark text">
+              <div className="d-flex flex-column text" style={{color:"#838383"}}>
                 <h4 className="mb-4" style={{color:"#0F77FF"}}>Contacts us</h4>
                 <span>
                   <CiMail /> contact@company.com
