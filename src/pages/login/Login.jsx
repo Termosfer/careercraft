@@ -3,9 +3,9 @@ import { Button, Form, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../features/authLogin"; // Düzenlenmiş import
+import { login } from "../../config/authLogin"; // Düzenlenmiş import
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5"; // İkonlar import edilmiş
-import { changeEmail, changePassword, clearInput } from "../../features/authSlice";
+import { changeEmail, changePassword, clearInput } from "../../config/authSlice";
 import toast from "react-hot-toast";
 const Login = () => {
   const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
@@ -25,7 +25,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const loginData = { email, password };
-      await dispatch(login(loginData)).unwrap();
+      await dispatch(login(loginData)).then(action=>{
+        localStorage.setItem("token", action.payload.accessToken)
+      });
       dispatch(clearInput())
       toast.success("Successfully registered!");
       navigate("/")

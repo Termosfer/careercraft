@@ -2,25 +2,18 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  data: null,
+  data: [],
   loading: false,
   error: "",
 };
 
-export const register = createAsyncThunk(
-  "register",
-  async (userData, thunkAPI) => {
-    try {
-      const response = await axios.post(
-        "http://44.203.152.52:8080/registration",
-        userData
-      );
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
-    }
-  }
-);
+export const register = createAsyncThunk("auth/register", async (userData) => {
+  const response = await axios.post(
+    "http://44.203.152.52:8080/registration",
+    userData
+  );
+  return response.data;
+});
 
 const registrationSlice = createSlice({
   name: "registration",
@@ -29,11 +22,10 @@ const registrationSlice = createSlice({
     builder
       .addCase(register.pending, (state) => {
         state.loading = true;
-        state.error = "";
       })
       .addCase(register.fulfilled, (state, action) => {
-        state.data = action.payload;
         state.loading = false;
+        state.data = action.payload;
       })
       .addCase(register.rejected, (state) => {
         state.loading = false;

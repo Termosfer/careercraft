@@ -10,13 +10,13 @@ import "./style.css";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { register } from "../../features/authRegister";
+import { register } from "../../config/authRegister";
 import {
   changeName,
   changeLastName,
   changeEmail,
   changePassword,
-} from "../../features/authSlice";
+} from "../../config/authSlice";
 function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
