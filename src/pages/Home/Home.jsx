@@ -133,10 +133,12 @@ const Home = () => {
                 to drive better teamwork, innovation, and adaptability within
                 organization.
                 <br />
-                </p>
-                <p> Boost Organizational Success: Cultivate a workforce
-                equipped with strong soft skills, leading to improved
-                productivity and performance.
+              </p>
+              <p>
+                {" "}
+                Boost Organizational Success: Cultivate a workforce equipped
+                with strong soft skills, leading to improved productivity and
+                performance.
               </p>
               <button className="btn btn-primary w-100">See more</button>
             </div>
@@ -147,12 +149,15 @@ const Home = () => {
                 Tailored Growth Opportunities: Experience personalized
                 development plans tailored to unique skill set and career goals.
                 <br />
-              <br/>
+                <br />
                 Enhanced Job Satisfaction: Develop crucial soft skills, leading
                 to increased job satisfaction and fulfillment in role.
               </p>
               <br />
               <button className="btn btn-primary w-100">See more</button>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="border">
             <h4 className="fw-semibold pb-5">How It Works</h4>
