@@ -3,14 +3,15 @@ import "./Home.css";
 import "axios";
 import axios from "axios";
 import image from "../../assets/img/7f9f8a75fed290e7cf1f91b9c71d3685.png";
-import img1 from "../../assets/img/box1.png";
-import img2 from "../../assets/img/box2.png";
-import img2_1 from "../../assets/img/box1.1.jpg";
-import img2_2 from "../../assets/img/box1.2.jpg";
-import img2_3 from "../../assets/img/box1.3.jpg";
-import img3_1 from "../../assets/img/box3.1.jpg";
-import img3_2 from "../../assets/img/box3.2.jpg";
-import img4 from "../../assets/img/box4.jpg";
+import S_2_img1 from "../../assets/img/S-2-img1.png";
+import S_2_img2 from "../../assets/img/S-2-img2.png";
+import S_2_img3 from "../../assets/img/S-2-img3.png";
+import S_2_img4_1 from "../../assets/img/S-2-img4.1.png";
+import S_2_img4_2 from "../../assets/img/S-2-img4.2.png";
+import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
+import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
+import S_3_img1 from "../../assets/img/S-3-img1.png";
+import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 
 const Home = () => {
   return (
@@ -33,54 +34,91 @@ const Home = () => {
         </div>
       </section>
       <section className="section2">
-        <div className="boxone py-5 d-flex justify-content-evenly container">
-          <div className="box">
-            <p className="fw-bold">AI-Powered Personalization</p>
-            <p>
-              We tailor exercises based on user progress for continuous
-              improvement. This adaptive learning approach ensures that each
-              user receives the most relevant and effective training, maximizing
-              their skill development potential.
-            </p>
-            <img src={img1} alt="" />
+        <div className="container">
+          <div className="pb-3">
+            <h4 className="text-center fw-semibold">
+              Maximize Your Growth with <br />
+              <span>Powerful Solutions</span>
+            </h4>
           </div>
-          <div className="box">
-            <p className="fw-bold">
-              AI-Driven Performance Analysis and Recommendations
-            </p>
-            <p>
-              We tailor exercises based on user progress for continuous
-              improvement. This adaptive learning approach ensures that each
-              user receives the most relevant and effective training, maximizing
-              their skill development potential.
-            </p>
-            <img src={img2} alt="" />
+          <div className="box2">
+            <div className="bg-white rounded d-flex p-5">
+              <div className="w-50 pe-4">
+                <p className="fw-medium fs-3">
+                  AI-Driven Performance Analysis and Recommendations 
+                </p>
+                <hr />
+                <span>
+                  We tailor exercises based on user progress for continuous
+                  improvement. This adaptive learning approach ensures that each
+                  user receives the most relevant and effective training,
+                  maximizing their skill development potential.
+                </span>
+              </div>
+              <div className="w-75 ps-4">
+                <img className="w-100" src={S_2_img1} alt="" />
+              </div>
+            </div>
+            <div className="d-flex pt-4">
+              <div className="bg-white rounded px-5 py-4 me-2 w-75">
+                <p className="fw-semibold fs-4">AI-Powered Personalization</p>
+                <span>
+                  We provide personalized recommendations for enhanced
+                  engagement. This approach ensures you receive the most
+                  relevant resources to advance your career effectively.
+                </span>
+                <img className="w-100 pt-4" src={S_2_img2} alt="" />
+              </div>
+              <div className="bg-white rounded px-5 py-4 ms-2 w-75">
+                <p className="fw-semibold fs-4">
+                  In-Depth Soft Skills Assessment
+                </p>
+                <span>
+                  Our evaluation delivers a precise analysis of your soft
+                  skills, highlighting both strengths and areas for development.
+                </span>
+                <img className="w-100 pt-4" src={S_2_img3} alt="" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="boxtwo d-flex container justify-content-evenly pb-5">
-          <div className="box">
-            <img className="w-100" src={img2_1} alt="" />
-            <span className="fw-semibold">Expert-Crafted Content</span>
-            <span>
-              <br />
-              Curated by industry professionals.
-            </span>
-          </div>
-          <div className="box">
-            <img className="w-100" src={img2_2} alt="" />
-            <span className="fw-semibold">Regular, Practical Exercises</span>
-            <span>
-              <br />
-              Real-world scenarios for skill enhancement.
-            </span>
-          </div>
-          <div className="box">
-            <img className="w-100" src={img2_3} alt="" />
-            <span className="fw-semibold">Progress Tracking and Analytics</span>
-            <span>
-              <br />
-              AI-generated insights for continuous improvement.
-            </span>
+          <div className="pt-5">
+            <h4 className="text-center fw-semibold my-5">
+              Experience the Benefits of <br /> <span>CareerCraft</span>
+            </h4>
+            <div className="box3">
+              <div className="box3items">
+                <img className="w-25" src={S_2_img4_1} alt="" />
+                <p className="fw-semibold">Tailored Growth Opportunities</p>
+                <span>
+                  Personalized development plans designed to match your unique
+                  skills and career goals.
+                </span>
+              </div>
+              <div className="box3items">
+                <img className="w-25" src={S_2_img4_2} alt="" />
+                <p className="fw-semibold">Targeted Skill Insights</p>
+                <span>
+                  Identify and address skill gaps with targeted resources for
+                  focused improvement.
+                </span>
+              </div>
+              <div className="box3items">
+                <img className="w-25" src={S_2_img4_3} alt="" />
+                <p className="fw-semibold">Enhanced Job Satisfaction</p>
+                <span>
+                  Identify and address skill gaps with targeted resources for
+                  focused improvement.
+                </span>
+              </div>
+              <div className="box3items">
+                <img className="w-25" src={S_2_img4_4} alt="" />
+                <p className="fw-semibold">Networking Opportunities</p>
+                <span>
+                  Connect with industry experts and build valuable professional
+                  relationships.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -115,45 +153,59 @@ const Home = () => {
               </p>
               <br />
               <button className="btn btn-primary w-100">See more</button>
+        <div className="container">
+          <div className="border">
+            <h4 className="fw-semibold pb-5">How It Works</h4>
+            <div className="d-flex">
+              <div className="w-25">
+                <img className="w-25" src={S_3_img1} alt="" />
+              </div>
+              <div className="textbox">
+                <div>
+                  <p className="fw-semibold">Register Your Account</p>
+                  <span>
+                    Sign up to create your personalized CareerCraft account with
+                    just <br /> a few details.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Complete initial soft skills evaluation
+                  </p>
+                  <span>
+                    Take our comprehensive evaluation to assess your current
+                    soft
+                    <br /> skills and identify areas for improvement.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Receive personalized course recommendations
+                  </p>
+                  <span>
+                    Get tailored course suggestions based on your evaluation to
+                    target
+                    <br /> your specific development needs.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Engage in regular exercises and track progress
+                  </p>
+                  <span>
+                    Participate in recommended exercises and monitor your
+                    progress
+                    <br /> with real-time updates on your achievements.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="section4">
-        <div className="box d-flex container justify-content-center py-5">
-          <div className="me-5">
-            <p className="fw-semibold fs-3">How It Works</p>
-            <p>
-              Simple steps to unlock your career <br /> potential and start
-              learning today.
-            </p>
-            <button className="btn btn-light text-primary px-4">
-              Get Started
-            </button>
-          </div>
-          <div className="d-grid ms-5">
-            <div className="box">
-              <div className="num">1</div>
-              <p>Register Your Account</p>
-            </div>
-            <div className="box">
-              <div className="num">2</div>
-              <p>Complete initial soft skills evaluation</p>
-            </div>
-            <div className="box">
-              <div className="num">3</div>
-              <p>Receive personalized course recommendations</p>
-            </div>
-            <div className="box">
-              <div className="num">4</div>
-              <p>Engage in regular exercises and track progress</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section5">
         <div className="box">
-          <img className="w-100" src={img4} alt="/" />
+          <img className="w-100" src={S_4_img1} alt="/" />
           <div className="boxone">
             <div className="boxtext">
               <p className="fs-2 fw-semibold">
