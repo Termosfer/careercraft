@@ -26,6 +26,9 @@
   width: 70%;
 }
 
+.form-check-input{
+  box-shadow: none !important;
+}
 
 .registration-btn{
   background-color: #0084FF !important;

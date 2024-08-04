@@ -122,6 +122,7 @@ function Register() {
                     placeholder="First Name"
                     onChange={handleChangeName}
                     value={name}
+      className="shadow-none"
                   />
                 </Form.Group>
                 <Form.Group
@@ -135,6 +136,7 @@ function Register() {
                     placeholder="Last name"
                     onChange={handleChangeLastName}
                     value={surname}
+                    className="shadow-none"
                   />
                 </Form.Group>
                 <Form.Group
@@ -153,6 +155,7 @@ function Register() {
                     required
                     onChange={handleChangeEmail}
                     value={email}
+                    className="shadow-none"
                   />
                 </Form.Group>
                 <Form.Group
@@ -166,6 +169,7 @@ function Register() {
                     required
                     onChange={handleChangePassword}
                     value={password}
+                    className="shadow-none"
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -173,6 +177,7 @@ function Register() {
                     required
                     label="Agree to terms and conditions"
                     feedbackType="invalid"
+                   
                   />
                 </Form.Group>
                 <Button type="submit" className="w-100 registration-btn">
