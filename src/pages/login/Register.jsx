@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import "./style.css";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../features/authRegister";
 import {
@@ -19,6 +19,7 @@ import {
 } from "../../features/authSlice";
 function Register() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const name = useSelector((state) => state.auth.name);
   const surname = useSelector((state) => state.auth.surname);
   const email = useSelector((state) => state.auth.email);
@@ -38,7 +39,6 @@ function Register() {
   };
 
   const [validated, setValidated] = useState(false);
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -181,7 +181,6 @@ function Register() {
               </Form>
             </Col>
           </Row>
-          <Toaster position="top-center" reverseOrder={false} />
         </Container>
       </div>
     </div>

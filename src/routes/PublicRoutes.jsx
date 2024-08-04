@@ -20,8 +20,8 @@ const PublicRoutes = () => {
             <Route path='/resources' element={<Resources/>}/>
             <Route path='/services' element={<Services/>}/>
             <Route path='/solutions' element={<Solution/>}/>
-            <Route path='/register' element={<Register/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='/auth/register' element={<Register/>}/>
+            <Route path='/auth/login' element={<Login/>}/>
         </Routes>
     </PublicLayout>
   )

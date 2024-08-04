@@ -1,4 +1,4 @@
-import { createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "",
@@ -23,10 +23,14 @@ const authSlice = createSlice({
     changePassword: (state, action) => {
       state.password = action.payload;
     },
+    clearInput: (state) => {
+      state.email = "";
+      state.password = "";
+    },
   },
 });
 
-export const { changeName, changeLastName, changeEmail, changePassword } =
+export const { changeName, changeLastName, changeEmail, changePassword, clearInput } =
   authSlice.actions;
 
 export default authSlice.reducer;

@@ -2,15 +2,15 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  user: [],
+  user: null,
   loading: false,
   error: "",
 };
 
-export const login = createAsyncThunk("login", async () => {
+export const login = createAsyncThunk("login", async (loginData) => {
   const response = await axios.post(
-    "http://44.203.152.52:8080/login",
-    userData
+    "http://44.203.152.52:8080/api/auth/login",
+    loginData
   );
   return response.data;
 });
@@ -18,6 +18,8 @@ export const login = createAsyncThunk("login", async () => {
 const authLogin = createSlice({
   name: "login",
   initialState: initialState,
+  
+  
   extraReducers: (builder) => {
     builder
       .addCase(login.pending, (state) => {
@@ -35,5 +37,4 @@ const authLogin = createSlice({
   },
 });
 
-
-export default authLogin.reducer
+export default authLogin.reducer;
