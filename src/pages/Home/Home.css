@@ -13,7 +13,7 @@
     }
   }
   .container {
-    padding: 0 140px;
+    /* padding: 0 140px; */
     .rounded {
       border-radius: 18px !important;
     }
@@ -49,7 +49,7 @@
 
 .section3 {
   .container {
-    padding: 0 140px;
+    /* padding: 0 140px; */
     .border {
       padding: 50px 130px;
       margin: 100px 0;

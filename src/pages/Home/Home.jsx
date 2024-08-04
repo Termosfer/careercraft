@@ -34,7 +34,7 @@ const Home = () => {
         </div>
       </section>
       <section className="section2">
-        <div className="container">
+        <div className="container w-75 px-5">
           <div className="pb-3">
             <h4 className="text-center fw-semibold">
               Maximize Your Growth with <br />
@@ -123,7 +123,7 @@ const Home = () => {
         </div>
       </section>
       <section className="section3">
-        <div className="container">
+        <div className="container w-75 px-5">
           <div className="border">
             <h4 className="fw-semibold pb-5">How It Works</h4>
             <div className="d-flex">
