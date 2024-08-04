@@ -36,9 +36,7 @@ const Login = () => {
     }
   };
 
-  const handleForgot = () => {
-    // Şifreyi unuttum işlemleri
-  };
+ 
 
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon

@@ -54,8 +54,7 @@ function Register() {
       const userData = { name, surname, email, password };
       await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
-      navigate("/login");
-      
+      navigate("/auth/login");
     } catch (error) {
       toast.error("Registration failed.");
     }
@@ -123,7 +122,7 @@ function Register() {
                     placeholder="First Name"
                     onChange={handleChangeName}
                     value={name}
-      className="shadow-none"
+                    className="shadow-none"
                   />
                 </Form.Group>
                 <Form.Group
@@ -178,7 +177,6 @@ function Register() {
                     required
                     label="Agree to terms and conditions"
                     feedbackType="invalid"
-                   
                   />
                 </Form.Group>
                 <Button type="submit" className="w-100 registration-btn">
