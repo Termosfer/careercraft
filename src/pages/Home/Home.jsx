@@ -122,42 +122,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <section className="section3">
-        <div className="boxone">
-          <div className="d-flex justify-content-center">
-            <div className="box me-2">
-              <img className="w-100" src={img3_1} alt="" />
-              <p className="fw-semibold pt-3">For Employers</p>
-              <p>
-                Transform Your Workforce: Enhance the soft skills of employees
-                to drive better teamwork, innovation, and adaptability within
-                organization.
-                <br />
-              </p>
-              <p>
-                {" "}
-                Boost Organizational Success: Cultivate a workforce equipped
-                with strong soft skills, leading to improved productivity and
-                performance.
-              </p>
-              <button className="btn btn-primary w-100">See more</button>
-            </div>
-            <div className="box ms-2">
-              <img className="w-100" src={img3_2} alt="" />
-              <p className="fw-semibold pt-3">For Employers</p>
-              <p>
-                Tailored Growth Opportunities: Experience personalized
-                development plans tailored to unique skill set and career goals.
-                <br />
-                <br />
-                Enhanced Job Satisfaction: Develop crucial soft skills, leading
-                to increased job satisfaction and fulfillment in role.
-              </p>
-              <br />
-              <button className="btn btn-primary w-100">See more</button>
-            </div>
-          </div>
-        </div>
+      <section className="section3">
         <div className="container">
           <div className="border">
             <h4 className="fw-semibold pb-5">How It Works</h4>
@@ -207,7 +172,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
       <section className="section4">
         <div className="box">
           <img className="w-100" src={S_4_img1} alt="/" />
