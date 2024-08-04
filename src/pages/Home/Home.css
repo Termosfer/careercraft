@@ -46,3 +46,24 @@
     }
   }
 }
+
+.section3 {
+  .container {
+    padding: 0 140px;
+    .border {
+      padding: 50px 130px;
+      margin: 100px 0;
+      border-radius: 36px;
+    }
+    p {
+      font-size: 20px;
+    }
+    span {
+      color: #838383;
+    }
+    .textbox {
+      display: grid;
+      row-gap: 45px;
+    }
+  }
+}

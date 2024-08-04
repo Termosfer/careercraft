@@ -10,6 +10,7 @@ import S_2_img4_1 from "../../assets/img/S-2-img4.1.png";
 import S_2_img4_2 from "../../assets/img/S-2-img4.2.png";
 import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
+import S_3_img1 from "../../assets/img/S-3-img1.png";
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
         <div className="container">
           <div className="pb-3">
             <h4 className="text-center fw-semibold">
-              Maximize Your Growth with <br /> Our{" "}
+              Maximize Your Growth with <br />
               <span>Powerful Solutions</span>
             </h4>
           </div>
@@ -115,6 +116,57 @@ const Home = () => {
                   Connect with industry experts and build valuable professional
                   relationships.
                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section3">
+        <div className="container">
+          <div className="border">
+            <h4 className="fw-semibold pb-5">How It Works</h4>
+            <div className="d-flex">
+              <div className="w-25">
+                <img className="w-25" src={S_3_img1} alt="" />
+              </div>
+              <div className="textbox">
+                <div>
+                  <p className="fw-semibold">Register Your Account</p>
+                  <span>
+                    Sign up to create your personalized CareerCraft account with
+                    just <br /> a few details.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Complete initial soft skills evaluation
+                  </p>
+                  <span>
+                    Take our comprehensive evaluation to assess your current
+                    soft
+                    <br /> skills and identify areas for improvement.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Receive personalized course recommendations
+                  </p>
+                  <span>
+                    Get tailored course suggestions based on your evaluation to
+                    target
+                    <br /> your specific development needs.
+                  </span>
+                </div>
+                <div className="">
+                  <p className="fw-semibold">
+                    Engage in regular exercises and track progress
+                  </p>
+                  <span>
+                    Participate in recommended exercises and monitor your
+                    progress
+                    <br /> with real-time updates on your achievements.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
