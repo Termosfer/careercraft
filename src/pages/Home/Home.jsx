@@ -122,7 +122,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="section3">
+      {/* <section className="section3">
         <div className="boxone">
           <div className="d-flex justify-content-center">
             <div className="box me-2">
@@ -207,7 +207,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="section4">
         <div className="box">
           <img className="w-100" src={S_4_img1} alt="/" />
