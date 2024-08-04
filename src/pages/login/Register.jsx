@@ -54,7 +54,8 @@ function Register() {
       const userData = { name, surname, email, password };
       await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
-      navigate("/");
+      navigate("/login");
+      
     } catch (error) {
       toast.error("Registration failed.");
     }

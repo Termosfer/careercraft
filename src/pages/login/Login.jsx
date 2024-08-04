@@ -44,6 +44,31 @@ const Login = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
   };
 
+  const handleForgot = async () => {
+    try {
+      await axios.post(`http://44.203.152.52:8080/api/password/reset-request?email=${email}`)
+      console.log("sent mail");
+      navigate("/checkMail")
+    } catch (error) {
+      console.log(error.response.data.message);
+      
+    }
+  }
+
+  const handleLogin= async()=>{
+    try {
+     const {data}= await axios.post("http://44.203.152.52:8080/api/auth/login",userLogged)
+     localStorage.setItem("token", JSON.stringify(data.accessToken));
+     navigate("/")
+     console.log(data.accessToken);
+     
+    } catch (error) {
+      console.log(error.response);
+      
+    }
+  }
+
+
   return (
     <div className="login-pg">
       <div className="bg-img">
@@ -101,7 +126,7 @@ const Login = () => {
                 </div>
               </Form.Group>
 
-              <Button className="w-100 log-btn" variant="primary" type="submit">
+              <Button onClick={handleLogin} className="w-100 log-btn" variant="primary">
                 Login now
               </Button>
 
