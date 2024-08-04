@@ -11,6 +11,7 @@ import S_2_img4_2 from "../../assets/img/S-2-img4.2.png";
 import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
 import S_3_img1 from "../../assets/img/S-3-img1.png";
+import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 
 const Home = () => {
   return (
@@ -168,6 +169,28 @@ const Home = () => {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section4">
+        <div className="box">
+          <img className="w-100" src={S_4_img1} alt="/" />
+          <div className="boxone">
+            <div className="boxtext">
+              <p className="fs-2 fw-semibold">
+                Start Your Soft Skills Journey Today
+              </p>
+              <p>
+                Unlock your potential with CareerCraft's personalized training
+                solutions.
+              </p>
+              <button className="btn btn-light text-primary me-2 px-3">
+                Book a Demo
+              </button>
+              <button className="btn btn-outline-light ms-2 px-3">
+                Explore Courses
+              </button>
             </div>
           </div>
         </div>

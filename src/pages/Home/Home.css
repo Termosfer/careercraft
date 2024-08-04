@@ -67,3 +67,23 @@
     }
   }
 }
+
+.section4 {
+  .box {
+    position: relative;
+  }
+  .boxone {
+    background-color: hsla(215, 100%, 52%, 0.5);
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+  .boxtext {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+  }
+}
