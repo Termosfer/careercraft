@@ -52,7 +52,7 @@ function CollapsibleExample() {
                 </Link>
                 <Link
                   to="/auth/register"
-                  className="me-1 sign-up"
+                  className="me-1 login"
                   onClick={() => dispatch(logout())}
                 >
                   Logout
