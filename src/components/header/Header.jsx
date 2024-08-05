@@ -18,17 +18,19 @@ function CollapsibleExample() {
   }, [dispatch]);
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container className="d-flex align-items-center justify-content-center w-75 px-5">
-        <Link to="/" className="d-flex align-items-center">
-          <Image src={logo} className="logo" alt="logo" />
-        </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
+        <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-5 gap-5 mx-auto">
+          <Link to="/" className="d-flex align-items-center">
+            <Image src={logo} className="logo" alt="logo" />
+          </Link>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        </div>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto d-flex justify-content-between column-gap-4 ">
+          <Nav className="mx-auto  d-flex align-items-md-center align-items-center justify-content-md-center column-gap-lg-4 text-nowrap">
             <Link to="/" className="text-decoration-none text-dark">
               Home
             </Link>
-            <Link to="/about" className="text-decoration-none text-dark">
+            <Link to="/about" className="text-decoration-none text-dark ">
               About Us
             </Link>
             <Link to="/solutions" className="text-decoration-none text-dark">
@@ -44,7 +46,7 @@ function CollapsibleExample() {
               Contacts
             </Link>
           </Nav>
-          <Nav className="d-flex align-items-center column-gap-2">
+          <Nav className="d-flex justify-content-md-between justify-content-between align-items-md-center align-items-center column-gap-2 mt-2 mt-lg-0 text-nowrap">
             {user ? (
               <div>
                 <Link to="/auth/register" className="me-1 sign-up">
