@@ -7,7 +7,7 @@ import logo from "../../assets/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userData } from "../../config/authLogin";
+import { userData, logout } from "../../config/authLogin";
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.login.user);
@@ -49,6 +49,13 @@ function CollapsibleExample() {
               <div>
                 <Link to="/auth/register" className="me-1 sign-up">
                   {user.name}
+                </Link>
+                <Link
+                  to="/auth/register"
+                  className="me-1 login"
+                  onClick={() => dispatch(logout())}
+                >
+                  Logout
                 </Link>
                 <Link to="/auth/login" className="ms-1 login">
                   Book a Demo
