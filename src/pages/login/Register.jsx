@@ -16,6 +16,7 @@ import {
   changeLastName,
   changeEmail,
   changePassword,
+  clearInput
 } from "../../config/authSlice";
 function Register() {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ function Register() {
       const userData = { name, surname, email, password };
       await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
+      dispatch(clearInput())
       navigate("/auth/login");
     } catch (error) {
       toast.error("Registration failed.");
