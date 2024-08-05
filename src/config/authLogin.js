@@ -15,17 +15,24 @@ export const login = createAsyncThunk("auth/login", async (loginData) => {
   return response.data;
 });
 
-export const user = createAsyncThunk("auth/user", async () => {
+export const userData = createAsyncThunk("auth/userData", async () => {
   const token = localStorage.getItem("token");
-  const response = await axios.get(
-    "http://44.203.152.52:8080/api/auth/customerId",
-    {
-      headers: {
-        Authorization: `Token ${token}`,
-      },
+  if (token) {
+    try {
+      const response = await axios.get(
+        "http://44.203.152.52:8080/customerInfo",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      return response.data;
+    } catch (error) {
+      console.log(error);
     }
-  );
-  return response.data;
+  }
 });
 
 const authLogin = createSlice({
@@ -45,17 +52,17 @@ const authLogin = createSlice({
         state.loading = false;
         state.error = "Login failed";
       })
-      .addCase(user.pending, (state) => {
+      .addCase(userData.pending, (state) => {
         state.loading = true;
       })
-      .addCase(user.fulfilled, (state, action) => {
+      .addCase(userData.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload;
       })
-      .addCase(user.rejected, (state) => {
+      .addCase(userData.rejected, (state) => {
         state.loading = false;
         state.user = null;
-      })
+      });
   },
 });
 
