@@ -42,7 +42,7 @@ const Login = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
   };
 
-  const handleForgot = async () => {
+  /* const handleForgot = async () => {
     try {
       await axios.post(`http://44.203.152.52:8080/api/password/reset-request?email=${email}`)
       console.log("sent mail");
@@ -64,7 +64,7 @@ const Login = () => {
       console.log(error.response);
       
     }
-  }
+  } */
 
 
   return (
@@ -99,7 +99,7 @@ const Login = () => {
                   <span>Password</span>
                   <span>
                     <Button
-                      onClick={handleForgot}
+                      /* onClick={handleForgot} */
                       className="p-0 border-0 bg-transparent text-primary text-decoration-none"
                     >
                       Forgot Password?
@@ -124,7 +124,7 @@ const Login = () => {
                 </div>
               </Form.Group>
 
-              <Button onClick={handleLogin} className="w-100 log-btn" variant="primary">
+              <Button /* onClick={handleLogin} */ type="submit" className="w-100 log-btn" variant="primary">
                 Login now
               </Button>
 
