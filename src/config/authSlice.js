@@ -26,6 +26,8 @@ const authSlice = createSlice({
     clearInput: (state) => {
       state.email = "";
       state.password = "";
+      state.name = "";
+      state.surname = "";
     },
   },
 });
