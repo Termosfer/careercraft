@@ -1,5 +1,5 @@
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import logo from "../../assets/Logo.png";
@@ -9,12 +9,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { userData, logout } from "../../config/authLogin";
 function CollapsibleExample() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.login.user);
   console.log(user, "asd");
   useEffect(() => {
     dispatch(userData());
   }, [dispatch]);
-
+  const handlerLogout = () => {
+    dispatch(logout())
+    navigate("/")
+  }
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
@@ -54,10 +58,8 @@ function CollapsibleExample() {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item to="/user/profile">
-                      Profile
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={()=>dispatch(logout())}>
+                    <Dropdown.Item to="/user/profile">Profile</Dropdown.Item>
+                    <Dropdown.Item onClick={handlerLogout}>
                       Logout
                     </Dropdown.Item>
                   </Dropdown.Menu>
