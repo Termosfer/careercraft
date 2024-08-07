@@ -1,10 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import "./style.css";
 import { useState } from "react";
@@ -16,7 +11,7 @@ import {
   changeLastName,
   changeEmail,
   changePassword,
-  clearInput
+  clearInput,
 } from "../../config/authSlice";
 function Register() {
   const dispatch = useDispatch();
@@ -55,7 +50,7 @@ function Register() {
       const userData = { name, surname, email, password };
       await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
-      dispatch(clearInput())
+      dispatch(clearInput());
       navigate("/auth/login");
     } catch (error) {
       toast.error("Registration failed.");
@@ -69,9 +64,8 @@ function Register() {
       <img className="register-img" src={img} alt="bg-img" />
       <div className="bg-img-cover">
         <Container className="w-75 p-5">
-          <Row /* className="d-flex align-items-center justify-content-center" */
-          >
-            <Col xs={6}>
+          <Row>
+            <Col xs={12} md={6} lg={6}>
               <div className="d-flex flex-column">
                 <div className="text-width mb-5 w-100">
                   <h1 className="color">Join CareerCraft Today!</h1>
@@ -103,18 +97,19 @@ function Register() {
                 </span>
               </div>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} md={6} lg={6}>
               <Form
                 noValidate
                 validated={validated}
                 onSubmit={handleSubmit}
-                className="bg-light border rounded-4 px-5 py-4 w-100"
+                className="bg-light border rounded-4 px-5 py-4"
               >
                 <h2 className="border-bottom fw-bold pb-2">
                   Create an account
                 </h2>
                 <Form.Group
-                  /* as={Col} */ md="4"
+                  as={Col}
+                  md="12" /* className="w-100" */
                   controlId="validationCustom01"
                 >
                   <Form.Label>First Name</Form.Label>
@@ -127,10 +122,7 @@ function Register() {
                     className="shadow-none"
                   />
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="4"
-                  controlId="validationCustom02"
-                >
+                <Form.Group as={Col} md="12" controlId="validationCustom02">
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control
                     required
@@ -141,15 +133,8 @@ function Register() {
                     className="shadow-none"
                   />
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */
-                  md="4"
-                  controlId="validationCustomUsername"
-                ></Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="6"
-                  controlId="validationCustom03"
-                >
+
+                <Form.Group as={Col} md="12" controlId="validationCustom03">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
@@ -160,10 +145,7 @@ function Register() {
                     className="shadow-none"
                   />
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="3"
-                  controlId="validationCustom04"
-                >
+                <Form.Group as={Col} md="12" controlId="validationCustom04">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
