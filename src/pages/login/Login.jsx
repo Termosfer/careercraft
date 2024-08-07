@@ -29,7 +29,7 @@ const Login = () => {
         localStorage.setItem("token", action.payload.accessToken)
       });
       dispatch(clearInput())
-      toast.success("Successfully registered!");
+      toast.success("Successfully login!");
       navigate("/")
     } catch (error) {
       console.error("Login failed:", error);
