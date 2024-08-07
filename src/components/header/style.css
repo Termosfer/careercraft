@@ -22,22 +22,24 @@ a {
 
 .sign-up,
 .login {
-  padding: 5px 15px;
-  background-color: transparent;
-  border: 1px solid #0084ff;
-  color: #0084ff;
-  border-radius: 8px;
+  padding: 5px 15px !important;
+  border-radius: 5px !important;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.sign-up:hover {
-  background-color: #0084ff;
-  color: #fff;
+  border: 1px solid #0084ff !important;
+  transition: all 0.3s ease !important;
 }
 
 .login {
   background-color: #0084ff;
   color: #fff;
-  transition: all.3s ease;
+}
+
+.sign-up {
+  background-color: transparent !important;
+  color: #0084ff !important;
+ 
+}
+.sign-up:hover {
+  background-color: #0084ff !important;
+  color: #fff !important;
 }
