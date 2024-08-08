@@ -12,6 +12,7 @@ import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
 import S_3_img1 from "../../assets/img/S-3-img1.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -28,9 +29,9 @@ const Home = () => {
           <p className="fw-semibold">
             Forge Stronger Teams: Revolutionize Soft Skills Learning
           </p>
-          <button className="btnone btn btn-primary me-3 px-3">
+          <Link to="/free-trial" className="btnone btn btn-primary me-3 px-3">
             Book a Demo
-          </button>
+          </Link>
           <button className="btntwo btn btn-outline-primary px-3">
             Explore Courses
           </button>
