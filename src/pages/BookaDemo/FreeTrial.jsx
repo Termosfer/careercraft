@@ -17,11 +17,7 @@ console.log(question, "quest")
   return (
     <div>
       <h1>Questions</h1>
-      {question ? (
-        <pre>{JSON.stringify(question, null, 2)}</pre>
-      ) : (
-        <div>No questions available</div>
-      )}
+    
     </div>
   );
 }
