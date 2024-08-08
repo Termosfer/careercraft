@@ -64,7 +64,7 @@ function CollapsibleExample() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Link to="/auth/login" className="ms-1 login">
+                <Link to="/free-trial" className="ms-1 login">
                   Book a Demo
                 </Link>
               </>
