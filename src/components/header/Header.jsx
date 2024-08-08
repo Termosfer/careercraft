@@ -11,7 +11,6 @@ function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.login.user);
-  console.log(user, "asd");
   useEffect(() => {
     dispatch(userData());
   }, [dispatch]);
