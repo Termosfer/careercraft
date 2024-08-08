@@ -17,15 +17,21 @@ const Home = () => {
   return (
     <div>
       <section className="section1">
-        <div className="text-center pt-5">
+        <div
+          className="text-center pt-5"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <p className="fw-bold fs-2">
             Transform Your Workforce with <br /> Next-Gen Soft Skills Training
           </p>
           <p className="fw-semibold">
             Forge Stronger Teams: Revolutionize Soft Skills Learning
           </p>
-          <button className="btn btn-primary me-3 px-3">Book a Demo</button>
-          <button className="btn btn-outline-primary px-3">
+          <button className="btnone btn btn-primary me-3 px-3">
+            Book a Demo
+          </button>
+          <button className="btntwo btn btn-outline-primary px-3">
             Explore Courses
           </button>
           <div style={{ marginBottom: "0" }}>
@@ -138,7 +144,7 @@ const Home = () => {
                     just <br /> a few details.
                   </span>
                 </div>
-                <div className="">
+                <div>
                   <p className="fw-semibold">
                     Complete initial soft skills evaluation
                   </p>
@@ -148,7 +154,7 @@ const Home = () => {
                     <br /> skills and identify areas for improvement.
                   </span>
                 </div>
-                <div className="">
+                <div>
                   <p className="fw-semibold">
                     Receive personalized course recommendations
                   </p>
@@ -158,7 +164,7 @@ const Home = () => {
                     <br /> your specific development needs.
                   </span>
                 </div>
-                <div className="">
+                <div>
                   <p className="fw-semibold">
                     Engage in regular exercises and track progress
                   </p>
@@ -185,10 +191,10 @@ const Home = () => {
                 Unlock your potential with CareerCraft's personalized training
                 solutions.
               </p>
-              <button className="btn btn-light text-primary me-2 px-3">
+              <button className="btnone btn btn-light text-primary me-2 px-3">
                 Book a Demo
               </button>
-              <button className="btn btn-outline-light ms-2 px-3">
+              <button className="btntwo btn btn-outline-light ms-2 px-3">
                 Explore Courses
               </button>
             </div>
