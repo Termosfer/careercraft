@@ -7,6 +7,10 @@ import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../config/authLogin"; // Düzenlenmiş import
+import { changeEmail, changePassword, clearInput } from "../../config/authSlice";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [show, setShow] = useState(false);
