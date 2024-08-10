@@ -11,6 +11,7 @@ import Solution from '../pages/Solution/Solution'
 import Login from '../pages/login/Login'
 import CheckMail from '../pages/CheckMail/CheckMail'
 import FreeTrial from '../pages/BookaDemo/FreeTrial'
+import Profile from '../pages/Profile/Profile'
 
 const PublicRoutes = () => {
   return (
@@ -26,6 +27,8 @@ const PublicRoutes = () => {
             <Route path='/auth/login' element={<Login/>}/>
             <Route path='/checkMail' element={<CheckMail/>}/>
             <Route path='/free-trial' element={<FreeTrial/>}/>
+            <Route path='/profile' element={<Profile/>}/>
+
         </Routes>
     </PublicLayout>
   )
