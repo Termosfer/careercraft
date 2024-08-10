@@ -1,28 +1,40 @@
 import { useNavigate } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import "./style.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import { register } from "../../config/authRegister";
+import {
+  changeName,
+  changeLastName,
+  changeEmail,
+  changePassword,
+  clearInput,
+} from "../../config/authSlice";
 function Register() {
-  const [validated, setValidated] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [register, setRegister] = useState({
-    name: "",
-    surname: "",
-    email: "",
-    address: "",
-    password: "",
-  });
+  const name = useSelector((state) => state.auth.name);
+  const surname = useSelector((state) => state.auth.surname);
+  const email = useSelector((state) => state.auth.email);
+  const password = useSelector((state) => state.auth.password);
 
+  const handleChangeName = (e) => {
+    dispatch(changeName(e.currentTarget.value));
+  };
+  const handleChangeLastName = (e) => {
+    dispatch(changeLastName(e.currentTarget.value));
+  };
+  const handleChangeEmail = (e) => {
+    dispatch(changeEmail(e.currentTarget.value));
+  };
+  const handleChangePassword = (e) => {
+    dispatch(changePassword(e.currentTarget.value));
+  };
 
-
+  const [validated, setValidated] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,9 +47,11 @@ function Register() {
     }
 
     try {
-      await axios.post("http://44.203.152.52:8080/registration", register);
+      const userData = { name, surname, email, password };
+      await dispatch(register(userData)).unwrap();
       toast.success("Successfully registered!");
-      navigate("/");
+      dispatch(clearInput());
+      navigate("/auth/login");
     } catch (error) {
       toast.error("Registration failed.");
     }
@@ -50,15 +64,16 @@ function Register() {
       <img className="register-img" src={img} alt="bg-img" />
       <div className="bg-img-cover">
         <Container className="w-75 p-5">
-          <Row /* className="d-flex align-items-center justify-content-center" */
-          >
-            <Col xs={6}>
+          <Row>
+            <Col xs={12} md={6} lg={6}>
               <div className="d-flex flex-column">
                 <div className="text-width mb-5 w-100">
                   <h1 className="color">Join CareerCraft Today!</h1>
                   <span className="color ">
-                  Unlock your potential with cutting-edge soft skills training. Register to access
-                   personalized evaluations, tailored courses, and exclusive resources designed to help you excel.
+                    Unlock your potential with cutting-edge soft skills
+                    training. Register to access personalized evaluations,
+                    tailored courses, and exclusive resources designed to help
+                    you excel.
                   </span>
                 </div>
 
@@ -82,16 +97,19 @@ function Register() {
                 </span>
               </div>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} md={6} lg={6}>
               <Form
                 noValidate
                 validated={validated}
                 onSubmit={handleSubmit}
-                className="bg-light border rounded-4 px-5 py-4 w-100"
+                className="bg-light border rounded-4 px-5 py-4"
               >
-                <h2 className="border-bottom fw-bold pb-2">Create an account</h2>
+                <h2 className="border-bottom fw-bold pb-2">
+                  Create an account
+                </h2>
                 <Form.Group
-                  /* as={Col} */ md="4"
+                  as={Col}
+                  md="12" /* className="w-100" */
                   controlId="validationCustom01"
                 >
                   <Form.Label>First Name</Form.Label>
@@ -99,64 +117,44 @@ function Register() {
                     required
                     type="text"
                     placeholder="First Name"
-                    onChange={(e) =>
-                      setRegister({ ...register, name: e.target.value })
-                    }
-                    value={register.name}
+                    onChange={handleChangeName}
+                    value={name}
+                    className="shadow-none"
                   />
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="4"
-                  controlId="validationCustom02"
-                >
+                <Form.Group as={Col} md="12" controlId="validationCustom02">
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control
                     required
                     type="text"
                     placeholder="Last name"
-                    onChange={(e) =>
-                      setRegister({ ...register, surname: e.target.value })
-                    }
-                    value={register.surname}
+                    onChange={handleChangeLastName}
+                    value={surname}
+                    className="shadow-none"
                   />
-                 
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */
-                  md="4"
-                  controlId="validationCustomUsername"
-                ></Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="6"
-                  controlId="validationCustom03"
-                >
+
+                <Form.Group as={Col} md="12" controlId="validationCustom03">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="example@gmail.com"
                     required
-                    onChange={(e) =>
-                      setRegister({ ...register, email: e.target.value })
-                    }
-                    value={register.email}
+                    onChange={handleChangeEmail}
+                    value={email}
+                    className="shadow-none"
                   />
-                  
                 </Form.Group>
-                <Form.Group
-                  /* as={Col} */ md="3"
-                  controlId="validationCustom04"
-                >
+                <Form.Group as={Col} md="12" controlId="validationCustom04">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
                     placeholder="Password"
                     required
-                    onChange={(e) =>
-                      setRegister({ ...register, password: e.target.value })
-                    }
-                    value={register.password}
+                    onChange={handleChangePassword}
+                    value={password}
+                    className="shadow-none"
                   />
-                 
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Check

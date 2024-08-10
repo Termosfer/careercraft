@@ -1,28 +1,46 @@
-.active {
-  background-color: #0084FF;
+.active:hover {
+  background-color: #0084ff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
-a{
+a {
   text-decoration: none;
 }
-.login {
-  font-size: 20px;
-}
 
-.signup{
-    font-size: 18px;
-}
-
-.navbar-brand{
+.navbar-brand {
   height: 55px;
   width: 115px;
 }
 
-.logo{
-height: 62px;
-width: 130px;
-object-fit: contain;
+.logo {
+  height: 62px;
+  width: 130px;
+  object-fit: contain;
+}
+
+.sign-up,
+.login {
+  padding: 5px 15px !important;
+  border-radius: 5px !important;
+  text-decoration: none;
+  border: 1px solid #0084ff !important;
+  transition: all 0.3s ease !important;
+}
+
+.login {
+  background-color: #0084ff;
+  color: #fff;
+}
+
+.sign-up {
+  background-color: transparent !important;
+  color: #0084ff !important;
+ 
+}
+.sign-up:hover {
+  background-color: #0084ff !important;
+  color: #fff !important;
+  
 }

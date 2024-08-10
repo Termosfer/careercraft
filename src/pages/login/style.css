@@ -3,10 +3,12 @@
 .bg-img {
   height: 91vh;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 .register-img {
   width: 100%;
-  height: 91vh;
+  height: 100%;
 }
 
 .bg-img-cover {
@@ -23,13 +25,17 @@
 }
 
 .text-width {
-  width: 70%;
+  width: 100%;
 }
 
+.form-check-input{
+  box-shadow: none !important;
+}
 
 .registration-btn{
-  background-color: #0084FF;
+  background-color: #0084FF !important;
 }
+
 
 
 /* login css */
@@ -86,6 +92,7 @@
 }
 
 .icon-cont{
+  cursor: pointer;
   position: absolute;
   top: 40px;
   right: 16px;

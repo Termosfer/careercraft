@@ -1,12 +1,22 @@
-.footer-logo{
-    font-size: 30px;
-    font-weight: 800;
+.footer-logo {
+  font-size: 30px;
+  font-weight: 800;
 }
 
-h4{
-    font-size: 20px;
+h4 {
+  font-size: 20px;
 }
-.text > span{
-    font-size: 16px;
-    line-height: 35px;
+.text > span {
+  font-size: 16px;
+  line-height: 35px;
+  text-align: left;
+}
+
+.icons {
+    margin: 0;
+  width: 100%;
+  display: flex;
+  
+  column-gap: 30px;
+  /* justify-content: space-between; */
 }

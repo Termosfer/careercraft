@@ -9,6 +9,9 @@ import Resources from '../pages/Resources/Resources'
 import Services from '../pages/Services/Services'
 import Solution from '../pages/Solution/Solution'
 import Login from '../pages/login/Login'
+import CheckMail from '../pages/CheckMail/CheckMail'
+import FreeTrial from '../pages/BookaDemo/FreeTrial'
+import Profile from '../pages/Profile/Profile'
 
 const PublicRoutes = () => {
   return (
@@ -20,8 +23,12 @@ const PublicRoutes = () => {
             <Route path='/resources' element={<Resources/>}/>
             <Route path='/services' element={<Services/>}/>
             <Route path='/solutions' element={<Solution/>}/>
-            <Route path='/register' element={<Register/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='/auth/register' element={<Register/>}/>
+            <Route path='/auth/login' element={<Login/>}/>
+            <Route path='/checkMail' element={<CheckMail/>}/>
+            <Route path='/free-trial' element={<FreeTrial/>}/>
+            <Route path='/profile' element={<Profile/>}/>
+
         </Routes>
     </PublicLayout>
   )
