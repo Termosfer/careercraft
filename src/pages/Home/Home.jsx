@@ -49,7 +49,7 @@ const Home = () => {
             </h4>
           </div>
           <div className="box2">
-            <div className="bg-white rounded d-flex p-5">
+            <div className="response bg-white rounded d-flex p-5">
               <div className="w-50 pe-4">
                 <p className="fw-medium fs-3">
                   AI-Driven Performance Analysis and Recommendations 
@@ -66,7 +66,7 @@ const Home = () => {
                 <img className="w-100" src={S_2_img1} alt="" />
               </div>
             </div>
-            <div className="d-flex pt-4">
+            <div className="response d-flex pt-4">
               <div className="bg-white rounded px-5 py-4 me-2 w-75">
                 <p className="fw-semibold fs-4">AI-Powered Personalization</p>
                 <span>
