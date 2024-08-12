@@ -96,7 +96,7 @@
     }
     .textbox {
       display: grid;
-      row-gap: 45px;
+      row-gap: 100px;
       .d-flex {
         column-gap: 15%;
         .w-25 {
