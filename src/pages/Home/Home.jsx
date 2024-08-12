@@ -11,6 +11,8 @@ import S_2_img4_2 from "../../assets/img/S-2-img4.2.png";
 import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
 import S_3_img1 from "../../assets/img/S-3-img1.png";
+import aa from "../../assets/img/aa.png";
+import bb from "../../assets/img/bb.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 import { Link } from "react-router-dom";
 
@@ -132,48 +134,98 @@ const Home = () => {
       <section className="section3">
         <div className="container w-75 px-5">
           <div className="border">
-            <h4 className="fw-semibold pb-5">How It Works</h4>
+            <h4
+              className="fw-semibold pb-5"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              How It Works
+            </h4>
             <div className="d-flex">
-              <div className="w-25">
-                <img className="w-25" src={S_3_img1} alt="" />
-              </div>
+              {/* <div className="">
+                <div
+                  className="w-25"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={S_3_img1} alt="" />
+                  <img className="w-100" src={aa} alt="/" />
+                </div>
+                <div
+                  className="aaa w-25"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={S_3_img1} alt="" />
+                  <img className="w-100" src={aa} alt="/" />
+                </div>
+              </div> */}
+
               <div className="textbox">
-                <div>
-                  <p className="fw-semibold">Register Your Account</p>
-                  <span>
-                    Sign up to create your personalized CareerCraft account with
-                    just <br /> a few details.
-                  </span>
+                <div
+                  className="d-flex"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={aa} alt="/" />
+                  <div>
+                    <p className="fw-semibold">Register Your Account</p>
+                    <span>
+                      Sign up to create your personalized CareerCraft account
+                      with just <br /> a few details.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Complete initial soft skills evaluation
-                  </p>
-                  <span>
-                    Take our comprehensive evaluation to assess your current
-                    soft
-                    <br /> skills and identify areas for improvement.
-                  </span>
+                <div
+                  className="d-flex"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={aa} alt="/" />
+                  <div className="">
+                    <p className="fw-semibold">
+                      Complete initial soft skills evaluation
+                    </p>
+                    <span>
+                      Take our comprehensive evaluation to assess your current
+                      soft
+                      <br /> skills and identify areas for improvement.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Receive personalized course recommendations
-                  </p>
-                  <span>
-                    Get tailored course suggestions based on your evaluation to
-                    target
-                    <br /> your specific development needs.
-                  </span>
+                <div
+                  className="d-flex"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={aa} alt="/" />
+                  <div className="">
+                    <p className="fw-semibold">
+                      Receive personalized course recommendations
+                    </p>
+                    <span>
+                      Get tailored course suggestions based on your evaluation
+                      to target
+                      <br /> your specific development needs.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Engage in regular exercises and track progress
-                  </p>
-                  <span>
-                    Participate in recommended exercises and monitor your
-                    progress
-                    <br /> with real-time updates on your achievements.
-                  </span>
+                <div
+                  className="d-flex"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img className="w-25" src={aa} alt="/" />
+                  <div className="">
+                    <p className="fw-semibold">
+                      Engage in regular exercises and track progress
+                    </p>
+                    <span>
+                      Participate in recommended exercises and monitor your
+                      progress
+                      <br /> with real-time updates on your achievements.
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
