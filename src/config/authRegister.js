@@ -7,9 +7,9 @@ const initialState = {
   error: "",
 };
 
-export const register = createAsyncThunk("auth/register", async (userData) => {
+export const register = createAsyncThunk("registration/register", async (userData) => {
   const response = await axios.post(
-    "http://44.203.152.52:8080/registration",
+    "http://44.203.152.52:8070/api/registration",
     userData
   );
   return response.data;
