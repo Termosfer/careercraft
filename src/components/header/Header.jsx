@@ -1,16 +1,29 @@
 import "./style.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, DropdownToggle, Nav, Navbar } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import logo from "../../assets/Logo.png";
 import Image from "react-bootstrap/Image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userData, logout } from "../../config/authLogin";
+import { RiArrowDropDownLine, RiArrowDownSLine } from "react-icons/ri"
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [active, setActive] = useState(false)
   const user = useSelector((state) => state.login.user);
+
+  const bgColors = ["#D3E5FF", "#FFD6D3", "#D3FFE0", "#F6FFD3", "#F6D3FF", "#FFD3EE", "#D3F7FF"]
+  const txtColors = ["#3480EC", "#BB342A", "#15B24A", "#AFB215", "#8015B2", "#FFD3EE", "#D3F7FF"]
+
+const getRandomColor = (colors)=> colors[Math.floor(Math.random() * colors.length)]
+const [background, setBackground] = useState(getRandomColor(bgColors));
+  const [textColor, setTextColor] = useState(getRandomColor(txtColors));
+  const handlerClick = () => {
+    setActive(!active)
+  }
+
   useEffect(() => {
     dispatch(userData());
   }, [dispatch]);
@@ -50,23 +63,29 @@ function CollapsibleExample() {
           </Nav>
           <Nav className="d-flex justify-content-md-between justify-content-between align-items-md-center align-items-center column-gap-2 mt-2 mt-lg-0 text-nowrap">
             {user ? (
-              <>
-                <Dropdown>
-                  <Dropdown.Toggle className="sign-up" id="dropdown-basic">
-                    {user.name}
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item to="/user/profile">Profile</Dropdown.Item>
-                    <Dropdown.Item onClick={handlerLogout}>
-                      Logout
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+              <div className="d-flex align-items-center gap-2">
                 <Link to="/free-trial" className="ms-1 login">
                   Book a Demo
                 </Link>
-              </>
+                <div className="position-relative">
+                  <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
+                    <h1 className="rounded-circle" id="dropdown-basic" style={{backgroundColor: background, color: textColor}}>
+                      {user.name.slice(0, 1) + user.surname.slice(0, 1)}
+                    </h1>
+                    <RiArrowDownSLine style={{ color: textColor}}/>
+                  </div>
+                  {
+                    active && (<ul className="position-absolute">
+                      <li to="/user/profile" className="li">Profile</li>
+                      <li className="li" onClick={handlerLogout}>
+                        Logout
+                      </li>
+                    </ul>)
+                  }
+
+                </div>
+
+              </div>
             ) : (
               <div>
                 <Link to="/auth/register" className="me-1 sign-up">
