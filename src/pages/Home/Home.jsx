@@ -11,8 +11,6 @@ import S_2_img4_2 from "../../assets/img/S-2-img4.2.png";
 import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
 import S_3_img1 from "../../assets/img/S-3-img1.png";
-import aa from "../../assets/img/aa.png";
-import bb from "../../assets/img/bb.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 import { Link } from "react-router-dom";
 
