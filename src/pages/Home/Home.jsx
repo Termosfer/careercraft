@@ -136,10 +136,8 @@ const Home = () => {
           <div className="border">
             <h4 className="fw-semibold pb-5">How It Works</h4>
             <div className="d-flex">
-              <div className="">
-                <div className="w-25">
-                  <img className="w-75" src={S_3_img1} alt="" />
-                </div>
+              <div className="w-25">
+                <img className="w-25" src={S_3_img1} alt="" />
               </div>
               <div className="textbox">
                 <div className="d-flex">
