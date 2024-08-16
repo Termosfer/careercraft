@@ -95,13 +95,7 @@
       }
       .textbox {
         display: grid;
-        row-gap: 100px;
-        .d-flex {
-          column-gap: 15%;
-          .w-25 {
-            width: 12% !important;
-          }
-        }
+        row-gap: 45px;
       }
     }
     .d-grid {

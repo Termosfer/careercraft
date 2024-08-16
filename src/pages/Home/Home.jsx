@@ -134,40 +134,15 @@ const Home = () => {
       <section className="section3">
         <div className="container w-75 px-5">
           <div className="border">
-            <h4
-              className="fw-semibold pb-5"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              How It Works
-            </h4>
+            <h4 className="fw-semibold pb-5">How It Works</h4>
             <div className="d-flex">
-              {/* <div className="">
-                <div
-                  className="w-25"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={S_3_img1} alt="" />
-                  <img className="w-100" src={aa} alt="/" />
+              <div className="">
+                <div className="w-25">
+                  <img className="w-75" src={S_3_img1} alt="" />
                 </div>
-                <div
-                  className="aaa w-25"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={S_3_img1} alt="" />
-                  <img className="w-100" src={aa} alt="/" />
-                </div>
-              </div> */}
-
+              </div>
               <div className="textbox">
-                <div
-                  className="d-flex"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={aa} alt="/" />
+                <div className="d-flex">
                   <div>
                     <p className="fw-semibold">Register Your Account</p>
                     <span>
@@ -176,12 +151,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div
-                  className="d-flex"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={aa} alt="/" />
+                <div className="d-flex">
                   <div className="">
                     <p className="fw-semibold">
                       Complete initial soft skills evaluation
@@ -193,12 +163,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div
-                  className="d-flex"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={aa} alt="/" />
+                <div className="d-flex">
                   <div className="">
                     <p className="fw-semibold">
                       Receive personalized course recommendations
@@ -210,12 +175,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div
-                  className="d-flex"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <img className="w-25" src={aa} alt="/" />
+                <div className="d-flex">
                   <div className="">
                     <p className="fw-semibold">
                       Engage in regular exercises and track progress
