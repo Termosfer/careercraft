@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homepage">
       <section className="section1">
         <div
           className="text-center pt-5"
@@ -49,7 +49,7 @@ const Home = () => {
             </h4>
           </div>
           <div className="box2">
-            <div className="bg-white rounded d-flex p-5">
+            <div className="response bg-white rounded d-flex p-5">
               <div className="w-50 pe-4">
                 <p className="fw-medium fs-3">
                   AI-Driven Performance Analysis and Recommendations 
@@ -66,7 +66,7 @@ const Home = () => {
                 <img className="w-100" src={S_2_img1} alt="" />
               </div>
             </div>
-            <div className="d-flex pt-4">
+            <div className="response d-flex pt-4">
               <div className="bg-white rounded px-5 py-4 me-2 w-75">
                 <p className="fw-semibold fs-4">AI-Powered Personalization</p>
                 <span>
@@ -138,42 +138,50 @@ const Home = () => {
                 <img className="w-25" src={S_3_img1} alt="" />
               </div>
               <div className="textbox">
-                <div>
-                  <p className="fw-semibold">Register Your Account</p>
-                  <span>
-                    Sign up to create your personalized CareerCraft account with
-                    just <br /> a few details.
-                  </span>
+                <div className="d-flex">
+                  <div>
+                    <p className="fw-semibold">Register Your Account</p>
+                    <span>
+                      Sign up to create your personalized CareerCraft account
+                      with just <br /> a few details.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Complete initial soft skills evaluation
-                  </p>
-                  <span>
-                    Take our comprehensive evaluation to assess your current
-                    soft
-                    <br /> skills and identify areas for improvement.
-                  </span>
+                <div className="d-flex">
+                  <div className="">
+                    <p className="fw-semibold">
+                      Complete initial soft skills evaluation
+                    </p>
+                    <span>
+                      Take our comprehensive evaluation to assess your current
+                      soft
+                      <br /> skills and identify areas for improvement.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Receive personalized course recommendations
-                  </p>
-                  <span>
-                    Get tailored course suggestions based on your evaluation to
-                    target
-                    <br /> your specific development needs.
-                  </span>
+                <div className="d-flex">
+                  <div className="">
+                    <p className="fw-semibold">
+                      Receive personalized course recommendations
+                    </p>
+                    <span>
+                      Get tailored course suggestions based on your evaluation
+                      to target
+                      <br /> your specific development needs.
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <p className="fw-semibold">
-                    Engage in regular exercises and track progress
-                  </p>
-                  <span>
-                    Participate in recommended exercises and monitor your
-                    progress
-                    <br /> with real-time updates on your achievements.
-                  </span>
+                <div className="d-flex">
+                  <div className="">
+                    <p className="fw-semibold">
+                      Engage in regular exercises and track progress
+                    </p>
+                    <span>
+                      Participate in recommended exercises and monitor your
+                      progress
+                      <br /> with real-time updates on your achievements.
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
