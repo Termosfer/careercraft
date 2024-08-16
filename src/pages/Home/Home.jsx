@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homepage">
       <section className="section1">
         <div
           className="text-center pt-5"
