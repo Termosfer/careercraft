@@ -32,9 +32,9 @@ const Home = () => {
           <Link to="/free-trial" className="btnone btn btn-primary me-3 px-3">
             Book a Demo
           </Link>
-          <button className="btntwo btn btn-outline-primary px-3">
+          <Link to='/freetest' className="btntwo btn btn-outline-primary px-3">
             Explore Courses
-          </button>
+          </Link>
           <div style={{ marginBottom: "0" }}>
             <img className="w-75" src={image} alt="/" />
           </div>

@@ -1,0 +1,37 @@
+.FreeTest {
+  background-image: url(../../assets/img/45a8e2e6b78ebe5d2ec9e94fbb13202b.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 100vh;
+  .section1 {
+    height: 95vh;
+    .text-blur {
+      backdrop-filter: blur(20px);
+      background-color: rgba(217, 219, 233, 0.25);
+      border-radius: 10px;
+      color: #fff;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.section2 {
+  .a {
+    background-color: #408fff;
+    border-radius: 18px;
+    padding-bottom: 20px;
+    p,
+    h5 {
+      color: #fff;
+      padding: 0 40px;
+    }
+  }
+}
+
+.img4{
+  width: 500px;
+  height: 342px;
+}
+
