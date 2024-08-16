@@ -8,20 +8,20 @@ const initialState = {
   error: "",
 };
 
-export const login = createAsyncThunk("auth/login", async (loginData) => {
+export const login = createAsyncThunk("login/login", async (loginData) => {
   const response = await axios.post(
-    "http://44.203.152.52:8080/api/auth/login",
+    "http://44.203.152.52:8070/api/auth/login",
     loginData
   );
   return response.data;
 });
 
-export const userData = createAsyncThunk("auth/userData", async () => {
+export const userData = createAsyncThunk("login/userData", async () => {
   const token = localStorage.getItem("token");
   if (token) {
     try {
       const response = await axios.get(
-        "http://44.203.152.52:8080/customerInfo",
+        "http://44.203.152.52:8070/customerInfo",
         {
           headers: {
             Authorization: `Bearer ${token}`,
