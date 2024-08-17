@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAnswer, getQuestion } from "../../config/getQuestions";
+import {  getAnswer, getQuestion } from "../../config/getQuestions";
 import { Container, Form, Button } from "react-bootstrap";
 
 import { changeIncrease } from "../../config/getQuestions";
@@ -10,8 +10,9 @@ const FreeTrial = () => {
   const count = useSelector((state) => state.questions.value)
 
   const { question, loading, error, answer } = useSelector((state) => state.questions);
+  console.log(answer, "ans")
   console.log(question, "quest");
-console.log(answer, "ans")
+
   useEffect(() => {
 
     dispatch(getQuestion(count));

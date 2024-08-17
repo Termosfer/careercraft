@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
   question: [],
-  answer: [],
+  answer: {},
   loading: false,
   error: "",
   value: 0,
@@ -31,7 +31,7 @@ export const getQuestion = createAsyncThunk(
 export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer",{}, {
+    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", {}, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -40,6 +40,8 @@ export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
   }
 
 })
+  
+  
 
 
 
