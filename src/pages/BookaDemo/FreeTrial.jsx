@@ -16,7 +16,7 @@ const FreeTrial = () => {
   useEffect(() => {
 
     dispatch(getQuestion(count));
-    dispatch(getAnswer())
+    /* dispatch(getAnswer()) */
   }, [dispatch, count]);
 
   if (loading) return <div>Loading...</div>;
