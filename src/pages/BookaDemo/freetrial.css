@@ -38,13 +38,9 @@
 .progress {
   border-radius: 0px !important;
 }
-input[type=radio]{
-    display: none;
-}
-input[type=radio]{
-    display: inline-block;
-    padding: 5px 10px;
-    cursor: pointer;
-    border: 1px solid red;
-    border-radius: 5px;
+
+.progress-bar.bg-primary.progress-bar-animated.progress-bar-striped {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: -1px 0 7px 5px #0000ff6b;
 }
