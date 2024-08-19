@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const FreeTest = () => {
   const token = localStorage.getItem("token");
   return (
-    <>
+    <main className="main">
       <div className="FreeTest">
         <div className="container w-75 px-5">
           <section className="section1 d-flex flex-column justify-content-center">
@@ -109,7 +109,7 @@ const FreeTest = () => {
           <button className="btn btn-primary px-4">Start Assessment</button>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
