@@ -5,17 +5,13 @@ import { getAnswer, getQuestion } from "../../config/getQuestions";
 import { Container, Form, Button } from "react-bootstrap";
 import { changeIncrease } from "../../config/getQuestions";
 import "./freetrial.css";
-
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import img from "../../assets/img/testpageimg.jfif";
 const FreeTrial = () => {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
   const { question, loading, error } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const [length, setLenght] = useState(1);
 
   useEffect(() => {
     dispatch(getQuestion(count));
@@ -31,18 +27,12 @@ const FreeTrial = () => {
       );
       setProgress(progressPercentage);
     }
-    if (question.length) {
-      setLenght(question[0].questions[0].text);
-    }
   }, [question, count]);
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-  // if (loading) return <div>Loading...</div>;
+
   if (loading)
     return (
       <div className="">
-        {!isImageLoaded && <Skeleton height={338} className="m-auto w-100" />}
+        {<Skeleton height={338} className="m-auto w-100" />}
         <div className=" px-5 py-4 mt-5 text-center">
           <Skeleton style={{ width: "35%" }} className="mb-5" height={40} />
           <Skeleton
