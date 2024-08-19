@@ -69,13 +69,13 @@ const [background, setBackground] = useState(getRandomColor(bgColors));
                 </Link>
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
-                    <h1 className="rounded-circle" id="dropdown-basic" style={{backgroundColor: background, color: textColor}}>
+                    <h1 className="rounded-circle" id="dropdown-basic" style={{backgroundColor: background, color: textColor, border:"none"}}>
                       {user.name.slice(0, 1) + user.surname.slice(0, 1)}
                     </h1>
                     <RiArrowDownSLine style={{ color: textColor}}/>
                   </div>
                   {
-                    active && (<ul className="position-absolute">
+                    active && (<ul className="position-absolute ">
                       <li to="/user/profile" className="li">Profile</li>
                       <li className="li" onClick={handlerLogout}>
                         Logout
