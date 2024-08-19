@@ -13,22 +13,53 @@ function CollapsibleExample() {
   const navigate = useNavigate();
   const [active, setActive] = useState(false)
   const user = useSelector((state) => state.login.user);
-
-  const bgColors = ["#D3E5FF", "#FFD6D3", "#D3FFE0", "#F6FFD3", "#F6D3FF", "#FFD3EE", "#D3F7FF"]
-  const txtColors = ["#3480EC", "#BB342A", "#15B24A", "#AFB215", "#8015B2", "#FFD3EE", "#D3F7FF"]
-
-const getRandomColor = (colors)=> colors[Math.floor(Math.random() * colors.length)]
-const [background, setBackground] = useState(getRandomColor(bgColors));
-  const [textColor, setTextColor] = useState(getRandomColor(txtColors));
-  const handlerClick = () => {
-    setActive(!active)
+  
+  const allColors = [{
+    bgColor: "#D3E5FF",
+    textColor: "#3480EC"
+    
+  },
+  {
+    bgColor: "#FFD6D3",
+    textColor: "#BB342A"
+  },
+  {
+    bgColor: "#D3FFE0",
+    textColor: "#15B24A"
+  },
+  {
+    bgColor: "#F6FFD3",
+    textColor: "#AFB215"
+  },
+  {
+    bgColor: "#F6D3FF",
+    textColor: "#8015B2"
+  },
+  {
+    bgColor: "#FFD3EE",
+    textColor: "#B21573"
+  },
+  {
+    bgColor: "#D3F7FF",
+    textColor: "#158CB2"
   }
+]
 
-  useEffect(() => {
+const getRandomColor = () => {
+  const randomIndex = Math.floor(Math.random() * allColors.length);
+  return allColors[randomIndex];
+};
+const [color, setColor] = useState(getRandomColor());
+const handlerClick = () => {
+  setActive(!active)
+}
+
+useEffect(() => {
     dispatch(userData());
   }, [dispatch]);
   const handlerLogout = () => {
     dispatch(logout())
+    setActive(false)
     navigate("/")
   }
   return (
@@ -69,10 +100,10 @@ const [background, setBackground] = useState(getRandomColor(bgColors));
                 </Link>
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
-                    <h1 className="rounded-circle" id="dropdown-basic" style={{backgroundColor: background, color: textColor, border:"none"}}>
+                    <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: `${color.bgColor}`, color: `${color.textColor}`, border: "none" }}>
                       {user.name.slice(0, 1) + user.surname.slice(0, 1)}
                     </h1>
-                    <RiArrowDownSLine style={{ color: textColor}}/>
+                    <RiArrowDownSLine style={{ color: `${color.textColor}` }} />
                   </div>
                   {
                     active && (<ul className="position-absolute ">
