@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAnswer, getQuestion } from "../../config/getQuestions";
 import { Container, Form, Button } from "react-bootstrap";
 import { changeIncrease } from "../../config/getQuestions";
-
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import "./freetrial.css"
 const FreeTrial = () => {
   const dispatch = useDispatch();
@@ -64,7 +65,7 @@ const FreeTrial = () => {
   };
   return (
     <>
-    
+
       <div className="bg-testimg">
         <Container className="text-position px-5  w-75 ">
           <h1 className="text-center mb-3">Skill Level Test</h1>
