@@ -1,21 +1,28 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAnswer, getQuestion } from "../../config/getQuestions";
 import { Container, Form, Button } from "react-bootstrap";
-import { changeIncrease } from "../../config/getQuestions";
-import "./freetrial.css";
+import { getAnswer, getQuestion, } from "../../config/getQuestions";
+import { changeIncrease, currentAnswer } from "../../config/getQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import "./freetrial.css";
+
 const FreeTrial = () => {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const { question, loading, error } = useSelector((state) => state.questions);
+  const {question, loading, error,orderValue} = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
+  const clikcHandler = (e)=>{
+    dispatch(currentAnswer(e.target.value))
+  }
 
+
+  const orderValueId = useSelector((state)=>state.questions.orderValue)
+  console.log(orderValue, "asdad")
   useEffect(() => {
     dispatch(getQuestion(count));
-    /* dispatch(getAnswer()) */
+    dispatch(getAnswer(orderValueId))
   }, [dispatch, count]);
 
   useEffect(() => {
@@ -51,9 +58,11 @@ const FreeTrial = () => {
     );
 
   if (error) return <div>Error: {error}</div>;
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(changeIncrease());
+    dispatch(currentAnswer());
   };
   return (
     <>
@@ -84,6 +93,7 @@ const FreeTrial = () => {
                     {question.answers?.map((answer) => (
                       <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
                         <input
+                          onChange={clikcHandler}
                           className="radio"
                           type="radio"
                           name="name"

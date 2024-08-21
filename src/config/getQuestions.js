@@ -7,6 +7,8 @@ const initialState = {
   loading: false,
   error: "",
   value: 0,
+  questionId: "",
+  orderValue: "",
 };
 
 export const getQuestion = createAsyncThunk(
@@ -28,10 +30,10 @@ export const getQuestion = createAsyncThunk(
 );
 
 
-export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
+export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", {}, {
+    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", {answer}, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -40,8 +42,8 @@ export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
   }
 
 })
-  
-  
+
+
 
 
 
@@ -52,6 +54,9 @@ const questionsSlice = createSlice({
     changeIncrease: (state) => {
       state.value = state.value + 1;
     },
+    currentAnswer: (state, action) => {
+      state.orderValue = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -81,6 +86,6 @@ const questionsSlice = createSlice({
       });
   },
 });
-export const { changeIncrease } = questionsSlice.actions;
+export const { changeIncrease, currentAnswer } = questionsSlice.actions;
 
 export default questionsSlice.reducer;

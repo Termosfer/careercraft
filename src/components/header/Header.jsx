@@ -13,7 +13,7 @@ function CollapsibleExample() {
   const navigate = useNavigate();
   const [active, setActive] = useState(false)
   const user = useSelector((state) => state.login.user);
-  
+  console.log(user, "asdad")
   const allColors = [{
     bgColor: "#D3E5FF",
     textColor: "#3480EC"
@@ -101,7 +101,8 @@ useEffect(() => {
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
                     <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: `${color.bgColor}`, color: `${color.textColor}`, border: "none" }}>
-                      {user.name.slice(0, 1) + user.surname.slice(0, 1)}
+                    {user.name && user.surname ? user.name.slice(0,1) + user.surname.slice(0,1): ""}
+
                     </h1>
                     <RiArrowDownSLine style={{ color: `${color.textColor}` }} />
                   </div>
