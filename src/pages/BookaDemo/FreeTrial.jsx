@@ -2,8 +2,8 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import { getAnswer, getQuestion, } from "../../config/getQuestions";
-import { changeIncrease, currentAnswer } from "../../config/getQuestions";
+import { getQuestion, getQuestionsCount, } from "../../config/getQuestions";
+import { changeIncrease } from "../../config/getQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
@@ -11,26 +11,21 @@ import "./freetrial.css";
 const FreeTrial = () => {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const {question, loading, error,orderValue} = useSelector((state) => state.questions);
+  const { question, loading, error, totalCount } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
-  const clikcHandler = (e)=>{
-    dispatch(currentAnswer(e.target.value))
-  }
+  console.log(question, "asd")
+  console.log(count, "ad")
+  console.log(totalCount, "total")
 
-
-  const orderValueId = useSelector((state)=>state.questions.orderValue)
-  console.log(orderValue, "asdad")
   useEffect(() => {
     dispatch(getQuestion(count));
-    dispatch(getAnswer(orderValueId))
+    dispatch(getQuestionsCount())
   }, [dispatch, count]);
 
   useEffect(() => {
-    if (question && question.length) {
-      const totalQuestions = 15;
-      const answeredQuestions = count;
+    if (question) {
       const progressPercentage = Math.round(
-        (answeredQuestions / totalQuestions) * 100
+        (count / totalCount) * 100
       );
       setProgress(progressPercentage);
     }
@@ -62,11 +57,9 @@ const FreeTrial = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(changeIncrease());
-    dispatch(currentAnswer());
   };
   return (
     <>
-
       <div className="bg-testimg">
         <Container className="text-position px-5  w-75 ">
           <h1 className="text-center mb-3">Skill Level Test</h1>
@@ -75,48 +68,38 @@ const FreeTrial = () => {
           </h2>
         </Container>
       </div>
-      <ProgressBar variant="primary" now={progress} animated />
+      <ProgressBar variant="primary" now={progress} label={`${progress}%`} animated />
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
-          <span style={{ color: "#0F77FF" }}>Question {count + 1}</span> Out of
-          15
+          <span style={{ color: "#0F77FF" }}>Question {count}</span> Out of <span>{totalCount}</span>
         </h2>
-        {question?.map((quest, index) => (
-          <div key={index}>
-            {quest.questions?.map((question) => (
-              <div key={question.id}>
-                <h2 className="text-center my-5 fw-semibold">
-                  {question.text}
-                </h2>
-                <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
-                  <ul className="list-unstyled">
-                    {question.answers?.map((answer) => (
-                      <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
-                        <input
-                          onChange={clikcHandler}
-                          className="radio"
-                          type="radio"
-                          name="name"
-                          required
-                        />{" "}
-                        {answer.text}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-center">
-                    <Button
-                      type="submit"
-                      style={{ background: "#0F77FF" }}
-                      className="px-5 fs-6"
-                    >
-                      Next
-                    </Button>
-                  </div>
-                </Form>
-              </div>
-            ))}
-          </div>
-        ))}
+        <div>
+          <h2 className="text-center my-5 fw-semibold" key={question.id}>{question.text}</h2>
+          <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
+            <ul className="list-unstyled">
+              {question.answers?.map((answer) => (
+                <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
+                  <input
+                    className="radio"
+                    type="radio"
+                    name="name"
+                    required
+                  />{" "}
+                  {answer.text}
+                </li>
+              ))}
+            </ul>
+            <div className="text-center">
+              <Button
+                type="submit"
+                style={{ background: "#0F77FF" }}
+                className="px-5 fs-6"
+              >
+                Next
+              </Button>
+            </div>
+          </Form>
+        </div>
       </Container>
     </>
   );

@@ -13,7 +13,6 @@ function CollapsibleExample() {
   const navigate = useNavigate();
   const [active, setActive] = useState(false)
   const user = useSelector((state) => state.login.user);
-  console.log(user, "asdad")
   const allColors = [{
     bgColor: "#D3E5FF",
     textColor: "#3480EC"
