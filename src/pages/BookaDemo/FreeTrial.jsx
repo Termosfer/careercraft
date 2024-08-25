@@ -13,10 +13,10 @@ const FreeTrial = () => {
   const [progress, setProgress] = useState(0);
   const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
-  console.log(question, "asd")
-  console.log(count, "ad")
-  console.log(totalCount, "total")
-  console.log(orderValue,  "answer")
+  console.log(question, "question")
+  console.log(count, "count")
+  console.log(totalCount, "totalCount")
+  console.log(orderValue,  "answerId")
 
   useEffect(() => {
     dispatch(getQuestion(count));
