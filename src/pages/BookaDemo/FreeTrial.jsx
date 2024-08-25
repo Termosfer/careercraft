@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
 import { getQuestion, getQuestionsCount, getAnswer } from "../../config/getQuestions";
-import { changeIncrease } from "../../config/getQuestions";
+import { changeIncrease, currentAnswerOrderValue } from "../../config/getQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
@@ -11,13 +11,12 @@ import "./freetrial.css";
 const FreeTrial = () => {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const { question, loading, error, totalCount, answer } = useSelector((state) => state.questions);
+  const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
   console.log(question, "asd")
   console.log(count, "ad")
   console.log(totalCount, "total")
-  console.log(answer, "answer")
+  console.log(orderValue,  "answer")
 
   useEffect(() => {
     dispatch(getQuestion(count));
@@ -32,15 +31,16 @@ const FreeTrial = () => {
       );
       setProgress(progressPercentage);
     }
+    
   }, [question, count]);
 
-  const handleAnswerChange = (event) => {
-    setSelectedAnswer(event.target.value);
+  const handleAnswerChange = (e) => {
+    dispatch(currentAnswerOrderValue(e.currentTarget.value))
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    if (selectedAnswer) {
-      const answer = { questionId: question.id, orderValue: selectedAnswer }
+    if (orderValue) {
+      const answer = {orderValue, questionId:question.id}
       dispatch(getAnswer(answer));
       dispatch(changeIncrease());
     }
@@ -92,7 +92,7 @@ const FreeTrial = () => {
               {question.answers?.map((answer) => (
                 <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
                   <input
-                    value={answer.id}
+                    value={answer.orderValue}
                     onChange={handleAnswerChange}
                     className="radio"
                     type="radio"

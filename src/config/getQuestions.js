@@ -7,7 +7,8 @@ const initialState = {
   error: "",
   value: 1,
   totalCount: "",
-  answer:""
+  orderValue: null,
+  
 };
 
 export const getQuestion = createAsyncThunk(
@@ -42,7 +43,7 @@ export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount",
 
 })
 
-export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) => {
+export const getAnswer = createAsyncThunk("questions/getAnswer", async(answer) => {
   const token = localStorage.getItem("token")
   if (token) {
     const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", answer, {
@@ -56,9 +57,6 @@ export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) 
 })
 
 
-
-
-
 const questionsSlice = createSlice({
   name: "questions",
   initialState,
@@ -66,9 +64,9 @@ const questionsSlice = createSlice({
     changeIncrease: (state) => {
       state.value = state.value + 1;
     },
-    currentAnswer: (state, action) => {
+    currentAnswerOrderValue: (state, action) => {
       state.orderValue = action.payload
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -88,20 +86,8 @@ const questionsSlice = createSlice({
         state.totalCount = action.payload;
       })
 
-     .addCase(getAnswer.pending, (state) => {
-       state.loading = true;
-       state.error = "";
-     })
-     .addCase(getAnswer.fulfilled, (state, action) => {
-       state.loading = false;
-       state.answer = action.payload;
-     })
-     .addCase(getAnswer.rejected, (state, action) => {
-       state.loading = false;
-       state.error = action.error.message;
-     });
   },
 });
-export const { changeIncrease, currentAnswer } = questionsSlice.actions;
+export const { changeIncrease, currentAnswer, currentAnswerOrderValue, currentAnswerId } = questionsSlice.actions;
 
 export default questionsSlice.reducer;
