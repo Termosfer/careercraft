@@ -7,6 +7,7 @@ const initialState = {
   error: "",
   value: 1,
   totalCount: "",
+  answer:""
 };
 
 export const getQuestion = createAsyncThunk(
@@ -41,10 +42,10 @@ export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount",
 
 })
 
-/* export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) => {
+export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", {answer}, {
+    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", answer, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -52,7 +53,7 @@ export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount",
     return response.data
   }
 
-}) */
+})
 
 
 
@@ -87,7 +88,7 @@ const questionsSlice = createSlice({
         state.totalCount = action.payload;
       })
 
-    /*  .addCase(getAnswer.pending, (state) => {
+     .addCase(getAnswer.pending, (state) => {
        state.loading = true;
        state.error = "";
      })
@@ -98,7 +99,7 @@ const questionsSlice = createSlice({
      .addCase(getAnswer.rejected, (state, action) => {
        state.loading = false;
        state.error = action.error.message;
-     }); */
+     });
   },
 });
 export const { changeIncrease, currentAnswer } = questionsSlice.actions;
