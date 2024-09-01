@@ -9,7 +9,7 @@ const initialState = {
 
 export const register = createAsyncThunk("registration/register", async (userData) => {
   const response = await axios.post(
-    "http://44.203.152.52:8070/registration",
+    "http://35.173.133.91:8070/registration",
     userData
   );
   return response.data;

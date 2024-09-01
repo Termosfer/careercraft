@@ -28,9 +28,10 @@ const Login = () => {
     e.preventDefault();
     try {
       const loginData = { email, password };
-      await dispatch(login(loginData)).then(action=>{
-        localStorage.setItem("token", action.payload.accessToken)
-      });
+      await dispatch(login(loginData))
+        .then(action => {
+          localStorage.setItem("token", action.payload.accessToken)
+        });
       dispatch(clearInput())
       toast.success("Successfully login!");
       navigate("/")
@@ -39,7 +40,7 @@ const Login = () => {
     }
   };
 
- 
+
 
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
@@ -139,7 +140,7 @@ const Login = () => {
               </div>
             </Form>
           </Container>
-            
+
         </div>
       </div>
     </div>

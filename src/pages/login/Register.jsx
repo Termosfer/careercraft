@@ -20,7 +20,8 @@ function Register() {
   const surname = useSelector((state) => state.auth.surname);
   const email = useSelector((state) => state.auth.email);
   const password = useSelector((state) => state.auth.password);
-
+const data = useSelector(state=>state.registration.data)
+console.log(data, "data")
   const handleChangeName = (e) => {
     dispatch(changeName(e.currentTarget.value));
   };

@@ -2,8 +2,8 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import { getQuestion, getQuestionsCount, getAnswer } from "../../config/getQuestions";
-import { changeIncrease, currentAnswerOrderValue } from "../../config/getQuestions";
+import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
+import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
@@ -80,7 +80,7 @@ const FreeTrial = () => {
           </h2>
         </Container>
       </div>
-      <ProgressBar variant="primary" now={progress} label={`${progress}%`} animated />
+      <ProgressBar variant="primary" now={progress} className="progressbar-free"/>
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
           <span style={{ color: "#0F77FF" }}>Question {count}</span> Out of <span>{totalCount}</span>
