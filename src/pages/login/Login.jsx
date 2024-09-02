@@ -17,7 +17,9 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handlerChangeEmail = (e) => {
-    dispatch(changeEmail(e.currentTarget.value));
+    const email = e.currentTarget.value
+    dispatch(changeEmail(email));
+    localStorage.setItem("email",email)
   };
 
   const handlerChangePassword = (e) => {

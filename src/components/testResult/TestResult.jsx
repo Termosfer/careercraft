@@ -4,13 +4,15 @@ import "./testresult.css"
 import ProgressBar from "react-bootstrap/ProgressBar";
 import RChart from '../radarChart/RadarChart';
 const TestResult = () => {
+  const email = localStorage.getItem("email")
+
     return (
         <>
             <Container className='w-75 p-5'>
                 <Row>
                     <Col lg={12} className='py-4'>
                         <h1 className=' text-center pb-4'>Thank you for completing the Soft Skills Assessment!</h1>
-                        <p className='fw-bolder' style={{ fontSize: "19px" }}>Your detailed report has been emailed to shah.77@gmail.com. If you don’t see it in your inbox, please check your spam/junk folder.</p>
+                        <p className='fw-bolder' style={{ fontSize: "19px" }}>Your detailed report has been emailed to <span className='text-primary'>{email}</span>. If you don’t see it in your inbox, please check your spam/junk folder.</p>
                     </Col>
                     <Col lg={7}>
 

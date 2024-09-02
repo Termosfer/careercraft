@@ -14,17 +14,17 @@ function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [active, setActive] = useState(false)
-  const user  = useSelector(state =>state.user.username)
+  const user = useSelector(state => state.user.username)
   const token = localStorage.getItem("token")
-
-  useEffect(()=>{
+  const email = localStorage.getItem("email")
+  useEffect(() => {
     dispatch(userData(token))
-  },[dispatch,token])
-  
+  }, [dispatch, token])
+
   const handlerClick = () => {
     setActive(!active)
   }
-   
+
   const handlerLogout = () => {
     dispatch(logout())
     setActive(false)
@@ -69,7 +69,7 @@ function CollapsibleExample() {
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
                     <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                      {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1): ""}
+                      {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
 
                     </h1>
                     <RiArrowDownSLine style={{ color: "#408FFF" }} />
@@ -81,26 +81,26 @@ function CollapsibleExample() {
                         <div className="d-flex align-items-center gap-2 bottom">
                           <div>
                             <h1 className="rounded-circle" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                            {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
+                              {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
                             </h1>
                           </div>
                           <div className="d-flex flex-column">
                             <span className="fs-8">{user.name + " " + user.surname}</span>
-                            <span className="fs-7">anderson@gmail.com</span>
+                            <span className="fs-7">{email}</span>
                           </div>
                         </div>
                         <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover"/><span className="fs">Profile</span></div>
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover"/><span className="fs">Settings</span></div>
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Profile</span></div>
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Settings</span></div>
                         </div>
                         <div className="px-1 pt-2 gap-2 d-flex flex-column  ">
 
                           <div className="px-1  d-flex align-items-center p-1 gap-1 action-item " onClick={handlerLogout}>
-                            <img src={logoutImg} alt="logout" style={{ width: "20px", height: "20px", }} className="img-hover"/>
+                            <img src={logoutImg} alt="logout" style={{ width: "20px", height: "20px", }} className="img-hover" />
                             <span className="fs">Logout</span>
                           </div>
                         </div>
-                        </div>
+                      </div>
                     )
                   }
 
