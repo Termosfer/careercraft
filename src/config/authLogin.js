@@ -16,7 +16,6 @@ export const login = createAsyncThunk("login/login", async (loginData) => {
   return response.data;
 });
 
-<<<<<<< HEAD
 export const userData = createAsyncThunk("login/userData", async () => {
   const token = localStorage.getItem("token");
   if (token) {
@@ -43,8 +42,6 @@ export const logout = createAsyncThunk("auth/logout", async()=>{
 
 
 
-=======
->>>>>>> master
 const authLogin = createSlice({
   name: "login",
   initialState: initialState,
