@@ -26,24 +26,6 @@ export const loginUser = createAsyncThunk("auth/login",
   }
 )
 
-// export const userData = createAsyncThunk("auth/userData", async () => {
-//   if (token) {
-//     try {
-//       const response = await axios.get(
-//         `${baseURL}/customerInfo`,
-//         {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         }
-//       );
-
-//       return response.data;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// });
 
 
 export const fortgotHandle = createAsyncThunk("auth/password/reset", async (email) => {
