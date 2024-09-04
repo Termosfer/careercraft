@@ -20,29 +20,30 @@ export const loginUser = createAsyncThunk("auth/login",
     const { data } = await axios.post(`${baseURL}/api/auth/login`, userLogged)
     // console.log(data.accessToken);
     localStorage.setItem("token", data.accessToken);
+    localStorage.setItem("email",userLogged.email)
     toast.success("Successfully logged in!")
     return data;
   }
 )
 
-export const userData = createAsyncThunk("auth/userData", async () => {
-  if (token) {
-    try {
-      const response = await axios.get(
-        `${baseURL}/customerInfo`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+// export const userData = createAsyncThunk("auth/userData", async () => {
+//   if (token) {
+//     try {
+//       const response = await axios.get(
+//         `${baseURL}/customerInfo`,
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
 
-      return response.data;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-});
+//       return response.data;
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+// });
 
 
 export const fortgotHandle = createAsyncThunk("auth/password/reset", async (email) => {
@@ -54,6 +55,7 @@ export const fortgotHandle = createAsyncThunk("auth/password/reset", async (emai
 
 export const logout = createAsyncThunk("auth/logout", async () => {
   localStorage.removeItem("token")
+  localStorage.removeItem("email")
 })
 
 
@@ -105,17 +107,6 @@ const authLogin = createSlice({
         state.message=null
         state.errorMessage=action.error.message
 
-      })
-      .addCase(userData.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(userData.fulfilled, (state, action) => {
-        state.loading = false;
-        state.user = action.payload;
-      })
-      .addCase(userData.rejected, (state) => {
-        state.loading = false;
-        state.user = null;
       })
       .addCase(logout.fulfilled, (state) => {
         state.loading = false;

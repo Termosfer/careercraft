@@ -20,7 +20,7 @@ const Login = () => {
     password: ""
   })
 
-  const [email, setEmail] = useState(localStorage.getItem("email"))
+  // const [email, setEmail] = useState(localStorage.getItem("email"))
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,11 +51,11 @@ const Login = () => {
   //   }
   // };
 
-  useEffect(() => {
-    localStorage.setItem("email", JSON.stringify(userLogged.email))
-    setEmail(JSON.parse(localStorage.getItem("email")))
+  // useEffect(() => {
+  //   localStorage.setItem("email", JSON.stringify(userLogged.email))
+  //   setEmail(JSON.parse(localStorage.getItem("email")))
 
-  }, [userLogged]);
+  // }, [userLogged]);
 
 
   const handlePassword = () => {
@@ -63,7 +63,7 @@ const Login = () => {
   };
 
   const handleForgot = async () => {
-    dispatch(fortgotHandle(email))
+    dispatch(fortgotHandle(userLogged.email))
     navigate("/checkMail")
   }
 
