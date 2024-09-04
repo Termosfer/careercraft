@@ -4,6 +4,7 @@ import registrationReducer from "./authRegister";
 import loginReducer from "./authLogin";
 import questionReducer from "./authQuestions";
 import userReducer from "./authUser";
+
 export const store = configureStore({
   reducer: {
     auth: authReducer,
