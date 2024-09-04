@@ -7,26 +7,28 @@ import { Container, Form, Button } from "react-bootstrap";
 import { changeIncrease } from "../../config/getQuestions";
 const FreeTrial = () => {
   const dispatch = useDispatch();
-  const count = useSelector((state)=>state.questions.value)
-  console.log(count, "count")
+  const count = useSelector((state) => state.questions.value);
+  console.log(count, "count");
   const { question, loading, error } = useSelector((state) => state.questions);
   console.log(question, "quest");
   useEffect(() => {
-    
-    dispatch(getQuestion(count)); 
+    dispatch(getQuestion(count));
   }, [dispatch, count]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  return (
+    <Container className="px-5 w-75">
+      {error ? <span>Error: {error}</span> : <span>Loading...</span>}
+    </Container>
+  );
 
-const submitHandler = (e)=>{
-  e.preventDefault()
-  dispatch(changeIncrease())
-}
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(changeIncrease());
+  };
 
   return (
     <Container className="w-75 px-5 py-4 mt-5 border rounded">
-      {question?.map((quest,index) => (
+      {question?.map((quest, index) => (
         <div key={index}>
           <h1>{quest.skillName}</h1>
           {quest.questions?.map((n) => (
@@ -35,12 +37,14 @@ const submitHandler = (e)=>{
               <Form onSubmit={submitHandler}>
                 {n.answers?.map((answer) => (
                   <ul key={answer.id} className="list-unstyled">
-                    
-                    <li className="d-flex gap-2"><input type="radio" name="name" required />  {answer.text}</li>
+                    <li className="d-flex gap-2">
+                      <input type="radio" name="name" required /> {answer.text}
+                    </li>
                   </ul>
                 ))}
-                <Button type="submit" variant="primary">Submit</Button>
-
+                <Button type="submit" variant="primary">
+                  Submit
+                </Button>
               </Form>
             </div>
           ))}

@@ -19,7 +19,7 @@ function CollapsibleExample() {
     navigate("/")
   }
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" id="bg-nav" variant="light">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
         <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-5 gap-5 mx-auto">
           <Link to="/" className="d-flex align-items-center">
