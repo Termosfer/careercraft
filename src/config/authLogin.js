@@ -8,7 +8,7 @@ const initialState = {
   loading: false,
   errorMessage: "",
   message:null,
-  token: localStorage.getItem("token")
+  token: ""
 };
 
 const baseURL = "http://35.173.133.91:8070"
@@ -18,7 +18,7 @@ export const loginUser = createAsyncThunk("auth/login",
 
   async (userLogged) => {
     const { data } = await axios.post(`${baseURL}/api/auth/login`, userLogged)
-    console.log(data.accessToken);
+    // console.log(data.accessToken);
     localStorage.setItem("token", data.accessToken);
     toast.success("Successfully logged in!")
     return data;
@@ -29,7 +29,7 @@ export const userData = createAsyncThunk("auth/userData", async () => {
   if (token) {
     try {
       const response = await axios.get(
-        `${backendURL}/customerInfo`,
+        `${baseURL}/customerInfo`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

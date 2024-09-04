@@ -20,7 +20,7 @@ const Login = () => {
     password: ""
   })
 
-  const [email, setEmail] = useState(JSON.parse(localStorage.getItem("email")))
+  const [email, setEmail] = useState(localStorage.getItem("email"))
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -69,10 +69,9 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    dispatch(loginUser(userLogged))
-    
-    if (token) {
-      navigate("/");
+    const resultAction = await dispatch(loginUser(userLogged));
+    if (loginUser.fulfilled.match(resultAction)){
+        navigate("/")
     }
 
   };
