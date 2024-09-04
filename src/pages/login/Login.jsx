@@ -17,7 +17,9 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handlerChangeEmail = (e) => {
-    dispatch(changeEmail(e.currentTarget.value));
+    const email = e.currentTarget.value
+    dispatch(changeEmail(email));
+    localStorage.setItem("email",email)
   };
 
   const handlerChangePassword = (e) => {
@@ -28,9 +30,10 @@ const Login = () => {
     e.preventDefault();
     try {
       const loginData = { email, password };
-      await dispatch(login(loginData)).then(action=>{
-        localStorage.setItem("token", action.payload.accessToken)
-      });
+      await dispatch(login(loginData))
+        .then(action => {
+          localStorage.setItem("token", action.payload.accessToken)
+        });
       dispatch(clearInput())
       toast.success("Successfully login!");
       navigate("/")
@@ -39,7 +42,7 @@ const Login = () => {
     }
   };
 
- 
+
 
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
@@ -139,7 +142,7 @@ const Login = () => {
               </div>
             </Form>
           </Container>
-            
+
         </div>
       </div>
     </div>

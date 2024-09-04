@@ -1,62 +1,30 @@
-import "./style.css";
+import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Container, DropdownToggle, Nav, Navbar } from "react-bootstrap";
-import Dropdown from "react-bootstrap/Dropdown";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../assets/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userData, logout } from "../../config/authLogin";
-import { RiArrowDropDownLine, RiArrowDownSLine } from "react-icons/ri"
+import { RiArrowDownSLine } from "react-icons/ri"
+import userImg from "../../assets/profileImg/user-square.png"
+import logoutImg from "../../assets/profileImg/logout-03.png"
+import settingImg from "../../assets/profileImg/elements.png"
+import { logout, userData } from "../../config/authUser";
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [active, setActive] = useState(false)
-  const user = useSelector((state) => state.login.user);
-  
-  const allColors = [{
-    bgColor: "#D3E5FF",
-    textColor: "#3480EC"
-    
-  },
-  {
-    bgColor: "#FFD6D3",
-    textColor: "#BB342A"
-  },
-  {
-    bgColor: "#D3FFE0",
-    textColor: "#15B24A"
-  },
-  {
-    bgColor: "#F6FFD3",
-    textColor: "#AFB215"
-  },
-  {
-    bgColor: "#F6D3FF",
-    textColor: "#8015B2"
-  },
-  {
-    bgColor: "#FFD3EE",
-    textColor: "#B21573"
-  },
-  {
-    bgColor: "#D3F7FF",
-    textColor: "#158CB2"
+  const user = useSelector(state => state.user.username)
+  const token = localStorage.getItem("token")
+  const email = localStorage.getItem("email")
+  useEffect(() => {
+    dispatch(userData(token))
+  }, [dispatch, token])
+
+  const handlerClick = () => {
+    setActive(!active)
   }
-]
 
-const getRandomColor = () => {
-  const randomIndex = Math.floor(Math.random() * allColors.length);
-  return allColors[randomIndex];
-};
-const [color, setColor] = useState(getRandomColor());
-const handlerClick = () => {
-  setActive(!active)
-}
-
-useEffect(() => {
-    dispatch(userData());
-  }, [dispatch]);
   const handlerLogout = () => {
     dispatch(logout())
     setActive(false)
@@ -100,18 +68,40 @@ useEffect(() => {
                 </Link>
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
-                    <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: `${color.bgColor}`, color: `${color.textColor}`, border: "none" }}>
-                      {user.name.slice(0, 1) + user.surname.slice(0, 1)}
+                    <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
+                      {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
+
                     </h1>
-                    <RiArrowDownSLine style={{ color: `${color.textColor}` }} />
+                    <RiArrowDownSLine style={{ color: "#408FFF" }} />
                   </div>
                   {
-                    active && (<ul className="position-absolute ">
-                      <li to="/user/profile" className="li">Profile</li>
-                      <li className="li" onClick={handlerLogout}>
-                        Logout
-                      </li>
-                    </ul>)
+
+                    active && (
+                      <div className="position-absolute p-3">
+                        <div className="d-flex align-items-center gap-2 bottom">
+                          <div>
+                            <h1 className="rounded-circle" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
+                              {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
+                            </h1>
+                          </div>
+                          <div className="d-flex flex-column">
+                            <span className="fs-8">{user.name + " " + user.surname}</span>
+                            <span className="fs-7">{email}</span>
+                          </div>
+                        </div>
+                        <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Profile</span></div>
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Settings</span></div>
+                        </div>
+                        <div className="px-1 pt-2 gap-2 d-flex flex-column  ">
+
+                          <div className="px-1  d-flex align-items-center p-1 gap-1 action-item " onClick={handlerLogout}>
+                            <img src={logoutImg} alt="logout" style={{ width: "20px", height: "20px", }} className="img-hover" />
+                            <span className="fs">Logout</span>
+                          </div>
+                        </div>
+                      </div>
+                    )
                   }
 
                 </div>

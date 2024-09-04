@@ -36,7 +36,7 @@
 }
 
 .progress {
-  border-radius: 0px !important;
+  border-start-start-radius: 0px !important;
 }
 
 .progress-bar.bg-primary.progress-bar-animated.progress-bar-striped {

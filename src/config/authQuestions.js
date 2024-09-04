@@ -3,10 +3,12 @@ import axios from "axios";
 
 const initialState = {
   question: [],
-  answer: {},
   loading: false,
   error: "",
-  value: 0,
+  value: 1,
+  totalCount: "",
+  orderValue: null,
+  
 };
 
 export const getQuestion = createAsyncThunk(
@@ -15,23 +17,23 @@ export const getQuestion = createAsyncThunk(
     const token = localStorage.getItem("token")
     if (token) {
       const response = await axios.get(
-        `http://44.203.152.52:8070/questions/grouped-by-skills?skillIds=1&jobId=1&id=${count}`, {
+        `http://35.173.133.91:8070/questions/${count}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
       }
       );
-      return response.data.skillsQuestions;
+      return response.data;
     }
   }
 
 );
 
 
-export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
+export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount", async () => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.post("http://44.203.152.52:8070/user-answers/answer", {}, {
+    const response = await axios.get(`http://35.173.133.91:8070/questions/count`, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -40,9 +42,19 @@ export const getAnswer = createAsyncThunk("questions/getAnswer", async () => {
   }
 
 })
-  
-  
 
+export const getAnswer = createAsyncThunk("questions/getAnswer", async(answer) => {
+  const token = localStorage.getItem("token")
+  if (token) {
+    const response = await axios.post("http://35.173.133.91:8070/user-answers/answer", answer, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    })
+    return response.data
+  }
+
+})
 
 
 const questionsSlice = createSlice({
@@ -51,6 +63,9 @@ const questionsSlice = createSlice({
   reducers: {
     changeIncrease: (state) => {
       state.value = state.value + 1;
+    },
+    currentAnswerOrderValue: (state, action) => {
+      state.orderValue = action.payload
     },
   },
   extraReducers: (builder) => {
@@ -67,20 +82,12 @@ const questionsSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       })
-      .addCase(getAnswer.pending, (state) => {
-        state.loading = true;
-        state.error = "";
+      .addCase(getQuestionsCount.fulfilled, (state, action) => {
+        state.totalCount = action.payload;
       })
-      .addCase(getAnswer.fulfilled, (state, action) => {
-        state.loading = false;
-        state.answer = action.payload;
-      })
-      .addCase(getAnswer.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
+
   },
 });
-export const { changeIncrease } = questionsSlice.actions;
+export const { changeIncrease, currentAnswer, currentAnswerOrderValue, currentAnswerId } = questionsSlice.actions;
 
 export default questionsSlice.reducer;

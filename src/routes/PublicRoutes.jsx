@@ -13,6 +13,7 @@ import CheckMail from "../pages/CheckMail/CheckMail";
 import FreeTrial from "../pages/BookaDemo/FreeTrial";
 import Profile from "../pages/Profile/Profile";
 import FreeTest from "../pages/FreeTest/FreeTest";
+import TestResult from "../components/testResult/TestResult";
 
 const PublicRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const PublicRoutes = () => {
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/freetest" element={<FreeTest />} />
+        <Route path="/freetest/test-result" element={<TestResult/>}/>
       </Routes>
     </PublicLayout>
   );
