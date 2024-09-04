@@ -35,12 +35,12 @@
   border: 1px solid #0f77ff;
 }
 
-.progress  {
-  border-start-start-radius: 0px !important;
+ .progress  {
+  border-radius: 0px !important;
 }
 
-.progress-bar.bg-primary.progress-bar-animated.progress-bar-striped {
+.progress-bar {
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
-  box-shadow: -1px 0 7px 5px #0000ff6b;
+  /* box-shadow: -1px 0 7px 5px #0000ff6b; */
 }
