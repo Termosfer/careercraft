@@ -1,36 +1,98 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const initialState = {
-  user: null,
+  user: {},
   loading: false,
-  error: "",
+  errorMessage: "",
+  message:null,
+  token: ""
 };
 
-export const login = createAsyncThunk("login/login", async (loginData) => {
-  const response = await axios.post(
-    "http://35.173.133.91:8070/api/auth/login",
-    loginData
-  );
+const baseURL = "http://35.173.133.91:8070"
 
-  return response.data;
-});
+
+export const loginUser = createAsyncThunk("auth/login",
+
+  async (userLogged) => {
+    const { data } = await axios.post(`${baseURL}/api/auth/login`, userLogged)
+    // console.log(data.accessToken);
+    localStorage.setItem("token", data.accessToken);
+    localStorage.setItem("email",userLogged.email)
+    toast.success("Successfully logged in!")
+    return data;
+  }
+)
+
+
+
+export const fortgotHandle = createAsyncThunk("auth/password/reset", async (email) => {
+  const {data} = await axios.post(`${baseURL}/api/password/reset-request?email=${email}`)
+  console.log(data);
+  toast.success("Email was successfully sent!");
+  return data
+})
+
+export const logout = createAsyncThunk("auth/logout", async () => {
+  localStorage.removeItem("token")
+  localStorage.removeItem("email")
+})
+
+
 
 const authLogin = createSlice({
   name: "login",
   initialState: initialState,
+
+  reducers: {
+
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(login.pending, (state) => {
-        state.loading = true;
+      .addCase(loginUser.pending, (state) => {
+        state.loading = true
+        state.token = null
+        state.user = null
+        state.errorMessage = null
       })
-      .addCase(login.fulfilled, (state, action) => {
-        state.loading = false;
-        state.user = action.payload;
+      .addCase(loginUser.fulfilled, (state, action) => {
+        state.loading = false
+        state.token = action.payload.accessToken
+        state.user = null
+        state.errorMessage = null
       })
-      .addCase(login.rejected, (state) => {
+      .addCase(loginUser.rejected, (state, action) => {
+        state.loading = false
+        state.token = null
+        state.user = null
+        console.log(action.error.message);
+        if (action.error.message === "Request failed with status code 401") {
+          state.errorMessage = "Access Denied! Incorrect Email or Password!"
+        } else {
+          state.errorMessage = action.error.message
+        }
+
+      })
+
+      .addCase(fortgotHandle.fulfilled, (state, action) => {
+        state.loading = false
+        state.token = null
+        state.message=action.payload
+        state.errorMessage=null
+
+      })
+      .addCase(fortgotHandle.rejected, (state, action) => {
+        state.loading = false
+        state.token = null
+        state.message=null
+        state.errorMessage=action.error.message
+
+      })
+      .addCase(logout.fulfilled, (state) => {
         state.loading = false;
-        state.error = "Login failed";
+        state.user = null;
       });
   },
 });

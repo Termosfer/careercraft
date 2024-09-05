@@ -35,8 +35,8 @@
   border: 1px solid #0f77ff;
 }
 
- .progress  {
-  border-radius: 0px !important;
+.progress {
+  border-start-start-radius: 0px !important;
 }
 
 .progress-bar {

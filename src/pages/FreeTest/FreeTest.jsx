@@ -1,5 +1,5 @@
 import React from "react";
-import "./freetest.css";
+import "./FreeTest.css";
 import img1 from "../../assets/img/imgg1.png";
 import img2 from "../../assets/img/imgg2.png";
 import img3 from "../../assets/img/imgg3.png";

@@ -9,7 +9,8 @@ import { RiArrowDownSLine } from "react-icons/ri"
 import userImg from "../../assets/profileImg/user-square.png"
 import logoutImg from "../../assets/profileImg/logout-03.png"
 import settingImg from "../../assets/profileImg/elements.png"
-import { logout, userData } from "../../config/authUser";
+import { logout } from "../../config/authLogin";
+import { userData } from "../../config/authUser";
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function CollapsibleExample() {
   const email = localStorage.getItem("email")
   useEffect(() => {
     dispatch(userData(token))
-  }, [dispatch, token])
+  }, [token])
 
   const handlerClick = () => {
     setActive(!active)
@@ -31,7 +32,7 @@ function CollapsibleExample() {
     navigate("/")
   }
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" id="bg-nav" variant="light">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
         <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-5 gap-5 mx-auto">
           <Link to="/" className="d-flex align-items-center">
@@ -69,7 +70,7 @@ function CollapsibleExample() {
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
                     <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                      {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
+                      {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase()  : ""}
 
                     </h1>
                     <RiArrowDownSLine style={{ color: "#408FFF" }} />
@@ -81,7 +82,7 @@ function CollapsibleExample() {
                         <div className="d-flex align-items-center gap-2 bottom">
                           <div>
                             <h1 className="rounded-circle" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                              {user.name && user.surname ? user.name.slice(0, 1) + user.surname.slice(0, 1) : ""}
+                              {user.name && user.surname ? user.name.slice(0, 1).toUpperCase()  + user.surname.slice(0, 1).toUpperCase()  : ""}
                             </h1>
                           </div>
                           <div className="d-flex flex-column">
