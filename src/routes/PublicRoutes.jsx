@@ -34,7 +34,7 @@ const PublicRoutes = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/freetest" element={<FreeTest/>} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route path='/api/password/reset' element={<ResetPass />} />
+        <Route path='/auth/password/reset' element={<ResetPass />} />
 
       </Routes>
     </PublicLayout>

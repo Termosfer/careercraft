@@ -7,27 +7,28 @@ const initialState = {
     error: ""
 }
 
+const baseURL= "http://35.173.133.91:8070"
 
-export const userData = createAsyncThunk("userData", async (token) => {
-    try {
+export const userData = createAsyncThunk("auth/userData", async (token) => {
+    if (token) {
+      try {
         const response = await axios.get(
-            "http://35.173.133.91:8070/customerInfo",
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            }
+          `${baseURL}/customerInfo`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
         );
-
+  
         return response.data;
-    } catch (error) {
+      } catch (error) {
         console.log(error);
+      }
     }
-})
+  });
 
-export const logout = createAsyncThunk("logout", async () => {
-    localStorage.removeItem("token")
-})
+
 
 const authUser = createSlice({
     name: "user",
@@ -44,10 +45,6 @@ const authUser = createSlice({
             .addCase(userData.rejected, (state) => {
                 state.error = "Error"
             })
-            .addCase(logout.fulfilled, (state) => {
-                state.loading = false;
-                state.username = null;
-            });
     }
 })
 

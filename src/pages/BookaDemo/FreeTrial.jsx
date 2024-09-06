@@ -7,16 +7,17 @@ import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuesti
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
+import { Link } from "react-router-dom";
 
 const FreeTrial = () => {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
   const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
-  console.log(question, "question")
+  // console.log(question, "question")
   console.log(count, "count")
-  console.log(totalCount, "totalCount")
-  console.log(orderValue,  "answerId")
+  // console.log(totalCount, "totalCount")
+  // console.log(orderValue,  "answerId")
 
   useEffect(() => {
     dispatch(getQuestion(count));
@@ -31,8 +32,10 @@ const FreeTrial = () => {
       );
       setProgress(progressPercentage);
     }
-    
+
   }, [question, count]);
+
+
 
   const handleAnswerChange = (e) => {
     dispatch(currentAnswerOrderValue(e.currentTarget.value))
@@ -40,7 +43,7 @@ const FreeTrial = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (orderValue) {
-      const answer = {orderValue, questionId:question.id}
+      const answer = { orderValue, questionId: question.id }
       dispatch(getAnswer(answer));
       dispatch(changeIncrease());
     }
@@ -73,14 +76,14 @@ const FreeTrial = () => {
   return (
     <>
       <div className="bg-testimg">
-        <Container className="text-position px-5  w-75 ">
+        <Container className="text-position px-5  w-75">
           <h1 className="text-center mb-3">Skill Level Test</h1>
           <h2 className="text-center">
             Evaluate Your Skills and Uncover Opportunities for Growth
           </h2>
         </Container>
       </div>
-      <ProgressBar variant="primary" now={progress} className="progressbar-free"/>
+      <ProgressBar variant="primary" now={progress} />
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
           <span style={{ color: "#0F77FF" }}>Question {count}</span> Out of <span>{totalCount}</span>
@@ -109,7 +112,7 @@ const FreeTrial = () => {
                 style={{ background: "#0F77FF" }}
                 className="px-5 fs-6"
               >
-                Next
+                {count < 70 ? "Next" : `${<Link to='/freetest/test-result'></Link>}`}
               </Button>
             </div>
           </Form>

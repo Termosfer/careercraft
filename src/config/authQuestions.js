@@ -5,7 +5,7 @@ const initialState = {
   question: [],
   loading: false,
   error: "",
-  value: 1,
+  value: 68,
   totalCount: "",
   orderValue: null,
   
