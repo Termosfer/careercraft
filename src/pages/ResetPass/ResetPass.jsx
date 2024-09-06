@@ -51,11 +51,16 @@ const ResetPass = () => {
      dispatch(resetPass(reset))
    }, []) */
 
-  const handleReset = (e) => {
+  const handleReset =async(e) => {
     e.preventDefault()
     console.log("resetted")
-    const reset = (newPass, confirmPass, input1, input2, input3, input4)
+    const  allInput = `${input1}${input2}${input3}${input4}`
+    const reset = {newPassword:newPass, confirmPassword:confirmPass, token:allInput}
     dispatch(resetPass(reset))
+    const resultAction = await dispatch(resetPass(reset));
+    if (resetPass.fulfilled.match(resultAction)) {
+      navigate("/auth/login")
+    }
   }
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
