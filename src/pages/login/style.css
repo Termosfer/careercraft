@@ -41,7 +41,7 @@
 /* login css */
 #login-f {
   width: 540px;
-  max-height: 485px;
+  max-height: auto;
   padding: 48px 72px !important;
   background-color: white;
   display: flex;
@@ -97,4 +97,8 @@
   top: 40px;
   right: 16px;
   font-size: 24px;
+}
+
+.time{
+  border-radius: 50%;
 }

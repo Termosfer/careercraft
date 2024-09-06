@@ -7,7 +7,7 @@ const initialState = {
   user: {},
   loading: false,
   errorMessage: "",
-  message:null,
+  message: null,
   token: ""
 };
 
@@ -20,7 +20,7 @@ export const loginUser = createAsyncThunk("auth/login",
     const { data } = await axios.post(`${baseURL}/api/auth/login`, userLogged)
     // console.log(data.accessToken);
     localStorage.setItem("token", data.accessToken);
-    localStorage.setItem("email",userLogged.email)
+    localStorage.setItem("email", userLogged.email)
     toast.success("Successfully logged in!")
     return data;
   }
@@ -29,10 +29,15 @@ export const loginUser = createAsyncThunk("auth/login",
 
 
 export const fortgotHandle = createAsyncThunk("auth/password/reset", async (email) => {
-  const {data} = await axios.post(`${baseURL}/api/password/reset-request?email=${email}`)
+  const { data } = await axios.post(`${baseURL}/api/password/reset-request?email=${email}`)
   console.log(data);
-  toast.success("Email was successfully sent!");
+  toast.success("Check your Mail please. The link for password reset was sent!")
   return data
+})
+
+export const resetPass = createAsyncThunk("auth/confirmPass", async (reset) => {
+  const response = await axios.post(`${baseURL}/api/password/reset`, reset)
+  return response.data
 })
 
 export const logout = createAsyncThunk("auth/logout", async () => {
@@ -79,21 +84,31 @@ const authLogin = createSlice({
       .addCase(fortgotHandle.fulfilled, (state, action) => {
         state.loading = false
         state.token = null
-        state.message=action.payload
-        state.errorMessage=null
+        state.message = action.payload
+        state.errorMessage = null
 
       })
       .addCase(fortgotHandle.rejected, (state, action) => {
         state.loading = false
         state.token = null
-        state.message=null
-        state.errorMessage=action.error.message
+        state.message = null
+        state.errorMessage = action.error.message
 
       })
       .addCase(logout.fulfilled, (state) => {
         state.loading = false;
         state.user = null;
-      });
+      })
+      .addCase(resetPass.pending, (state) => {
+        state.loading = true
+      })
+      .addCase(resetPass.fulfilled, (state, action) => {
+        state.loading = false,
+          state.message = action.payload
+      })
+      .addCase(resetPass.rejected, (state) => {
+        state.errorMessage = "404 Not Found"
+      })
   },
 });
 

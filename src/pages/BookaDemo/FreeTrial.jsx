@@ -19,6 +19,9 @@ const FreeTrial = () => {
   // console.log(totalCount, "totalCount")
   // console.log(orderValue,  "answerId")
 
+  const [active, setActive] = useState(count < 70)
+
+
   useEffect(() => {
     dispatch(getQuestion(count));
     dispatch(getQuestionsCount())
@@ -107,13 +110,25 @@ const FreeTrial = () => {
               ))}
             </ul>
             <div className="text-center">
-              <Button
-                type="submit"
-                style={{ background: "#0F77FF" }}
-                className="px-5 fs-6"
-              >
-                {count < 70 ? "Next" : `${<Link to='/freetest/test-result'></Link>}`}
-              </Button>
+
+              {
+                active ? (<Button
+                  type="submit"
+                  style={{ background: "#0F77FF" }}
+                  className="px-5 fs-6"
+                >
+                  Next
+                </Button>) : (<Link to="/freetest/test-result"
+                  
+                  style={{ background: "#0F77FF" }}
+                  className="px-5 fs-6"
+                >
+                  Finish
+                </Link>)
+              }
+
+              
+
             </div>
           </Form>
         </div>

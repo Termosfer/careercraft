@@ -9,7 +9,6 @@ import Resources from '../pages/Resources/Resources'
 import Services from '../pages/Services/Services'
 import Solution from '../pages/Solution/Solution'
 import Login from '../pages/login/Login'
-import CheckMail from '../pages/CheckMail/CheckMail'
 import FreeTrial from '../pages/BookaDemo/FreeTrial'
 import Profile from '../pages/Profile/Profile'
 import ResetPass from '../pages/ResetPass/ResetPass'
@@ -29,7 +28,6 @@ const PublicRoutes = () => {
         <Route path="/solutions" element={<Solution />} />
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
-        <Route path="/checkMail" element={<CheckMail />} />
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/freetest" element={<FreeTest/>} />

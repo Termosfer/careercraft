@@ -5,11 +5,14 @@ const initialState = {
   surname: "",
   email: "",
   password: "",
+  newPass: "",
+  confirmPass: "",
+  resetToken: "",
 };
 
 const authSlice = createSlice({
   name: "auth",
-  initialState: initialState,
+  initialState,
   reducers: {
     changeName: (state, action) => {
       state.name = action.payload;
@@ -23,6 +26,15 @@ const authSlice = createSlice({
     changePassword: (state, action) => {
       state.password = action.payload;
     },
+    changeNewPass: (state, action) => {
+      state.newPass = action.payload
+    },
+    changeConfirmPass: (state, action) => {
+      state.confirmPass = action.payload
+    },
+    changeResetToken: (state,action)=>{
+      state.resetToken = action.payload
+    },
     clearInput: (state) => {
       state.email = "";
       state.password = "";
@@ -32,7 +44,7 @@ const authSlice = createSlice({
   },
 });
 
-export const { changeName, changeLastName, changeEmail, changePassword, clearInput } =
+export const { changeName, changeLastName, changeEmail, changePassword, clearInput, changeNewPass, changeConfirmPass, changeResetToken } =
   authSlice.actions;
 
 export default authSlice.reducer;
