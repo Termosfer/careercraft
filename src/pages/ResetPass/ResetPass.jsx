@@ -64,7 +64,7 @@ const ResetPass = () => {
   };
   const handleReset = async (e) => {
     e.preventDefault();
-    console.log("resetted");
+    // console.log("resetted");
     const allInput = `${input1}${input2}${input3}${input4}`;
     const reset = {
       newPassword: newPass,
