@@ -104,7 +104,7 @@ const authLogin = createSlice({
       })
       .addCase(resetPass.fulfilled, (state, action) => {
         state.loading = false,
-          state.message = action.payload
+        state.message = action.payload
       })
       .addCase(resetPass.rejected, (state) => {
         state.errorMessage = "404 Not Found"

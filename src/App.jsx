@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <PublicRoutes />
-      <Toaster position="top-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false}/>
     </BrowserRouter>
   );
 }

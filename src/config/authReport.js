@@ -33,7 +33,7 @@ const initialState = {
     raport: null,
     allreport: null,
     loading: false,
-    error: "",
+    error: null,
 }
 
 const authReport = createSlice({
@@ -47,13 +47,13 @@ const authReport = createSlice({
             .addCase(getReports.fulfilled, (state, action) => {
                 state.raport = action.payload,
                     state.loading = false
-            }).addCase(getReports.rejected, (state) => {
-                state.error = "Something is wrong"
+            }).addCase(getReports.rejected, (state, action) => {
+                state.error = action.payload
             }).addCase(getAllReports.pending, (state) => {
                 state.loading = true
             }).addCase(getAllReports.fulfilled, (state, action) => {
                 state.loading = false,
-                    state.allreport = action.payload
+                state.allreport = action.payload
             }).addCase(getAllReports.rejected, (state) => {
                 state.error = "Something is wrong"
             })

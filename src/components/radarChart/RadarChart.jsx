@@ -3,13 +3,14 @@ import {
     Radar, RadarChart, PolarGrid,
     PolarAngleAxis, PolarRadiusAxis
 } from 'recharts';
-const RChart = () => {
+const RChart = ({allReport}) => {
+    console.log(allReport, "radar")
     const data = [
-        { name: 'Communication', x: 40 },
-        { name: 'Personal Qualities', x: 66 },
-        { name: 'Critical Thinking', x: 42 },
-        { name: 'Leadership', x: 58 },
-        { name: 'Teamwork', x: 67 },
+        { name: 'Communication', x: allReport && allReport[4] ? allReport[4].percentageCorrect : ""},
+        { name: 'Personal Qualities', x: allReport && allReport[3] ? allReport[3].percentageCorrect : "" },
+        { name: 'Critical Thinking', x: allReport && allReport[2] ? allReport[2].percentageCorrect : "" },
+        { name: 'Leadership', x: allReport && allReport[1] ? allReport[1].percentageCorrect : "" },
+        { name: 'Teamwork', x: allReport && allReport[0] ? allReport[0].percentageCorrect : "" },
 
     ];
     return (
