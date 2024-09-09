@@ -35,9 +35,17 @@ export const fortgotHandle = createAsyncThunk("auth/password/reset", async (emai
   return data
 })
 
-export const resetPass = createAsyncThunk("auth/confirmPass", async (reset) => {
-  const response = await axios.post(`${baseURL}/api/password/reset`, reset)
-  return response.data
+export const resetPass = createAsyncThunk("auth/confirmPass", async (reset, { rejectWithValue }) => {
+  try {
+    const response = await axios.post(`${baseURL}/api/password/reset`, reset)
+    return response.data
+  } catch (error) {
+    if (error.response) {
+      return rejectWithValue(error.response.data);
+    }
+    return rejectWithValue(error.response);
+
+  }
 })
 
 export const logout = createAsyncThunk("auth/logout", async () => {
@@ -50,10 +58,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 const authLogin = createSlice({
   name: "login",
   initialState: initialState,
-
-  reducers: {
-
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(loginUser.pending, (state) => {
@@ -104,10 +109,10 @@ const authLogin = createSlice({
       })
       .addCase(resetPass.fulfilled, (state, action) => {
         state.loading = false,
-        state.message = action.payload
+          state.message = action.payload
       })
-      .addCase(resetPass.rejected, (state) => {
-        state.errorMessage = "404 Not Found"
+      .addCase(resetPass.rejected, (state, action) => {
+        state.errorMessage = action.payload.newPassword
       })
   },
 });

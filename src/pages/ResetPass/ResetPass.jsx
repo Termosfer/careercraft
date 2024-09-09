@@ -22,9 +22,13 @@ const ResetPass = () => {
   const dispatch = useDispatch();
   const newPassword = useSelector((state) => state.auth.newPass);
   const confirmPassword = useSelector((state) => state.auth.confirmPass);
-
+  const errorMessage = useSelector((state) => state.login.errorMessage);
+  console.log(errorMessage,  "adsdad")
   const changenewPass = (e) => {
+  if (!errorMessage.length) {
     dispatch(changeNewPass(e.currentTarget.value));
+  }
+  return errorMessage
   };
 
   const changeconfirmPass = (e) => {
@@ -42,10 +46,6 @@ const ResetPass = () => {
     }
   }, [time]);
 
-  /*  useEffect(() => {
-    
-     dispatch(resetPass(reset))
-   }, []) */
 
   // Refs for the inputs
   const inputRefs = useRef([]);
