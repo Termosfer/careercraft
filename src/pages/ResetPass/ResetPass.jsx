@@ -12,19 +12,16 @@ import { resetPass } from "../../config/authLogin";
 const ResetPass = () => {
   const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
   const [time, setTime] = useState(180);
-  const [input1, setInput1] = useState("");
-  const [input2, setInput2] = useState("");
-  const [input3, setInput3] = useState("");
-  const [input4, setInput4] = useState("");
+  const [inputs, setInputs] = useState({
+    input1: "",
+    input2: "",
+    input3: "",
+    input4: "",
+  });
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const newPassword = useSelector((state) => state.auth.newPass);
   const confirmPassword = useSelector((state) => state.auth.confirmPass);
-
-  // console.log(input1, "asd");
-  // console.log(input2, "asd");
-  // console.log(input3, "asd");
-  // console.log(input4, "asd");
 
   const changenewPass = (e) => {
     dispatch(changeNewPass(e.currentTarget.value));
@@ -64,7 +61,7 @@ const ResetPass = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     // console.log("resetted");
-    const token = `${input1}${input2}${input3}${input4}`;
+    const token = `${inputs.input1}${inputs.input2}${inputs.input3}${inputs.input4}`;
     const reset = {
       newPassword,
       confirmPassword,
@@ -156,11 +153,11 @@ const ResetPass = () => {
                   autoFocus
                   maxLength={1}
                   onChange={(e) => {
-                    setInput1(e.target.value);
+                    setInputs({ ...inputs, input1: e.target.value });
                     handleInputChange(e, 0);
                   }}
                   ref={(el) => (inputRefs.current[0] = el)}
-                  value={input1}
+                  value={inputs.input1}
                 />
                 <Form.Control
                   className="field-input text-center"
@@ -174,11 +171,11 @@ const ResetPass = () => {
                   autoFocus
                   maxLength={1}
                   onChange={(e) => {
-                    setInput2(e.target.value);
+                    setInputs({ ...inputs, input2: e.target.value });
                     handleInputChange(e, 1);
                   }}
                   ref={(el) => (inputRefs.current[1] = el)}
-                  value={input2}
+                  value={inputs.input2}
                 />
                 <Form.Control
                   className="field-input text-center"
@@ -193,11 +190,11 @@ const ResetPass = () => {
                   autoFocus
                   maxLength={1}
                   onChange={(e) => {
-                    setInput3(e.target.value);
+                    setInputs({ ...inputs, input3: e.target.value });
                     handleInputChange(e, 2);
                   }}
                   ref={(el) => (inputRefs.current[2] = el)}
-                  value={input3}
+                  value={inputs.input3}
                 />
                 <Form.Control
                   className="field-input text-center"
@@ -212,11 +209,11 @@ const ResetPass = () => {
                   autoFocus
                   maxLength={1}
                   onChange={(e) => {
-                    setInput4(e.target.value);
+                    setInputs({ ...inputs, input4: e.target.value });
                     handleInputChange(e, 3);
                   }}
                   ref={(el) => (inputRefs.current[3] = el)}
-                  value={input4}
+                  value={inputs.input4}
                 />
               </div>
 
