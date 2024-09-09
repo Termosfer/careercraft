@@ -4,10 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  changeConfirmPass,
-  changeNewPass,
-} from "../../config/authSlice";
+import { changeConfirmPass, changeNewPass } from "../../config/authSlice";
 import { resetPass } from "../../config/authLogin";
 const ResetPass = () => {
   const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
@@ -23,12 +20,9 @@ const ResetPass = () => {
   const newPassword = useSelector((state) => state.auth.newPass);
   const confirmPassword = useSelector((state) => state.auth.confirmPass);
   const errorMessage = useSelector((state) => state.login.errorMessage);
-  console.log(errorMessage,  "adsdad")
+  console.log(errorMessage, "adsdad");
   const changenewPass = (e) => {
-  if (!errorMessage.length) {
     dispatch(changeNewPass(e.currentTarget.value));
-  }
-  return errorMessage
   };
 
   const changeconfirmPass = (e) => {
@@ -45,7 +39,6 @@ const ResetPass = () => {
       navigate("/");
     }
   }, [time]);
-
 
   // Refs for the inputs
   const inputRefs = useRef([]);
@@ -105,6 +98,9 @@ const ResetPass = () => {
                   autoFocus
                   onChange={changenewPass}
                 />
+                {errorMessage && (
+                  <span className="text-danger">{errorMessage}.</span>
+                )}
                 <div className="icon-cont" onClick={handlePassword}>
                   {show ? (
                     <IoEyeOffOutline color="#98A2B3" />
