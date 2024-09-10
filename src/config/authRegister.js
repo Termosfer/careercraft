@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseURL } from "./api";
 
 const initialState = {
   data: [],
@@ -9,7 +10,7 @@ const initialState = {
 
 export const register = createAsyncThunk("registration/register", async (userData) => {
   const response = await axios.post(
-    "http://35.173.133.91:8070/registration",
+    `${baseURL}/registration`,
     userData
   );
   return response.data;

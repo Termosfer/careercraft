@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { baseURL } from "./api";
 import toast from "react-hot-toast";
 
 const initialState = {
@@ -11,7 +12,7 @@ const initialState = {
   token: "",
 };
 
-const baseURL = "http://35.173.133.91:8070";
+
 
 export const loginUser = createAsyncThunk(
   "auth/login",

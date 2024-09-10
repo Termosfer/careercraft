@@ -70,7 +70,7 @@ function CollapsibleExample() {
                 <div className="position-relative">
                   <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
                     <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                      {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase()  : ""}
+                      {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase() : ""}
 
                     </h1>
                     <RiArrowDownSLine style={{ color: "#408FFF" }} />
@@ -82,7 +82,7 @@ function CollapsibleExample() {
                         <div className="d-flex align-items-center gap-2 bottom">
                           <div>
                             <h1 className="rounded-circle" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                              {user.name && user.surname ? user.name.slice(0, 1).toUpperCase()  + user.surname.slice(0, 1).toUpperCase()  : ""}
+                              {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase() : ""}
                             </h1>
                           </div>
                           <div className="d-flex flex-column">
@@ -91,7 +91,7 @@ function CollapsibleExample() {
                           </div>
                         </div>
                         <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Profile</span></div>
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><Link to={"/profile"} className="fs">Profile</Link></div>
                           <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Settings</span></div>
                         </div>
                         <div className="px-1 pt-2 gap-2 d-flex flex-column  ">

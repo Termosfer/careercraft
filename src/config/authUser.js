@@ -1,13 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseURL } from "./api";
 
 const initialState = {
     username: null,
     loading: false,
     error: ""
 }
-
-const baseURL= "http://35.173.133.91:8070"
 
 export const userData = createAsyncThunk("auth/userData", async (token) => {
     if (token) {

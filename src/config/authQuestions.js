@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { baseURL } from "./api";
 
 const initialState = {
   question: [],
@@ -17,7 +18,7 @@ export const getQuestion = createAsyncThunk(
     const token = localStorage.getItem("token")
     if (token) {
       const response = await axios.get(
-        `http://35.173.133.91:8070/questions/${count}`, {
+        `${baseURL}/questions/${count}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -33,7 +34,7 @@ export const getQuestion = createAsyncThunk(
 export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount", async () => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.get(`http://35.173.133.91:8070/questions/count`, {
+    const response = await axios.get(`${baseURL}/questions/count`, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -46,7 +47,7 @@ export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount",
 export const getAnswer = createAsyncThunk("questions/getAnswer", async(answer) => {
   const token = localStorage.getItem("token")
   if (token) {
-    const response = await axios.post("http://35.173.133.91:8070/user-answers/answer", answer, {
+    const response = await axios.post(`${baseURL}/user-answers/answer`, answer, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
