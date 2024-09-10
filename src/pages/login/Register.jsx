@@ -13,6 +13,7 @@ import {
   changePassword,
   clearInput,
 } from "../../config/authSlice";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -20,8 +21,8 @@ function Register() {
   const surname = useSelector((state) => state.auth.surname);
   const email = useSelector((state) => state.auth.email);
   const password = useSelector((state) => state.auth.password);
-const data = useSelector(state=>state.registration.data)
-console.log(data, "data")
+  const data = useSelector((state) => state.registration.data);
+  console.log(data, "data");
   const handleChangeName = (e) => {
     dispatch(changeName(e.currentTarget.value));
   };
@@ -36,6 +37,10 @@ console.log(data, "data")
   };
 
   const [validated, setValidated] = useState(false);
+  const [show, setShow] = useState(false);
+  const handlePassword = () => {
+    setShow(!show);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -149,13 +154,20 @@ console.log(data, "data")
                 <Form.Group as={Col} md="12" controlId="validationCustom04">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
-                    type="password"
+                    type={show ? "text" : "password"}
                     placeholder="Password"
                     required
                     onChange={handleChangePassword}
                     value={password}
                     className="shadow-none"
                   />
+                  <div className="icon-cont-reg" onClick={handlePassword}>
+                    {show ? (
+                      <IoEyeOffOutline color="#98A2B3" />
+                    ) : (
+                      <IoEyeOutline color="#98A2B3" />
+                    )}
+                  </div>
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Check

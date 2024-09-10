@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeConfirmPass, changeNewPass } from "../../config/authSlice";
 import { resetPass } from "../../config/authLogin";
 const ResetPass = () => {
+  const [show1, setShow1] = useState(false); // Şifre görünürlüğünü kontrol eden state
   const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
   const [time, setTime] = useState(180);
   const [inputs, setInputs] = useState({
@@ -15,20 +16,36 @@ const ResetPass = () => {
     input3: "",
     input4: "",
   });
+  const [confirmPass, setConfirmPass] = useState("");
+  const [newPass, setNewPass] = useState("");
+  const [active, setActive] = useState(true);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const newPassword = useSelector((state) => state.auth.newPass);
   const confirmPassword = useSelector((state) => state.auth.confirmPass);
   const errorMessage = useSelector((state) => state.login.errorMessage);
-  console.log(errorMessage, "adsdad");
   const changenewPass = (e) => {
     dispatch(changeNewPass(e.currentTarget.value));
+    setConfirmPass(e.currentTarget.value);
+    setActive(false);
+    if (e.currentTarget.value == confirmPass) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
   };
 
   const changeconfirmPass = (e) => {
     dispatch(changeConfirmPass(e.currentTarget.value));
+    setNewPass(e.currentTarget.value);
+    setActive(false);
+    if (e.currentTarget.value == confirmPass) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
   };
-
   useEffect(() => {
     if (time > 0) {
       const timer = setInterval(() => {
@@ -40,7 +57,6 @@ const ResetPass = () => {
     }
   }, [time]);
 
-  // Refs for the inputs
   const inputRefs = useRef([]);
 
   const handleInputChange = (e, index) => {
@@ -53,7 +69,6 @@ const ResetPass = () => {
   };
   const handleReset = async (e) => {
     e.preventDefault();
-    // console.log("resetted");
     const token = `${inputs.input1}${inputs.input2}${inputs.input3}${inputs.input4}`;
     const reset = {
       newPassword,
@@ -65,6 +80,9 @@ const ResetPass = () => {
     if (resetPass.fulfilled.match(resultAction)) {
       navigate("/auth/login");
     }
+  };
+  const handlePassword1 = () => {
+    setShow1(!show1); // Şifre görünürlüğünü kontrol eden fonksiyon
   };
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
@@ -93,7 +111,7 @@ const ResetPass = () => {
                 <Form.Control
                   className="field-input"
                   style={{ outline: "none", boxShadow: "none" }}
-                  type={show ? "text" : "password"}
+                  type={show1 ? "text" : "password"}
                   placeholder="Enter your password"
                   autoFocus
                   onChange={changenewPass}
@@ -101,8 +119,8 @@ const ResetPass = () => {
                 {errorMessage && (
                   <span className="text-danger">{errorMessage}.</span>
                 )}
-                <div className="icon-cont" onClick={handlePassword}>
-                  {show ? (
+                <div className="icon-cont" onClick={handlePassword1}>
+                  {show1 ? (
                     <IoEyeOffOutline color="#98A2B3" />
                   ) : (
                     <IoEyeOutline color="#98A2B3" />
@@ -116,12 +134,21 @@ const ResetPass = () => {
                 </Form.Label>
                 <Form.Control
                   className="field-input"
-                  style={{ outline: "none", boxShadow: "none" }}
+                  style={{
+                    outline: "none",
+                    boxShadow: "none",
+                    borderColor: active ? "#dee2e6" : "red",
+                  }}
                   type={show ? "text" : "password"}
                   placeholder="Enter your password"
                   autoFocus
                   onChange={changeconfirmPass}
                 />
+                {active ? (
+                  ""
+                ) : (
+                  <span className="text-danger">Passwords don't match</span>
+                )}
                 <div className="icon-cont" onClick={handlePassword}>
                   {show ? (
                     <IoEyeOffOutline color="#98A2B3" />

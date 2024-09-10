@@ -2,77 +2,38 @@ import React, { useState, useEffect } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
-
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { fortgotHandle, loginUser } from "../../config/authLogin"; // Düzenlenmiş import
-// import { changeEmail, changePassword, clearInput } from "../../config/authSlice";
+import { fortgotHandle, loginUser } from "../../config/authLogin";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
-  // const email = useSelector((state) => state.auth.email);
-  // const password = useSelector((state) => state.auth.password);
-
+  const [show, setShow] = useState(false);
   const [userLogged, setUserLogged] = useState({
     email: "",
-    password: ""
-  })
-
-  // const [email, setEmail] = useState(localStorage.getItem("email"))
-
+    password: "",
+  });
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const token = useSelector(state => state.login.token)
-  const message = useSelector(state => state.login.message)
-
-
-  // const handlerChangeEmail = (e) => {
-  //   dispatch(changeEmail(e.currentTarget.value));
-  // };
-
-  // const handlerChangePassword = (e) => {
-  //   dispatch(changePassword(e.currentTarget.value));
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const loginData = { email, password };
-  //     await dispatch(login(loginData)).then(action=>{
-  //       localStorage.setItem("token", action.payload.accessToken)
-  //     });
-  //     dispatch(clearInput())
-  //     toast.success("Successfully login!");
-  //     navigate("/")
-  //   } catch (error) {
-  //     console.error("Login failed:", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   localStorage.setItem("email", JSON.stringify(userLogged.email))
-  //   setEmail(JSON.parse(localStorage.getItem("email")))
-
-  // }, [userLogged]);
-
+  const token = useSelector((state) => state.login.token);
+  const message = useSelector((state) => state.login.message);
+  const errormessage = useSelector((state) => state.login.errorMessage);
 
   const handlePassword = () => {
-    setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
+    setShow(!show);
   };
 
   const handleForgot = async () => {
-    dispatch(fortgotHandle(userLogged.email))
-  }
+    dispatch(fortgotHandle(userLogged.email));
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     const resultAction = await dispatch(loginUser(userLogged));
     if (loginUser.fulfilled.match(resultAction)) {
-      navigate("/")
+      navigate("/");
     }
-
   };
 
   return (
@@ -96,7 +57,9 @@ const Login = () => {
                     type="email"
                     placeholder="Enter your email"
                     autoFocus
-                    onChange={e => setUserLogged({ ...userLogged, email: e.target.value })}
+                    onChange={(e) =>
+                      setUserLogged({ ...userLogged, email: e.target.value })
+                    }
                     value={userLogged.email}
                   />
                 </Form.Group>
@@ -121,7 +84,9 @@ const Login = () => {
                     type={show ? "text" : "password"}
                     placeholder="Enter your password"
                     autoFocus
-                    onChange={e => setUserLogged({ ...userLogged, password: e.target.value })}
+                    onChange={(e) =>
+                      setUserLogged({ ...userLogged, password: e.target.value })
+                    }
                     value={userLogged.password}
                   />
                   <div className="icon-cont" onClick={handlePassword}>
@@ -134,16 +99,20 @@ const Login = () => {
                 </Form.Group>
 
                 <Button
-                /* onClick={handleLogin} */ type="submit"
+                  type="submit"
                   className="w-100 log-btn"
                   variant="primary"
                 >
                   Login now
                 </Button>
+                <span className="text-danger text-center">{errormessage}</span>
 
                 <div className="text-center dont-acc pb-2">
                   Don't Have An Account?{" "}
-                  <Link to="/auth/register" className="text-decoration-none pb-2">
+                  <Link
+                    to="/auth/register"
+                    className="text-decoration-none pb-2"
+                  >
                     Sign Up
                   </Link>
                 </div>
