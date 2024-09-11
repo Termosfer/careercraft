@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div style={{ background: "#f8f8f8" }} className="py-4">
+    <div style={{ background: "white" }} className="py-4">
       <Container className="p-5 w-75 p-5">
         <Row>
           <Col xs={12} md={12} lg={3} className="mb-4 mb-md-3">

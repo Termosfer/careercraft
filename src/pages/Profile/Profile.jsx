@@ -4,7 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Card from "react-bootstrap/Card";
 import EditSVG from "../../components/SVG/EditSVG";
 import "./Profile.css"
 import { useSelector } from "react-redux";
@@ -42,7 +41,7 @@ const Profile = () => {
         }
 
         <Form className=" border rounded-4 personal-cont ">
-          <Row className=" w-100 d-flex justify-content-between">
+          <Row className=" w-100 d-flex ">
             <Col>
               <h4 className="pers-info-h4 fw-semibold">Personal Information</h4>
             </Col>
@@ -54,9 +53,51 @@ const Profile = () => {
             </Col>
           </Row>
           
-          <Row>
-            <Col>Phone</Col>
-            <Col>Job</Col>
+          <Row className="prof-p">
+            <Col>
+            <label htmlFor="">First name</label>
+            <p>{user.name}</p>
+            </Col>
+
+            <Col>
+            <label htmlFor="">Last name</label>
+            <p>{user.surname}</p>
+            </Col>
+          </Row>
+
+          <Row className="prof-p">
+            <Col>
+            <label htmlFor="">Gender</label>
+            <p>Female</p>
+            </Col>
+
+            <Col>
+            <label htmlFor="">Birthday</label>
+            <p>23 March, 2001</p>
+            </Col>
+          </Row>
+
+          <Row className="prof-p">
+            <Col>
+            <label htmlFor="">Bio</label>
+            <p>IT Project Manager</p>
+            </Col>
+
+            <Col>
+            <label htmlFor="">Email Address</label>
+            <p>{email}</p>
+            </Col>
+          </Row>
+
+          <Row className="prof-p">
+            <Col>
+            <label htmlFor="">Phone</label>
+            <p>+994 55 555 55 55</p>
+            </Col>
+
+            <Col>
+            
+            </Col>
           </Row>
         </Form>
       </Container>
