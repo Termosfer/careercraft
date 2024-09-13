@@ -104,9 +104,7 @@ function CollapsibleExample() {
                       </div>
                     )
                   }
-
                 </div>
-
               </div>
             ) : (
               <div>

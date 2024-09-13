@@ -3,7 +3,7 @@ import axios from "axios";
 import { baseURL } from "./api";
 
 const initialState = {
-    username: null,
+    username: {},
     loading: false,
     error: ""
 }
@@ -12,7 +12,7 @@ export const userData = createAsyncThunk("auth/userData", async (token) => {
     if (token) {
       try {
         const response = await axios.get(
-          `${baseURL}/customerInfo`,
+          `${baseURL}/api/customers/info`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

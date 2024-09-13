@@ -16,7 +16,7 @@ const Profile = () => {
   const user = useSelector(state => state.user.username)
   const email = localStorage.getItem("email")
 
-  console.log(user, email);
+  console.log(user, email, "asdadasd");
 
 
   return (
