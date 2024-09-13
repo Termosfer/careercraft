@@ -91,7 +91,7 @@ function CollapsibleExample() {
                           </div>
                         </div>
                         <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><Link to={"/profile"} className="fs">Profile</Link></div>
+                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><Link to={"/profile"} className="fs text-decoration-none text-dark">Profile</Link></div>
                           <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Settings</span></div>
                         </div>
                         <div className="px-1 pt-2 gap-2 d-flex flex-column  ">
