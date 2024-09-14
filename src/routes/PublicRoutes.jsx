@@ -14,7 +14,7 @@ import Profile from '../pages/Profile/Profile'
 import ResetPass from '../pages/ResetPass/ResetPass'
 import FreeTest from '../pages/FreeTest/FreeTest'
 import TestResult from '../components/testResult/TestResult'
-
+import HardSkillTestResult from '../components/hardSkillTestResult/HardSkillTestResult'
 
 const PublicRoutes = () => {
   return (
@@ -32,6 +32,7 @@ const PublicRoutes = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/freetest" element={<FreeTest/>} />
         <Route path="/freetest/test-result" element={<TestResult />} />
+        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path='/auth/password/reset' element={<ResetPass />} />
 
       </Routes>
