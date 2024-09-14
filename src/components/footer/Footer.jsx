@@ -15,11 +15,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-<<<<<<< HEAD
-    <div style={{ background: "white" }} className="py-4">
-=======
     <div style={{ background: "#ffffff" }} className="py-4">
->>>>>>> abbas
       <Container className="p-5 w-75 p-5">
         <Row>
           <Col xs={12} md={12} lg={3} className="mb-4 mb-md-3">
