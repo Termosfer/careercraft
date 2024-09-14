@@ -10,6 +10,7 @@ const TestResult = () => {
     const dispatch = useDispatch()
     const totalReport = useSelector(state => state.report.raport)
     const allReport = useSelector(state => state.report.allreport)
+    console.log(allReport)
     const error = useSelector(state => state.report.error)
     console.log(error, "error")
     console.log(allReport, "allreport")
