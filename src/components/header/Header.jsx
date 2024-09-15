@@ -5,32 +5,32 @@ import logo from "../../assets/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RiArrowDownSLine } from "react-icons/ri"
-import userImg from "../../assets/profileImg/user-square.png"
-import logoutImg from "../../assets/profileImg/logout-03.png"
-import settingImg from "../../assets/profileImg/elements.png"
+import { RiArrowDownSLine } from "react-icons/ri";
+/* import userImg from "../../assets/profileImg/user-square.png"; */
+import logoutImg from "../../assets/profileImg/logout-03.png";
+import settingImg from "../../assets/profileImg/elements.png";
 import { logout } from "../../config/authLogin";
 import { userData } from "../../config/authUser";
+import UserSVG from "../SVG/UserSVG";
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [active, setActive] = useState(false)
-  const user = useSelector(state => state.user.username)
-  const token = localStorage.getItem("token")
-  const email = localStorage.getItem("email")
+  const [active, setActive] = useState(false);
+  const user = useSelector((state) => state.user.username);
+  const token = localStorage.getItem("token");
   useEffect(() => {
-    dispatch(userData(token))
-  }, [token])
+    dispatch(userData(token));
+  }, [token]);
 
   const handlerClick = () => {
-    setActive(!active)
-  }
+    setActive(!active);
+  };
 
   const handlerLogout = () => {
-    dispatch(logout())
-    setActive(false)
-    navigate("/")
-  }
+    dispatch(logout());
+    setActive(false);
+    navigate("/");
+  };
   return (
     <Navbar collapseOnSelect expand="lg" id="bg-nav" variant="light">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
@@ -68,42 +68,95 @@ function CollapsibleExample() {
                   Book a Demo
                 </Link>
                 <div className="position-relative">
-                  <div className="d-flex align-items-center  gap-1 cursor-pointer" onClick={handlerClick}>
-                    <h1 className="rounded-circle" id="dropdown-basic" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                      {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase() : ""}
-
+                  <div
+                    className="d-flex align-items-center  gap-1 cursor-pointer"
+                    onClick={handlerClick}
+                  >
+                    <h1
+                      className="rounded-circle"
+                      id="dropdown-basic"
+                      style={{
+                        backgroundColor: "#D3E5FF",
+                        color: "#408FFF",
+                        border: "none",
+                      }}
+                    >
+                      {user.name && user.surname
+                        ? user.name.slice(0, 1).toUpperCase() +
+                          user.surname.slice(0, 1).toUpperCase()
+                        : ""}
                     </h1>
                     <RiArrowDownSLine style={{ color: "#408FFF" }} />
                   </div>
-                  {
-
-                    active && (
-                      <div className="position-absolute p-3">
-                        <div className="d-flex align-items-center gap-2 bottom">
-                          <div>
-                            <h1 className="rounded-circle" style={{ backgroundColor: "#D3E5FF", color: "#408FFF", border: "none" }}>
-                              {user.name && user.surname ? user.name.slice(0, 1).toUpperCase() + user.surname.slice(0, 1).toUpperCase() : ""}
-                            </h1>
-                          </div>
-                          <div className="d-flex flex-column">
-                            <span className="fs-8">{user.name + " " + user.surname}</span>
-                            <span className="fs-7">{email}</span>
-                          </div>
+                  {active && (
+                    <div className="position-absolute p-3">
+                      <div className="d-flex align-items-center gap-2 bottom">
+                        <div>
+                          <h1
+                            className="rounded-circle"
+                            style={{
+                              backgroundColor: "#D3E5FF",
+                              color: "#408FFF",
+                              border: "none",
+                            }}
+                          >
+                            {user.name && user.surname
+                              ? user.name.slice(0, 1).toUpperCase() +
+                                user.surname.slice(0, 1).toUpperCase()
+                              : ""}
+                          </h1>
                         </div>
-                        <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={userImg} alt="userimg" style={{ width: "20px", height: "20px" }} className="img-hover" /><Link to={"/profile"} className="fs text-decoration-none text-dark">Profile</Link></div>
-                          <div className="d-flex align-items-center gap-1  p-1 action-item"> <img src={settingImg} alt="setting" style={{ width: "20px", height: "20px" }} className="img-hover" /><span className="fs">Settings</span></div>
-                        </div>
-                        <div className="px-1 pt-2 gap-2 d-flex flex-column  ">
-
-                          <div className="px-1  d-flex align-items-center p-1 gap-1 action-item " onClick={handlerLogout}>
-                            <img src={logoutImg} alt="logout" style={{ width: "20px", height: "20px", }} className="img-hover" />
-                            <span className="fs">Logout</span>
-                          </div>
+                        <div className="d-flex flex-column">
+                          <span className="fs-8">
+                            {user.name + " " + user.surname}
+                          </span>
+                          <span className="fs-9">{user.email}</span>
                         </div>
                       </div>
-                    )
-                  }
+                      <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
+                        <div className="d-flex align-items-center gap-1  p-1 action-item">
+                          {" "}
+                          {/*  <img
+                            src={userImg}
+                            alt="userimg"
+                            style={{ width: "20px", height: "20px" }}
+                            className="img-hover"
+                          /> */}
+                          <UserSVG />
+                          <Link
+                            to={"/profile"}
+                            className="fs text-decoration-none text-dark"
+                          >
+                            Profile
+                          </Link>
+                        </div>
+                        <div className="d-flex align-items-center gap-1  p-1 action-item">
+                          {" "}
+                          <img
+                            src={settingImg}
+                            alt="setting"
+                            style={{ width: "20px", height: "20px" }}
+                            className="img-hover"
+                          />
+                          <span className="fs">Settings</span>
+                        </div>
+                      </div>
+                      <div className="px-1 pt-2 gap-2 d-flex flex-column  ">
+                        <div
+                          className="px-1  d-flex align-items-center p-1 gap-1 action-item "
+                          onClick={handlerLogout}
+                        >
+                          <img
+                            src={logoutImg}
+                            alt="logout"
+                            style={{ width: "20px", height: "20px" }}
+                            className="img-hover"
+                          />
+                          <span className="fs">Logout</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ) : (

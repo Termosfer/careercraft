@@ -12,15 +12,12 @@ const initialState = {
   token: "",
 };
 
-
-
 export const loginUser = createAsyncThunk(
   "auth/login",
 
   async (userLogged) => {
     const { data } = await axios.post(`${baseURL}/api/auth/login`, userLogged);
     localStorage.setItem("token", data.accessToken);
-    localStorage.setItem("email", userLogged.email);
     toast.success("Successfully logged in!");
     return data;
   }
@@ -57,7 +54,6 @@ export const resetPass = createAsyncThunk(
 
 export const logout = createAsyncThunk("auth/logout", async () => {
   localStorage.removeItem("token");
-  localStorage.removeItem("email");
 });
 
 const authLogin = createSlice({
