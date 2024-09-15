@@ -1,72 +1,92 @@
-.btn-edit{
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    align-items: center;
+.btn-edit {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
 }
 
-.cont-h1-profile{
-    width: 95px;
-    height: 95px;
-    background-color: #D3E5FF;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid white;
+.cont-h1-profile {
+  width: 95px;
+  height: 95px;
+  background-color: #d3e5ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
 }
 
-.profile-h1{
-    margin-bottom: 0;
-    font-size: 30px;
-    color:  #3480AC;
+.profile-h1 {
+  margin-bottom: 0;
+  font-size: 30px;
+  color: #3480ac;
 }
 
-.fw-semibold{
-    font-size: 24px;
-
+.fw-semibold {
+  font-size: 24px;
 }
 
-.fs-7{
-    color: #838383;
-    font-size: 14px;
+.fs-7 {
+  color: #838383;
+  font-size: 14px;
 }
 
-
-.bg-profile{
-    height: 200px;
-    background-image: url("../../assets/img/profile.png");
-    background-position: center;
-    background-size: cover;
+.bg-profile {
+  height: 200px;
+  background-image: url("../../assets/img/profile.png");
+  background-position: center;
+  background-size: cover;
 }
 
-.cont-prof{
-    position: relative;
+.cont-prof {
+  position: relative;
 }
 
+.profile-div {
+  position: absolute;
+  top: -130px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
 
-.profile-div{
+.rounded-4 {
+  margin-top: 100px;
+}
+
+.personal-cont {
+  padding: 36px;
+}
+
+label {
+  color: #838383;
+}
+
+.prof-p p {
+  margin-bottom: 22px;
+}
+
+.bgColor-softSkill {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border-radius: 18px;
+  background: linear-gradient(105.7deg, #0f77ff 0.61%, #094799 73.64%);
+}
+
+.graph-img {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+}
+.graph-img2 {
     position: absolute;
-    top:-130px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-end;
-}
+    top: 140px;
+    left: 0;
+    width: 100%;
+  }
 
-.rounded-4{
-    margin-top: 100px;
-}
-
-
-.personal-cont{
-    padding: 36px;
-}
-
-
-label{
-    color: #838383;
-}
-
-.prof-p p{
-    margin-bottom: 22px;
+.softSkill-info{
+    position: relative;
 }

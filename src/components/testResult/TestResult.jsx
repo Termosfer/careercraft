@@ -6,12 +6,12 @@ import RChart from '../radarChart/RadarChart';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllReports, getReports } from '../../config/authReport';
 const TestResult = () => {
-    const email = localStorage.getItem("email")
     const dispatch = useDispatch()
     const totalReport = useSelector(state => state.report.raport)
     const allReport = useSelector(state => state.report.allreport)
     console.log(allReport)
     const error = useSelector(state => state.report.error)
+    const user = useSelector((state) => state.user.username);
     console.log(error, "error")
     console.log(allReport, "allreport")
     const [color, setColor] = useState("#6FADFF")
@@ -38,7 +38,7 @@ const TestResult = () => {
                 <Row>
                     <Col lg={12} className='py-4'>
                         <h1 className=' text-center pb-4'>Thank you for completing the Soft Skills Assessment!</h1>
-                        <p className='fw-bolder' style={{ fontSize: "19px" }}>Your detailed report has been emailed to <span className='text-primary'>{email}</span>. If you don’t see it in your inbox, please check your spam/junk folder.</p>
+                        <p className='fw-bolder' style={{ fontSize: "19px" }}>Your detailed report has been emailed to <span className='text-primary'>{user.email}</span>. If you don’t see it in your inbox, please check your spam/junk folder.</p>
                     </Col>
                     <Col lg={7}>
 
