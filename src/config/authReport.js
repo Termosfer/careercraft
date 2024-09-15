@@ -7,7 +7,7 @@ import { baseURL } from "./api";
 const token = localStorage.getItem("token")
 export const getReports = createAsyncThunk("raport", async () => {
     if (token) {
-        const response = await axios.get(`${baseURL}/reports?categoryId=1`, {
+        const response = await axios.get(`${baseURL}/reports?categoryId=2`, {
 
             headers: {
                 Authorization: `Bearer ${token}`
@@ -20,7 +20,7 @@ export const getReports = createAsyncThunk("raport", async () => {
 
 export const getAllReports = createAsyncThunk('allreport', async () => {
     if (token) {
-        const response = await axios.get(`${baseURL}/reports/category/1`, {
+        const response = await axios.get(`${baseURL}/reports/category/2`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
