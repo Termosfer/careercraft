@@ -32,6 +32,7 @@ export const userData = createAsyncThunk("auth/userData", async (token) => {
 const authUser = createSlice({
     name: "user",
     initialState,
+    
     extraReducers: (builder) => {
         builder
             .addCase(userData.pending, (state) => {

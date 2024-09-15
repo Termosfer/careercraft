@@ -8,6 +8,7 @@ const initialState = {
   newPass: "",
   confirmPass: "",
   resetToken: "",
+  
 };
 
 const authSlice = createSlice({
@@ -32,7 +33,7 @@ const authSlice = createSlice({
     changeConfirmPass: (state, action) => {
       state.confirmPass = action.payload
     },
-    changeResetToken: (state,action)=>{
+    changeResetToken: (state, action) => {
       state.resetToken = action.payload
     },
     clearInput: (state) => {
@@ -41,6 +42,11 @@ const authSlice = createSlice({
       state.name = "";
       state.surname = "";
     },
+
+    
+    
+
+
   },
 });
 

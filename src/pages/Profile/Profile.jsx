@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,8 +10,23 @@ import { useSelector } from "react-redux";
 import Graph from "../../assets/img/Graph.png";
 import Graph2 from "../../assets/img/Graph2.png";
 import { Link } from "react-router-dom";
+import ModalChanges from "../../components/modal/ModalChanges";
 const Profile = () => {
   const user = useSelector((state) => state.user.username);
+  const infofromLocal = JSON.parse(localStorage.getItem("userInfo"))||{
+    gender:"-",
+    birthday:"-",
+    phone:"-",
+    position:"-"
+  }
+
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+
+
+
+
 
   return (
     <div className="profile-cont">
@@ -23,7 +38,7 @@ const Profile = () => {
               <h1 className="profile-h1">
                 {user.name && user.surname
                   ? user.name.slice(0, 1).toUpperCase() +
-                    user.surname.slice(0, 1).toUpperCase()
+                  user.surname.slice(0, 1).toUpperCase()
                   : ""}
               </h1>
             </div>
@@ -36,13 +51,15 @@ const Profile = () => {
           </div>
         )}
 
+        <ModalChanges show={show} setShow={setShow} />
+
         <Form className=" border rounded-4 personal-cont ">
           <Row className=" w-100 d-flex ">
             <Col>
               <h4 className="pers-info-h4 fw-semibold">Personal Information</h4>
             </Col>
             <Col className="d-flex justify-content-end">
-              <Button className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end">
+              <Button className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end" onClick={handleShow}>
                 Edit
                 <EditSVG />
               </Button>
@@ -64,19 +81,19 @@ const Profile = () => {
           <Row className="prof-p">
             <Col>
               <label htmlFor="">Gender</label>
-              <p>Female</p>
+              <p>{infofromLocal.gender}</p>
             </Col>
 
             <Col>
               <label htmlFor="">Birthday</label>
-              <p>23 March, 2001</p>
+              <p>{infofromLocal.birthday}</p>
             </Col>
           </Row>
 
           <Row className="prof-p">
             <Col>
-              <label htmlFor="">Bio</label>
-              <p>IT Project Manager</p>
+              <label htmlFor="">Position</label>
+              <p>{infofromLocal.position}</p>
             </Col>
 
             <Col>
@@ -88,7 +105,7 @@ const Profile = () => {
           <Row className="prof-p">
             <Col>
               <label htmlFor="">Phone</label>
-              <p>+994 55 555 55 55</p>
+              <p>{infofromLocal.phone}</p>
             </Col>
 
             <Col></Col>
@@ -154,6 +171,8 @@ const Profile = () => {
               </Button>
             </div>
           </div>
+
+
         </div>
       </Container>
     </div>
