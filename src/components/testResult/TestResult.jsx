@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import "./testresult.css"
 import ProgressBar from "react-bootstrap/ProgressBar";
 import RChart from '../radarChart/RadarChart';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllReports, getReports } from '../../config/authReport';
+import { Link } from 'react-router-dom';
 const TestResult = () => {
     const dispatch = useDispatch()
     const totalReport = useSelector(state => state.report.raport)
@@ -40,7 +41,7 @@ const TestResult = () => {
                         <h1 className=' text-center pb-4'>Thank you for completing the Soft Skills Assessment!</h1>
                         <p className='fw-bolder' style={{ fontSize: "19px" }}>Your detailed report has been emailed to <span className='text-primary'>{user.email}</span>. If you don’t see it in your inbox, please check your spam/junk folder.</p>
                     </Col>
-                    <Col lg={7}>
+                    <Col lg={6}>
 
                         <div className='left-side d-flex flex-column'>
                             <p>How strong are your soft skills?</p>
@@ -54,7 +55,7 @@ const TestResult = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={6}>
                         <div className='right-side'>
                             <div className='w-75 text-center'>
                                 <span className='fw-bold fs-5'>YOUR OVERALL SCORE</span>
@@ -84,7 +85,7 @@ const TestResult = () => {
             </Container>
             <div className='chart-bg-color d-flex flex-column align-items-center'>
                 <h2 className='text-center pt-5'>Here’s Your Results...</h2>
-                <RChart allReport = {allReport}/>
+                <RChart allReport={allReport} />
             </div>
             <div className='skills-bg-color'>
                 <Container className='w-75 p-5'>
@@ -95,11 +96,12 @@ const TestResult = () => {
                         </Col>
                     </Row>
                     <Row >
-                        <Col lg={4} >
+                        <Col lg={4} className="mb-3">
                             <div className='skills-result-page pb-4'>
                                 <div className='d-flex flex-column'>
                                     <p className='fw-bolder'>{allReport && allReport[4] ? allReport[4].skillName : ""}</p>
                                     <span>The ability to clearly and effectively convey ideas, ensuring that your message is understood by others.</span>
+                                    <Link>Read more</Link>
                                 </div>
                                 <div className="d-flex flex-column">
                                     <ProgressBar variant="primary" now={allReport && allReport[4] ? allReport[4].percentageCorrect : ""} />
@@ -110,12 +112,14 @@ const TestResult = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="mb-3">
                             <div className='skills-result-page pb-4'>
                                 <div className='d-flex flex-column'>
                                     <p className='fw-bolder'>{allReport && allReport[3] ? allReport[3].skillName : ""}</p>
                                     <span>The character traits such as integrity, resilience, and adaptability that influence how you approach challenges and interact with others.</span>
+                                    <Link>Read more</Link>
                                 </div>
+
                                 <div className="d-flex flex-column">
                                     <ProgressBar variant="primary" now={allReport && allReport[3] ? allReport[3].percentageCorrect : ""} />
                                     <div className='d-flex justify-content-between text-primary fw-bolder'>
@@ -126,12 +130,14 @@ const TestResult = () => {
                             </div>
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} className="mb-3">
                             <div className='skills-result-page pb-4'>
                                 <div className='d-flex flex-column'>
                                     <p className='fw-bolder'>{allReport && allReport[2] ? allReport[2].skillName : ""}</p>
                                     <span>The capacity to objectively analyze information, assess different perspectives, and make informed decisions.</span>
+                                    <Link>Read more</Link>
                                 </div>
+
                                 <div className="d-flex flex-column">
                                     <ProgressBar variant="primary" now={allReport && allReport[2] ? allReport[2].percentageCorrect : ""} />
                                     <div className='d-flex justify-content-between text-primary fw-bolder'>
@@ -141,14 +147,16 @@ const TestResult = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={2} className=' pt-3'></Col>
+                        <Col lg={2} className="mb-3"></Col>
 
-                        <Col lg={4} className=' pt-3'>
+                        <Col lg={4} className="mb-3">
                             <div className='skills-result-page pb-4'>
                                 <div className='d-flex flex-column'>
                                     <p className='fw-bolder'>{allReport && allReport[1] ? allReport[1].skillName : ""}</p>
                                     <span>The ability to inspire, guide, and influence others towards achieving shared goals.</span>
+                                    <Link>Read more</Link>
                                 </div>
+
                                 <div className="d-flex flex-column">
                                     <ProgressBar variant="primary" now={allReport && allReport[1] ? allReport[1].percentageCorrect : ""} />
                                     <div className='d-flex justify-content-between text-primary fw-bolder'>
@@ -158,12 +166,14 @@ const TestResult = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={4} className=' pt-3'>
+                        <Col lg={4} className="mb-3">
                             <div className='skills-result-page pb-4'>
                                 <div className="d-flex flex-column">
                                     <p className='fw-bolder'>{allReport && allReport[0] ? allReport[0].skillName : ""}</p>
                                     <span>The ability to work collaboratively with others, contributing to group objectives and supporting team members.</span>
+                                    <Link>Read more</Link>
                                 </div>
+
                                 <div className='d-flex flex-column'>
                                     <ProgressBar variant="primary" now={allReport && allReport[0] ? allReport[0].percentageCorrect : ""} />
                                     <div className='d-flex justify-content-between text-primary fw-bolder'>
@@ -174,6 +184,10 @@ const TestResult = () => {
                             </div>
                         </Col>
                     </Row>
+                    <div className=' pt-5 text-center'>
+                        <Button variant="primary" className='px-4'>View Hard Skills</Button>
+                    </div>
+
                 </Container>
             </div>
         </>
