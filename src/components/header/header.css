@@ -101,7 +101,8 @@ a {
     path {
       stroke: #0f77ff;
     }
-    a {
+    a,
+    span {
       color: #0f77ff !important;
     }
   }
