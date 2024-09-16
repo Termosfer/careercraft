@@ -19,7 +19,7 @@
 .profile-h1 {
   margin-bottom: 0;
   font-size: 30px;
-  color: #3480ac;
+  color: #3480ec;
 }
 
 .fw-semibold {
@@ -39,7 +39,20 @@
 }
 
 .cont-prof {
-  position: relative;
+  .text-end {
+    position: relative;
+    button {
+      path {
+        stroke: #0f77ff !important;
+      }
+    }
+    button:hover {
+      path {
+        stroke: #fff !important;
+        transition: all 0.15s ease-in-out;
+      }
+    }
+  }
 }
 
 .profile-div {
@@ -81,12 +94,12 @@ label {
   width: 100%;
 }
 .graph-img2 {
-    position: absolute;
-    top: 140px;
-    left: 0;
-    width: 100%;
-  }
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 100%;
+}
 
-.softSkill-info{
-    position: relative;
+.softSkill-info {
+  position: relative;
 }

@@ -5,13 +5,12 @@ import logo from "../../assets/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RiArrowDownSLine } from "react-icons/ri";
-/* import userImg from "../../assets/profileImg/user-square.png"; */
-import logoutImg from "../../assets/profileImg/logout-03.png";
-import settingImg from "../../assets/profileImg/elements.png";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { logout } from "../../config/authLogin";
 import { userData } from "../../config/authUser";
 import UserSVG from "../SVG/UserSVG";
+import SettingsSVG from "../SVG/SettingsSVG";
+import { LogOutSVG } from "../SVG/LogOutSVG";
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -86,7 +85,9 @@ function CollapsibleExample() {
                           user.surname.slice(0, 1).toUpperCase()
                         : ""}
                     </h1>
-                    <RiArrowDownSLine style={{ color: "#408FFF" }} />
+                    {/* <RiArrowDownSLine style={{ color: "#408FFF" }} />
+                    <RiArrowDropUpLine /> */}
+                    {active ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
                   </div>
                   {active && (
                     <div className="position-absolute p-3">
@@ -115,13 +116,6 @@ function CollapsibleExample() {
                       </div>
                       <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
                         <div className="d-flex align-items-center gap-1  p-1 action-item">
-                          {" "}
-                          {/*  <img
-                            src={userImg}
-                            alt="userimg"
-                            style={{ width: "20px", height: "20px" }}
-                            className="img-hover"
-                          /> */}
                           <UserSVG />
                           <Link
                             to={"/profile"}
@@ -131,13 +125,7 @@ function CollapsibleExample() {
                           </Link>
                         </div>
                         <div className="d-flex align-items-center gap-1  p-1 action-item">
-                          {" "}
-                          <img
-                            src={settingImg}
-                            alt="setting"
-                            style={{ width: "20px", height: "20px" }}
-                            className="img-hover"
-                          />
+                          <SettingsSVG />
                           <span className="fs">Settings</span>
                         </div>
                       </div>
@@ -146,12 +134,7 @@ function CollapsibleExample() {
                           className="px-1  d-flex align-items-center p-1 gap-1 action-item "
                           onClick={handlerLogout}
                         >
-                          <img
-                            src={logoutImg}
-                            alt="logout"
-                            style={{ width: "20px", height: "20px" }}
-                            className="img-hover"
-                          />
+                          <LogOutSVG />
                           <span className="fs">Logout</span>
                         </div>
                       </div>

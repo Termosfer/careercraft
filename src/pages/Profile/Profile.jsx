@@ -11,22 +11,19 @@ import Graph from "../../assets/img/Graph.png";
 import Graph2 from "../../assets/img/Graph2.png";
 import { Link } from "react-router-dom";
 import ModalChanges from "../../components/modal/ModalChanges";
+import { LogOutSVG } from "../../components/SVG/LogOutSVG";
 const Profile = () => {
   const user = useSelector((state) => state.user.username);
-  const infofromLocal = JSON.parse(localStorage.getItem("userInfo"))||{
-    gender:"-",
-    birthday:"-",
-    phone:"-",
-    position:"-"
-  }
+  const infofromLocal = JSON.parse(localStorage.getItem("userInfo")) || {
+    gender: "-",
+    birthday: "-",
+    phone: "-",
+    position: "-",
+  };
 
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
-
-
-
-
 
   return (
     <div className="profile-cont">
@@ -38,7 +35,7 @@ const Profile = () => {
               <h1 className="profile-h1">
                 {user.name && user.surname
                   ? user.name.slice(0, 1).toUpperCase() +
-                  user.surname.slice(0, 1).toUpperCase()
+                    user.surname.slice(0, 1).toUpperCase()
                   : ""}
               </h1>
             </div>
@@ -59,7 +56,10 @@ const Profile = () => {
               <h4 className="pers-info-h4 fw-semibold">Personal Information</h4>
             </Col>
             <Col className="d-flex justify-content-end">
-              <Button className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end" onClick={handleShow}>
+              <Button
+                className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end"
+                onClick={handleShow}
+              >
                 Edit
                 <EditSVG />
               </Button>
@@ -171,8 +171,16 @@ const Profile = () => {
               </Button>
             </div>
           </div>
-
-
+        </div>
+        <div className="text-end">
+          <Button
+            type="submit"
+            variant="outline-primary"
+            className="mt-4 px-4 py-2 button-view"
+          >
+            <LogOutSVG />
+            <span className="ms-2">Log Out</span>
+          </Button>
         </div>
       </Container>
     </div>
