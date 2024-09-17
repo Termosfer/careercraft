@@ -1,0 +1,43 @@
+
+
+ /*  .css-p1sr87-MuiGauge-referenceArc {
+    fill:transparent !important;
+    stroke-width: 25px !important;
+    stroke: rgba(64, 143, 255, .4) !important;
+  }
+ .css-b9rdri-MuiGauge-referenceArc {
+    stroke-width: 25px !important;
+    stroke: #0F77FF;
+    fill: transparent;
+} */
+
+.star-div{
+    width: max-content;
+}
+
+thead > tr,
+tbody > tr{
+    vertical-align: middle;
+    text-align: center;
+}
+
+th{
+    text-align: left;
+    white-space: nowrap;
+}
+thead> tr{
+    font-size: 14px;
+}
+tbody > tr{
+    font-size: 12px;
+}
+tbody > tr > td{
+text-align: left;
+}
+tbody > tr > td:nth-child(2){
+text-align: center;
+}
+
+.bgColor-container{
+    background: #ebf4ff;
+}
