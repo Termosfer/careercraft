@@ -1,20 +1,21 @@
-import React from 'react'
-import PublicLayout from '../layout/PublicLayout'
-import { Routes, Route } from "react-router-dom"
-import Register from '../pages/login/Register'
-import Home from '../pages/Home/Home'
-import About from '../pages/About/About'
-import Contact from '../pages/Contact/Contact'
-import Resources from '../pages/Resources/Resources'
-import Services from '../pages/Services/Services'
-import Solution from '../pages/Solution/Solution'
-import Login from '../pages/login/Login'
-import FreeTrial from '../pages/BookaDemo/FreeTrial'
-import Profile from '../pages/Profile/Profile'
-import ResetPass from '../pages/ResetPass/ResetPass'
-import FreeTest from '../pages/FreeTest/FreeTest'
-import TestResult from '../components/testResult/TestResult'
-import HardSkillTestResult from '../components/hardSkillTestResult/HardSkillTestResult'
+import React from "react";
+import PublicLayout from "../layout/PublicLayout";
+import { Routes, Route } from "react-router-dom";
+import Register from "../pages/login/Register";
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
+import Resources from "../pages/Resources/Resources";
+import Services from "../pages/Services/Services";
+import Solution from "../pages/Solution/Solution";
+import Login from "../pages/login/Login";
+import FreeTrial from "../pages/BookaDemo/FreeTrial";
+import Profile from "../pages/Profile/Profile";
+import ResetPass from "../pages/ResetPass/ResetPass";
+import FreeTest from "../pages/FreeTest/FreeTest";
+import TestResult from "../components/testResult/TestResult";
+import HardSkillTestResult from "../components/hardSkillTestResult/HardSkillTestResult";
+import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 
 const PublicRoutes = () => {
   return (
@@ -30,11 +31,14 @@ const PublicRoutes = () => {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/freetest" element={<FreeTest/>} />
+        <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
-        <Route path='/auth/password/reset' element={<ResetPass />} />
-
+        <Route
+          path="/freetest/hard-skill-test-result"
+          element={<HardSkillTestResult />}
+        />
+        <Route path="/auth/password/reset" element={<ResetPass />} />
+        <Route path="/TestResultsOne" element={<TestResultsOne />} />
       </Routes>
     </PublicLayout>
   );

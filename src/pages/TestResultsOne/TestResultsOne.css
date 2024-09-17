@@ -1,0 +1,91 @@
+.TestResultsOne .container .toggle {
+  border: 1px solid #408fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.TestResultsOne .container .toggle div {
+  color: #0f77ff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.TestResultsOne .container .section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TestResultsOne .container .section1 .fw-normal {
+  font-size: 10px;
+}
+
+.TestResultsOne .container .section1 h3 {
+  margin: 0;
+}
+
+.TestResultsOne .container .section1 .low {
+  padding: 8px 24px;
+  background: rgba(61, 141, 255, 0.25);
+  border-radius: 8px;
+}
+
+.TestResultsOne .container .section1 .low p {
+  margin: 0;
+}
+
+.TestResultsOne .container .border,
+.TestResultsOne .container .d-flex,
+.TestResultsOne .container .p-4 {
+  border: 2px solid var(--White-second, rgba(232, 232, 233, 1)) !important;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+.TestResultsOne .container .border .w-25 {
+  width: 15% !important;
+  height: 15%;
+}
+
+.TestResultsOne .container .border h5,
+.TestResultsOne .container .border h4 {
+  color: #0f77ff;
+}
+
+.TestResultsOne .container .border h4 {
+  margin-left: 32px;
+  margin-bottom: 15px;
+}
+
+.TestResultsOne .container .border p,
+.TestResultsOne .container .border span {
+  margin-bottom: 0.5rem !important;
+}
+
+.TestResultsOne .container .border p span,
+.TestResultsOne .container .border span span {
+  color: #0f77ff;
+  font-weight: 600;
+}
+
+.TestResultsOne .container .border ul span {
+  color: #0f77ff;
+}
+
+.TestResultsOne .container .border ul li {
+  margin-left: 30px;
+}
+
+.TestResultsOne .container .toggle div {
+  color: #0f77ff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 45px;
+}
+
+.TestResultsOne .container .toggle div.active {
+  background-color: #0f77ff;
+  color: #fff;
+  border-radius: 8px;
+}
