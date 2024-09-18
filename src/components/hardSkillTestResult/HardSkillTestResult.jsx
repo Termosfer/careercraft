@@ -27,7 +27,7 @@ const HardSkillTestResult = () => {
           <Col lg={5}>
             <div className="">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <Gauge width={400} height={170} value={40} startAngle={-90} endAngle={90} sx={{
+              <Gauge width={400} height={170} value={30} startAngle={-90} endAngle={90} sx={{
                 [`& .${gaugeClasses.valueText}`]: {
                   fontSize: 50,
                   transform: 'translate(0px, -40px)',

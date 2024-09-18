@@ -1,15 +1,17 @@
 
-
- /*  .css-p1sr87-MuiGauge-referenceArc {
+.css-yoqpz6-MuiGauge-container{
+  height: 190px !important;
+}
+  .css-p1sr87-MuiGauge-referenceArc {
     fill:transparent !important;
-    stroke-width: 25px !important;
+    stroke-width: 30px !important;
     stroke: rgba(64, 143, 255, .4) !important;
   }
  .css-b9rdri-MuiGauge-referenceArc {
-    stroke-width: 25px !important;
+    stroke-width: 30px !important;
     stroke: #0F77FF;
-    fill: transparent;
-} */
+    fill: #0F77FF;
+}
 
 .star-div{
     width: max-content;

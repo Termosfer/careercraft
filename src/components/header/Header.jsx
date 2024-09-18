@@ -1,7 +1,7 @@
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/img/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

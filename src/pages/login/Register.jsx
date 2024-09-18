@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
+import img from "../../assets/img/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import "./style.css";
 import { useState } from "react";
 import toast from "react-hot-toast";

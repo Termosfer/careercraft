@@ -5,7 +5,8 @@ import img2 from "../../assets/TestResultsOneImg/TestResultsImg2.png";
 import img3 from "../../assets/TestResultsOneImg/TestResultsImg3.png";
 import img4 from "../../assets/TestResultsOneImg/TestResultsImg4.png";
 import img5 from "../../assets/TestResultsOneImg/TestResultsImg5.png";
-import img1_1 from "../../assets/TestResultsOneImg/1.png";
+
+import AdditionalResources from "../../components/additionalResources/AdditionalResources";
 
 const TestResultsOne = () => {
   const [activeSection, setActiveSection] = useState("Communication");
@@ -153,56 +154,7 @@ const TestResultsOne = () => {
                   </span>
                 </div>
               </div>
-              <div className="mt-5 mb-4">
-                <h3 className="fw-semibold">Additional Resources</h3>
-              </div>
-              <div className="border d-flex p-4">
-                <img className="w-25" src={img1_1} alt="" />
-                <div>
-                  <h4>Communication Skills</h4>
-                  <ul>
-                    <span>Articles:</span>
-                    <li>
-                      8 Ways to Improve Your Communication Right Now - Harvard
-                      Business Review
-                    </li>
-                    <li>How to Communicate with Impact – McKinsey</li>
-                    <li>
-                      Effective Communication in Remote Teams – Buffer Blog
-                    </li>
-                    <li>Communication Skills for Product Owners – MindTools</li>
-                    <li>
-                      Communication Tips for Agile Product Owners – Team Gantt
-                    </li>
-                  </ul>
-                  <ul>
-                    <span>Books:</span>
-                    <li>
-                      Effective Communication Skills: A Guide to Professional
-                      Success by John Smith (2022)
-                    </li>
-                    <li>
-                      Made to Stick: Why Some Ideas Survive and Others Die by
-                      Chip Heath and Dan Heath
-                    </li>
-                    <li>
-                      The Pyramid Principle: Logic in Writing and Thinking by
-                      Barbara Minto
-                    </li>
-                    <li>
-                      Crucial Conversations: Tools for Talking When Stakes Are
-                      High by Kerry Patterson
-                    </li>
-                  </ul>
-                  <ul>
-                    <span>Journal Articles:</span>
-                    <li>
-                      The Role of Communication in Team Collaboration: A
-                      Meta-Analysis – Journal of Organizational Behavior
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <AdditionalResources/>
             </div>
           </div>
         );
