@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import img from "../../assets/simon-lee-zft-W1kVEhg-unsplash.jpg";
+import img from "../../assets/img/simon-lee-zft-W1kVEhg-unsplash.jpg";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { changeConfirmPass, changeNewPass } from "../../config/authSlice";
