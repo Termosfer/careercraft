@@ -15,6 +15,7 @@ import ResetPass from '../pages/ResetPass/ResetPass'
 import FreeTest from '../pages/FreeTest/FreeTest'
 import TestResult from '../components/testResult/TestResult'
 import HardSkillTestResult from '../components/hardSkillTestResult/HardSkillTestResult'
+import Packages from '../pages/Packages/Packages'
 
 const PublicRoutes = () => {
   return (
@@ -34,6 +35,8 @@ const PublicRoutes = () => {
         <Route path="/freetest/test-result" element={<TestResult />} />
         <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path='/auth/password/reset' element={<ResetPass />} />
+        <Route path='/packages' element={<Packages/>} />
+
 
       </Routes>
     </PublicLayout>

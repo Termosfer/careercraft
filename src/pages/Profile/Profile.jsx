@@ -9,9 +9,12 @@ import "./Profile.css";
 import { useSelector } from "react-redux";
 import Graph from "../../assets/img/Graph.png";
 import Graph2 from "../../assets/img/Graph2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalChanges from "../../components/modal/ModalChanges";
 import { LogOutSVG } from "../../components/SVG/LogOutSVG";
+import ModalAddress from "../../components/modal/ModalAddress";
+
+
 const Profile = () => {
   const user = useSelector((state) => state.user.username);
   const infofromLocal = JSON.parse(localStorage.getItem("userInfo")) || {
@@ -19,11 +22,27 @@ const Profile = () => {
     birthday: "-",
     phone: "-",
     position: "-",
+    country:"-",
+    city:"-"
   };
 
-  const [show, setShow] = useState(false);
+  const navigate=useNavigate()
+  const [show, setShow]=useState(false)
+  const [modalType, setModalType] = useState('');
 
-  const handleShow = () => setShow(true);
+  const handleShowPersonal = () => {
+    setModalType('personal');
+    setShow(true);
+  };
+
+  const handleShowAddress = () => {
+    setModalType('address');
+    setShow(true);
+  };
+
+  const handlePackagePage=()=>{
+    navigate("/packages")
+  }
 
   return (
     <div className="profile-cont">
@@ -48,7 +67,7 @@ const Profile = () => {
           </div>
         )}
 
-        <ModalChanges show={show} setShow={setShow} />
+        <ModalChanges show={show} setShow={setShow} modalType={modalType}/>
 
         <Form className=" border rounded-4 personal-cont ">
           <Row className=" w-100 d-flex ">
@@ -58,7 +77,7 @@ const Profile = () => {
             <Col className="d-flex justify-content-end">
               <Button
                 className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end"
-                onClick={handleShow}
+                onClick={handleShowPersonal}
               >
                 Edit
                 <EditSVG />
@@ -117,7 +136,7 @@ const Profile = () => {
               <h4 className="pers-info-h4 fw-semibold">Address</h4>
             </Col>
             <Col className="d-flex justify-content-end">
-              <Button className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end">
+              <Button onClick={handleShowAddress} className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end">
                 Edit
                 <EditSVG />
               </Button>
@@ -126,11 +145,11 @@ const Profile = () => {
           <Row className="prof-p">
             <Col>
               <label htmlFor="">Country</label>
-              <p>-</p>
+              <p>{infofromLocal.country}</p>
             </Col>
             <Col>
               <label htmlFor="">City/State</label>
-              <p>-</p>
+              <p>{infofromLocal.city}</p>
             </Col>
           </Row>
         </Form>
@@ -166,6 +185,7 @@ const Profile = () => {
                 type="submit"
                 variant="primary"
                 className="mt-5 px-4 button-view"
+                onClick={handlePackagePage}
               >
                 View Results
               </Button>
