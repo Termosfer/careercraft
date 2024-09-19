@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./style.css";
-import logo from "../../assets/footerLogo.png";
+import logo from "../../assets/img/footerLogo.png";
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
 import {
@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div style={{ background: "#ffffff" }} className="py-4">
+    <div style={{ background: "#ffffff" }} className="py-4 footer">
       <Container className="p-5 w-75 p-5">
         <Row>
           <Col xs={12} md={12} lg={3} className="mb-4 mb-md-3">

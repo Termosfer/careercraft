@@ -57,7 +57,7 @@
 
 .profile-div {
   position: absolute;
-  top: -130px;
+  top: 250px;
   display: flex;
   gap: 20px;
   align-items: flex-end;

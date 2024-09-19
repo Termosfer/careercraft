@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import PublicLayout from '../layout/PublicLayout'
 import { Routes, Route } from "react-router-dom"
@@ -15,7 +16,9 @@ import ResetPass from '../pages/ResetPass/ResetPass'
 import FreeTest from '../pages/FreeTest/FreeTest'
 import TestResult from '../components/testResult/TestResult'
 import HardSkillTestResult from '../components/hardSkillTestResult/HardSkillTestResult'
+import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 import Packages from '../pages/Packages/Packages'
+
 
 const PublicRoutes = () => {
   return (
@@ -31,13 +34,15 @@ const PublicRoutes = () => {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/freetest" element={<FreeTest/>} />
+        <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path='/auth/password/reset' element={<ResetPass />} />
-        <Route path='/packages' element={<Packages/>} />
-
-
+        <Route path='/packages' element={<Packages />} />
+        <Route
+          path="/freetest/hard-skill-test-result"
+          element={<HardSkillTestResult />}
+        />
+        <Route path="/TestResultsOne" element={<TestResultsOne />} />
       </Routes>
     </PublicLayout>
   );

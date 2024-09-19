@@ -12,7 +12,6 @@ import Graph2 from "../../assets/img/Graph2.png";
 import { Link, useNavigate } from "react-router-dom";
 import ModalChanges from "../../components/modal/ModalChanges";
 import { LogOutSVG } from "../../components/SVG/LogOutSVG";
-import ModalAddress from "../../components/modal/ModalAddress";
 
 
 const Profile = () => {
@@ -181,14 +180,20 @@ const Profile = () => {
                 Unlock detailed insights on your technical skills and
                 professional growth.
               </p>
+              <Link to="/freetest/hard-skill-test-result">
               <Button
                 type="submit"
                 variant="primary"
                 className="mt-5 px-4 button-view"
+<<<<<<< HEAD
                 onClick={handlePackagePage}
               >
+=======
+                >
+>>>>>>> 4e6f3d309b0129ed7d33f71f8ab3ea2ad0691677
                 View Results
               </Button>
+                </Link>
             </div>
           </div>
         </div>

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import "axios";
-import axios from "axios";
-import image from "../../assets/img/7f9f8a75fed290e7cf1f91b9c71d3685.png";
 import S_2_img1 from "../../assets/img/S-2-img1.png";
 import S_2_img2 from "../../assets/img/S-2-img2.png";
 import S_2_img3 from "../../assets/img/S-2-img3.png";
@@ -12,6 +10,7 @@ import S_2_img4_3 from "../../assets/img/S-2-img4.3.png";
 import S_2_img4_4 from "../../assets/img/S-2-img4.4.png";
 import S_3_img1 from "../../assets/img/S-3-img1.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
+import image from "../../assets/img/homeimage.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {

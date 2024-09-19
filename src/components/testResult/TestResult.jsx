@@ -185,7 +185,9 @@ const TestResult = () => {
                         </Col>
                     </Row>
                     <div className=' pt-5 text-center'>
-                        <Button variant="primary" className='px-4'>View Hard Skills</Button>
+                        <Link to="/freetest/hard-skill-test-result">
+                            <Button variant="primary" className='px-4'>View Hard Skills</Button>
+                        </Link>
                     </div>
 
                 </Container>
