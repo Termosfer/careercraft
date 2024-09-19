@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import PublicLayout from '../layout/PublicLayout'
 import { Routes, Route } from "react-router-dom"
