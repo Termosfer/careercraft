@@ -39,9 +39,9 @@ const Profile = () => {
     setShow(true);
   };
 
-  const handlePackagePage=()=>{
+ /*  const handlePackagePage=()=>{
     navigate("/packages")
-  }
+  } */
 
   return (
     <div className="profile-cont">
@@ -185,12 +185,7 @@ const Profile = () => {
                 type="submit"
                 variant="primary"
                 className="mt-5 px-4 button-view"
-<<<<<<< HEAD
-                onClick={handlePackagePage}
-              >
-=======
                 >
->>>>>>> 4e6f3d309b0129ed7d33f71f8ab3ea2ad0691677
                 View Results
               </Button>
                 </Link>
