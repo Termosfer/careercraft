@@ -40,12 +40,6 @@ const Profile = () => {
     setShow(true);
   };
 
-<<<<<<< HEAD
- /*  const handlePackagePage=()=>{
-    navigate("/packages")
-  } */
-=======
->>>>>>> jama
 
   return (
     <div className="profile-cont">
@@ -185,16 +179,6 @@ const Profile = () => {
                 professional growth.
               </p>
               <Link to="/freetest/hard-skill-test-result">
-<<<<<<< HEAD
-              <Button
-                type="submit"
-                variant="primary"
-                className="mt-5 px-4 button-view"
-                >
-                View Results
-              </Button>
-                </Link>
-=======
                 <Button
                   type="submit"
                   variant="primary"
@@ -203,7 +187,6 @@ const Profile = () => {
                   View Results
                 </Button>
               </Link>
->>>>>>> jama
             </div>
           </div>
         </div>
