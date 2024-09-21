@@ -32,9 +32,9 @@ const Home = () => {
             Book a Demo
           </Link>
           <Link to='/freetest' className="btntwo btn btn-outline-primary px-3">
-            Explore Courses
+            Start Free Test
           </Link>
-          <div style={{ marginBottom: "0" }}>
+          <div style={{ marginBottom: "0" }} className="pt-5">
             <img className="w-75" src={image} alt="/" />
           </div>
         </div>
@@ -203,7 +203,7 @@ const Home = () => {
                 Book a Demo
               </button>
               <button className="btntwo btn btn-outline-light ms-2 px-3">
-                Explore Courses
+                Start Free Test
               </button>
             </div>
           </div>

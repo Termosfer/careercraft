@@ -10,6 +10,8 @@ function ModalChanges({ show, setShow, modalType }) {
     const user = useSelector(state => state.user.username)
     const dispatch = useDispatch()
     const token = localStorage.getItem("token");
+    console.log(user, "user ");
+    
 
     const [editInfo, setEditInfo] = useState(JSON.parse(localStorage.getItem("userInfo")) || {
         position: "-",
@@ -22,24 +24,26 @@ function ModalChanges({ show, setShow, modalType }) {
 
 
     const [editUser, setEditUser] = useState({
-        name: user.name,
-        surname: user.surname,
+        name: user?.name || "",
+        surname: user?.surname || "",
         address: editInfo.city + "," + editInfo.country,
-        email: user.email
+        email: user?.email || ""
     })
 
 
     const handleClose = (e) => {
         e.preventDefault()
+        console.log('editUser:', editUser);
         dispatch(userEdited({ token, editUser }))
         localStorage.setItem("userInfo", JSON.stringify(editInfo))
+        setShow(false)
     };
 
 
     return (
         <>
 
-            <Modal show={show} onHide={() => setShow(false)}>
+            <Modal show={show} onHide={() => { setShow(false) }}>
                 <Modal.Header closeButton>
                     <Modal.Title>{modalType === 'personal' ? 'Edit Personal Info' : 'Edit Address Info'}</Modal.Title>
                 </Modal.Header>
