@@ -35,7 +35,9 @@
 .registration-btn {
   background-color: #0084ff !important;
 }
-
+.register{
+  border-radius: 18px;
+}
 .col-md-12 {
   position: relative;
 }

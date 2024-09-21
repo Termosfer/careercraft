@@ -108,7 +108,7 @@ function Register() {
                 noValidate
                 validated={validated}
                 onSubmit={handleSubmit}
-                className="bg-light border rounded-4 px-5 py-4"
+                className="bg-light border px-5 py-4 register"
               >
                 <h2 className="border-bottom fw-bold pb-2">
                   Create an account
