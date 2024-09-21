@@ -1,0 +1,13 @@
+.package-header ul{
+    list-style: none;
+    padding: 0;
+}
+
+.package-header .card{
+    padding: 28px 20px !important;
+}
+
+.package-header .card-body{
+    padding: 0;
+}
+

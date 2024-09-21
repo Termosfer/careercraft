@@ -14,6 +14,7 @@ import ModalChanges from "../../components/modal/ModalChanges";
 import { LogOutSVG } from "../../components/SVG/LogOutSVG";
 
 
+
 const Profile = () => {
   const user = useSelector((state) => state.user.username);
   const infofromLocal = JSON.parse(localStorage.getItem("userInfo")) || {
@@ -21,12 +22,12 @@ const Profile = () => {
     birthday: "-",
     phone: "-",
     position: "-",
-    country:"-",
-    city:"-"
+    country: "-",
+    city: "-"
   };
 
-  const navigate=useNavigate()
-  const [show, setShow]=useState(false)
+
+  const [show, setShow] = useState(false)
   const [modalType, setModalType] = useState('');
 
   const handleShowPersonal = () => {
@@ -39,9 +40,12 @@ const Profile = () => {
     setShow(true);
   };
 
+<<<<<<< HEAD
  /*  const handlePackagePage=()=>{
     navigate("/packages")
   } */
+=======
+>>>>>>> jama
 
   return (
     <div className="profile-cont">
@@ -53,7 +57,7 @@ const Profile = () => {
               <h1 className="profile-h1">
                 {user.name && user.surname
                   ? user.name.slice(0, 1).toUpperCase() +
-                    user.surname.slice(0, 1).toUpperCase()
+                  user.surname.slice(0, 1).toUpperCase()
                   : ""}
               </h1>
             </div>
@@ -66,7 +70,7 @@ const Profile = () => {
           </div>
         )}
 
-        <ModalChanges show={show} setShow={setShow} modalType={modalType}/>
+        <ModalChanges show={show} setShow={setShow} modalType={modalType} />
 
         <Form className=" border rounded-4 personal-cont ">
           <Row className=" w-100 d-flex ">
@@ -181,6 +185,7 @@ const Profile = () => {
                 professional growth.
               </p>
               <Link to="/freetest/hard-skill-test-result">
+<<<<<<< HEAD
               <Button
                 type="submit"
                 variant="primary"
@@ -189,6 +194,16 @@ const Profile = () => {
                 View Results
               </Button>
                 </Link>
+=======
+                <Button
+                  type="submit"
+                  variant="primary"
+                  className="mt-5 px-4 button-view"
+                >
+                  View Results
+                </Button>
+              </Link>
+>>>>>>> jama
             </div>
           </div>
         </div>

@@ -2,11 +2,14 @@ import { useState } from 'react';
 import { Modal, Button, Form } from "react-bootstrap";
 import "./modalChanges.css"
 import bg from "../../assets/img/Graph2.png"
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { userEdited } from '../../config/authUser';
 
 function ModalChanges({ show, setShow, modalType }) {
 
     const user = useSelector(state => state.user.username)
+    const dispatch = useDispatch()
+    const token = localStorage.getItem("token");
 
     const [editInfo, setEditInfo] = useState(JSON.parse(localStorage.getItem("userInfo")) || {
         position: "-",
@@ -17,17 +20,26 @@ function ModalChanges({ show, setShow, modalType }) {
         country: "-"
     })
 
+
+    const [editUser, setEditUser] = useState({
+        name: user.name,
+        surname: user.surname,
+        address: editInfo.city + "," + editInfo.country,
+        email: user.email
+    })
+
+
     const handleClose = (e) => {
         e.preventDefault()
+        dispatch(userEdited({ token, editUser }))
         localStorage.setItem("userInfo", JSON.stringify(editInfo))
-        setShow(false)
     };
 
 
     return (
         <>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>{modalType === 'personal' ? 'Edit Personal Info' : 'Edit Address Info'}</Modal.Title>
                 </Modal.Header>
@@ -44,9 +56,10 @@ function ModalChanges({ show, setShow, modalType }) {
                                             className="field-input"
                                             style={{ outline: "none", boxShadow: "none" }}
                                             type="text"
-                                            placeholder="Enter your first name"
+
                                             autoFocus
                                             defaultValue={user.name}
+                                            onChange={(e) => setEditUser({ ...editUser, name: e.target.value })}
                                         />
                                     </Form.Group>
                                     <Form.Group className="mb-2 col-6" controlId="formEmail">
@@ -55,9 +68,11 @@ function ModalChanges({ show, setShow, modalType }) {
                                             className="field-input"
                                             style={{ outline: "none", boxShadow: "none" }}
                                             type="text"
-                                            placeholder="Enter your last name"
+
                                             autoFocus
                                             defaultValue={user.surname}
+                                            onChange={(e) => setEditUser({ ...editUser, surname: e.target.value })}
+
                                         />
                                     </Form.Group>
 
@@ -106,6 +121,8 @@ function ModalChanges({ show, setShow, modalType }) {
                                             placeholder="Enter your email"
                                             autoFocus
                                             defaultValue={user.email}
+                                            onChange={(e) => setEditUser({ ...editUser, email: e.target.value })}
+
                                         />
                                     </Form.Group>
                                     <Form.Group className="mb-2 col-6" controlId="formEmail">
@@ -154,16 +171,14 @@ function ModalChanges({ show, setShow, modalType }) {
 
                         }
 
-                        <Button variant="primary" type='submit'>
-                            Save Changes
-                        </Button>
+                        <div className="mt-4 text-center">
+                            <Button variant="primary" type='submit' className=' w-50' >
+                                Save Changes
+                            </Button>
+                        </div>
                     </Form>
 
                 </Modal.Body>
-                <Modal.Footer>
-
-
-                </Modal.Footer>
             </Modal>
         </>
     );

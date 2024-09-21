@@ -36,7 +36,7 @@ const PublicRoutes = () => {
         <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
         <Route path='/auth/password/reset' element={<ResetPass />} />
-        <Route path='/packages' element={<Packages />} />
+        <Route path='/packages' element={<Packages/>} />
         <Route
           path="/freetest/hard-skill-test-result"
           element={<HardSkillTestResult />}
