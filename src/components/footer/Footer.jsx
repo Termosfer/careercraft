@@ -16,7 +16,7 @@ import {
 const Footer = () => {
   return (
     <div style={{ background: "#ffffff" }} className="py-4 footer">
-      <Container className="p-5 w-75 p-5">
+      <Container className="w-75 p-5">
         <Row>
           <Col xs={12} md={12} lg={3} className="mb-4 mb-md-3">
             <div className="d-flex flex-column align-items-lg-start align-items-md-center align-items-center pt-2">
