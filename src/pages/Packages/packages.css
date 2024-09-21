@@ -1,6 +1,6 @@
 .package-header ul {
   list-style: none;
-  padding: 0;
+  padding: 15px 0;
 }
 
 .package-header {
@@ -8,11 +8,22 @@
 }
 .package-header .card {
   padding: 28px 20px !important;
+  border-radius: 18px;
+  width: 16rem;
+  height: 450px;
+}
+.package-header .card:nth-child(2) {
+  border: 1px solid #408FFF;
+
 }
 .package-header ul li {
   display: flex;
   column-gap: 10px;
+  font-size: 14px;
+  color: #838383;
+  line-height: 30px;
 }
+
 
 .package-header .card-body {
   padding: 0;

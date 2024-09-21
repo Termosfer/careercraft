@@ -11,16 +11,16 @@ const Packages = () => {
   return (
     <div className="packages">
       <Container>
-        <div className="package-header bg-primary">
-          <h2 className="text-center">
+        <div className="package-header ">
+          <h2 className="text-center pb-5">
             Unlock Your Full Potential with <span>CareerCraft</span> Premium
           </h2>
           <div className="row gap-2 packages-boxes justify-content-center">
-            <Card style={{ width: "16rem" }}>
-              <Card.Body>
-                <Card.Title>Free Plan</Card.Title>
-                <Card.Text>
-                  <h3>
+            <Card className="mt-5">
+              <Card.Body className="d-flex flex-column justify-content-between">
+                <Card.Title className="text-center">Free Plan</Card.Title>
+                <div>
+                  <h3 className="text-center">
                     $0<span>/month</span>
                   </h3>
                   <ul>
@@ -41,18 +41,20 @@ const Packages = () => {
                       Career plan for soft skills improvement
                     </li>
                   </ul>
-                </Card.Text>
-                <button className="btn btn-outline-primary w-100">
-                  Get Started
-                </button>
+                </div>
+                <div className="">
+                    <button className="btn btn-outline-primary w-100">
+                      Get Started
+                    </button>
+                  </div>
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "16rem" }}>
-              <Card.Body>
-                <Card.Title>Free Plan</Card.Title>
-                <Card.Text>
-                  <h3>
+            <Card >
+              <Card.Body className="d-flex flex-column justify-content-between">
+                <Card.Title className="text-center">Pro Plan</Card.Title>
+                <div>
+                  <h3 className="text-center">
                     $29<sup>.99</sup>
                     <span>/month</span>
                   </h3>
@@ -78,16 +80,16 @@ const Packages = () => {
                       Priority support
                     </li>
                   </ul>
-                </Card.Text>
-                <Button variant="primary">Get started</Button>
+                </div>
+                <Button variant="primary" className="w-100">Get started</Button>
               </Card.Body>
             </Card>
 
-            <Card style={{ width: "16rem" }}>
-              <Card.Body>
-                <Card.Title>Free Plan</Card.Title>
-                <Card.Text>
-                  <h3>
+            <Card className="mt-5">
+              <Card.Body className="d-flex flex-column justify-content-between">
+                <Card.Title className="text-center">Premium Plan</Card.Title>
+                <div>
+                  <h3 className="text-center">
                     $99<sup>.99</sup>
                     <span>/month</span>
                   </h3>
@@ -109,7 +111,7 @@ const Packages = () => {
                       Personalized mentorship sessions
                     </li>
                   </ul>
-                </Card.Text>
+                </div>
                 <button className="btn btn-outline-primary w-100">
                   Get Started
                 </button>
@@ -121,7 +123,7 @@ const Packages = () => {
                 <Card.Img variant="top" src="" />
                 <Card.Body>
                   <Card.Title>Elevate Premium</Card.Title>
-                  <Card.Text>
+                  <div>
                     <p>
                       Elevate your career by gaining full access to advanced
                       skill assessments and personalized growth recommendations.{" "}
@@ -139,7 +141,7 @@ const Packages = () => {
                         <QushSVG />
                       </li>
                     </ul>
-                  </Card.Text>
+                  </div>
                   <Button variant="primary">Buy now</Button>
                 </Card.Body>
               </Card>
