@@ -82,7 +82,7 @@ label {
 .bgColor-softSkill {
   position: relative;
   height: 300px;
-  width: 540px;
+  width: 500px;
   border-radius: 18px;
   background: linear-gradient(105.7deg, #0f77ff 0.61%, #094799 73.64%);
 }

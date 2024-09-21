@@ -1,30 +1,33 @@
-import React from 'react'
-import QushSVG from '../../components/SVG/QushSVG'
-import { Card, Button, Container } from 'react-bootstrap'
-import "./packages.css"
-import photo1 from "../../assets/img/photo1.png"
-import photo2 from "../../assets/img/photo2.png"
-import photo3 from "../../assets/img/photo3.png"
+import React from "react";
+import QushSVG from "../../components/SVG/QushSVG";
+import { Card, Button, Container } from "react-bootstrap";
+import "./packages.css";
+import photo1 from "../../assets/img/photo1.png";
+import photo2 from "../../assets/img/photo2.png";
+import photo3 from "../../assets/img/photo3.png";
 import { FaPlus } from "react-icons/fa6";
-
-
 
 const Packages = () => {
   return (
     <div className="packages">
       <Container>
         <div className="package-header bg-primary">
-          <h2 className='text-center'>Unlock Your Full Potential with <span>CareerCraft</span> Premium</h2>
+          <h2 className="text-center">
+            Unlock Your Full Potential with <span>CareerCraft</span> Premium
+          </h2>
           <div className="row gap-2 packages-boxes justify-content-center">
             <Card style={{ width: "16rem" }}>
               <Card.Body>
                 <Card.Title>Free Plan</Card.Title>
                 <Card.Text>
-                  <h3>$0<span>/month</span></h3>
+                  <h3>
+                    $0<span>/month</span>
+                  </h3>
                   <ul>
                     <li>
                       <QushSVG />
-                      Key soft skills assessment</li>
+                      Key soft skills assessment
+                    </li>
                     <li>
                       <QushSVG />
                       Personalized soft skills guidance
@@ -39,19 +42,25 @@ const Packages = () => {
                     </li>
                   </ul>
                 </Card.Text>
-                <button className="btn btn-outline-primary w-100">Get Started</button>
+                <button className="btn btn-outline-primary w-100">
+                  Get Started
+                </button>
               </Card.Body>
             </Card>
 
-            <Card style={{ width: '16rem' }}>
+            <Card style={{ width: "16rem" }}>
               <Card.Body>
                 <Card.Title>Free Plan</Card.Title>
                 <Card.Text>
-                  <h3>$29<sup>.99</sup><span>/month</span></h3>
-                  <ul >
+                  <h3>
+                    $29<sup>.99</sup>
+                    <span>/month</span>
+                  </h3>
+                  <ul>
                     <li>
                       <QushSVG />
-                      50% hard skills assessment</li>
+                      50% hard skills assessment
+                    </li>
                     <li>
                       <QushSVG />
                       Personalized guidance based on results
@@ -74,15 +83,19 @@ const Packages = () => {
               </Card.Body>
             </Card>
 
-            <Card style={{ width: '16rem' }}>
+            <Card style={{ width: "16rem" }}>
               <Card.Body>
                 <Card.Title>Free Plan</Card.Title>
                 <Card.Text>
-                  <h3>$99<sup>.99</sup><span>/month</span></h3>
+                  <h3>
+                    $99<sup>.99</sup>
+                    <span>/month</span>
+                  </h3>
                   <ul>
                     <li>
                       <QushSVG />
-                      Product management assessment</li>
+                      Product management assessment
+                    </li>
                     <li>
                       <QushSVG />
                       Tailored career guidance for all hard skills
@@ -95,25 +108,29 @@ const Packages = () => {
                       <QushSVG />
                       Personalized mentorship sessions
                     </li>
-
                   </ul>
                 </Card.Text>
-                <button className="btn btn-outline-primary w-100">Get Started</button>
+                <button className="btn btn-outline-primary w-100">
+                  Get Started
+                </button>
               </Card.Body>
             </Card>
 
-
             <div className="elevate-cont">
-              <Card className='elevate-card' style={{ width: '50rem' }}>
+              <Card className="elevate-card" style={{ width: "50rem" }}>
                 <Card.Img variant="top" src="" />
                 <Card.Body>
                   <Card.Title>Elevate Premium</Card.Title>
                   <Card.Text>
-                    <p>Elevate your career by gaining full access to advanced skill assessments and personalized growth recommendations. </p>
+                    <p>
+                      Elevate your career by gaining full access to advanced
+                      skill assessments and personalized growth recommendations.{" "}
+                    </p>
                     <ul>
                       <li>
                         <QushSVG />
-                        Key soft skills assessment</li>
+                        Key soft skills assessment
+                      </li>
                       <li>
                         <QushSVG />
                       </li>
@@ -128,23 +145,22 @@ const Packages = () => {
               </Card>
             </div>
           </div>
-
         </div>
-
-
       </Container>
-
 
       <div className="blue-section">
         <Container>
-          <h1 className='fs-1 text-center px-5'>Trusted by thousands of professionals and organizations worldwide.</h1>
+          <h1 className="fs-1 text-center px-5">
+            Trusted by thousands of professionals and organizations worldwide.
+          </h1>
 
-          <div className="profiles-cont d-flex justify-content-around">
-
+          <div className="profiles-cont d-flex justify-content-center gap-3">
             <div className="profiles-p">
               <img src={photo1} alt="" />
               <div className="txt-p py-4">
-                “CareerCraft has transformed the way we approach skill development. The platform has cut down our training time by 50%, allowing us to focus on scaling with precision.”
+                “CareerCraft has transformed the way we approach skill
+                development. The platform has cut down our training time by 50%,
+                allowing us to focus on scaling with precision.”
               </div>
               <div className="position">
                 <h6>– Jane Doe</h6>
@@ -155,18 +171,19 @@ const Packages = () => {
             <div className="profiles-p">
               <img src={photo2} alt="" />
               <div className="txt-p py-4">
-                “CareerCraft has streamlined our team's learning process, helping us improve both efficiency and consistency.”
+                “CareerCraft has streamlined our team's learning process,
+                helping us improve both efficiency and consistency.”
               </div>
               <div className="position">
-                <h6>– Mark Johnson
-                </h6>
+                <h6>– Mark Johnson</h6>
                 <p>Learning & Development Lead</p>
               </div>
             </div>
             <div className="profiles-p">
               <img src={photo3} alt="" />
               <div className="txt-p py-4">
-                “CareerCraft helped us centralize all our training materials and resources, offering guidance on how to upskill effectively.”
+                “CareerCraft helped us centralize all our training materials and
+                resources, offering guidance on how to upskill effectively.”
               </div>
               <div className="position">
                 <h6>– Sarah Lee</h6>
@@ -177,23 +194,41 @@ const Packages = () => {
         </Container>
       </div>
 
-      <div className="faq-section">
-        <Container>
-          <h4>FAQ</h4>
-          
+      <div className="faq-section py-5">
+        <Container className="text-center w-50">
+          <h4 className="py-5 fw-bold">FAQ</h4>
+
           <div className="questions">
-            <p><FaPlus />Can I upgrade my package after enrolling in a lower-tier plan?</p>
-            <p><FaPlus /> Are the courses self-paced or instructor-led?</p>
-            <p><FaPlus /> Is there a trial version available for CareerCraft packages?</p>
-            <p><FaPlus />Can I cancel my subscription at any time?</p>
-            <p><FaPlus />Are CareerCraft packages suitable for professionals at all career levels?</p>
+            <p>
+              <FaPlus />
+              Can I upgrade my package after enrolling in a lower-tier plan?
+            </p>
+            <hr />
+            <p>
+              <FaPlus /> Are the courses self-paced or instructor-led?
+            </p>
+            <hr />
+            <p>
+              <FaPlus /> Is there a trial version available for CareerCraft
+              packages?
+            </p>
+            <hr />
+            <p>
+              <FaPlus />
+              Can I cancel my subscription at any time?
+            </p>
+            <hr />
+            <p>
+              <FaPlus />
+              Are CareerCraft packages suitable for professionals at all career
+              levels?
+            </p>
+            <hr />
           </div>
         </Container>
       </div>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default Packages
+export default Packages;
