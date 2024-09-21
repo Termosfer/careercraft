@@ -32,15 +32,15 @@ function CollapsibleExample() {
   };
   return (
     <Navbar collapseOnSelect expand="lg" id="bg-nav" variant="light">
-      <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3">
-        <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-5 gap-5 mx-auto">
+      <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3 header-cont">
+        <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-4 gap-4 mx-auto">
           <Link to="/" className="d-flex align-items-center">
             <Image src={logo} className="logo" alt="logo" />
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         </div>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto  d-flex align-items-md-center align-items-center justify-content-md-center column-gap-lg-4 text-nowrap">
+          <Nav className="mx-auto  d-flex align-items-md-center align-items-center justify-content-md-center column-gap-lg-4 text-nowrap list-menu">
             <Link to="/" className="text-decoration-none text-dark">
               Home
             </Link>
@@ -50,11 +50,9 @@ function CollapsibleExample() {
             <Link to="/solutions" className="text-decoration-none text-dark">
               Solutions
             </Link>
-            <Link to="/services" className="text-decoration-none text-dark">
-              Services
-            </Link>
+          
             <Link to="/resources" className="text-decoration-none text-dark">
-              Resources
+              Blogs
             </Link>
             <Link to="/contact" className="text-decoration-none text-dark">
               Contacts

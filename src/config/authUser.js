@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { baseURL, headers } from "./api";
+import { baseURL } from "./api";
 
 const initialState = {
   username: {},
@@ -14,7 +14,9 @@ export const userData = createAsyncThunk("auth/userData", async (token) => {
       const response = await axios.get(
         `${baseURL}/api/customers/info`,
         {
-          headers,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
 
@@ -32,7 +34,9 @@ export const userEdited = createAsyncThunk("auth/userEdit", async ({ token, edit
       const response = await axios.put(
         `${baseURL}/api/customers/update`, editUser,
         {
-          headers,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
 
