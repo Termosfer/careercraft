@@ -72,19 +72,12 @@ function CollapsibleExample() {
                     <h1
                       className="rounded-circle"
                       id="dropdown-basic"
-                      style={{
-                        backgroundColor: "#D3E5FF",
-                        color: "#408FFF",
-                        border: "none",
-                      }}
                     >
                       {user.name && user.surname
                         ? user.name.slice(0, 1).toUpperCase() +
                           user.surname.slice(0, 1).toUpperCase()
                         : ""}
                     </h1>
-                    {/* <RiArrowDownSLine style={{ color: "#408FFF" }} />
-                    <RiArrowDropUpLine /> */}
                     {active ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
                   </div>
                   {active && (

@@ -7,7 +7,7 @@ const initialState = {
   loading: false,
   error: "",
   value: 1,
-  totalCount: "",
+  totalCount: null,
   orderValue: null,
   
 };

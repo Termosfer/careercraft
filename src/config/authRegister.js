@@ -8,12 +8,21 @@ const initialState = {
   error: "",
 };
 
-export const register = createAsyncThunk("registration/register", async (userData) => {
-  const response = await axios.post(
-    `${baseURL}/registration`,
-    userData
-  );
-  return response.data;
+export const register = createAsyncThunk("registration/register", async (userData, { rejectWithValue }) => {
+  try {
+    const response = await axios.post(
+      `${baseURL}/registration`,
+      userData
+    );
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      console.log(error.response.data)
+      return rejectWithValue(error.response.data)
+    }
+    return rejectWithValue(error.response)
+  }
+
 });
 
 const registrationSlice = createSlice({
@@ -28,10 +37,9 @@ const registrationSlice = createSlice({
         state.loading = false;
         state.data = action.payload;
       })
-      .addCase(register.rejected, (state) => {
-        state.loading = false;
+      .addCase(register.rejected, (state,action) => {
         state.error =
-          action.error.message || "Error occurred during registration";
+          action.payload.password
       });
   },
 });

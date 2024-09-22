@@ -45,13 +45,16 @@ a {
 }
 
 .rounded-circle {
-  padding: 15px;
+  padding: 10px;
   width: auto;
   display: grid;
   place-content: center;
   font-size: 14px;
   border: 1px solid;
   margin: auto;
+  background-color: #D3E5FF;
+  color: #408FFF;
+  border: none;
 }
 
 .cursor-pointer {
@@ -72,10 +75,11 @@ a {
   border: 1px solid #e8e8e9;
 }
 
-.position-absolute > .bottom {
+.position-absolute>.bottom {
   border-bottom: 1px solid var(--White-second, rgba(232, 232, 233, 1));
   padding-bottom: 10px;
 }
+
 .fs,
 .fs-8 {
   font-size: 14px;
@@ -91,6 +95,7 @@ a {
   cursor: pointer;
   border: 1px solid rgba(248, 248, 248, 1);
 }
+
 .action-item:hover {
   background: rgba(211, 229, 255);
   border: 1px solid rgba(15, 119, 255, 0.45);
@@ -101,10 +106,10 @@ a {
     path {
       stroke: #0f77ff;
     }
+
     a,
     span {
       color: #0f77ff !important;
     }
   }
 }
-

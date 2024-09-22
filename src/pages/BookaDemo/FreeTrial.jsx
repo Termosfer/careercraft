@@ -7,20 +7,28 @@ import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuesti
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
   const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
   const count = useSelector((state) => state.questions.value);
-  console.log(question, "question")
-  // console.log(count, "count")
-  // console.log(totalCount, "totalCount")
-  // console.log(orderValue,  "answerId")
-
-
-
+  console.log(question.id, "question")
+  console.log(count, "count")
+  console.log(totalCount, "totalCount")
+  console.log(orderValue, "answerId")
+  const [active, setActive] = useState("Next")
+  useEffect(()=>{
+    if (count < totalCount) {
+      setActive("Next")
+    } else if (count === totalCount) {
+      setActive("Finish")
+    }
+  },[count])
+ 
+console.log(active, "ac")
   useEffect(() => {
     dispatch(getQuestion(count));
     dispatch(getQuestionsCount())
@@ -30,12 +38,12 @@ const FreeTrial = () => {
   useEffect(() => {
     if (question) {
       const progressPercentage = Math.round(
-        (count / totalCount) * 100
+        (question.id / totalCount) * 100
       );
       setProgress(progressPercentage);
     }
 
-  }, [question, count]);
+  }, [question]);
 
 
 
@@ -48,6 +56,9 @@ const FreeTrial = () => {
       const answer = { orderValue, questionId: question.id }
       dispatch(getAnswer(answer));
       dispatch(changeIncrease());
+      if (active === "Finish") {
+        navigate("/freetest/test-result"); 
+      }
     }
 
     if (loading)
@@ -88,7 +99,7 @@ const FreeTrial = () => {
       <ProgressBar variant="primary" now={progress} />
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
-          <span style={{ color: "#0F77FF" }}>Question {count}</span> Out of <span>{totalCount}</span>
+          <span style={{ color: "#0F77FF" }}>Question {question.id}</span> Out of <span>{totalCount}</span>
         </h2>
         <div>
           <h2 className="text-center my-5 fw-semibold" key={question.id}>{question.text}</h2>
@@ -109,28 +120,17 @@ const FreeTrial = () => {
               ))}
             </ul>
             <div className="text-center">
-              {
-                count && count < 70 ? (
-                  <Button
+            <Button
                     type="submit"
                     style={{ background: "#0F77FF" }}
                     className="px-5 fs-6"
                   >
-                    Next
+                    {active}
                   </Button>
-                ) : (<Link to="/freetest/test-result">
-                  <Button
-                    type="submit"
-                    style={{ background: "#0F77FF" }}
-                    className="px-5 fs-6">
-                    Finish
-                  </Button>
-                </Link>)
-              }
             </div>
           </Form>
-        </div>
-      </Container>
+        </div >
+      </Container >
     </>
   );
 };

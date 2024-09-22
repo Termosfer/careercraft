@@ -22,6 +22,8 @@ function Register() {
   const email = useSelector((state) => state.auth.email);
   const password = useSelector((state) => state.auth.password);
   const data = useSelector((state) => state.registration.data);
+  const error = useSelector((state) => state.registration.error);
+  console.log(error, "erro")
   console.log(data, "data");
   const handleChangeName = (e) => {
     dispatch(changeName(e.currentTarget.value));
@@ -179,6 +181,7 @@ function Register() {
                 <Button type="submit" className="w-100 registration-btn">
                   Create account
                 </Button>
+                {error && (<div className="text-center"><span className="text-danger">{error}.</span></div>)}
               </Form>
             </Col>
           </Row>
