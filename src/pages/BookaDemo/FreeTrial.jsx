@@ -13,22 +13,21 @@ const FreeTrial = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
+  const [button, setButton] = useState("Next")
   const count = useSelector((state) => state.questions.value);
+  const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
   console.log(question.id, "question")
   console.log(count, "count")
   console.log(totalCount, "totalCount")
   console.log(orderValue, "answerId")
-  const [active, setActive] = useState("Next")
   useEffect(()=>{
     if (count < totalCount) {
-      setActive("Next")
+      setButton("Next")
     } else if (count === totalCount) {
-      setActive("Finish")
+      setButton("Finish")
     }
   },[count])
  
-console.log(active, "ac")
   useEffect(() => {
     dispatch(getQuestion(count));
     dispatch(getQuestionsCount())
@@ -56,7 +55,7 @@ console.log(active, "ac")
       const answer = { orderValue, questionId: question.id }
       dispatch(getAnswer(answer));
       dispatch(changeIncrease());
-      if (active === "Finish") {
+      if (button === "Finish") {
         navigate("/freetest/test-result"); 
       }
     }
@@ -125,7 +124,7 @@ console.log(active, "ac")
                     style={{ background: "#0F77FF" }}
                     className="px-5 fs-6"
                   >
-                    {active}
+                    {button}
                   </Button>
             </div>
           </Form>

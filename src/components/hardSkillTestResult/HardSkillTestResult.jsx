@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col, Table, ProgressBar } from "react-bootstrap";
 import ChartAxe from "../chartAxe/ChartAxe";
 import star from "../../assets/img/star.png";
@@ -6,7 +6,17 @@ import { Gauge, gaugeClasses } from '@mui/x-charts';
 import "./hardskill.css";
 import { Link } from "react-router-dom";
 import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
+import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
+import { useDispatch, useSelector } from "react-redux";
 const HardSkillTestResult = () => {
+  const dispatch = useDispatch()
+  const {hardSkillRaport,hardSkillRaports} = useSelector(state=>state.report)
+  console.log(hardSkillRaport, "hard")
+  console.log(hardSkillRaports, "hardSkill")
+  useEffect(() => {
+    dispatch(getHardSkillReport())
+    dispatch(getHardSkillReports())
+  }, [])
 
   return (
     <>
