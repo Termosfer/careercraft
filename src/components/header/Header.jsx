@@ -31,7 +31,7 @@ function CollapsibleExample() {
     navigate("/");
   };
   return (
-    <Navbar collapseOnSelect expand="lg" id="bg-nav" variant="light">
+    <Navbar collapseOnSelect expand="lg" id="bg-nav" className="bgColor-navbar">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3 header-cont">
         <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-4 gap-4 mx-auto">
           <Link to="/" className="d-flex align-items-center">

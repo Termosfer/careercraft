@@ -13,7 +13,9 @@ a {
   height: 55px;
   width: 115px;
 }
-
+.bgColor-navbar{
+  background-color: #f8f8f8;
+}
 .logo {
   height: 62px;
   width: 130px;
