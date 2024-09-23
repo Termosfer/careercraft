@@ -7,7 +7,7 @@
                 {
                     "img": "/assets/hardSkills/hs1-p1.png",
                     "title": "User Needs & Market Research",
-                    "action": "Start with smaller-scale user interviews, surveys, and competitor analyses. Learn how to frame the right questions and analyze user data. Utilize platforms like Google Analytics, Hotjar, and SurveyMonkey to collect user data."
+                    "action": "Start with smaller-scale user interviews, surveys, and competitor analyses. Learn how to frame the right questions and analyze user data.Utilize platforms like Google Analytics, Hotjar, and SurveyMonkey to collect user data."
                 },
                 {
                     "img": "/assets/hardSkills/hs1-p2.png",
@@ -43,164 +43,64 @@
             "communcations": [
                 {
                     "papers": [
-                        {
-                            "0": "Lean Product Development as a System (ResearchGate)"
-                        },
-                        {
-                            "1": "Agile Product Discovery: Maximizing Value and Innovation (Springer)"
-                        },
-                        {
-                            "2": "The Role of Product Discovery in Agile Development (ACM)"
-                        },
-                        {
-                            "3": "User-Centered Design and Product Discovery (ResearchGate)"
-                        },
-                        {
-                            "4": "Innovation and Product Discovery in Agile Teams (IEEE Explore)"
-                        },
-                        {
-                            "5": "The Impact of Product Discovery on Business Success (Elsevier)"
-                        },
-                        {
-                            "6": "Design Thinking in Product Discovery (Harvard Business Review)"
-                        },
-                        {
-                            "7": "Customer Development and Product Discovery (ResearchGate)"
-                        },
-                        {
-                            "8": "Product Discovery in the Digital Era (Wiley Online)"
-                        },
-                        {
-                            "9": "Empathy in Product Discovery: A User-Centered Approach (Journal of Product Innovation)"
-                        }
+                        "Lean Product Development as a System (ResearchGate)",
+                        "Agile Product Discovery: Maximizing Value and Innovation (Springer)",
+                        "The Role of Product Discovery in Agile Development (ACM)",
+                        "User-Centered Design and Product Discovery (ResearchGate)",
+                        "Innovation and Product Discovery in Agile Teams (IEEE Explore)",
+                        "The Impact of Product Discovery on Business Success (Elsevier)",
+                        "Design Thinking in Product Discovery (Harvard Business Review)",
+                        "Customer Development and Product Discovery (ResearchGate)",
+                        "Product Discovery in the Digital Era (Wiley Online)",
+                        "Empathy in Product Discovery: A User-Centered Approach (Journal of Product Innovation)"
                     ],
                     "books": [
-                        {
-                            "0": "Inspired: How To Create Products Customers Love by Marty Cagan"
-                        },
-                        {
-                            "1": "Continuous Discovery Habits by Teresa Torres"
-                        },
-                        {
-                            "2": "Lean Product and Lean Analytics by Ben Yoskovitz"
-                        },
-                        {
-                            "3": "The Lean Startup by Eric Ries"
-                        },
-                        {
-                            "4": "Escaping the Build Trap by Melissa Perri"
-                        },
-                        {
-                            "5": "Testing Business Ideas by David J. Bland"
-                        },
-                        {
-                            "6": "Lean UX by Jeff Gothelf"
-                        },
-                        {
-                            "7": "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp"
-                        },
-                        {
-                            "8": "Value Proposition Design by Alex Osterwalder"
-                        },
-                        {
-                            "9": "User Story Mapping by Jeff Patton"
-                        }
+                        "Inspired: How To Create Products Customers Love by Marty Cagan",
+                        "Continuous Discovery Habits by Teresa Torres",
+                        "Lean Product and Lean Analytics by Ben Yoskovitz",
+                        "The Lean Startup by Eric Ries",
+                        "Escaping the Build Trap by Melissa Perri",
+                        "Testing Business Ideas by David J. Bland",
+                        "Lean UX by Jeff Gothelf",
+                        "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp",
+                        "Value Proposition Design by Alex Osterwalder",
+                        "User Story Mapping by Jeff Patton"
                     ],
                     "blogs": [
-                        {
-                            "0": "Teresa Torres’ Continuous Discovery Blog"
-                        },
-                        {
-                            "1": "Mind the Product – Product Discovery Section"
-                        },
-                        {
-                            "2": "Product Coalition – Discovery Insights"
-                        },
-                        {
-                            "3": "Roman Pichler’s Blog on Product Discovery"
-                        },
-                        {
-                            "4": "Product Talk by Melissa Perri"
-                        },
-                        {
-                            "5": "SVPG Blog by Marty Cagan"
-                        },
-                        {
-                            "6": "UX Collective – Product Discovery Articles"
-                        },
-                        {
-                            "7": "Ken Norton's 'Bring the Donuts' Blog"
-                        },
-                        {
-                            "8": "Nielsen Norman Group – Product Discovery Research"
-                        },
-                        {
-                            "9": "Agile Alliance – Product Discovery in Agile"
-                        }
+                        "Teresa Torres’ Continuous Discovery Blog",
+                        "Mind the Product – Product Discovery Section",
+                        "Product Coalition – Discovery Insights",
+                        "Roman Pichler’s Blog on Product Discovery",
+                        "Product Talk by Melissa Perri",
+                        "SVPG Blog by Marty Cagan",
+                        "UX Collective – Product Discovery Articles",
+                        "Ken Norton's 'Bring the Donuts' Blog",
+                        "Nielsen Norman Group – Product Discovery Research",
+                        "Agile Alliance – Product Discovery in Agile"
                     ],
                     "courses": [
-                        {
-                            "0": "Product Discovery Course by Mind the Produc"
-                        },
-                        {
-                            "1": "Continuous Discovery Habits by Teresa Torres (Product Talk Academy)"
-                        },
-                        {
-                            "2": "Product Management: Building a Product Roadmap by LinkedIn Learning"
-                        },
-                        {
-                            "3": "Lean Product and Agile Discovery by Udemy"
-                        },
-                        {
-                            "4": "Product Discovery Masterclass by Product School"
-                        },
-                        {
-                            "5": "Product Research and Discovery by Pragmatic Institute"
-                        },
-                        {
-                            "6": "Validating Product Ideas by Alex Cowan (Udemy)"
-                        },
-                        {
-                            "7": "Introduction to Lean UX by Interaction Design Foundation"
-                        },
-                        {
-                            "8": "Innovation and Product Development by Coursera (Wharton)"
-                        },
-                        {
-                            "9": "Designing and Running Product Discovery Workshops by Productized"
-                        }
+                        "Product Discovery Course by Mind the Produc",
+                        "Continuous Discovery Habits by Teresa Torres (Product Talk Academy)",
+                        "Product Management: Building a Product Roadmap by LinkedIn Learning",
+                        "Lean Product and Agile Discovery by Udemy",
+                        "Product Discovery Masterclass by Product School",
+                        "Product Research and Discovery by Pragmatic Institute",
+                        "Validating Product Ideas by Alex Cowan (Udemy)",
+                        "Introduction to Lean UX by Interaction Design Foundation",
+                        "Innovation and Product Development by Coursera (Wharton)",
+                        "Designing and Running Product Discovery Workshops by Productized"
                     ],
                     "tools": [
-                        {
-                            "0": "Productboard"
-                        },
-                        {
-                            "1": "Miro"
-                        },
-                        {
-                            "2": "Figma"
-                        },
-                        {
-                            "3": "Jira (for product discovery tasks)"
-                        },
-                        {
-                            "4": "Trello"
-                        },
-                        {
-                            "5": "ProdPad"
-                        },
-                        {
-                            "6": "Airfocus"
-                        },
-                        {
-                            "7": "Qualtrics (for user research)"
-                        },
-                        {
-                            "8": "Confluence (for team collaboration)"
-                        },
-                        {
-                            "9": "Optimal Workshop (for UX research)"
-                        }
+                        "Productboard",
+                        "Miro",
+                        "Figma",
+                        "Jira (for product discovery tasks)",
+                        "Trello",
+                        "ProdPad",
+                        "Airfocus",
+                        "Qualtrics (for user research)",
+                        "Confluence (for team collaboration)",
+                        "Optimal Workshop (for UX research)"
                     ]
                 }
             ]

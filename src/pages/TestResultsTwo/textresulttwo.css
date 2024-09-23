@@ -1,0 +1,19 @@
+.h3-skillName{
+    font-size: 40px;
+}
+
+.h5-title{
+    font-size: 22px;
+    color: #0F77FF;
+}
+.span-title{
+    color: #0F77FF;
+    font-size: 18px;
+}
+.p-title{
+    font-size: 18px;
+}
+
+.comm-p{
+    object-fit: contain;
+}
