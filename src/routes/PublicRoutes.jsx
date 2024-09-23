@@ -17,6 +17,7 @@ import TestResult from '../components/testResult/TestResult'
 import HardSkillTestResult from '../components/hardSkillTestResult/HardSkillTestResult'
 import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 import Packages from '../pages/Packages/Packages'
+import UserProfile from '../pages/UserProfile/UserProfile'
 
 
 const PublicRoutes = () => {
@@ -41,7 +42,8 @@ const PublicRoutes = () => {
           path="/freetest/hard-skill-test-result"
           element={<HardSkillTestResult />}
         />
-        <Route path="/TestResultsOne" element={<TestResultsOne />} />
+        <Route path="/testresultsone" element={<TestResultsOne />} />
+        <Route path="/userprofile" element={<UserProfile/>} />
       </Routes>
     </PublicLayout>
   );

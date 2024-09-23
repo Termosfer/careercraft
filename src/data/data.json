@@ -1,0 +1,290 @@
+{
+    "data": [
+        {
+            "skillID": "1",
+            "skillName": "Research & discovery",
+            "context": [
+                {
+                    "img":"/assets/hardSkills/hs1-p1.png",
+                    "title": "User Needs & Market Research",
+                    "action": "Start with smaller-scale user interviews, surveys, and competitor analyses. Learn how to frame the right questions and analyze user data. Utilize platforms like Google Analytics, Hotjar, and SurveyMonkey to collect user data."
+                },
+                {
+                    "img":"/assets/hardSkills/hs1-p2.png",
+                    "title": "Product Idea Validation",
+                    "action": "Use tools like Optimizely or VWO to run A/B tests on different product features to see which versions resonate most with users. Develop a feedback loop where insights from users are constantly incorporated into product adjustments.Leverage tools like Type-form or Usability-Hub for product validation."
+                },
+                {
+                    "img":"assets/hardSkills/hs1-p3.png",
+                    "title": "Managing Negative Feedback",
+                    "action": " When receiving negative feedback, conduct deep interviews to understand the core issues and complaints.Implement tools like Re-framer for gathering and organizing feedback into actionable patterns.Develop skills in decision-making to either pivot the product concept or improve it iteratively based on user data."
+                },
+                {
+                    "img":"assets/hardSkills/hs1-p4.png",
+                    "title": "Identifying User Problems",
+                    "action": "Move beyond surveys and interviews—use customer support tickets, social media, and forums to gain a broader understanding of user pain points.Tools like Zendesk and Intercom can be invaluable in collecting and analyzing customer feedback from support interactions.Focus on gathering unbiased data by avoiding assumptions based on personal experience or secondhand reports."
+                },
+                {
+                    "img":"assets/hardSkills/hs1-p5.png",
+                    "title": "Problem Discovery in Interviews",
+                    "action": "Take workshops or courses focused on conducting user interviews and active listening.Based on interviews, create problem hypotheses and validate them with additional research and data.Ensure clear communication of new problems and their impact on the project roadmap with stakeholders."
+                },
+                {
+                    "img":"assets/hardSkills/hs1-p6.png",
+                    "title": "Ensuring Value Across Product Lifecycle",
+                    "action": "  Use tools like Pendo or UserVoice to continually gather feedback throughout the product lifecycle.Stay up-to-date with market trends and adjust the product roadmap to stay competitive.Work closely with marketing, design, and development teams to ensure product value is created and maintained."
+                },
+                {
+                    "img":"assets/hardSkills/hs1-p7.png",
+                    "title": "Leveraging Value to Stand Out",
+                    "action": "  Use the Value Proposition Canvas to align your product with customer needs and differentiate from competitors.Conduct thorough competitor analysis using tools like SEMrush or SimilarWeb to identify strengths and weaknesses.Focus on highlighting the unique benefits of your product in marketing and positioning strategies."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        {
+                            "0": "Lean Product Development as a System (ResearchGate)"
+                        },
+                        {
+                            "1": "Agile Product Discovery: Maximizing Value and Innovation (Springer)"
+                        },
+                        {
+                            "2": "The Role of Product Discovery in Agile Development (ACM)"
+                        },
+                        {
+                            "3": "User-Centered Design and Product Discovery (ResearchGate)"
+                        },
+                        {
+                            "4": "Innovation and Product Discovery in Agile Teams (IEEE Explore)"
+                        },
+                        {
+                            "5": "The Impact of Product Discovery on Business Success (Elsevier)"
+                        },
+                        {
+                            "6": "Design Thinking in Product Discovery (Harvard Business Review)"
+                        },
+                        {
+                            "7": "Customer Development and Product Discovery (ResearchGate)"
+                        },
+                        {
+                            "8": "Product Discovery in the Digital Era (Wiley Online)"
+                        },
+                        {
+                            "9": "Empathy in Product Discovery: A User-Centered Approach (Journal of Product Innovation)"
+                        }
+                    ],
+                    "books": [
+                        {
+                            "0": "Inspired: How To Create Products Customers Love by Marty Cagan"
+                        },
+                        {
+                            "1": "Continuous Discovery Habits by Teresa Torres"
+                        },
+                        {
+                            "2": "Lean Product and Lean Analytics by Ben Yoskovitz"
+                        },
+                        {
+                            "3": "The Lean Startup by Eric Ries"
+                        },
+                        {
+                            "4": "Escaping the Build Trap by Melissa Perri"
+                        },
+                        {
+                            "5": "Testing Business Ideas by David J. Bland"
+                        },
+                        {
+                            "6": "Lean UX by Jeff Gothelf"
+                        },
+                        {
+                            "7": "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp"
+                        },
+                        {
+                            "8": "Value Proposition Design by Alex Osterwalder"
+                        },
+                        {
+                            "9": "User Story Mapping by Jeff Patton"
+                        }
+                    ],
+                    "blogs": [
+                        {
+                            "0": "Teresa Torres’ Continuous Discovery Blog"
+                        },
+                        {
+                            "1": "Mind the Product – Product Discovery Section"
+                        },
+                        {
+                            "2": "Product Coalition – Discovery Insights"
+                        },
+                        {
+                            "3": "Roman Pichler’s Blog on Product Discovery"
+                        },
+                        {
+                            "4": "Product Talk by Melissa Perri"
+                        },
+                        {
+                            "5": "SVPG Blog by Marty Cagan"
+                        },
+                        {
+                            "6": "UX Collective – Product Discovery Articles"
+                        },
+                        {
+                            "7": "Ken Norton's 'Bring the Donuts' Blog"
+                        },
+                        {
+                            "8": "Nielsen Norman Group – Product Discovery Research"
+                        },
+                        {
+                            "9": "Agile Alliance – Product Discovery in Agile"
+                        }
+                    ],
+                    "Courses": [
+                        {
+                            "0": "Product Discovery Course by Mind the Produc"
+                        },
+                        {
+                            "1": "Continuous Discovery Habits by Teresa Torres (Product Talk Academy)"
+                        },
+                        {
+                            "2": "Product Management: Building a Product Roadmap by LinkedIn Learning"
+                        },
+                        {
+                            "3": "Lean Product and Agile Discovery by Udemy"
+                        },
+                        {
+                            "4": "Product Discovery Masterclass by Product School"
+                        },
+                        {
+                            "5": "Product Research and Discovery by Pragmatic Institute"
+                        },
+                        {
+                            "6": "Validating Product Ideas by Alex Cowan (Udemy)"
+                        },
+                        {
+                            "7": "Introduction to Lean UX by Interaction Design Foundation"
+                        },
+                        {
+                            "8": "Innovation and Product Development by Coursera (Wharton)"
+                        },
+                        {
+                            "9": "Designing and Running Product Discovery Workshops by Productized"
+                        }
+                    ],
+                    "tools": [
+                        {
+                            "0": "Productboard"
+                        },
+                        {
+                            "1": "Miro"
+                        },
+                        {
+                            "2": "Figma"
+                        },
+                        {
+                            "3": "Jira (for product discovery tasks)"
+                        },
+                        {
+                            "4": "Trello"
+                        },
+                        {
+                            "5": "ProdPad"
+                        },
+                        {
+                            "6": "Airfocus"
+                        },
+                        {
+                            "7": "Qualtrics (for user research)"
+                        },
+                        {
+                            "8": "Confluence (for team collaboration)"
+                        },
+                        {
+                            "9": "Optimal Workshop (for UX research)"
+                        }
+                    ]
+                }
+            ]},
+            {
+                "skillID": "2",
+                "skillName": "Product Analytics",
+                "context": [
+                    {
+                        "img":"/assets/hardSkills/hs2-p1.png",
+                        "title": "Mastering Key Analytics Concepts",
+                        "action": "Read 'Lean Analytics' by Ben Yoskovitz to gain insights into how analytics can drive product decisions.Take an online course such as 'Google Analytics for Beginners' to learn how to track key product metrics.Practice with tools like Amplitude, Mix-panel, or Google Analytics to understand how to track user engagement and behaviour. Join online communities like Product Analytics Club to stay updated on best practices."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p2.png",
+                        "title": "Measurement & Tracking Skills",
+                        "action": "Practice creating measurement plans for product launches with specific goals (e.g., increase user engagement by 10%).Set up real or hypothetical tracking systems using tools like Google Analytics or Amplitude to monitor KPIs such as user engagement rates, session duration, and feature adoption.Regularly track metrics like daily active users, clickthrough rates, and average time spent to assess feature success."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p3.png",
+                        "title": "Analyze & Investigate Metrics",
+                        "action": "Learn how to segment users and perform cohort analysis using tools like Mix-panel or Amplitude.Use techniques such as surveys or user interviews to gather qualitative insights when engagement drops.Create actionable hypotheses based on metrics like session duration, bounce rates, and feature usage, then test and iterate on them.Study case studies where product teams solved engagement problems using product analytics."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p4.png",
+                        "title": "Master User Retention Techniques",
+                        "action": "Study retention calculation methods such as cohort analysis, retention rate formulas, and customer lifetime value (CLV).Implement retention strategies, including A/B testing of features, improving user onboarding, and optimizing the user experience.Use tools like Amplitude to set up retention tracking for specific features or user segments.Focus on improving the product’s long-term value proposition to drive repeat usage."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p5.png",
+                        "title": "Align Business Goals with Product Metrics",
+                        "action": "Learn to differentiate between growth metrics (user acquisition, CAC) and product metrics (retention, engagement, NPS).Study product life cycles to identify which metrics are most important at different stages.Align your product goals with broader business objectives by collaborating closely with stakeholders and leadership.Use tools like Product-board or Trello to visualize and track how business goals align with product analytics."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p6.png",
+                        "title": "Develop Data-Driven Decision-Making",
+                        "action": "Start by setting up regular reporting using key metrics like feature usage, user flows, drop-off points, and retention rates.Use qualitative data (user feedback) to complement quantitative data for a well-rounded decision-making approach.Practice running A/B tests on features and analyzing the outcomes to improve user engagement.Attend webinars or workshops on data-driven decision-making in product management."
+                    },
+                    {
+                        "img":"/assets/hardSkills/hs2-p7.png",
+                        "title": "Continuously Iterate Based on Analytics",
+                        "action": "Set up recurring reviews of product performance based on analytics and feedback.Create an optimization backlog where you list potential product improvements based on analytics insights.Work with a cross-functional team (e.g., developers, designers) to prioritize and implement product improvements.Ensure you’re tracking the right metrics at the right time, depending on whether you're focusing on growth or user satisfaction."
+                    }
+                ]
+            },
+            {
+                "skillID": "3",
+                "skillName": "Product Planning",
+                "context": [
+                    {
+                        "img": "/assets/hardSkills/hs3-p1.png",
+                        "title": "Deepen Product Planning Understanding",
+                        "action": "Read 'The Lean Product Playbook' by Dan Olsen and 'Inspired: How To Create Products Customers Love' by Marty Cagan to build a foundation in product planning. Study detailed case studies of successful product launches and planning processes to understand practical applications and strategies. Create and manage your own product planning projects, whether they are real or hypothetical, to apply what you've learned. Join online communities, forums, and LinkedIn groups related to product management to discuss and refine your understanding of product planning concepts. Develop visual aids such as mind maps or diagrams to map out key concepts like product roadmaps and MVPs, and regularly update them as you learn."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p2.png",
+                        "title": "Enhance Hypothesis Validation & MVP Development",
+                        "action": "Create MVPs for small projects or ideas, focusing on essential features to test your hypotheses. Organize and conduct user interviews to gather qualitative feedback on your MVP. Use this feedback to refine your product. Implement A/B tests to compare different versions of your MVP and determine which performs better in terms of user engagement and satisfaction. Systematically analyze feedback from users to identify patterns and insights that inform product improvements. Keep detailed records of your validation process, including hypotheses, testing methods, and results, to track progress and learn from experiences."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p3.png",
+                        "title": "Master Product Roadmap Development",
+                        "action": "Develop and maintain detailed product roadmaps using tools like Aha! or Product-Plan. Include key milestones, deliverables, and timelines. Work on prioritizing features and tasks based on business goals, user needs, and resource availability. Use frameworks like MoSCoW or RICE for prioritization. Regularly review and update the roadmap based on progress, user feedback, and changes in business strategy. Share your roadmap with stakeholders and team members to ensure alignment and gain feedback on the proposed plans. Monitor progress against the roadmap and adjust plans as needed to stay on track with product goals and deadlines."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p4.png",
+                        "title": "Enhance Iterative Development & Feedback Integration",
+                        "action": "Use agile methodologies to conduct iterative development cycles, allowing for regular feedback and continuous improvement. Establish feedback loops with users to gather input on each iteration of the product. Use this feedback to make informed adjustments. Based on feedback, refine features and functionalities to better meet user needs and improve overall product experience. Track changes made to the product based on feedback, including the rationale for each adjustment and the impact on the product. Analyze user journeys to identify pain points and areas for improvement, and address these issues in subsequent iterations."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p5.png",
+                        "title": "Align Product Planning with Business Objectives",
+                        "action": "Identify and define key metrics that align with business goals, such as revenue targets, user acquisition rates, and market share. Work closely with stakeholders, including executives and other departments, to ensure that product plans support business objectives. Regularly assess how product developments and features impact business outcomes. Adjust plans based on this assessment. Clearly communicate how product plans align with business goals to all team members and stakeholders to ensure shared understanding and commitment. Be prepared to pivot or adjust product strategies based on changes in business priorities or market conditions."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p6.png",
+                        "title": "Develop Product Launch Management Skills",
+                        "action": "Develop detailed launch plans, including timelines, marketing strategies, and distribution channels. Work with cross-functional teams to ensure that all aspects of the launch are well-coordinated, including development, marketing, and sales. Perform extensive prelaunch testing to identify and address any issues before the product goes live. Track key performance indicators during and after the launch to assess the success and address any issues that arise. Collect and analyze feedback from users and stakeholders after the launch to identify areas for improvement and plan future updates."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs3-p7.png",
+                        "title": "Regularly Review & Refine Product Plans",
+                        "action": "Schedule regular review meetings to assess product performance and update plans as necessary. Develop and maintain a backlog of potential product improvements based on analytics and user feedback. Work with cross-functional teams to prioritize and implement product improvements from the backlog. Continuously track key metrics to ensure that product improvements are achieving desired outcomes. Update product plans and roadmaps based on new insights, performance data, and changes in business strategy."
+                    }
+                ]
+            }
+        ]
+    }
