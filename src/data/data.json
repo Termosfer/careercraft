@@ -285,6 +285,86 @@
                         "action": "Schedule regular review meetings to assess product performance and update plans as necessary. Develop and maintain a backlog of potential product improvements based on analytics and user feedback. Work with cross-functional teams to prioritize and implement product improvements from the backlog. Continuously track key metrics to ensure that product improvements are achieving desired outcomes. Update product plans and roadmaps based on new insights, performance data, and changes in business strategy."
                     }
                 ]
+            },
+            {
+                "skillID": "4",
+                "skillName": "Customer Experience Beginner Level",
+                "context": [
+                    {
+                        "img": "/assets/hardSkills/hs4-p1.png",
+                        "title": "Deepen Understanding of Customer Experience Management",
+                        "action": "Write comprehensive summaries of essential CXM concepts and best practices. Engage in forums, webinars, and discussion groups dedicated to customer experience management. Study and summarize case studies of successful CXM implementations and their impact."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p2.png",
+                        "title": "Develop Skills in Creating Customer Journey Maps",
+                        "action": "Develop CJMs for different customer segments and scenarios, including both 'As Is' and 'To Be' states. Lead internal workshops to practice creating and analyzing CJMs with team members. Use customer feedback to refine and validate CJMs."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p3.png",
+                        "title": "Optimizing Feedback Collection Strategies",
+                        "action": "Simplify feedback forms and test different formats to improve completion rates. Test offering incentives to boost participation. Clearly explain the value of feedback to customers and address any barriers to participation."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p4.png",
+                        "title": "Ensure Accuracy and Relevance in Automated CJMs",
+                        "action": "Establish rules for data validation and quality assurance. Schedule audits to ensure the accuracy and relevance of data. Set up systems to detect and address data anomalies promptly."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p5.png",
+                        "title": "Address Resistance to CX Practices",
+                        "action": "Initiate discussions with resistant departments to understand their concerns and address them. Present data and case studies demonstrating the benefits of CX initiatives. Offer training sessions to educate other departments on the value and impact of CX practices."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p6.png",
+                        "title": "Utilize Customer Feedback for Continuous Improvement",
+                        "action": "Create systems for continuously collecting and analyzing customer feedback. Use feedback to make small, iterative changes and measure their impact. Regularly analyze feedback trends to identify and address emerging issues."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p7.png",
+                        "title": "Develop Comprehensive Service Blueprints",
+                        "action": "Define stages, touchpoints, and interactions in the customer journey. Work with cross-functional teams to ensure accurate and comprehensive blueprints. Keep the blueprint updated to reflect changes and improvements."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs4-p8.png",
+                        "title": "Implement and Monitor CX Initiatives",
+                        "action": "Create plans with timelines, responsibilities, and success criteria. Use KPIs to monitor the effectiveness of CX initiatives and adjust strategies as needed. Regularly report on outcomes and refine initiatives based on performance data."
+                    }
+                ]
+            },
+
+            {
+                "skillID": "5",
+                "skillName": "Business Domain Beginner Level",
+                "context": [
+                    {
+                        "img": "/assets/hardSkills/hs5-p1.png",
+                        "title": "Cross-Departmental Alignment",
+                        "action": "Organize workshops with representatives from all departments at the outset of the project to define the shared vision and goals. Use tools for real-time updates and collaboration. Set up biweekly or monthly cross-departmental meetings to review progress and align on goals. Ensure key stakeholders from each department are involved in major decisions and kept updated on changes."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs5-p2.png",
+                        "title": "Customer Support Integration",
+                        "action": "Include customer support teams in the initial planning stages to incorporate their insights into product design. Create mechanisms for customer support to provide continuous feedback based on customer interactions. Keep customer support teams informed about product changes and updates through regular briefings and training sessions."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs5-p3.png",
+                        "title": "Assess Effectiveness",
+                        "action": "Implement quantitative metrics (e.g., KPIs) and qualitative feedback (e.g., team surveys) to evaluate each stage. Schedule regular reviews at each stage of the process to assess performance and make necessary adjustments. Use the data collected to continuously refine and optimize processes."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs5-p4.png",
+                        "title": "Application of Lean Principles",
+                        "action": "Identify and eliminate waste in the value stream to streamline processes. Provide training on lean practices and encourage their application across the development process. Continuously refine and optimize each stage based on feedback and performance data."
+                    },
+                    {
+                        "img": "/assets/hardSkills/hs5-p5.png",
+                        "title": "Managing Communication Issues",
+                        "action": "Identify and address communication gaps through dedicated meetings with representatives from all departments. Use tools to facilitate real-time updates and feedback. Create clear protocols for communication and ensure regular follow-ups to maintain alignment."
+                    }
+                ]
             }
+            
+            
         ]
     }
