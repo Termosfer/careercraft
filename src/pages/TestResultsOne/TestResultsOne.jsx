@@ -366,7 +366,7 @@ const TestResultsOne = () => {
       case "Teamwork":
         return (
 
-          <div className="critical-thinking">
+          <div className="teamwork">
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
