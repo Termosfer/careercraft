@@ -1,11 +1,13 @@
 import React from "react";
 import QushSVG from "../../components/SVG/QushSVG";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import "./packages.css";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";
 import { FaPlus } from "react-icons/fa6";
+import pack1 from "../../assets/img/pack2.png"
+import pack2 from "../../assets/img/pack1.png"
 
 const Packages = () => {
   return (
@@ -13,7 +15,7 @@ const Packages = () => {
       <Container>
         <div className="package-header ">
           <h2 className="text-center pb-5">
-            Unlock Your Full Potential with <span>CareerCraft</span> Premium
+            Unlock Your Full Potential with <span className="title-cc">CareerCraft</span> Premium
           </h2>
           <div className="row gap-2 packages-boxes justify-content-center">
             <Card className="mt-5">
@@ -50,7 +52,7 @@ const Packages = () => {
               </Card.Body>
             </Card>
 
-            <Card >
+            <Card className="mb-5">
               <Card.Body className="d-flex flex-column justify-content-between">
                 <Card.Title className="text-center">Pro Plan</Card.Title>
                 <div>
@@ -117,13 +119,16 @@ const Packages = () => {
                 </button>
               </Card.Body>
             </Card>
+          </div>
 
-            <div className="elevate-cont">
-              <Card className="elevate-card" style={{ width: "50rem" }}>
-                <Card.Img variant="top" src="" />
-                <Card.Body>
-                  <Card.Title>Elevate Premium</Card.Title>
-                  <div>
+
+          <div className="elevate-cont">
+            <Card className="elevate-card" style={{ width: "50rem" }}>
+              <Card.Img variant="top" src="" />
+              <Card.Body>
+                <div className="text-img row">
+                  <div className="col-7">
+                    <Card.Title className="elevate-h">Elevate Premium</Card.Title>
                     <p>
                       Elevate your career by gaining full access to advanced
                       skill assessments and personalized growth recommendations.{" "}
@@ -131,21 +136,26 @@ const Packages = () => {
                     <ul>
                       <li>
                         <QushSVG />
-                        Key soft skills assessment
+                        Advanced hard skills insights
                       </li>
                       <li>
                         <QushSVG />
+                        Personalized learning paths
                       </li>
 
                       <li>
                         <QushSVG />
+                        Exclusive career resources
                       </li>
                     </ul>
                   </div>
-                  <Button variant="primary">Buy now</Button>
-                </Card.Body>
-              </Card>
-            </div>
+                  <img className="col-1" src={pack1} alt="" />
+                  <img className="pack2" src={pack2} alt="" />
+                </div>
+                <Button variant="primary">Buy now</Button>
+              </Card.Body>
+            </Card>
+
           </div>
         </div>
       </Container>
@@ -156,49 +166,52 @@ const Packages = () => {
             Trusted by thousands of professionals and organizations worldwide.
           </h1>
 
-          <div className="profiles-cont d-flex justify-content-center gap-3">
+          <div className="profiles-cont d-flex justify-content-center gap-5">
             <div className="profiles-p">
               <img src={photo1} alt="" />
               <div className="txt-p py-4">
                 “CareerCraft has transformed the way we approach skill
                 development. The platform has cut down our training time by 50%,
                 allowing us to focus on scaling with precision.”
-              </div>
-              <div className="position">
-                <h6>– Jane Doe</h6>
-                <p>Talent Development Manager</p>
+
+                <div className="position">
+                  <h6>– Jane Doe</h6>
+                  <p>Talent Development Manager</p>
+                </div>
               </div>
             </div>
 
-            <div className="profiles-p">
+            <div className="profiles-p pp-2">
               <img src={photo2} alt="" />
               <div className="txt-p py-4">
                 “CareerCraft has streamlined our team's learning process,
                 helping us improve both efficiency and consistency.”
-              </div>
-              <div className="position">
-                <h6>– Mark Johnson</h6>
-                <p>Learning & Development Lead</p>
+                <div className="position">
+                  <h6>– Mark Johnson</h6>
+                  <p>Learning & Development Lead</p>
+                </div>
               </div>
             </div>
+
             <div className="profiles-p">
               <img src={photo3} alt="" />
               <div className="txt-p py-4">
                 “CareerCraft helped us centralize all our training materials and
                 resources, offering guidance on how to upskill effectively.”
-              </div>
-              <div className="position">
-                <h6>– Sarah Lee</h6>
-                <p>Operations Manager</p>
+
+                <div className="position ">
+                  <h6>– Sarah Lee</h6>
+                  <p>Operations Manager</p>
+                </div>
               </div>
             </div>
           </div>
         </Container>
       </div>
 
-      <div className="faq-section py-5">
-        <Container className="text-center w-50">
-          <h4 className="py-5 fw-bold">FAQ</h4>
+      <div className="faq-section">
+        <Container className="text-center">
+          <h4 className="pb-5 fw-bold">FAQ</h4>
 
           <div className="questions">
             <p>
@@ -231,7 +244,7 @@ const Packages = () => {
       </div>
 
       <div className="package-bottom-section py-5 w-100">
-        <Container className="bottom-cont">
+        <Container className="bottom-cont w-75">
           <h3 className="title-career">
             Ready to Elevate Your Career?
           </h3>
