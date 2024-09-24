@@ -10,7 +10,7 @@ import { getHardSkillReport, getHardSkillReports } from "../../config/authReport
 import { useDispatch, useSelector } from "react-redux";
 const HardSkillTestResult = () => {
   const dispatch = useDispatch()
-  const {hardSkillRaport,hardSkillRaports} = useSelector(state=>state.report)
+  const { hardSkillRaport, hardSkillRaports } = useSelector(state => state.report)
   console.log(hardSkillRaport, "hard")
   console.log(hardSkillRaports, "hardSkill")
   useEffect(() => {
@@ -26,7 +26,7 @@ const HardSkillTestResult = () => {
           <Col lg={7}>
             <p>Congratulations! </p>
             <span>
-              Your overall score is <span className="text-primary fw-bolder">84% (Advanced)</span>, reflecting your strong
+              Your overall score is <span className="text-primary fw-bolder">{hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect : ""} ({hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].skillLevel.charAt(0).toUpperCase() + hardSkillRaport[0].skillLevel.slice(1).toLowerCase() : ""})</span>, reflecting your strong
               proficiency across key areas. You’re excelling in Product Design and
               Sales & Marketing, with room to grow in Business Domain and Product
               Analytics. Continue leveraging your strengths and focus on the areas
@@ -37,7 +37,7 @@ const HardSkillTestResult = () => {
           <Col lg={5}>
             <div className="">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <Gauge width={400} height={170} value={30} startAngle={-90} endAngle={90} sx={{
+              <Gauge width={400} height={170} value={hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect : ""} startAngle={-90} endAngle={90} sx={{
                 [`& .${gaugeClasses.valueText}`]: {
                   fontSize: 50,
                   transform: 'translate(0px, -40px)',
@@ -71,7 +71,7 @@ const HardSkillTestResult = () => {
       </Container>
       <div className=" d-flex flex-column align-items-center">
         <h2 className="text-center pt-5">Here’s Your Results...</h2>
-        <HardSkillRadarChart />
+        <HardSkillRadarChart allReport={hardSkillRaports} />
       </div>
       <Container className="p-5">
         <h1 className="text-center pb-5"><span className="text-primary">Hard Skills</span> Overview & <span className="text-primary">Development</span> Plan</h1>
@@ -88,7 +88,7 @@ const HardSkillTestResult = () => {
             <tr>
               <td>Research & Discovery</td>
               <td>
-                <ProgressBar variant="primary" now={60} />
+                <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : ""} />
                 Advanced
               </td>
               <td>Focus on conducting longitudinal studies and exploring advanced ethnographic techniques to uncover deeper consumer insights.</td>
@@ -96,49 +96,49 @@ const HardSkillTestResult = () => {
             </tr>
             <tr>
               <td>Product Analytics</td>
-              <td><ProgressBar variant="primary" now={60} /> Intermediate </td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : ""} /> Intermediate </td>
               <td>Enhance your skills in predictive analytics and data storytelling.</td>
               <td>Integrate advanced analytics tools like Power BI or Looker into your workflow. Participate in online forums or communities to stay updated on best practices.</td>
             </tr>
             <tr>
               <td>Product Planning</td>
-              <td><ProgressBar variant="primary" now={60} /> Beginner </td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : ""} /> Beginner </td>
               <td>Dive into advanced Agile frameworks and portfolio management.</td>
               <td>Experiment with lean planning techniques for more flexible, rapid iteration cycles. Share your strategies with peers for feedback and improvement.</td>
             </tr>
             <tr>
               <td>Customer Experience Management</td>
-              <td><ProgressBar variant="primary" now={60} /> Advanced</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : ""} /> Advanced</td>
               <td>Create detailed customer journey maps and identify pain points.</td>
               <td>Run a customer journey workshop with cross-functional teams. Implement feedback loops to continuously improve the customer experience.</td>
             </tr>
             <tr>
               <td>Business Domain</td>
-              <td><ProgressBar variant="primary" now={60} /> Beginner</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : ""} /> Beginner</td>
               <td>Deepen your understanding of industry trends and competitive landscape.</td>
               <td>Stay updated on industry reports and news. Network with professionals in your field to exchange insights and enhance your knowledge.</td>
             </tr>
             <tr>
               <td>Business Model & Economy</td>
-              <td><ProgressBar variant="primary" now={60} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : ""} /> Intermediate</td>
               <td>Strengthen your economic analysis and identify revenue streams in emerging markets.</td>
               <td>Test different business models through case studies or simulations. Analyze how various economic conditions impact these models.</td>
             </tr>
             <tr>
               <td>Sales & Marketing</td>
-              <td><ProgressBar variant="primary" now={60} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : ""} /> Intermediate</td>
               <td>Enhance your data-driven marketing tactics and conversion rate optimization.</td>
               <td>Run A/B tests on your campaigns to refine your messaging. Engage with a mentor to review your strategies and identify new opportunities.</td>
             </tr>
             <tr>
               <td>Product Design</td>
-              <td><ProgressBar variant="primary" now={60} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : ""} /> Intermediate</td>
               <td>Explore voice and gesture-based design, focusing on micro-interactions and seamless transitions.</td>
               <td>Work on VUI projects or design prototypes incorporating AR/VR. Share your designs in design communities to get feedback and refine your approach.</td>
             </tr>
             <tr>
               <td>Development & Delivery</td>
-              <td><ProgressBar variant="primary" now={60} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : ""} /> Intermediate</td>
               <td>Gain further exposure to DevOps and CI/CD processes for faster, reliable product delivery.</td>
               <td>Set up a CI/CD pipeline on a small-scale project and optimize it for faster deployment cycles. Document your process and share insights with your team.</td>
             </tr>
@@ -158,10 +158,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[7].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -174,10 +174,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[5].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -190,10 +190,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[8].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -206,10 +206,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[6].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -222,10 +222,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[4].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -238,10 +238,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[3].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -254,10 +254,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[2].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -270,10 +270,10 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : ""}%</span>
+                    <span>{hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[1].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -286,10 +286,13 @@ const HardSkillTestResult = () => {
                   <Link>Read more</Link>
                 </div>
                 <div className="d-flex flex-column">
-                  <ProgressBar variant="primary" now={60} />
+                  <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : ""} />
                   <div className='d-flex justify-content-between text-primary fw-bolder'>
-                    <span>50%</span>
-                    <span>scoreName</span>
+                    <span>{hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : ""}%</span>
+                    <span>
+                      {hardSkillRaports && hardSkillRaports[0] ?
+                        hardSkillRaports[0].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[0].skillLevel.slice(1).toLowerCase() : ""}
+                    </span>
                   </div>
                 </div>
               </div>

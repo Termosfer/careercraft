@@ -1,45 +1,56 @@
-
-.css-yoqpz6-MuiGauge-container{
-  height: 190px !important;
+.css-yoqpz6-MuiGauge-container {
+    height: 190px !important;
 }
-  .css-p1sr87-MuiGauge-referenceArc {
-    fill:transparent !important;
+
+.css-p1sr87-MuiGauge-referenceArc {
+    fill: transparent !important;
     stroke-width: 30px !important;
     stroke: rgba(64, 143, 255, .4) !important;
-  }
- .css-b9rdri-MuiGauge-referenceArc {
+}
+
+.css-b9rdri-MuiGauge-referenceArc {
     stroke-width: 30px !important;
     stroke: #0F77FF;
     fill: #0F77FF;
 }
 
-.star-div{
+.gaugeClasses.valueText {
+    font-size: 50;
+    transform: translate(0px, -40px);
+    font-weight: bold;
+}
+
+.star-div {
     width: max-content;
 }
 
-thead > tr,
-tbody > tr{
+thead>tr,
+tbody>tr {
     vertical-align: middle;
     text-align: center;
 }
 
-th{
+th {
     text-align: left;
     white-space: nowrap;
 }
-thead> tr{
+
+thead>tr {
     font-size: 14px;
 }
-tbody > tr{
+
+tbody>tr {
     font-size: 12px;
 }
-tbody > tr > td{
-text-align: left;
-}
-tbody > tr > td:nth-child(2){
-text-align: center;
+
+tbody>tr>td {
+    text-align: left;
 }
 
-.bgColor-container{
+tbody>tr>td:nth-child(2) {
+    text-align: center;
+}
+
+.bgColor-container {
     background: #ebf4ff;
 }
