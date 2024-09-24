@@ -43,10 +43,15 @@
   margin-bottom: 25px;
 }
 
-.TestResultsOne .container .border .w-25 {
+.soft-img-container{
+  align-items: flex-start;
+
+}
+
+/* .TestResultsOne .container .border .w-25 {
   width: 15% !important;
   height: 15%;
-}
+} */
 
 .TestResultsOne .container .border h5,
 .TestResultsOne .container .border h4 {
@@ -88,4 +93,15 @@
   background-color: #0f77ff;
   color: #fff;
   border-radius: 8px;
+}
+.soft__img{
+  width: 15%;
+  border-radius: 18px;
+  object-fit:cover;
+}
+
+.soft__img1{
+  width: 25%;
+  border-radius: 18px;
+  object-fit:cover;
 }

@@ -51,8 +51,8 @@ function CollapsibleExample() {
               Solutions
             </Link>
           
-            <Link to="/resources" className="text-decoration-none text-dark">
-              Blogs
+            <Link to="/packages" className="text-decoration-none text-dark">
+              Packages
             </Link>
             <Link to="/contact" className="text-decoration-none text-dark">
               Contacts

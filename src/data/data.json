@@ -531,6 +531,206 @@
                     ]
                 }
             ]
+        },
+        {
+            "skillID": "6",
+            "skillName": "Business Model & Economy Beginner Level",
+            "context": [
+                {
+                    "img": "/assets/hardSkills/hs6-p1.png",
+                    "title": "Understanding and Measuring ROI",
+                    "action": "Advanced ROI calculation methods, including cost per acquisition (CPA), lifetime value (LTV), and net revenue analysis. Use case studies and real data to practice calculating ROI. Implement tracking systems to monitor key performance metrics for growth channels (e.g., conversion rates, retention rates). Integrate tracking tools with existing systems to automate data collection and reporting."
+                },
+                {
+                    "img": "/assets/hardSkills/hs6-p2.png",
+                    "title": "Adapting to Performance Changes",
+                    "action": " Learn advanced data analysis techniques to diagnose performance issues (e.g., regression analysis, trend analysis). Develop skills in strategic planning to adjust marketing and operational strategies based on performance insights. Implement A/B testing and scenario planning to evaluate the impact of potential adjustments.Evaluate the performance of alternative channels and optimize them based on data."
+                },
+                {
+                    "img": "/assets/hardSkills/hs6-p3.png",
+                    "title": "Competitive Market Strategy",
+                    "action": "Conduct in-depth competitive analysis using tools like SWOT analysis, market positioning maps, and competitor benchmarking. Regularly update competitive analysis to reflect changes in the market.Develop and refine customer segmentation based on new insights.Use advanced market research techniques, such as customer surveys, focus groups, and industry reports."
+                },
+                {
+                    "img": "/assets/hardSkills/hs6-p4.png",
+                    "title": "Defining Monetization Models",
+                    "action": "Learn about different pricing strategies and their impact on customer acquisition and retention. Implement pricing tests and experiments to find the optimal pricing strategy.Ensure that the monetization model aligns with customer needs and market conditions. Gather and analyze feedback to refine the monetization approach."
+                },
+                {
+                    "img": "/assets/hardSkills/hs6-p5.png",
+                    "title": "Improving Unit Economics",
+                    "action": "Perform detailed cost analysis to identify inefficiencies and opportunities for cost reduction. Compare cost structures against industry standards and best practices.Make informed adjustments to pricing and cost structures based on detailed financial analysis.Test different pricing and cost scenarios to optimize unit economics."
+                },
+                {
+                    "img": "/assets/hardSkills/hs6-p6.png",
+                    "title": "Calculating ROI for New Features",
+                    "action": "Develop detailed cost estimates for feature development, including resources, time, and opportunity costs.Use forecasting models to predict future costs and benefits.Estimate the expected benefits from new features, including increased revenue, customer acquisition, and retention.Use financial projections and scenario analysis to ensure accurate ROI calculations."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        "'Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers'  Alexander Osterwalder",
+                        "'Value Proposition Design: How to Create Products and Services Customers Want'  Alexander Osterwalder",
+                        "'The Lean Startup: How Today’s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses'  Eric Ries",
+                        "'Blue Ocean Strategy: How to Create Uncontested Market Space and Make the Competition Irrelevant'  W. Chan Kim and Renée Mauborgne",
+                        "'Monetizing Innovation: How Smart Companies Design the Product Around the Price'  Madhavan Ramanujam and Georg Tacke",
+                        "'The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail'  Clayton Christensen",
+                        "'Dynamic Capabilities and Strategic Management'  David Teece",
+                        "'The Theory of Disruptive Innovation'  Clayton Christensen",
+                        "'A ResourceBased View of the Firm'  Jay Barney",
+                        "'The Business Model Navigator: 55 Models That Will Revolutionize Your Business'  Oliver Gassmann"
+                    ],
+                    "books": [
+                        "Business Model Generation' by Alexander Osterwalder and Yves Pigneur",
+                        "'Value Proposition Design' by Alexander Osterwalder, Yves Pigneur, Gregory Bernarda, and Alan Smith",
+                        "'The Lean Startup' by Eric Ries",
+                        "'Blue Ocean Strategy' by W. Chan Kim and Renée Mauborgne",
+                        "'The Innovator's Dilemma' by Clayton Christensen",
+                        "'Monetizing Innovation' by Madhavan Ramanujam and Georg Tacke",
+                        "'HBR's Must Reads on Strategy' by Harvard Business Review",
+                        "'Scaling Lean' by Ash Maurya",
+                        "'The Business Model Navigator' by Oliver Gassmann, Karolin Frankenberger, and Michaela Csik",
+                        "'Hooked: How to Build Habit-Forming Products' by Nir Eyal"
+                    ],
+                    "blogs": [
+                        "'Strategyzer Blog' by Strategyzer",
+                        "'Harvard Business Review  Strategy' Blog",
+                        "'Entrepreneur  Business Models' Blog",
+                        "'Forbes  Business Strategy' Blog",
+                        "'Inc. Magazine  Business Models' Blog",
+                        "'TechCrunch  Business Models' Blog",
+                        "'Business Insider  Business Strategy' Blog",
+                        "'The Startup  Business Models' Blog",
+                        "'GrowthHackers  Business Models' Blog",
+                        "'Medium  Business Strategy' Blog"
+                    ],
+                    "courses": [
+                        "'Business Model Innovation'  Coursera (offered by University of Virginia)",
+                        "'Financial Modeling for Business Analysts and Consultants'  Udemy",
+                        "'Understanding and Managing the Business Model'  LinkedIn Learning",
+                        "'Strategic Management'  edX (offered by Wharton School)",
+                        "'Monetizing Innovation'  Coursera (offered by Wharton School)",
+                        "'Developing Business Models and Strategies'  LinkedIn Learning",
+                        "'Lean Startup Principles'  Udacity",
+                        "'Advanced Business Strategy'  Coursera (offered by University of Virginia)",
+                        "'Business Strategy in Practice'  edX (offered by Copenhagen Business School)",
+                        "'Financial Management'  Coursera (offered by University of Illinois)"
+                    ],
+                    "tools": [
+                        "Business Model Canvas",
+                        "SWOT Analysis Tool",
+                        "PEST Analysis Tool",
+                        "Financial Projection Software (e.g., LivePlan)",
+                        "Customer Segmentation Tool (e.g., Segment)",
+                        "Marketing Analytics Tools (e.g., Google Analytics, Mixpanel)",
+                        "KPI Tracking Software (e.g., Klipfolio, Geckoboard)",
+                        "Pricing Optimization Tools (e.g., Price Intelligently)",
+                        "Competitive Analysis Tools (e.g., SEMrush, Ahrefs)",
+                        "A/B Testing Tools (e.g., Optimizely, VWO)"
+                    ]
+                }
+            ]
+        },
+        {
+            "skillID": "7",
+            "skillName": "Business Model & Economy Beginner Level",
+            "context": [
+                {
+                    "img": "/assets/hardSkills/hs7-p1.png",
+                    "title": "Effective Growth Channels",
+                    "action": "Conduct comprehensive market research to understand industry trends, customer behavior, and potential channels. Analyze competitors' successful channels and strategies. Use data-driven methods, including A/B testing and performance analytics, to evaluate channel effectiveness. Develop and implement a multichannel strategy based on collected data and ROI metrics."
+                },
+                {
+                    "img": "/assets/hardSkills/hs7-p2.png",
+                    "title": "Choosing Advertising Platforms",
+                    "action": " Assess platform specific metrics such as CPC, conversion rates, and audience fit. Perform a competitive analysis to understand platform effectiveness. Consider cost implications and alignment with campaign objectives and budget constraints. Use A/B testing to refine platform choices and strategies"
+                },
+                {
+                    "img": "/assets/hardSkills/hs7-p3.png",
+                    "title": "Addressing Confusing Onboarding Processes",
+                    "action": "Gather and analyze client feedback to identify specific onboarding issues. Redesign the onboarding process to simplify steps and improve clarity. Enhance communication and support during the onboarding phase. Provide additional resources or support to assist clients."
+                },
+                {
+                    "img": "/assets/hardSkills/hs7-p4.png",
+                    "title": "Creating an Effective Feedback Loop",
+                    "action": "Implement a structured process for collecting and analyzing feedback. Integrate feedback into strategic decision-making and adjustments. Regularly review and refine strategies based on feedback insights. Use multiple feedback channels to gather diverse insights."
+                },
+                {
+                    "img": "/assets/hardSkills/hs7-p5.png",
+                    "title": "Adjusting Positioning Strategy Against Competitors",
+                    "action": "Evaluate the impact of competitor pricing on market positioning. Strengthen the value proposition and emphasize unique features. Consider price adjustments or promotional tactics as needed. Revise product messaging to highlight key benefits and differentiators."
+                },
+                {
+                    "img": "/assets/hardSkills/hs7-p6.png",
+                    "title": "Measuring CRM System Implementation Success",
+                    "action": " Monitor key metrics such as user adoption rates, data accuracy, and impact on sales and customer relationships. Gather feedback from users on CRM system effectiveness and usability. Analyze system performance to identify areas for improvement. Make necessary adjustments based on feedback and performance data."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        "'The Impact of Social Media Marketing on Brand Loyalty'  Journal of Marketing",
+                        "'Consumer Behavior and Marketing Strategy'  Journal of Consumer Research",
+                        "'Optimizing Online Advertising Campaigns: A Case Study'  International Journal of Advertising",
+                        "'The Role of Customer Experience in Digital Marketing'  Journal of Interactive Marketing",
+                        "'DataDriven Marketing: Insights from Marketing Analytics'  Marketing Science",
+                        "'The Influence of Social Media on Consumer DecisionMaking'  Journal of Advertising Research",
+                        "'Digital Advertising and Consumer Behavior'  Journal of Marketing Research",
+                        "'Personalization in Digital Marketing'  Journal of Interactive Marketing",
+                        "'The Effectiveness of Content Marketing'  Journal of Business Research",
+                        "'Customer Relationship Management in the Digital Age'  Journal of Marketing Theory and Practice"
+                    ],
+                    "books": [
+                        "Contagious: How to Build Word of Mouth in the Digital Age by Jonah Berger",
+                        "Influence: The Psychology of Persuasion by Robert Cialdini",
+                        "Building a Story Brand: Clarify Your Message So Customers Will Listen by Donald Miller",
+                        "Marketing 4.0: Moving from Traditional to Digital by Philip Kotler",
+                        "Blue Ocean Strategy: How to Create Uncontested Market Space and Make the Competition Irrelevant by W. Chan Kim and Renée Mauborgne",
+                        "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses by Eric Ries",
+                        "Made to Stick: Why Some Ideas Survive and Others Die by Chip Heath and Dan Heath",
+                        "The New Rules of Marketing and PR: How to Use Social Media, Online Video, Mobile Applications, Blogs, News Releases, and Viral Marketing to Reach Buyers Directly by David Meerman Scott",
+                        "Top of Mind: Use Content to Unleash Your Influence and Engage Those Who Matter To You by John Hall",
+                        "Killing Marketing: How Innovative Businesses Are Turning Marketing Cost into Profit by Joe Pulizzi and Robert Rose"
+                    ],
+                    "blogs": [
+                        "HubSpot Blog",
+                        "Neil Patel Blog",
+                        "Moz Blog",
+                        "MarketingProfs Blog",
+                        "Seth Godin's Blog",
+                        "Social Media Examiner",
+                        "Content Marketing Institute Blog",
+                        "Kissmetrics Blog",
+                        "Marketing Land",
+                        "Ad Age"
+                    ],
+                    "courses": [
+                        "'Digital Marketing Specialization' by the University of Illinois (Coursera)",
+                        "'The Complete Digital Marketing Course' by Udemy",
+                        "'Growth Hacking with Digital Marketing' by Udemy",
+                        "'Marketing Analytics' by Columbia University (edX)",
+                        "'Introduction to Marketing' by the University of Pennsylvania (Coursera)",
+                        "'Social Media Marketing Specialization' by Northwestern University (Coursera)",
+                        "'Content Marketing Certification' by HubSpot Academy",
+                        "'Email Marketing Mastery' by Udemy",
+                        "'Digital Marketing Nanodegree' by Udacity",
+                        "'Advanced SEO' by Moz Academy"
+                    ],
+                    "tools": [
+                        "Google Analytics",
+                        "SEMrush",
+                        "HubSpot CRM",
+                        "Ahrefs",
+                        "Hootsuite",
+                        "Mailchimp",
+                        "Buffer",
+                        "Google Ads",
+                        "Crazy Egg",
+                        "Salesforce Marketing Cloud"
+                    ]
+                }
+            ]
         }
     ]
 }
