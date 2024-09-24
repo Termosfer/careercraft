@@ -148,173 +148,67 @@
             "communcations": [
                 {
                     "papers": [
-                        {
-                            "0": "'Product Analytics and Data-Driven Decision Making' - John Doe, Journal of Business Analytics"
-                        },
-                        {
-                            "1": "'Leveraging Analytics for Product Success' - Jane Smith, Harvard Business Review"
-                        },
-                        {
-                            "2": "'The Role of Data in Product Innovation' - Michael Johnson, Journal of Product Innovation Management"
-                        },
-                        {
-                            "3": "'Analytics-Driven Product Development' - Richard Carter, International Journal of Product Management"
-                        },
-                        {
-                            "4": "'The Impact of Analytics on Product Lifecycle' - Emily Davis, Journal of Applied Product Science"
-                        },
-                        {
-                            "5": "'Data Analytics for Product Management' - Thomas Anderson, Journal of Business Research"
-                        },
-                        {
-                            "6": "'Using Product Analytics to Optimize User Experience' - Linda Roberts, Journal of Consumer Analytics"
-                        },
-                        {
-                            "7": "'Product Analytics in Agile Teams' - Alex Green, IEEE Transactions on Engineering Management"
-                        },
-                        {
-                            "8": "'Growth Metrics and Analytics in Product Development' - Samuel Lee, MIT Sloan Management Review"
-                        },
-                        {
-                            "9": "'Product Usage Data for Business Decision-Making' - Victoria Williams, Journal of Information Technology"
-                        }
+                        "'Product Analytics and Data-Driven Decision Making' - John Doe, Journal of Business Analytics",
+                        "'Leveraging Analytics for Product Success' - Jane Smith, Harvard Business Review",
+                        "'The Role of Data in Product Innovation' - Michael Johnson, Journal of Product Innovation Management",
+                        "'Analytics-Driven Product Development' - Richard Carter, International Journal of Product Management",
+                        "'The Impact of Analytics on Product Lifecycle' - Emily Davis, Journal of Applied Product Science",
+                        "'Data Analytics for Product Management' - Thomas Anderson, Journal of Business Research",
+                        "'Using Product Analytics to Optimize User Experience' - Linda Roberts, Journal of Consumer Analytics",
+                        "'Product Analytics in Agile Teams' - Alex Green, IEEE Transactions on Engineering Management",
+                        "'Growth Metrics and Analytics in Product Development' - Samuel Lee, MIT Sloan Management Review",
+                        "'Product Usage Data for Business Decision-Making' - Victoria Williams, Journal of Information Technology"
                     ],
                     "books": [
-                        {
-                            "0": "Lean Analytics - Ben Yoskovitz"
-                        },
-                        {
-                            "1": "Data-Driven Product Management - Matt Trifiro"
-                        },
-                        {
-                            "2": "Measuring the User Experience - William Albert and Thomas Tullis"
-                        },
-                        {
-                            "3": "Hooked: How to Build Habit-Forming Products - Nir Eyal"
-                        },
-                        {
-                            "4": "Data-Driven: Creating a Data Culture - Hilary Mason and DJ Patil"
-                        },
-                        {
-                            "5": "The Lean Product Playbook - Dan Olsen"
-                        },
-                        {
-                            "6": "Building Analytics Teams - John Thompson"
-                        },
-                        {
-                            "7": "Actionable Gamification - Yu-kai Chou"
-                        },
-                        {
-                            "8": "The Art of Scalability - Martin L. Abbott & Michael T. Fisher"
-                        },
-                        {
-                            "9": "Analytics at Work: Smarter Decisions, Better Results - Thomas H. Davenport"
-                        }
+                        "Lean Analytics - Ben Yoskovitz",
+                        "Data-Driven Product Management - Matt Trifiro",
+                        "Measuring the User Experience - William Albert and Thomas Tullis",
+                        "Hooked: How to Build Habit-Forming Products - Nir Eyal",
+                        "Data-Driven: Creating a Data Culture - Hilary Mason and DJ Patil",
+                        "The Lean Product Playbook - Dan Olsen",
+                        "Building Analytics Teams - John Thompson",
+                        "Actionable Gamification - Yu-kai Chou",
+                        "The Art of Scalability - Martin L. Abbott & Michael T. Fisher",
+                        "Analytics at Work: Smarter Decisions, Better Results - Thomas H. Davenport"
                     ],
                     "blogs": [
-                        {
-                            "0": "Mind the Product - Analytics Section"
-                        },
-                        {
-                            "1": "Amplitude Blog - Analytics"
-                        },
-                        {
-                            "2": "Mix-panel Blog"
-                        },
-                        {
-                            "3": "Product-Led Institute Blog"
-                        },
-                        {
-                            "4": "Heap Analytics Blog"
-                        },
-                        {
-                            "5": "Growth-Hackers Blog"
-                        },
-                        {
-                            "6": "Product Coalition Blog"
-                        },
-                        {
-                            "7": "Medium – Data Science & Product Analytics"
-                        },
-                        {
-                            "8": "Mode Blog – Product Analytics"
-                        },
-                        {
-                            "9": "Segment Blog"
-                        },
-                        {
-                            "10": "UX Collective Blog - Data and Metrics"
-                        },
-                        {
-                            "11": "Reforge Blog"
-                        }
+                        "Mind the Product - Analytics Section",
+                        "Amplitude Blog - Analytics",
+                        "Mix-panel Blog",
+                        "Product-Led Institute Blog",
+                        "Heap Analytics Blog",
+                        "Growth-Hackers Blog",
+                        "Product Coalition Blog",
+                        "Medium – Data Science & Product Analytics",
+                        "Mode Blog – Product Analytics",
+                        "Segment Blog",
+                        "UX Collective Blog - Data and Metrics",
+                        "Reforge Blog"
                     ],
                     "courses": [
-                        {
-                            "0": "Product Analytics - Udemy"
-                        },
-                        {
-                            "1": "Continuous Discovery Habits by Teresa Torres (Product Talk Academy)"
-                        },
-                        {
-                            "2": "Product Analytics with Amplitude - Udacity"
-                        },
-                        {
-                            "3": "Data Science and Machine Learning Bootcamp - Udemy"
-                        },
-                        {
-                            "4": "Become a Product Manager - LinkedIn Learning"
-                        },
-                        {
-                            "5": "Data Analytics for Product Managers - Reforge"
-                        },
-                        {
-                            "6": "Advanced Data Analytics - edX"
-                        },
-                        {
-                            "7": "Metrics for Product Managers - Mind the Product"
-                        },
-                        {
-                            "8": "Analytics for Product Managers - Product School"
-                        },
-                        {
-                            "9": "Building Data-Driven Products - Product Plan Academy"
-                        }
+                        "Product Analytics - Udemy",
+                        "Continuous Discovery Habits by Teresa Torres (Product Talk Academy)",
+                        "Product Analytics with Amplitude - Udacity",
+                        "Data Science and Machine Learning Bootcamp - Udemy",
+                        "Become a Product Manager - LinkedIn Learning",
+                        "Data Analytics for Product Managers - Reforge",
+                        "Advanced Data Analytics - edX",
+                        "Metrics for Product Managers - Mind the Product",
+                        "Analytics for Product Managers - Product School",
+                        "Building Data-Driven Products - Product Plan Academy"
                     ],
                     "tools": [
-                        {
-                            "0": "Amplitude"
-                        },
-                        {
-                            "1": "Mix-panel"
-                        },
-                        {
-                            "2": "Heap Analytics"
-                        },
-                        {
-                            "3": "Google Analytics"
-                        },
-                        {
-                            "4": "Tableau"
-                        },
-                        {
-                            "5": "Power BI"
-                        },
-                        {
-                            "6": "Looker"
-                        },
-                        {
-                            "7": "Segment"
-                        },
-                        {
-                            "8": "Kiss-metrics"
-                        },
-                        {
-                            "9": "Hotjar"
-                        },
-                        {
-                            "10": "Pendo"
-                        }
+                        "Amplitude",
+                        "Mix-panel",
+                        "Heap Analytics",
+                        "Google Analytics",
+                        "Tableau",
+                        "Power BI",
+                        "Looker",
+                        "Segment",
+                        "Kiss-metrics",
+                        "Hotjar",
+                        "Pendo"
                     ]
                 }
             ]
@@ -362,191 +256,73 @@
             "communcations": [
                 {
                     "papers": [
-                        {
-                            "0": " 'Understanding the Role of Product Managers in High-Tech Firms' (Journal of Product Innovation Management)"
-                        },
-                        {
-                            "1": " 'Product Planning and Its Impact on Firm Performance' (Strategic Management Journal)"
-                        },
-                        {
-                            "2": " 'A Framework for Product Development Planning' (Research-Technology Management)"
-                        },
-                        {
-                            "3": " 'The Role of Product Roadmaps in Agile Development' (IEEE Software)"
-                        },
-                        {
-                            "4": " 'Strategic Product Planning in a Competitive Environment' (Harvard Business Review)"
-                        },
-                        {
-                            "5": " 'Challenges and Best Practices in Product Planning' (Journal of Business Strategy)"
-                        },
-                        {
-                            "6": " 'Evaluating the Effectiveness of Product Roadmaps' (International Journal of Project Management)"
-                        },
-                        {
-                            "7": "'A Study on Product Planning and Development Processes in Technology Companies' (Technology Management Review)"
-                        },
-                        {
-                            "8": " 'Product Planning in Innovative Firms: An Empirical Study' (Journal of Business Research"
-                        },
-                        {
-                            "9": "'Best Practices in Product Roadmapping: An Empirical Analysis' (International Journal of Product Development)"
-                        },
-                        {
-                            "10": "'Strategic Product Planning: Aligning Product and Market Needs' (Academy of Management Perspectives)"
-                        },
-                        {
-                            "11": "'Product Lifecycle Management and its Impact on Product Planning' (Journal of Product Innovation Management)"
-                        },
-                        {
-                            "12": " 'Effective Product Planning and Market Strategy in High-Tech Industries' (Strategic Management Journal)"
-                        }
+                        " 'Understanding the Role of Product Managers in High-Tech Firms' (Journal of Product Innovation Management)",
+                        " 'Product Planning and Its Impact on Firm Performance' (Strategic Management Journal)",
+                        " 'A Framework for Product Development Planning' (Research-Technology Management)",
+                        " 'The Role of Product Roadmaps in Agile Development' (IEEE Software)",
+                        " 'Strategic Product Planning in a Competitive Environment' (Harvard Business Review)",
+                        " 'Challenges and Best Practices in Product Planning' (Journal of Business Strategy)",
+                        " 'Evaluating the Effectiveness of Product Roadmaps' (International Journal of Project Management)",
+                        "'A Study on Product Planning and Development Processes in Technology Companies' (Technology Management Review)",
+                        " 'Product Planning in Innovative Firms: An Empirical Study' (Journal of Business Research",
+                        "'Best Practices in Product Roadmapping: An Empirical Analysis' (International Journal of Product Development)",
+                        "'Strategic Product Planning: Aligning Product and Market Needs' (Academy of Management Perspectives)",
+                        "'Product Lifecycle Management and its Impact on Product Planning' (Journal of Product Innovation Management)",
+                        " 'Effective Product Planning and Market Strategy in High-Tech Industries' (Strategic Management Journal)"
                     ],
                     "books": [
-                        {
-                            "0": "Inspired: How To Create Products Customers Love by Marty Cagan"
-                        },
-                        {
-                            "1": "The Lean Product Playbook by Dan Olsen"
-                        },
-                        {
-                            "2": "Lean Analytics: Use Data to Build a Better Startup Faster by Alistair Croll and Benjamin Yoskovitz"
-                        },
-                        {
-                            "3": "Crucial Conversations: Tools for Talking When Stakes Are High by Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler"
-                        },
-                        {
-                            "4": "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp, John Zeratsky, and Braden Kowitz"
-                        },
-                        {
-                            "5": "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses by Eric Ries"
-                        },
-                        {
-                            "6": "Hooked: How to Build Habit-Forming Products by Nir Eyal"
-                        },
-                        {
-                            "7": "Product Roadmaps Relaunched: How to Set Direction while Embracing Uncertainty by C. Todd Lombardo, Bruce McCarthy, and Evan Ryan"
-                        },
-                        {
-                            "8": "Scaling Lean: Mastering the Key Metrics for Startup Growth by Ash Maurya"
-                        },
-                        {
-                            "9": "Building a StoryBrand: Clarify Your Message So Customers Will Listen by Donald Miller"
-                        },
-                        {
-                            "10": "Product Management's Sacred Seven: The Skills Required to Crush Product Manager Interviews and Be a Great PM by Parth Detroja, Neel Mehta, and Aditya Agashe"
-                        },
-                        {
-                            "11": "Designing Products People Love: How Great Designers Create Successful Products by Scott Hurff"
-                        },
-                        {
-                            "12": "Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value by Teresa Torres"
-                        },
-                        {
-                            "13": "The Product Manager's Survival Guide: Everything You Need to Know to Succeed as a Product Manager by Steven Haines"
-                        },
-                        {
-                            "14": "The Product Book: How to Become a Great Product Manager by Josh Anon and Carlos González de Villaumbrosia"
-                        }
+                        "Inspired: How To Create Products Customers Love by Marty Cagan",
+                        "The Lean Product Playbook by Dan Olsen",
+                        "Lean Analytics: Use Data to Build a Better Startup Faster by Alistair Croll and Benjamin Yoskovitz",
+                        "Crucial Conversations: Tools for Talking When Stakes Are High by Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler",
+                        "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp, John Zeratsky, and Braden Kowitz",
+                        "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses by Eric Ries",
+                        "Hooked: How to Build Habit-Forming Products by Nir Eyal",
+                        "Product Roadmaps Relaunched: How to Set Direction while Embracing Uncertainty by C. Todd Lombardo, Bruce McCarthy, and Evan Ryan",
+                        "Scaling Lean: Mastering the Key Metrics for Startup Growth by Ash Maurya",
+                        "Building a StoryBrand: Clarify Your Message So Customers Will Listen by Donald Miller",
+                        "Product Management's Sacred Seven: The Skills Required to Crush Product Manager Interviews and Be a Great PM by Parth Detroja, Neel Mehta, and Aditya Agashe",
+                        "Designing Products People Love: How Great Designers Create Successful Products by Scott Hurff",
+                        "Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value by Teresa Torres",
+                        "The Product Manager's Survival Guide: Everything You Need to Know to Succeed as a Product Manager by Steven Haines",
+                        "The Product Book: How to Become a Great Product Manager by Josh Anon and Carlos González de Villaumbrosia"
                     ],
                     "blogs": [
-                        {
-                            "0": "Product Coalition"
-                        },
-                        {
-                            "1": "Mind the Product"
-                        },
-                        {
-                            "2": "Aha! Blog"
-                        },
-                        {
-                            "3": "ProductPlan Blog"
-                        },
-                        {
-                            "4": "The Product Manager"
-                        },
-                        {
-                            "5": "Product Management Today"
-                        },
-                        {
-                            "6": "Intercom Blog"
-                        },
-                        {
-                            "7": "The Clever PM"
-                        },
-                        {
-                            "8": "ProductLed Growth Blog"
-                        },
-                        {
-                            "9": "The Agile Product Management Blog"
-                        }
+                        "Product Coalition",
+                        "Mind the Product",
+                        "Aha! Blog",
+                        "ProductPlan Blog",
+                        "The Product Manager",
+                        "Product Management Today",
+                        "Intercom Blog",
+                        "The Clever PM",
+                        "ProductLed Growth Blog",
+                        "The Agile Product Management Blog"
                     ],
                     "courses": [
-                        {
-                            "0": "Product Management: Building a Product Roadmap (Coursera)"
-                        },
-                        {
-                            "1": "Product Management Fundamentals (Udemy)"
-                        },
-                        {
-                            "2": "Agile Product Management (LinkedIn Learning)"
-                        },
-                        {
-                            "3": "The Product Management Certificate Program (Product School)"
-                        },
-                        {
-                            "4": "Advanced Product Management (Udacity)"
-                        },
-                        {
-                            "5": "Product Management Certification (General Assembly)"
-                        },
-                        {
-                            "6": "Agile Product Management and Scrum (Pluralsight)"
-                        },
-                        {
-                            "7": "Strategic Product Management (edX)"
-                        },
-                        {
-                            "8": "Product Management for Beginners (Skillshare)"
-                        },
-                        {
-                            "9": "Managing Product Management (Harvard Online)"
-                        },
-                        {
-                            "10": "Certified Scrum Product Owner (CSPO) (Scrum Alliance)"
-                        }
+                        "Product Management: Building a Product Roadmap (Coursera)",
+                        "Product Management Fundamentals (Udemy)",
+                        "Agile Product Management (LinkedIn Learning)",
+                        "The Product Management Certificate Program (Product School)",
+                        "Advanced Product Management (Udacity)",
+                        "Product Management Certification (General Assembly)",
+                        "Agile Product Management and Scrum (Pluralsight)",
+                        "Strategic Product Management (edX)",
+                        "Product Management for Beginners (Skillshare)",
+                        "Managing Product Management (Harvard Online)",
+                        "Certified Scrum Product Owner (CSPO) (Scrum Alliance)"
                     ],
                     "tools": [
-                        {
-                            "0": "Aha!"
-                        },
-                        {
-                            "1": "ProductPlan"
-                        },
-                        {
-                            "2": "Roadmunk"
-                        },
-                        {
-                            "3": "Asana"
-                        },
-                        {
-                            "4": "Click-Up"
-                        },
-                        {
-                            "5": "Miro"
-                        },
-                        {
-                            "6": "Monday.com"
-                        },
-                        {
-                            "7": "JIRA"
-                        },
-                        {
-                            "8": "Confluence"
-                        },
-                        {
-                            "9": "Pendo"
-                        }
+                        "Aha!",
+                        "ProductPlan",
+                        "Roadmunk",
+                        "Asana",
+                        "Click-Up",
+                        "Miro",
+                        "Monday.com",
+                        "JIRA",
+                        "Confluence",
+                        "Pendo"
                     ]
                 }
             ]
@@ -599,164 +375,64 @@
             "communcations": [
                 {
                     "papers": [
-                        {
-                            "0": " 'Customer Experience Management: A Review and Future Research Agenda' by Vargo et al."
-                        },
-                        {
-                            "1": "'The Role of Customer Experience Management in Enhancing Customer Satisfaction' by Lemon & Verhoef"
-                        },
-                        {
-                            "2": "'The Impact of Customer Experience on Customer Loyalty' by Schmitt"
-                        },
-                        {
-                            "3": "'Customer Journey Mapping: The What, Why, and How' by Shaw & Ivens"
-                        },
-                        {
-                            "4": "'The Relationship Between Customer Experience Management and Business Performance' by Gentile et al."
-                        },
-                        {
-                            "5": "'Service Blueprinting and Customer Experience Management' by Bitner et al."
-                        },
-                        {
-                            "6": "'Customer Experience and Loyalty: An Integrated Model' by Meyer & Schwager"
-                        },
-                        {
-                            "7": "'The Impact of Employee Experience on Customer Experience' by Kwortnik & Thompson"
-                        },
-                        {
-                            "8": "'Big Data Analytics in Customer Experience Management' by Choudhury & Kumar"
-                        },
-                        {
-                            "9": "'Customer Experience Management and Digital Transformation' by Grewal & Roggeveen"
-                        }
+                        " 'Customer Experience Management: A Review and Future Research Agenda' by Vargo et al.",
+                        "'The Role of Customer Experience Management in Enhancing Customer Satisfaction' by Lemon & Verhoef",
+                        "'The Impact of Customer Experience on Customer Loyalty' by Schmitt",
+                        "'Customer Journey Mapping: The What, Why, and How' by Shaw & Ivens",
+                        "'The Relationship Between Customer Experience Management and Business Performance' by Gentile et al.",
+                        "'Service Blueprinting and Customer Experience Management' by Bitner et al.",
+                        "'Customer Experience and Loyalty: An Integrated Model' by Meyer & Schwager",
+                        "'The Impact of Employee Experience on Customer Experience' by Kwortnik & Thompson",
+                        "'Big Data Analytics in Customer Experience Management' by Choudhury & Kumar",
+                        "'Customer Experience Management and Digital Transformation' by Grewal & Roggeveen"
                     ],
                     "books": [
-                        {
-                            "0": "Customer Experience 3.0 by John A. Goodman"
-                        },
-                        {
-                            "1": "The Power of Customer Experience by Martin Newman"
-                        },
-                        {
-                            "2": "Measuring Customer Experience by James M. Duffy"
-                        },
-                        {
-                            "3": "Customer Experience 2.0 by Brian Solis"
-                        },
-                        {
-                            "4": "The CX Leader's Five Step Guide by Jesse Harriott"
-                        },
-                        {
-                            "5": "Designing Experiences by J. Robert Rossman and Mathew D. Morris"
-                        },
-                        {
-                            "6": "The Customer Experience Book by Alan Pennington"
-                        },
-                        {
-                            "7": "The Effortless Experience by Matthew Dixon, Nick Toman, and Rick DeLisi"
-                        },
-                        {
-                            "8": "Customer Experience 101 by John A. Goodman"
-                        },
-                        {
-                            "9": "Customer Experience 4.0 by William N. Stalling"
-                        }
+                        "Customer Experience 3.0 by John A. Goodman",
+                        "The Power of Customer Experience by Martin Newman",
+                        "Measuring Customer Experience by James M. Duffy",
+                        "Customer Experience 2.0 by Brian Solis",
+                        "The CX Leader's Five Step Guide by Jesse Harriott",
+                        "Designing Experiences by J. Robert Rossman and Mathew D. Morris",
+                        "The Customer Experience Book by Alan Pennington",
+                        "The Effortless Experience by Matthew Dixon, Nick Toman, and Rick DeLisi",
+                        "Customer Experience 101 by John A. Goodman",
+                        "Customer Experience 4.0 by William N. Stalling"
                     ],
                     "blogs": [
-                        {
-                            "0": "CX Network"
-                        },
-                        {
-                            "1": "Customer Think"
-                        },
-                        {
-                            "2": "Forrester's CX Blog"
-                        },
-                        {
-                            "3": "Harvard Business Review's Customer Experience Blog"
-                        },
-                        {
-                            "4": "Zendesk Blog on Customer Experience"
-                        },
-                        {
-                            "5": "TTEC’s Customer Experience Blog"
-                        },
-                        {
-                            "6": "Freshdesk Blog on Customer Service"
-                        },
-                        {
-                            "7": "Help Scout Blog"
-                        },
-                        {
-                            "8": "CX Journey"
-                        },
-                        {
-                            "9": "Experience Matters Blog"
-                        }
+                        "CX Network",
+                        "Customer Think",
+                        "Forrester's CX Blog",
+                        "Harvard Business Review's Customer Experience Blog",
+                        "Zendesk Blog on Customer Experience",
+                        "TTEC’s Customer Experience Blog",
+                        "Freshdesk Blog on Customer Service",
+                        "Help Scout Blog",
+                        "CX Journey",
+                        "Experience Matters Blog"
                     ],
                     "courses": [
-                        {
-                            "0": "'Customer Experience Management' on Coursera"
-                        },
-                        {
-                            "1": "'Customer Experience: How to Design and Implement a CX Strategy' on Udemy"
-                        },
-                        {
-                            "2": "'Customer Journey Mapping' on LinkedIn Learning"
-                        },
-                        {
-                            "3": "'Customer Experience Certification' by the CX Network"
-                        },
-                        {
-                            "4": "'Customer Experience Management Fundamentals' by the Service Council"
-                        },
-                        {
-                            "5": "'Creating Customer Value and Loyalty' by edX"
-                        },
-                        {
-                            "6": "'Customer Experience Design' on Skillshare"
-                        },
-                        {
-                            "7": "'Advanced Customer Experience Management' on Pluralsight"
-                        },
-                        {
-                            "8": "'CX Strategy Mastery' by CX University"
-                        },
-                        {
-                            "9": "'Service Design and Customer Experience' by Interaction Design Foundation"
-                        }
+                        "'Customer Experience Management' on Coursera",
+                        "'Customer Experience: How to Design and Implement a CX Strategy' on Udemy",
+                        "'Customer Journey Mapping' on LinkedIn Learning",
+                        "'Customer Experience Certification' by the CX Network",
+                        "'Customer Experience Management Fundamentals' by the Service Council",
+                        "'Creating Customer Value and Loyalty' by edX",
+                        "'Customer Experience Design' on Skillshare",
+                        "'Advanced Customer Experience Management' on Pluralsight",
+                        "'CX Strategy Mastery' by CX University",
+                        "'Service Design and Customer Experience' by Interaction Design Foundation"
                     ],
                     "tools": [
-                        {
-                            "0": "Customer Journey Mapping Tools (e.g., Smaply, Miro)"
-                        },
-                        {
-                            "1": "Feedback Collection Tools (e.g., SurveyMonkey, Qualtrics)"
-                        },
-                        {
-                            "2": "Experience Management Platforms (e.g., Medallia, InMoment)"
-                        },
-                        {
-                            "3": "Analytics Tools (e.g., Hotjar, Mixpanel)"
-                        },
-                        {
-                            "4": "Service Blueprinting Tools (e.g., Lucidchart, Microsoft Visio)"
-                        },
-                        {
-                            "5": "Customer Feedback Tools (e.g., Typeform, UserVoice)"
-                        },
-                        {
-                            "6": "Customer Experience Management Platforms (e.g., Salesforce Service Cloud, Adobe Experience Cloud)"
-                        },
-                        {
-                            "7": "Net Promoter Score (NPS) Tools (e.g., Delighted, Promoter.io)"
-                        },
-                        {
-                            "8": "Heatmap Tools (e.g., Crazy Egg, FullStory)"
-                        },
-                        {
-                            "9": "Customer Support Tools (e.g., Intercom, Freshdesk)"
-                        }
+                        "Customer Journey Mapping Tools (e.g., Smaply, Miro)",
+                        "Feedback Collection Tools (e.g., SurveyMonkey, Qualtrics)",
+                        "Experience Management Platforms (e.g., Medallia, InMoment)",
+                        "Analytics Tools (e.g., Hotjar, Mixpanel)",
+                        "Service Blueprinting Tools (e.g., Lucidchart, Microsoft Visio)",
+                        "Customer Feedback Tools (e.g., Typeform, UserVoice)",
+                        "Customer Experience Management Platforms (e.g., Salesforce Service Cloud, Adobe Experience Cloud)",
+                        "Net Promoter Score (NPS) Tools (e.g., Delighted, Promoter.io)",
+                        "Heatmap Tools (e.g., Crazy Egg, FullStory)",
+                        "Customer Support Tools (e.g., Intercom, Freshdesk)"
                     ]
                 }
             ]
@@ -794,164 +470,159 @@
             "communcations": [
                 {
                     "papers": [
-                        {
-                            "0": "'The Role of Product Management in Agile Organizations'"
-                        },
-                        {
-                            "1": "'Business Process Management: Concepts, Languages, Architectures'"
-                        },
-                        {
-                            "2": "'The Effects of Leadership Styles on Product Management'"
-                        },
-                        {
-                            "3": "'Transformational Leadership and Team Performance in IT Sector'"
-                        },
-                        {
-                            "4": "'Lean Product Development: Case Studies and Analysis'"
-                        },
-                        {
-                            "5": "'Managing Cross-Functional Teams in Product Development'"
-                        },
-                        {
-                            "6": "'Integrating Customer Feedback into Product Management'"
-                        },
-                        {
-                            "7": "'Agile Methodologies and Product Development Efficiency'"
-                        },
-                        {
-                            "8": "'The Impact of Communication on Product Development Success'"
-                        },
-                        {
-                            "9": "'Evaluating Effectiveness in Product Management Processes'"
-                        }
+                        "'The Role of Product Management in Agile Organizations'",
+                        "'Business Process Management: Concepts, Languages, Architectures'",
+                        "'The Effects of Leadership Styles on Product Management'",
+                        "'Transformational Leadership and Team Performance in IT Sector'",
+                        "'Lean Product Development: Case Studies and Analysis'",
+                        "'Managing Cross-Functional Teams in Product Development'",
+                        "'Integrating Customer Feedback into Product Management'",
+                        "'Agile Methodologies and Product Development Efficiency'",
+                        "'The Impact of Communication on Product Development Success'",
+                        "'Evaluating Effectiveness in Product Management Processes'"
                     ],
                     "books": [
-                        {
-                            "0": "'The Lean Startup' by Eric Ries"
-                        },
-                        {
-                            "1": "'Scrum: The Art of Doing Twice the Work in Half the Time' by Jeff Sutherland"
-                        },
-                        {
-                            "2": "'Product Management for Dummies' by Brain Lawley and Pamela Schure"
-                        },
-                        {
-                            "3": "'The Pragmatic Programmer' by Andrew Hunt and David Thomas"
-                        },
-                        {
-                            "4": "'Measure What Matters' by John Doerr"
-                        },
-                        {
-                            "5": "'Inspired: How To Create Products Customers Love' by Marty Cagan"
-                        },
-                        {
-                            "6": "'Lean Product and Lean Analytics' by Ben Yoskovitz and Alistair Croll"
-                        },
-                        {
-                            "7": "'The Product Book' by Josh Anon and Carlos Gonzalez de Villaumbrosia"
-                        },
-                        {
-                            "8": "'The Four Steps to the Epiphany' by Steve Blank"
-                        },
-                        {
-                            "9": "'Building a StoryBrand' by Donald Miller"
-                        }
+                        "'The Lean Startup' by Eric Ries",
+                        "'Scrum: The Art of Doing Twice the Work in Half the Time' by Jeff Sutherland",
+                        "'Product Management for Dummies' by Brain Lawley and Pamela Schure",
+                        "'The Pragmatic Programmer' by Andrew Hunt and David Thomas",
+                        "'Measure What Matters' by John Doerr",
+                        "'Inspired: How To Create Products Customers Love' by Marty Cagan",
+                        "'Lean Product and Lean Analytics' by Ben Yoskovitz and Alistair Croll",
+                        "'The Product Book' by Josh Anon and Carlos Gonzalez de Villaumbrosia",
+                        "'The Four Steps to the Epiphany' by Steve Blank",
+                        "'Building a StoryBrand' by Donald Miller"
                     ],
                     "blogs": [
-                        {
-                            "0": "Harvard Business Review (Product Management section)"
-                        },
-                        {
-                            "1": "Mind the Product Blog"
-                        },
-                        {
-                            "2": "Product Coalition"
-                        },
-                        {
-                            "3": "Aha! Blog"
-                        },
-                        {
-                            "4": "Intercom Blog"
-                        },
-                        {
-                            "5": "Product Hunt Blog"
-                        },
-                        {
-                            "6": "Roman Pichler’s Blog"
-                        },
-                        {
-                            "7": "ProductPlan Blog"
-                        },
-                        {
-                            "8": "The Clever PM Blog"
-                        },
-                        {
-                            "9": "Strategyzer Blog"
-                        }
+                        "Harvard Business Review (Product Management section)",
+                        "Mind the Product Blog",
+                        "Product Coalition",
+                        "Aha! Blog",
+                        "Intercom Blog",
+                        "Product Hunt Blog",
+                        "Roman Pichler’s Blog",
+                        "ProductPlan Blog",
+                        "The Clever PM Blog",
+                        "Strategyzer Blog"
                     ],
                     "courses": [
-                        {
-                            "0": "'Product Management Certification' by Pragmatic Institute"
-                        },
-                        {
-                            "1": "'Agile Product Management' by Coursera"
-                        },
-                        {
-                            "2": "'Lean Product and Lean Analytics' by Udacity"
-                        },
-                        {
-                            "3": "'Certified Scrum Product Owner (CSPO)' by Scrum Alliance"
-                        },
-                        {
-                            "4": "'Strategic Product Management' by LinkedIn Learning"
-                        },
-                        {
-                            "5": "'Digital Product Management' by edX"
-                        },
-                        {
-                            "6": "'Advanced Product Management' by Product School"
-                        },
-                        {
-                            "7": "'Growth Product Manager' by Reforge"
-                        },
-                        {
-                            "8": "'Agile and Scrum' by Pluralsight"
-                        },
-                        {
-                            "9": "'Product Management Fundamentals' by Udemy"
-                        }
+                        "'Product Management Certification' by Pragmatic Institute",
+                        "'Agile Product Management' by Coursera",
+                        "'Lean Product and Lean Analytics' by Udacity",
+                        "'Certified Scrum Product Owner (CSPO)' by Scrum Alliance",
+                        "'Strategic Product Management' by LinkedIn Learning",
+                        "'Digital Product Management' by edX",
+                        "'Advanced Product Management' by Product School",
+                        "'Growth Product Manager' by Reforge",
+                        "'Agile and Scrum' by Pluralsight",
+                        "'Product Management Fundamentals' by Udemy"
                     ],
                     "tools": [
-                        {
-                            "0": "Jira"
-                        },
-                        {
-                            "1": "Trello"
-                        },
-                        {
-                            "2": "Asana"
-                        },
-                        {
-                            "3": "Monday.com"
-                        },
-                        {
-                            "4": "ClickUp"
-                        },
-                        {
-                            "5": "Productboard"
-                        },
-                        {
-                            "6": "Roadmunk"
-                        },
-                        {
-                            "7": "Miro"
-                        },
-                        {
-                            "8": "Aha!"
-                        },
-                        {
-                            "9": "Smartsheet"
-                        }
+                        "Jira",
+                        "Trello",
+                        "Asana",
+                        "Monday.com",
+                        "ClickUp",
+                        "Productboard",
+                        "Roadmunk",
+                        "Miro",
+                        "Aha!",
+                        "Smartsheet"
+                    ]
+                }
+            ]
+        },
+        {
+            "skillID": "6",
+            "skillName": "Business Model & Economy Beginner Level",
+            "context": [
+                {
+                    "img": "/assets/hardSkills/hs5-p1.png",
+                    "title": "Cross-Departmental Alignment",
+                    "action": "Organize workshops with representatives from all departments at the outset of the project to define the shared vision and goals. Use tools for real-time updates and collaboration. Set up biweekly or monthly cross-departmental meetings to review progress and align on goals. Ensure key stakeholders from each department are involved in major decisions and kept updated on changes."
+                },
+                {
+                    "img": "/assets/hardSkills/hs5-p2.png",
+                    "title": "Customer Support Integration",
+                    "action": "Include customer support teams in the initial planning stages to incorporate their insights into product design. Create mechanisms for customer support to provide continuous feedback based on customer interactions. Keep customer support teams informed about product changes and updates through regular briefings and training sessions."
+                },
+                {
+                    "img": "/assets/hardSkills/hs5-p3.png",
+                    "title": "Assess Effectiveness",
+                    "action": "Implement quantitative metrics (e.g., KPIs) and qualitative feedback (e.g., team surveys) to evaluate each stage. Schedule regular reviews at each stage of the process to assess performance and make necessary adjustments. Use the data collected to continuously refine and optimize processes."
+                },
+                {
+                    "img": "/assets/hardSkills/hs5-p4.png",
+                    "title": "Application of Lean Principles",
+                    "action": "Identify and eliminate waste in the value stream to streamline processes. Provide training on lean practices and encourage their application across the development process. Continuously refine and optimize each stage based on feedback and performance data."
+                },
+                {
+                    "img": "/assets/hardSkills/hs5-p5.png",
+                    "title": "Managing Communication Issues",
+                    "action": "Identify and address communication gaps through dedicated meetings with representatives from all departments. Use tools to facilitate real-time updates and feedback. Create clear protocols for communication and ensure regular follow-ups to maintain alignment."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        "'The Role of Product Management in Agile Organizations'",
+                        "'Business Process Management: Concepts, Languages, Architectures'",
+                        "'The Effects of Leadership Styles on Product Management'",
+                        "'Transformational Leadership and Team Performance in IT Sector'",
+                        "'Lean Product Development: Case Studies and Analysis'",
+                        "'Managing Cross-Functional Teams in Product Development'",
+                        "'Integrating Customer Feedback into Product Management'",
+                        "'Agile Methodologies and Product Development Efficiency'",
+                        "'The Impact of Communication on Product Development Success'",
+                        "'Evaluating Effectiveness in Product Management Processes'"
+                    ],
+                    "books": [
+                        "'The Lean Startup' by Eric Ries",
+                        "'Scrum: The Art of Doing Twice the Work in Half the Time' by Jeff Sutherland",
+                        "'Product Management for Dummies' by Brain Lawley and Pamela Schure",
+                        "'The Pragmatic Programmer' by Andrew Hunt and David Thomas",
+                        "'Measure What Matters' by John Doerr",
+                        "'Inspired: How To Create Products Customers Love' by Marty Cagan",
+                        "'Lean Product and Lean Analytics' by Ben Yoskovitz and Alistair Croll",
+                        "'The Product Book' by Josh Anon and Carlos Gonzalez de Villaumbrosia",
+                        "'The Four Steps to the Epiphany' by Steve Blank",
+                        "'Building a StoryBrand' by Donald Miller"
+                    ],
+                    "blogs": [
+                        "Harvard Business Review (Product Management section)",
+                        "Mind the Product Blog",
+                        "Product Coalition",
+                        "Aha! Blog",
+                        "Intercom Blog",
+                        "Product Hunt Blog",
+                        "Roman Pichler’s Blog",
+                        "ProductPlan Blog",
+                        "The Clever PM Blog",
+                        "Strategyzer Blog"
+                    ],
+                    "courses": [
+                        "'Product Management Certification' by Pragmatic Institute",
+                        "'Agile Product Management' by Coursera",
+                        "'Lean Product and Lean Analytics' by Udacity",
+                        "'Certified Scrum Product Owner (CSPO)' by Scrum Alliance",
+                        "'Strategic Product Management' by LinkedIn Learning",
+                        "'Digital Product Management' by edX",
+                        "'Advanced Product Management' by Product School",
+                        "'Growth Product Manager' by Reforge",
+                        "'Agile and Scrum' by Pluralsight",
+                        "'Product Management Fundamentals' by Udemy"
+                    ],
+                    "tools": [
+                        "Jira",
+                        "Trello",
+                        "Asana",
+                        "Monday.com",
+                        "ClickUp",
+                        "Productboard",
+                        "Roadmunk",
+                        "Miro",
+                        "Aha!",
+                        "Smartsheet"
                     ]
                 }
             ]
