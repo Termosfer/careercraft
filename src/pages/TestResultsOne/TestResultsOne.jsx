@@ -14,7 +14,7 @@ const TestResultsOne = () => {
   const dispatch = useDispatch()
   const ssData = useSelector(state => state.softSkillResult.softResult)
   const allReport = useSelector(state => state.report.allreport)
-  // console.log(allReport, "all")
+  console.log(allReport, "all")
   /* console.log(ssData, "asdadada") */
   const [skill, setSkill] = useState([])
   useEffect(() => {
@@ -46,12 +46,9 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-                Communication <span className="text-primary">{allReport && allReport[0].skillLevel}</span>{" "}
+              {allReport && allReport[4].skillName} <span className="text-primary">{allReport && allReport[4].skillLevel}</span>{" "}
                 Level
               </h3>
-
-
-
               <div className="low text-primary">
                 <span className="fw-bold">
                   {`<50%`}
@@ -125,31 +122,327 @@ const TestResultsOne = () => {
         );
       case "Personal Qualities":
         return (
-          <div className="PersonalQualities">
-            <h3 className="my-5">
-              Diğer Personal Qualities içerikleri burada olacak
-            </h3>
+
+          <div className="personal-qualities">
+
+            <div className="section1 my-5">
+              <h3 className="fw-semibold">
+              {allReport && allReport[3].skillName} <span className="text-primary">{allReport && allReport[3].skillLevel}</span>{" "}
+                Level
+              </h3>
+              <div className="low text-primary">
+                <span className="fw-bold">
+                  {`<50%`}
+                  <p className="fw-normal">Beginner</p>
+                </span>
+              </div>
+            </div>
+
+
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 4 &&
+                      (
+                        <div>
+
+                          <div className="border d-flex p-4 ">
+                            <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" />
+                            <div>
+                              <h5>{ssDat.description && ssDat.description}</h5>
+                              <p>
+                                <span>Action:</span> {ssDat.action}
+                              </p>
+                              <p>
+                                <span>Courses:</span>
+                                {ssDat.additionalResources.courses.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                              <p>
+                                <span>Blogs:</span>
+                                {ssDat.additionalResources.blogs.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="mt-5 mb-4">
+              <h3 className="fw-semibold">Additional Resources</h3>
+            </div>
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 4 &&
+                      (
+                        <AdditionalResources addRes={ssDat} />
+
+                      )
+                    }
+
+                  </div>
+                ))}
+
+              </div>
+            ))}
           </div>
+
         );
       case "Critical Thinking":
         return (
-          <div className="Critical Thinking">
-            <h3 className="my-5">
-              Diğer Critical Thinking içerikleri burada olacak
-            </h3>
+
+          <div className="critical-thinking">
+
+            <div className="section1 my-5">
+              <h3 className="fw-semibold">
+              {allReport && allReport[2].skillName} <span className="text-primary">{allReport && allReport[2].skillLevel}</span>{" "}
+                Level
+              </h3>
+              <div className="low text-primary">
+                <span className="fw-bold">
+                  {`<50%`}
+                  <p className="fw-normal">Beginner</p>
+                </span>
+              </div>
+            </div>
+
+
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 2 &&
+                      (
+                        <div>
+
+                          <div className="border d-flex p-4 ">
+                            <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" />
+                            <div>
+                              <h5>{ssDat.description && ssDat.description}</h5>
+                              <p>
+                                <span>Action:</span> {ssDat.action}
+                              </p>
+                              <p>
+                                <span>Courses:</span>
+                                {ssDat.additionalResources.courses.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                              <p>
+                                <span>Blogs:</span>
+                                {ssDat.additionalResources.blogs.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="mt-5 mb-4">
+              <h3 className="fw-semibold">Additional Resources</h3>
+            </div>
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 2 &&
+                      (
+                        <AdditionalResources addRes={ssDat} />
+
+                      )
+                    }
+
+                  </div>
+                ))}
+
+              </div>
+            ))}
           </div>
+
         );
       case "Leadership":
         return (
-          <div className="Leadership">
-            <h3 className="my-5">Diğer Leadership içerikleri burada olacak</h3>
+
+          <div className="leadership">
+
+            <div className="section1 my-5">
+              <h3 className="fw-semibold">
+              {allReport && allReport[1].skillName} <span className="text-primary">{allReport && allReport[1].skillLevel}</span>{" "}
+                Level
+              </h3>
+              <div className="low text-primary">
+                <span className="fw-bold">
+                  {`<50%`}
+                  <p className="fw-normal">Beginner</p>
+                </span>
+              </div>
+            </div>
+
+
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 3 &&
+                      (
+                        <div>
+
+                          <div className="border d-flex p-4 ">
+                            <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" />
+                            <div>
+                              <h5>{ssDat.description && ssDat.description}</h5>
+                              <p>
+                                <span>Action:</span> {ssDat.action}
+                              </p>
+                              <p>
+                                <span>Courses:</span>
+                                {ssDat.additionalResources.courses.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                              <p>
+                                <span>Blogs:</span>
+                                {ssDat.additionalResources.blogs.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="mt-5 mb-4">
+              <h3 className="fw-semibold">Additional Resources</h3>
+            </div>
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 3 &&
+                      (
+                        <AdditionalResources addRes={ssDat} />
+
+                      )
+                    }
+
+                  </div>
+                ))}
+
+              </div>
+            ))}
           </div>
+
         );
       case "Teamwork":
         return (
-          <div className="Teamwork">
-            <h3 className="my-5">Diğer Teamwork içerikleri burada olacak</h3>
+
+          <div className="critical-thinking">
+
+            <div className="section1 my-5">
+              <h3 className="fw-semibold">
+              {allReport && allReport[0].skillName} <span className="text-primary">{allReport && allReport[0].skillLevel}</span>{" "}
+                Level
+              </h3>
+              <div className="low text-primary">
+                <span className="fw-bold">
+                  {`<50%`}
+                  <p className="fw-normal">Beginner</p>
+                </span>
+              </div>
+            </div>
+
+
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 1 &&
+                      (
+                        <div>
+
+                          <div className="border d-flex p-4 ">
+                            <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" />
+                            <div>
+                              <h5>{ssDat.description && ssDat.description}</h5>
+                              <p>
+                                <span>Action:</span> {ssDat.action}
+                              </p>
+                              <p>
+                                <span>Courses:</span>
+                                {ssDat.additionalResources.courses.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                              <p>
+                                <span>Blogs:</span>
+                                {ssDat.additionalResources.blogs.slice(0, 2).map((c) => (
+                                  <>
+                                    <span className="text-secondary-emphasis fw-normal" >  {c}</span> <br />
+                                  </>
+                                ))}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="mt-5 mb-4">
+              <h3 className="fw-semibold">Additional Resources</h3>
+            </div>
+            {skill?.map((skillItem) => (
+              <div key={skillItem.skillId}>
+                {ssData?.map((ssDat) => (
+                  <div key={ssDat.id}>
+                    {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === 1 &&
+                      (
+                        <AdditionalResources addRes={ssDat} />
+
+                      )
+                    }
+
+                  </div>
+                ))}
+
+              </div>
+            ))}
           </div>
+
         );
       default:
         return null;
