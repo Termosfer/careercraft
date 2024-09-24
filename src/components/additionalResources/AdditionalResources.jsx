@@ -1,60 +1,46 @@
 import React from 'react'
 import img1_1 from "../../assets/TestResultsOneImg/1.png";
-const AdditionalResources = () => {
+const AdditionalResources = ({ addRes }) => {
+    console.log(addRes, "addRes")
     return (
         <>
-            <div className="mt-5 mb-4">
-                <h3 className="fw-semibold">Additional Resources</h3>
-            </div>
-            <div className="border d-flex p-4">
-                <img className="w-25" src={img1_1} alt="" />
+            <div className="border d-flex p-4 soft-img-container">
+                <img className="soft__img1" src={img1_1} alt="" />
                 <div>
-                    <h4>Communication Skills</h4>
-                    <ul>
-                        <span>Articles:</span>
-                        <li>
-                            8 Ways to Improve Your Communication Right Now - Harvard
-                            Business Review
-                        </li>
-                        <li>How to Communicate with Impact – McKinsey</li>
-                        <li>
-                            Effective Communication in Remote Teams – Buffer Blog
-                        </li>
-                        <li>Communication Skills for Product Owners – MindTools</li>
-                        <li>
-                            Communication Tips for Agile Product Owners – Team Gantt
-                        </li>
-                    </ul>
+                    <h4>{addRes.description}</h4>
                     <ul>
                         <span>Books:</span>
-                        <li>
-                            Effective Communication Skills: A Guide to Professional
-                            Success by John Smith (2022)
-                        </li>
-                        <li>
-                            Made to Stick: Why Some Ideas Survive and Others Die by
-                            Chip Heath and Dan Heath
-                        </li>
-                        <li>
-                            The Pyramid Principle: Logic in Writing and Thinking by
-                            Barbara Minto
-                        </li>
-                        <li>
-                            Crucial Conversations: Tools for Talking When Stakes Are
-                            High by Kerry Patterson
-                        </li>
+                        {addRes.additionalResources.books.map((c) => (
+                            <>
+                                {c.length > 0 &&
+                                    (<li className="text-secondary-emphasis fw-normal" >  {c}</li>)}
+                            </>
+                        ))}
+                    </ul>
+                    <ul>
+                        <span>Tools:</span>
+                        {addRes.additionalResources.tools.map((c) => (
+                            <>
+                            {
+                                c.length > 0 && 
+                            
+                                (<li className="text-secondary-emphasis fw-normal" >  {c}</li>) }
+                            </>
+                        ))}
                     </ul>
                     <ul>
                         <span>Journal Articles:</span>
-                        <li>
-                            The Role of Communication in Team Collaboration: A
-                            Meta-Analysis – Journal of Organizational Behavior
-                        </li>
+                        {addRes.additionalResources.academicPapers.map((c) => (
+                            <>{
+                                c.length > 0 &&
+                                (<li className="text-secondary-emphasis fw-normal" >  {c}</li>)}
+                            </>
+                        ))}
                     </ul>
                 </div>
             </div>
 
-            <div className="border d-flex p-4">
+            {/* <div className="border d-flex p-4">
                 <img className="w-25" src={img1_1} alt="" />
                 <div>
                     <h4>Public Speaking & Presentation</h4>
@@ -93,9 +79,9 @@ const AdditionalResources = () => {
                         <li>Public Speaking Anxiety in IT Professionals: Causes and Coping Mechanisms by J. Anderson (2020)</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="border d-flex p-4">
+            {/* <div className="border d-flex p-4">
                 <img className="w-25" src={img1_1} alt="" />
                 <div>
                     <h4>Active Listening</h4>
@@ -130,9 +116,9 @@ const AdditionalResources = () => {
                         <li>Conflict Resolution Strategies in Agile Teams – Journal of Agile Research</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="border d-flex p-4">
+            {/* <div className="border d-flex p-4">
                 <img className="w-25" src={img1_1} alt="" />
                 <div>
                     <h4>Negotiation Skills</h4>
@@ -173,7 +159,7 @@ const AdditionalResources = () => {
                         <li>Collaborative Negotiation in Agile Teams: An Empirical Study – Journal of Agile Management</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
