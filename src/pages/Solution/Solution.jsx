@@ -1,65 +1,72 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import img__20 from "../../assets/solutionImg/img__20.png"
+import img__21 from "../../assets/solutionImg/img__21.png"
 import img__22 from "../../assets/solutionImg/img__22.png"
+import img__23 from "../../assets/solutionImg/img__23.png"
+import img__24 from "../../assets/solutionImg/img__24.png"
+import img__25 from "../../assets/solutionImg/img__25.png"
+import img__26 from "../../assets/solutionImg/img__26.png"
+import img__27 from "../../assets/solutionImg/img__27.png"
 import img__28 from "../../assets/solutionImg/img__28.png"
 import img__29 from "../../assets/solutionImg/img__29.png"
 import img__30 from "../../assets/solutionImg/img__30.png"
 import img__31 from "../../assets/solutionImg/img__31.png"
 import img__32 from "../../assets/solutionImg/img__32.png"
+import img__33 from "../../assets/solutionImg/img__33.png"
 import "./solution.css"
 const Solution = () => {
   return (
     <>
       <div className='bg-solutions'>
-        <Container className='w-75 px-5'>
-          <div className='img-border pt-4'>
-            <div className='img__solutions'>
-              <div className='pb-5'>
-                <h1 className='w-50 text-center mx-auto'>Empower Your <span className='text-primary'>Career</span> with <span className='text-primary'>Tailored</span> Growth Paths</h1>
-                <p className='w-75 mx-auto text-center p-text'>Revolutionize your personal and professional development with AI-driven assessments, customized learning, and career guidance.</p>
+        <img src={img__20} alt="" className='img__20' />
+        <img src={img__21} alt="" className='img__21' />
+        <Container className='w-75 p-5 '>
+          <div className='pb-5 d-flex flex-column  gap-4'>
+            <h1 className='w-50 text-center mx-auto'>Empower Your <span className='text-primary'>Career</span> with <span className='text-primary'>Tailored</span> Growth Paths</h1>
+            <p className='w-75 mx-auto text-center p-text'>Revolutionize your personal and professional development with AI-driven assessments, customized learning, and career guidance.</p>
+
+            <div className='text-center py-5 category'>
+              <button type='btn' className='btn btn-primary px-4 py-2'>Start Your Journey</button>
+            </div>
+            <div className='d-flex justify-content-center gap-4  category'>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__22} alt="img__22" className='img__22' />
+                </div>
+                <span>Product Owner</span>
               </div>
-              <div className='text-center py-4'>
-                <button type='btn' className='btn btn-primary px-4 py-2'>Start Your Journey</button>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__25} alt="img__22" className='img__22' />
+                </div>
+                <span>Product Owner</span>
               </div>
-              <div className='d-flex justify-content-center gap-4 pt-5'>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__26} alt="img__22" className='img__22' />
                 </div>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
-                </div>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
-                </div>
+                <span>Product Owner</span>
               </div>
-              <div className='d-flex justify-content-center gap-4 pt-3'>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
+            </div>
+            <div className='d-flex justify-content-center gap-4 category'>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__27} alt="img__22" className='img__22' />
                 </div>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
+                <span>Product Owner</span>
+              </div>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__24} alt="img__22" className='img__22' />
                 </div>
-                <div className=' bg-category'>
-                  <div className='bg_img  d-flex align-items-center justify-content-center'>
-                    <img src={img__22} alt="img__22" className='img__22' />
-                  </div>
-                  <span>Product Owner</span>
+                <span>Product Owner</span>
+              </div>
+              <div className=' bg-category'>
+                <div className='bg_img  d-flex align-items-center justify-content-center'>
+                  <img src={img__23} alt="img__22" className='img__22' />
                 </div>
+                <span>Product Owner</span>
               </div>
             </div>
           </div>
@@ -67,7 +74,6 @@ const Solution = () => {
       </div>
       <Container className='w-75 p-5'>
         <div>
-
           <h1>Skill & Career <span className='text-primary'>Assessments</span></h1>
           <p className='p__text'>Our AI-powered assessments analyze your unique skill set and deliver actionable insights to drive your growth. Whether you're starting out or advancing your career, CareerCraft identifies skill gaps and provides the right tools, courses, and resources to bridge them. With personalized guidance, you'll strengthen key areas, enhance your expertise, and stay on track to achieve your career goals.</p>
         </div>
@@ -153,7 +159,7 @@ const Solution = () => {
         </div>
       </Container>
       <div className='bg__img__33'>
-        <Container className='w-75 p-5'>
+        <Container className='w-75 p-5 pos'>
           <div className='text-white text-center'>
             <h1>Ready to Elevate Your Career?</h1>
             <p className='w-75 mx-auto pb-4'>Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.</p>
