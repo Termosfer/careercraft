@@ -329,7 +329,7 @@
         },
         {
             "skillID": "4",
-            "skillName": "Customer Experience Beginner Level",
+            "skillName": "Customer Experience",
             "context": [
                 {
                     "img": "/assets/hardSkills/hs4-p1.png",
@@ -439,7 +439,7 @@
         },
         {
             "skillID": "5",
-            "skillName": "Business Domain Beginner Level",
+            "skillName": "Business Domain",
             "context": [
                 {
                     "img": "/assets/hardSkills/hs5-p1.png",
@@ -534,7 +534,7 @@
         },
         {
             "skillID": "6",
-            "skillName": "Business Model & Economy Beginner Level",
+            "skillName": "Business Model & Economy",
             "context": [
                 {
                     "img": "/assets/hardSkills/hs6-p1.png",
@@ -634,7 +634,7 @@
         },
         {
             "skillID": "7",
-            "skillName": "Business Model & Economy Beginner Level",
+            "skillName": "Sales & Marketing",
             "context": [
                 {
                     "img": "/assets/hardSkills/hs7-p1.png",
@@ -728,6 +728,204 @@
                         "Google Ads",
                         "Crazy Egg",
                         "Salesforce Marketing Cloud"
+                    ]
+                }
+            ]
+        },
+        {
+            "skillID": "8",
+            "skillName": "Product Design",
+            "context": [
+                {
+                    "img": "/assets/hardSkills/hs8-p1.png",
+                    "title": "Managing Updates in a Design System",
+                    "action": "Establish a formal change management process for proposing, reviewing, and integrating updates.Ensure stakeholders are involved in the review process to align changes with business goals.Maintain comprehensive documentation of updates.Provide training and communication to team members about new changes."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p2.png",
+                    "title": "Ensuring Accurate Business Logic Implementation",
+                    "action": "Implement rigorous testing practices including unit tests, integration tests, and user acceptance tests.Collaborate closely with the development team to ensure accurate implementation.Maintain a clear traceability matrix for tracking business rules.Regularly review and update documentation to reflect changes and ensure alignment."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p3.png",
+                    "title": "Validating Product Concepts",
+                    "action": "Perform user surveys, focus groups, and prototype testing to gather feedback.Analyze market trends and competitive positioning to assess concept potential.Use feedback to iteratively refine the product concept before moving to development."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p4.png",
+                    "title": "Revising Usage Scenarios from User Testing",
+                    "action": "Conduct a detailed analysis to understand discrepancies between scenarios and actual user behavior.Gather additional feedback and review scenarios for improvement.Update usage scenarios based on analysis and feedback.Validate revised scenarios through additional user testing to ensure accuracy."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p5.png",
+                    "title": "Incorporating Feedback into Product Design",
+                    "action": "Actively seek feedback through user testing, stakeholder reviews, and design critiques.Systematically analyze and categorize feedback to identify actionable insights.Prioritize and incorporate changes based on feedback, ensuring alignment with usability and business objectives.Update documentation to reflect changes and perform further testing to validate improvements."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        "'A Survey of UserCentered Design Practices in Industry'  International Journal of HumanComputer Studies",
+                        "'Design Thinking: Understanding How Designers Think and Work'  Design Studies",
+                        "'The Role of Prototyping in Product Development'  Research in Engineering Design",
+                        "'User Experience Design: A Survey of Research'  ACM Computing Surveys",
+                        "'Evaluating User Experience in Product Development'  International Journal of HumanComputer Interaction",
+                        "'A Comprehensive Review of User Experience Design'  Journal of Usability Studies",
+                        "'The Impact of Design Thinking on Business Innovation'  Harvard Business Review",
+                        "'Design and Evaluation of User Interfaces for Mobile Applications'  Journal of Mobile Computing",
+                        "'Usability and User Experience Testing: Methods and Case Studies'  HumanCentric Computing and Information Sciences",
+                        "'Integrating User Experience Design into the Agile Development Process'  IEEE Transactions on Software Engineering"
+                    ],
+                    "books": [
+                        "The Design of Everyday Things by Don Norman",
+                        "Lean UX: Applying Lean Principles to Improve User Experience by Jeff Gothelf",
+                        "Design Sprint: A Practical Guidebook for Building Great Digital Products by Richard Banfield, C. Todd Lombardo, and Trace Wax",
+                        "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp",
+                        "Don't Make Me Think: A Common Sense Approach to Web Usability by Steve Krug",
+                        "Designing for Interaction: Creating Smart Applications and Clever Devices by Dan Saffer",
+                        "Hooked: How to Build HabitForming Products by Nir Eyal",
+                        "The Elements of User Experience: UserCentered Design for the Web by Jesse James Garrett",
+                        "About Face: The Essentials of Interaction Design by Alan Cooper, Robert Reimann, and David Cronin",
+                        "The User Is Always Right: A Practical Guide to Creating and Using Personas for the Web by Steve Mulder and Ziv Yaar"
+                    ],
+                    "blogs": [
+                        "Smashing Magazine",
+                        "UX Design.cc",
+                        "Nielsen Norman Group Blog",
+                        "A List Apart",
+                        "UX Booth",
+                        "CreativeBloq  UX Design",
+                        "UX Planet",
+                        "Medium  UX Collective",
+                        "Designer Hangout",
+                        "InVision Blog"
+                    ],
+                    "courses": [
+                        "Coursera  Interaction Design Specialization",
+                        "Udacity  Product Design",
+                        "LinkedIn Learning  UX Design",
+                        "Interaction Design Foundation  User Experience Design",
+                        "Skillshare  Introduction to Product Design",
+                        "edX  User Experience (UX) Research and Design",
+                        "Designlab  UX Academy",
+                        "General Assembly  UX Design Immersive",
+                        "CareerFoundry  UX Design Short Course",
+                        "Pluralsight  UX Design Fundamentals"
+                    ],
+                    "tools": [
+                        "Sketch",
+                        "Figma",
+                        "Adobe XD",
+                        "InVision",
+                        "Balsamiq Mockups",
+                        "Axure RP",
+                        "Marvel App",
+                        "Principle",
+                        "Zeplin",
+                        "Framer"
+                    ]
+                }
+            ]
+        },
+        {
+            "skillID": "9",
+            "skillName": "Development & Delivery",
+            "context": [
+                {
+                    "img": "/assets/hardSkills/hs8-p1.png",
+                    "title": "Enhancing Organization and Communication",
+                    "action": "Practice active listening and clear articulation of project goals and updates.Create a structured process for handling updates and changes in project plans.Involve stakeholders in reviews to align changes with business goals.Adopt tools like Asana, Jira, or Trello to manage tasks and track progress.Maintain comprehensive documentation of project plans, decisions, and changes."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p2.png",
+                    "title": "Addressing Inefficiencies and Meeting Deadlines",
+                    "action": "Perform a thorough review of current development processes to identify inefficiencies.Use prioritization frameworks like MoSCoW or Eisenhower Matrix to manage tasks effectively.Regularly reassess priorities based on project needs and team feedback.Ensure team members have the necessary skills and tools to perform their tasks efficiently.Continuously monitor progress and adjust processes as needed to address emerging issues."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p3.png",
+                    "title": "Managing and Supporting Teams During Challenges",
+                    "action": "Assess the impact of challenges on project timelines and deliverables.Reevaluate project goals and timelines based on current circumstances.Involve the team in developing and implementing strategies to mitigate risks.Implement risk management strategies to prevent future issues.Provide regular updates and support to keep the team informed and motivated."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p4.png",
+                    "title": "Analyzing and Responding to User Feedback",
+                    "action": "Collect and analyze feedback to identify specific issues and concerns.Segment feedback based on user demographics and usage patterns.Collaborate with the development team to address identified issues.Implement necessary adjustments based on feedback analysis.Gather additional feedback to ensure ongoing improvement."
+                },
+                {
+                    "img": "/assets/hardSkills/hs8-p5.png",
+                    "title": "Importance of Code Documentation",
+                    "action": "Establish and enforce standards for code documentation.Ensure that all code includes clear explanations, design decisions, and usage instructions.Ensure developers understand the importance of thorough documentation.Conduct regular code reviews to ensure adherence to documentation standards.Provide feedback and support to improve documentation practices."
+                }
+            ],
+            "communcations": [
+                {
+                    "papers": [
+                        "'Managing Agile Development: A Case Study on Agile Delivery and Development Practices' – Journal of Systems and Software",
+                        "'Effective Communication and Coordination in Agile Software Development' – ACM Transactions on Software Engineering and Methodology",
+                        "'The Role of Documentation in Agile Development' – IEEE Software",
+                        "'Impact of Agile Practices on Development Efficiency' – Empirical Software Engineering",
+                        "'Improving Project Delivery through Agile Techniques' – Software: Practice and Experience",
+                        "'Agile Project Management: A Case Study on Communication and Coordination' – International Journal of Project Management",
+                        "'Assessing the Impact of Agile Practices on Team Performance' – Journal of Software: Evolution and Process",
+                        "'A Systematic Review of Agile Delivery Practices' – Information and Software Technology",
+                        "'Challenges and Solutions in Agile Software Development' – IEEE Transactions on Software Engineering",
+                        "'Quantitative Analysis of Agile Development Performance' – Journal of Systems and Software"
+                    ],
+                    "books": [
+                        "Agile Estimating and Planning by Mike Cohn",
+                        "The Phoenix Project by Gene Kim, Kevin Behr, and George Spafford",
+                        "The DevOps Handbook by Gene Kim, Patrick Debois, John Willis, and Jez Humble",
+                        "Continuous Delivery by Jez Humble and David Farley",
+                        "Scrum: The Art of Doing Twice the Work in Half the Time by Jeff Sutherland",
+                        "Lean Software Development by Mary and Tom Poppendieck",
+                        "Kanban: Successful Evolutionary Change for Your Technology Business by David J. Anderson",
+                        "Drive: The Surprising Truth About What Motivates Us by Daniel H. Pink",
+                        "The Lean Startup by Eric Ries",
+                        "The Agile Samurai by Jonathan Rasmusson",
+                        "Making Work Visible by Dominica DeGrandis",
+                        "User Story Mapping by Jeff Patton"
+                    ],
+                    "blogs": [
+                        "'Atlassian Agile Coach' – Atlassian",
+                        "'Agile Alliance Blog' – Agile Alliance",
+                        "'Scrum.org Blog' – Scrum.org",
+                        "'ThoughtWorks Technology Blog' – ThoughtWorks",
+                        "'Agile Product Design and Delivery' – Agile Product Design Blog",
+                        "'Mountain Goat Software Blog' – Mountain Goat Software",
+                        "'Agile For All Blog' – Agile For All",
+                        "'Scrum Alliance Blog' – Scrum Alliance",
+                        "'The Agile Revolution' – Agile Revolution",
+                        "'DevOps Blog' – DevOps.com",
+                        "'DevOps Insights' – DevOps Insights",
+                        "'Continuous Delivery Blog' – Continuous Delivery"
+                    ],
+                    "courses": [
+                        "'Agile Development Specialization' – Coursera",
+                        "'Scrum Master Certification' – Scrum Alliance",
+                        "'Continuous Delivery and DevOps' – edX",
+                        "'Product Management with Agile' – LinkedIn Learning",
+                        "'Advanced Agile and Scrum' – Udemy",
+                        "'DevOps Foundations' – LinkedIn Learning",
+                        "'Lean Product and Lean Analytics' – Udemy",
+                        "'Agile for Product Managers' – Coursera",
+                        "'Scrum Fundamentals' – Pluralsight",
+                        "'Kanban Fundamentals' – Pluralsight",
+                        "'Certified Agile Practitioner' – PMI",
+                        "'Introduction to DevOps' – edX"
+                    ],
+                    "tools": [
+                        "Jira",
+                        "Trello",
+                        "Asana",
+                        "Smartsheet",
+                        "Monday.com",
+                        "ClickUp",
+                        "Basecamp",
+                        "Microsoft Project",
+                        "GitHub",
+                        "GitLab",
+                        "VersionOne",
+                        "Pivotal Tracker"
                     ]
                 }
             ]
