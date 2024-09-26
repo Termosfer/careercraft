@@ -1,0 +1,55 @@
+.bg-contact {
+    background-image: url("../../assets/contactImg/bg-contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.left__side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+
+.bg-img__34 {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.img__34 {
+    width: 24px;
+    height: 24px;
+}
+
+.field__input {
+    padding: 10px !important;
+}
+
+.text__area::placeholder {
+    color: #98a2b3 !important;
+    font-size: 14px;
+}
+
+.label {
+    padding-bottom: 5px;
+}
+.right__side{
+  width: 50%;  
+    
+}
+
+#login__f {
+    
+    padding: 44px 68px !important;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 18px;
+}

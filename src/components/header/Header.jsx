@@ -52,7 +52,10 @@ function CollapsibleExample() {
             </Link>
           
             <Link to="/packages" className="text-decoration-none text-dark">
-              Packages
+              Pricing
+            </Link>
+            <Link className="text-decoration-none text-dark">
+              Blogs
             </Link>
             <Link to="/contact" className="text-decoration-none text-dark">
               Contacts
