@@ -64,7 +64,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="right__side bg-dark">
+          <div className="right__side">
             <Form
               className="border"
               id="login__f"
