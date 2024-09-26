@@ -832,27 +832,27 @@
             "skillName": "Development & Delivery",
             "context": [
                 {
-                    "img": "/assets/hardSkills/hs8-p1.png",
+                    "img": "/assets/hardSkills/hs9-p1.png",
                     "title": "Enhancing Organization and Communication",
                     "action": "Practice active listening and clear articulation of project goals and updates.Create a structured process for handling updates and changes in project plans.Involve stakeholders in reviews to align changes with business goals.Adopt tools like Asana, Jira, or Trello to manage tasks and track progress.Maintain comprehensive documentation of project plans, decisions, and changes."
                 },
                 {
-                    "img": "/assets/hardSkills/hs8-p2.png",
+                    "img": "/assets/hardSkills/hs9-p2.png",
                     "title": "Addressing Inefficiencies and Meeting Deadlines",
                     "action": "Perform a thorough review of current development processes to identify inefficiencies.Use prioritization frameworks like MoSCoW or Eisenhower Matrix to manage tasks effectively.Regularly reassess priorities based on project needs and team feedback.Ensure team members have the necessary skills and tools to perform their tasks efficiently.Continuously monitor progress and adjust processes as needed to address emerging issues."
                 },
                 {
-                    "img": "/assets/hardSkills/hs8-p3.png",
+                    "img": "/assets/hardSkills/hs9-p3.png",
                     "title": "Managing and Supporting Teams During Challenges",
                     "action": "Assess the impact of challenges on project timelines and deliverables.Reevaluate project goals and timelines based on current circumstances.Involve the team in developing and implementing strategies to mitigate risks.Implement risk management strategies to prevent future issues.Provide regular updates and support to keep the team informed and motivated."
                 },
                 {
-                    "img": "/assets/hardSkills/hs8-p4.png",
+                    "img": "/assets/hardSkills/hs9-p4.png",
                     "title": "Analyzing and Responding to User Feedback",
                     "action": "Collect and analyze feedback to identify specific issues and concerns.Segment feedback based on user demographics and usage patterns.Collaborate with the development team to address identified issues.Implement necessary adjustments based on feedback analysis.Gather additional feedback to ensure ongoing improvement."
                 },
                 {
-                    "img": "/assets/hardSkills/hs8-p5.png",
+                    "img": "/assets/hardSkills/hs9-p5.png",
                     "title": "Importance of Code Documentation",
                     "action": "Establish and enforce standards for code documentation.Ensure that all code includes clear explanations, design decisions, and usage instructions.Ensure developers understand the importance of thorough documentation.Conduct regular code reviews to ensure adherence to documentation standards.Provide feedback and support to improve documentation practices."
                 }
