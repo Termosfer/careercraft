@@ -10,31 +10,31 @@ const AdditionalResources = ({ addRes }) => {
                     <h4>{addRes.description}</h4>
                     <ul>
                         <span>Books:</span>
-                        {addRes.additionalResources.books.map((c) => (
-                            <>
+                        {addRes.additionalResources.books.map((c,index) => (
+                            <div key={index}>
                                 {c.length > 0 &&
-                                    (<li className="text-secondary-emphasis fw-normal" >  {c}</li>)}
-                            </>
+                                    (<li className="text-secondary-emphasis fw-normal">  {c}</li>)}
+                            </div>
                         ))}
                     </ul>
                     <ul>
                         <span>Tools:</span>
-                        {addRes.additionalResources.tools.map((c) => (
-                            <>
+                        {addRes.additionalResources.tools.map((c,index) => (
+                            <div key={index}>
                             {
                                 c.length > 0 && 
                             
                                 (<li className="text-secondary-emphasis fw-normal" >  {c}</li>) }
-                            </>
+                            </div>
                         ))}
                     </ul>
                     <ul>
                         <span>Journal Articles:</span>
-                        {addRes.additionalResources.academicPapers.map((c) => (
-                            <>{
+                        {addRes.additionalResources.academicPapers.map((c,index) => (
+                            <div key={index}>{
                                 c.length > 0 &&
                                 (<li className="text-secondary-emphasis fw-normal" >  {c}</li>)}
-                            </>
+                            </div>
                         ))}
                     </ul>
                 </div>

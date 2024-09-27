@@ -74,7 +74,6 @@ const Contact = () => {
                 <Form.Label className="label">Full Name</Form.Label>
                 <Form.Control
                   className="field__input"
-                  style={{ outline: "none", boxShadow: "none" }}
                   type="email"
                   placeholder="Enter full name"
                   autoFocus
@@ -85,16 +84,14 @@ const Contact = () => {
                 <Form.Label className="label">Email</Form.Label>
                 <Form.Control
                   className="field__input"
-                  style={{ outline: "none", boxShadow: "none" }}
                   type="email"
-                  placeholder="Enter email"
+                  placeholder="example@gmail.com"
                   autoFocus
                 />
               </Form.Group>
               {<Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="label">Message</Form.Label>
                 <Form.Control
-                  style={{ outline: "none", boxShadow: "none" }}
                   className="text__area" as="textarea" rows={3} placeholder="Please provide a brief description of your inquiry or request." />
               </Form.Group>}
 

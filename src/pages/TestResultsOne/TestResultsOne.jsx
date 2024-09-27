@@ -15,7 +15,7 @@ const TestResultsOne = () => {
   const ssData = useSelector(state => state.softSkillResult.softResult)
   const allReport = useSelector(state => state.report.allreport)
   console.log(allReport, "all")
-  /* console.log(ssData, "asdadada") */
+  console.log(ssData, "asdadada")
   const [skill, setSkill] = useState([])
   useEffect(() => {
     dispatch(getSSResults())
@@ -33,8 +33,7 @@ const TestResultsOne = () => {
       );
     }
   }, [allReport]);
-  // console.log(skill, "ads")
-
+  console.log(skill, "skill")
   const [activeSection, setActiveSection] = useState("Communication");
 
   const renderContent = () => {
@@ -46,7 +45,7 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-              {allReport && allReport[4].skillName} <span className="text-primary">{allReport && allReport[4].skillLevel}</span>{" "}
+                {allReport && allReport[4].skillName} <span className="text-primary">{allReport && allReport[4] ? allReport[4].skillLevel.charAt(0).toUpperCase() + allReport[4].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
               <div className="low text-primary">
@@ -127,7 +126,7 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-              {allReport && allReport[3].skillName} <span className="text-primary">{allReport && allReport[3].skillLevel}</span>{" "}
+                {allReport && allReport[3].skillName} <span className="text-primary">{allReport && allReport[3] ? allReport[3].skillLevel.charAt(0).toUpperCase() + allReport[3].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
               <div className="low text-primary">
@@ -208,7 +207,7 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-              {allReport && allReport[2].skillName} <span className="text-primary">{allReport && allReport[2].skillLevel}</span>{" "}
+                {allReport && allReport[2].skillName} <span className="text-primary">{allReport && allReport[2] ? allReport[2].skillLevel.charAt(0).toUpperCase() + allReport[2].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
               <div className="low text-primary">
@@ -289,7 +288,7 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-              {allReport && allReport[1].skillName} <span className="text-primary">{allReport && allReport[1].skillLevel}</span>{" "}
+                {allReport && allReport[1].skillName} <span className="text-primary">{allReport && allReport[1] ? allReport[1].skillLevel.charAt(0).toUpperCase() + allReport[1].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
               <div className="low text-primary">
@@ -370,7 +369,7 @@ const TestResultsOne = () => {
 
             <div className="section1 my-5">
               <h3 className="fw-semibold">
-              {allReport && allReport[0].skillName} <span className="text-primary">{allReport && allReport[0].skillLevel}</span>{" "}
+                {allReport && allReport[0].skillName} <span className="text-primary">{allReport && allReport[0] ? allReport[0].skillLevel.charAt(0).toUpperCase() + allReport[0].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
               <div className="low text-primary">

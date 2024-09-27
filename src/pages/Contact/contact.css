@@ -29,8 +29,13 @@
 
 .field__input {
     padding: 10px !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
-
+.text__area{
+    outline: none !important;
+    box-shadow: none !important;
+}
 .text__area::placeholder {
     color: #98a2b3 !important;
     font-size: 14px;
