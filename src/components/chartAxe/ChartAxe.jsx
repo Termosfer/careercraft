@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-
 import CanvasJSReact from "@canvasjs/react-charts";
- /* var CanvasJSnpm install @canvasjs/chartsReact = require('@canvasjs/react-charts'); */
 
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const ChartAxe = () => {
-
+const ChartAxe = ({hardSkillRaports}) => {
+console.log(hardSkillRaports, "hardskillasda")
 
   const options = {
     animationEnabled: true,
@@ -22,6 +20,7 @@ const ChartAxe = () => {
       },
       lineThickness: 1,
       tickLength: 0,
+      gridThickness: 1,
     },
     axisY: {
       title: "",
@@ -39,38 +38,22 @@ const ChartAxe = () => {
       lineThickness: 1,
       tickLength: 0,
     },
-    axisX: {
-     /*  title: "", */
-      /* minimum: 0,  
-      maximum: 50,  
-      interval: 10, */  
-      /* crosshair: {
-        enabled: true,
-        snapToDataPoint: true,
-        labelFormatter: function (e) {
-          return e.value + "%";
-        },
-      }, */
-      gridThickness: 1,
-      lineThickness: 1,
-      tickLength: 0,
-    },
  
     data: [
       {
         type: "area",
         yValueFormatString: "",
-        color: "rgba(15, 119, 255, 0.5)",
+        color: "rgba(15, 119, 255, 0.3)",
         dataPoints: [
-          { label: "Research & Discovery", y: 75.3 },
-          { label: "Product Analytics", y: 83.97 },
-          { label: "Product Planning", y: 73.49 },
-          { label: "Customer Experience Management", y: 84.16 },
-          { label: "Business Domain", y: 84.86 },
-          { label: "Business Model & Economy", y: 84.97 },
-          { label: "Sales & Marketing", y: 55.13 },
-          { label: "Product Design", y: 85.71 },
-          { label: "Development & Delivery", y: 84.63 },
+          { label: "Research & Discovery", y: hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : "" },
+          { label: "Product Analytics", y: hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : "" },
+          { label: "Product Planning", y: hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : "" },
+          { label: "Customer Experience Management", y: hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : "" },
+          { label: "Business Domain", y: hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : "" },
+          { label: "Business Model & Economy", y: hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : "" },
+          { label: "Sales & Marketing", y: hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : "" },
+          { label: "Product Design", y: hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : "" },
+          { label: "Development & Delivery", y: hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : "" },
         ],
       },
     ],

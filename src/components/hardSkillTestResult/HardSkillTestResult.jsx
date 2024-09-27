@@ -17,7 +17,7 @@ const HardSkillTestResult = () => {
     dispatch(getHardSkillReport())
     dispatch(getHardSkillReports())
   }, [])
-
+  const value = hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0) : "";
   return (
     <>
       <Container className="w-75 px-5">
@@ -26,7 +26,7 @@ const HardSkillTestResult = () => {
           <Col lg={7}>
             <p>Congratulations! </p>
             <span>
-              Your overall score is <span className="text-primary fw-bolder">{hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect : ""} ({hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].skillLevel.charAt(0).toUpperCase() + hardSkillRaport[0].skillLevel.slice(1).toLowerCase() : ""})</span>, reflecting your strong
+              Your overall score is <span className="text-primary fw-bolder">{hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0) : ""}% ({hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].skillLevel.charAt(0).toUpperCase() + hardSkillRaport[0].skillLevel.slice(1).toLowerCase() : ""})</span>, reflecting your strong
               proficiency across key areas. You’re excelling in Product Design and
               Sales & Marketing, with room to grow in Business Domain and Product
               Analytics. Continue leveraging your strengths and focus on the areas
@@ -37,7 +37,7 @@ const HardSkillTestResult = () => {
           <Col lg={5}>
             <div className="">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <Gauge width={400} height={170} value={hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect : ""} startAngle={-90} endAngle={90} sx={{
+              <Gauge width={400} height={170} value={value}  formatValue={(value) => `${value}%`} startAngle={-90} endAngle={90} sx={{
                 [`& .${gaugeClasses.valueText}`]: {
                   fontSize: 50,
                   transform: 'translate(0px, -40px)',
@@ -57,7 +57,7 @@ const HardSkillTestResult = () => {
             against industry averages. This helps you understand where you stand
             and identify areas for further development.
           </p>
-          <ChartAxe />
+          <ChartAxe hardSkillRaports={hardSkillRaports}/>
           <div
             className="star-div d-flex align-items-center justify-content-center border mx-auto rounded mt-4 py-2 px-1 gap-1">
             <img src={star} width={20} height={20} alt="star" />
@@ -89,56 +89,72 @@ const HardSkillTestResult = () => {
               <td>Research & Discovery</td>
               <td>
                 <ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : ""} />
-                Advanced
+                {hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[7].skillLevel.slice(1).toLowerCase() : ""}
               </td>
               <td>Focus on conducting longitudinal studies and exploring advanced ethnographic techniques to uncover deeper consumer insights.</td>
               <td>Apply these techniques in real-world projects, particularly in untapped market segments. Consider collaborating with industry experts to refine your approach.</td>
             </tr>
             <tr>
               <td>Product Analytics</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : ""} /> Intermediate </td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : ""} />
+              {hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[5].skillLevel.slice(1).toLowerCase() : ""}
+               </td>
               <td>Enhance your skills in predictive analytics and data storytelling.</td>
               <td>Integrate advanced analytics tools like Power BI or Looker into your workflow. Participate in online forums or communities to stay updated on best practices.</td>
             </tr>
             <tr>
               <td>Product Planning</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : ""} /> Beginner </td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[8].skillLevel.slice(1).toLowerCase() : ""}
+               </td>
               <td>Dive into advanced Agile frameworks and portfolio management.</td>
               <td>Experiment with lean planning techniques for more flexible, rapid iteration cycles. Share your strategies with peers for feedback and improvement.</td>
             </tr>
             <tr>
               <td>Customer Experience Management</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : ""} /> Advanced</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[6].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Create detailed customer journey maps and identify pain points.</td>
               <td>Run a customer journey workshop with cross-functional teams. Implement feedback loops to continuously improve the customer experience.</td>
             </tr>
             <tr>
               <td>Business Domain</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : ""} /> Beginner</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[4].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Deepen your understanding of industry trends and competitive landscape.</td>
               <td>Stay updated on industry reports and news. Network with professionals in your field to exchange insights and enhance your knowledge.</td>
             </tr>
             <tr>
               <td>Business Model & Economy</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : ""} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[3].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Strengthen your economic analysis and identify revenue streams in emerging markets.</td>
               <td>Test different business models through case studies or simulations. Analyze how various economic conditions impact these models.</td>
             </tr>
             <tr>
               <td>Sales & Marketing</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : ""} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[2].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Enhance your data-driven marketing tactics and conversion rate optimization.</td>
               <td>Run A/B tests on your campaigns to refine your messaging. Engage with a mentor to review your strategies and identify new opportunities.</td>
             </tr>
             <tr>
               <td>Product Design</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : ""} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[1].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Explore voice and gesture-based design, focusing on micro-interactions and seamless transitions.</td>
               <td>Work on VUI projects or design prototypes incorporating AR/VR. Share your designs in design communities to get feedback and refine your approach.</td>
             </tr>
             <tr>
               <td>Development & Delivery</td>
-              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : ""} /> Intermediate</td>
+              <td><ProgressBar variant="primary" now={hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : ""} /> 
+              {hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].skillLevel.charAt(0).toUpperCase() + hardSkillRaports[0].skillLevel.slice(1).toLowerCase() : ""}
+              </td>
               <td>Gain further exposure to DevOps and CI/CD processes for faster, reliable product delivery.</td>
               <td>Set up a CI/CD pipeline on a small-scale project and optimize it for faster deployment cycles. Document your process and share insights with your team.</td>
             </tr>

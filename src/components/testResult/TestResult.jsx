@@ -32,7 +32,7 @@ const TestResult = () => {
         dispatch(getReports())
         dispatch(getAllReports())
     }, [dispatch])
-    // console.log(totalReport, "totalReport")
+     console.log(totalReport, "totalReport")
     return (
         <>
             <Container className='w-75 p-5'>
