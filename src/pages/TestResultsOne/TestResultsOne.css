@@ -105,3 +105,15 @@
   border-radius: 18px;
   object-fit:cover;
 }
+
+
+.section1 {
+  .low{
+    border: none !important;
+  }
+
+  .p2{
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
