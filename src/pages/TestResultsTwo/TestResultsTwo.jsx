@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import data from "../../data/data.json"
 import img from "../../assets/img/comm-p.png";
+import right from "../../assets/TestResultsOneImg/right-arrow.png"
+import left from "../../assets/TestResultsOneImg/left-arrow.png"
 import AdditionalResources from "../../components/additionalResources/AdditionalResources";
 import "./textresulttwo.css"
 const TestResultsTwo = () => {
@@ -11,14 +13,20 @@ const TestResultsTwo = () => {
             case "Communication":
                 return (
                     <div className="Communication">
+                        <div className='arrow'>
+                            <img src={left} alt="left-arrow" className='arrow1'/>
+                            <img src={right} alt="right-arrow" className='arrow1'/>
+
+                        </div>
                         {/* Communication İçeriği */}
-                        <div className="Communication">
-                            <h1 className='pt-5 h3-skillName'>{data.data[0].skillName}</h1>
-                            <div className="low text-primary">
+                        <div className="section1 my-4">
+                            <h3 className='fw-semibold'>{data.data[0].skillName}</h3>
+                            <div className="low text-primary text-center">
                                 <span className="fw-bold">
                                     {`<50%`}
-                                    <p className="fw-normal">Beginner</p>
                                 </span>
+                                    <p className="fw-normal">Beginner</p>
+                            </div>
                             </div>
                             <div className="section1 my-4">
 
@@ -62,7 +70,6 @@ const TestResultsTwo = () => {
                                 </div>
                             </div>
                             {/* <AdditionalResources/> */}
-                        </div>
                     </div >
                 );
             case "Personal Qualities":

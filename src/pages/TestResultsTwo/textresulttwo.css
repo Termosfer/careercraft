@@ -1,19 +1,43 @@
-.h3-skillName{
+.h3-skillName {
     font-size: 40px;
 }
 
-.h5-title{
+.h5-title {
     font-size: 22px;
     color: #0F77FF;
 }
-.span-title{
+
+.span-title {
     color: #0F77FF;
     font-size: 18px;
 }
-.p-title{
+
+.p-title {
     font-size: 18px;
 }
 
-.comm-p{
+.comm-p {
     object-fit: contain;
+}
+
+.container .section1 .low {
+    padding: 8px 24px;
+    background: rgba(61, 141, 255, 0.25);
+    border-radius: 8px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.arrow1 {
+    width: 40px;
+    height: 40px;
+    background-color: #0F77FF;
+    /* background-color: (64, 143, 255, 0.75); */
+    border-radius: 10px;
+    padding: 10px;
 }
