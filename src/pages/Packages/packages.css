@@ -5,13 +5,14 @@
 
 .package-header {
   padding: 60px 0 100px 0;
-  .card-body{
-    h3{
+
+  .card-body {
+    h3 {
       font-weight: 600;
     }
   }
 
-  .title-cc{
+  .title-cc {
     color: #0F77FF;
   }
 }
@@ -46,42 +47,45 @@
 }
 
 
-.elevate-cont{
+.elevate-cont {
   padding: 80px 0 0 0;
   display: flex;
   justify-content: center;
 
-  .elevate-card{
-    .card-body{
+  .elevate-card {
+    .card-body {
       padding: 0 30px !important;
-      .col-7{
+
+      .col-7 {
         width: 60%;
       }
     }
 
   }
-  .elevate-h{
+
+  .elevate-h {
     font-size: 33px;
 
   }
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     gap: 6px;
     padding: 0;
   }
 
-  .text-img{
+  .text-img {
     justify-content: space-between;
-    .col-1{
+
+    .col-1 {
       width: 40%;
       height: 40%;
       margin: 25px 0 !important;
     }
   }
 
-  .pack2{
+  .pack2 {
     position: absolute;
     bottom: 30px;
     right: 150px;
@@ -110,7 +114,8 @@
   width: 270px;
 
   margin-bottom: 0;
-  .txt-p{
+
+  .txt-p {
     font-size: 14px;
     height: 250px;
     display: flex;
@@ -124,11 +129,12 @@
 
 .faq-section {
   padding: 80px 0;
+
   h4 {
     font-size: 38px;
   }
 
-  .text-center{
+  .text-center {
     width: 65%;
   }
 
@@ -149,26 +155,39 @@
 
 .package-bottom-section {
   background-image: url("../../assets//img/bg-package.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  padding-top: 40px;
+
   .bottom-cont {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 23px;
     color: white;
     align-items: center;
+    .h3-p{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     
-    h3{
+    }
+
+    h3 {
       font-size: 42px;
     }
 
-    p{
+    p {
       font-size: 18px;
       text-align: center;
       font-weight: 300;
+      width: 75%;
     }
-    button{
-      padding: 13px 32px;
+
+    button {
+      padding: 12px 32px;
     }
   }
 }

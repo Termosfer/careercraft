@@ -243,14 +243,16 @@ const Packages = () => {
         </Container>
       </div>
 
-      <div className="package-bottom-section py-5 w-100">
+      <div className="package-bottom-section w-100">
         <Container className="bottom-cont w-75">
-          <h3 className="title-career">
-            Ready to Elevate Your Career?
-          </h3>
-          <p>
-            Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.
-          </p>
+          <div className="h3-p">
+            <h3 className="title-career">
+              Ready to Elevate Your Career?
+            </h3>
+            <p>
+              Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.
+            </p>
+          </div>
           <Button variant="primary">Get Started Now</Button>
         </Container>
       </div>

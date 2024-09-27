@@ -48,11 +48,14 @@ const TestResultsOne = () => {
                 {allReport && allReport[4].skillName} <span className="text-primary">{allReport && allReport[4] ? allReport[4].skillLevel.charAt(0).toUpperCase() + allReport[4].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
-              <div className="low text-primary">
-                <span className="fw-bold">
-                  {`<50%`}
-                  <p className="fw-normal">Beginner</p>
-                </span>
+              <div className="low text-primary text-center">
+                <p className="fw-bold p1">
+                  {allReport && allReport[4].skillLevel === "BEGINNER" && "<60% "}
+                  {allReport && allReport[4].skillLevel === "INTERMEDIATE" && "<80% "}
+                  {allReport && allReport[4].skillLevel === "ADVANCED" && ">80% "}
+
+                </p>
+                <p className="p2"> { allReport && allReport[4].skillLevel.slice(0,1) + allReport[4].skillLevel.slice(1).toLowerCase()}</p>
               </div>
             </div>
 
@@ -129,11 +132,14 @@ const TestResultsOne = () => {
                 {allReport && allReport[3].skillName} <span className="text-primary">{allReport && allReport[3] ? allReport[3].skillLevel.charAt(0).toUpperCase() + allReport[3].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
-              <div className="low text-primary">
-                <span className="fw-bold">
-                  {`<50%`}
-                  <p className="fw-normal">Beginner</p>
-                </span>
+              <div className="low text-primary text-center">
+                <p className="fw-bold p1">
+                  {allReport && allReport[3].skillLevel === "BEGINNER" && "<60% "}
+                  {allReport && allReport[3].skillLevel === "INTERMEDIATE" && "<80% "}
+                  {allReport && allReport[3].skillLevel === "ADVANCED" && ">80% "}
+
+                </p>
+                <p className="p2"> { allReport && allReport[3].skillLevel.slice(0,1) + allReport[3].skillLevel.slice(1).toLowerCase()}</p>
               </div>
             </div>
 
@@ -210,11 +216,14 @@ const TestResultsOne = () => {
                 {allReport && allReport[2].skillName} <span className="text-primary">{allReport && allReport[2] ? allReport[2].skillLevel.charAt(0).toUpperCase() + allReport[2].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
-              <div className="low text-primary">
-                <span className="fw-bold">
-                  {`<50%`}
-                  <p className="fw-normal">Beginner</p>
-                </span>
+              <div className="low text-primary text-center">
+                <p className="fw-bold p1">
+                  {allReport && allReport[2].skillLevel === "BEGINNER" && "<60% "}
+                  {allReport && allReport[2].skillLevel === "INTERMEDIATE" && "<80% "}
+                  {allReport && allReport[2].skillLevel === "ADVANCED" && ">80% "}
+
+                </p>
+                <p className="p2"> { allReport && allReport[2].skillLevel.slice(0,1) + allReport[2].skillLevel.slice(1).toLowerCase()}</p>
               </div>
             </div>
 
@@ -291,11 +300,14 @@ const TestResultsOne = () => {
                 {allReport && allReport[1].skillName} <span className="text-primary">{allReport && allReport[1] ? allReport[1].skillLevel.charAt(0).toUpperCase() + allReport[1].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
-              <div className="low text-primary">
-                <span className="fw-bold">
-                  {`<50%`}
-                  <p className="fw-normal">Beginner</p>
-                </span>
+              <div className="low text-primary text-center">
+                <p className="fw-bold p1">
+                  {allReport && allReport[1].skillLevel === "BEGINNER" && "<60% "}
+                  {allReport && allReport[1].skillLevel === "INTERMEDIATE" && "<80% "}
+                  {allReport && allReport[1].skillLevel === "ADVANCED" && ">80% "}
+
+                </p>
+                <p className="p2"> { allReport && allReport[1].skillLevel.slice(0,1) + allReport[1].skillLevel.slice(1).toLowerCase()}</p>
               </div>
             </div>
 
@@ -372,11 +384,14 @@ const TestResultsOne = () => {
                 {allReport && allReport[0].skillName} <span className="text-primary">{allReport && allReport[0] ? allReport[0].skillLevel.charAt(0).toUpperCase() + allReport[0].skillLevel.slice(1).toLowerCase() : ""}</span>{" "}
                 Level
               </h3>
-              <div className="low text-primary">
-                <span className="fw-bold">
-                  {`<50%`}
-                  <p className="fw-normal">Beginner</p>
-                </span>
+              <div className="low text-primary text-center">
+                <p className="fw-bold p1">
+                  {allReport && allReport[0].skillLevel === "BEGINNER" && "<60% "}
+                  {allReport && allReport[0].skillLevel === "INTERMEDIATE" && "<80% "}
+                  {allReport && allReport[0].skillLevel === "ADVANCED" && ">80% "}
+
+                </p>
+                <p className="p2"> { allReport && allReport[0].skillLevel.slice(0,1) + allReport[0].skillLevel.slice(1).toLowerCase()}</p>
               </div>
             </div>
 
