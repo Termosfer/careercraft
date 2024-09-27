@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import img__20 from "../../assets/solutionImg/img__20.png"
 import img__21 from "../../assets/solutionImg/img__21.png"
 import img__22 from "../../assets/solutionImg/img__22.png"
@@ -159,13 +159,19 @@ const Solution = () => {
         </div>
       </Container>
       <div className='bg__img__33'>
-        <Container className='w-75 p-5 pos'>
-          <div className='text-white text-center'>
-            <h1>Ready to Elevate Your Career?</h1>
-            <p className='w-75 mx-auto pb-4'>Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.</p>
-            <button type="button" className='btn btn-primary px-4 py-2'>Get Started Now</button>
-          </div>
-        </Container>
+        <div className="package-bottom-section w-100">
+          <Container className="bottom-cont w-75">
+            <div className="h3-p">
+              <h3 className="title-career">
+                Ready to Elevate Your Career?
+              </h3>
+              <p>
+                Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.
+              </p>
+            </div>
+            <Button variant="primary">Get Started Now</Button>
+          </Container>
+        </div>
       </div>
     </>
   )
