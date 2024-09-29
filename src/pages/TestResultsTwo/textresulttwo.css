@@ -20,10 +20,37 @@
     object-fit: contain;
 }
 
-.container .section1 .low {
+.skillNames {
+    border: 1px solid #0F77FF;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+}
+
+.skillNames__1 {
+    color: #408fff;
+    padding: 8px 28px;
+    border-radius: 8px;
+    min-width: max-content;
+    margin-bottom: 0;
+}
+.skillNames-active{
+    background-color: #0F77FF;
+    color: white;
+}
+.section1 .low {
     padding: 8px 24px;
     background: rgba(61, 141, 255, 0.25);
     border-radius: 8px;
+}
+
+.p__level {
+    margin-bottom: 0 !important;
+    font-size: 12px;
 }
 
 .arrow {
