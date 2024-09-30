@@ -16,7 +16,7 @@ const HardSkillTestResult = () => {
   useEffect(() => {
     dispatch(getHardSkillReport())
     dispatch(getHardSkillReports())
-  }, [])
+  }, [dispatch])
   const value = hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0) : "";
   return (
     <>
