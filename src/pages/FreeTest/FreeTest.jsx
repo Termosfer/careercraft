@@ -5,6 +5,7 @@ import img2 from "../../assets/img/imgg2.png";
 import img3 from "../../assets/img/imgg3.png";
 import img4 from "../../assets/img/imgg4.png";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 const FreeTest = () => {
   const token = localStorage.getItem("token");
   return (
@@ -106,7 +107,8 @@ const FreeTest = () => {
           </div>
         </div>
         <div className="text-center py-5">
-          <button className="btn btn-primary px-4">Start Assessment</button>
+          <Button variant="primary" className="px-4">Start Assessment</Button>
+    
         </div>
       </section>
     </main>

@@ -8,12 +8,13 @@
 }
 
 .span-title {
-    color: #0F77FF;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .p-title {
+    color: #0F77FF;
     font-size: 18px;
+    margin-right: 5px;
 }
 
 .comm-p {
@@ -25,10 +26,12 @@
     font-weight: 600;
     padding: 10px;
     border-radius: 8px;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-wrap: nowrap;
-    column-gap: 10px;
+    column-gap: 5px;
+    gap: 10px;
+    white-space: nowrap;
 }
 
 .skillNames__1 {
@@ -37,15 +40,23 @@
     border-radius: 8px;
     min-width: max-content;
     margin-bottom: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.skillNames-active{
+
+.skillNames-active {
     background-color: #0F77FF;
     color: white;
+    font-weight: bold;
 }
+
 .section1 .low {
     padding: 8px 24px;
     background: rgba(61, 141, 255, 0.25);
     border-radius: 8px;
+    
 }
 
 .p__level {
@@ -67,4 +78,25 @@
     /* background-color: (64, 143, 255, 0.75); */
     border-radius: 10px;
     padding: 10px;
+}
+
+.content__border,
+.communicate {
+    border: 1px solid #e8e8e9;
+    border-radius: 18px;
+}
+
+.ul__li{
+    font-size: 14px;
+    line-height: 5px;
+}
+
+.skillNames__1:hover {
+    background-color: #f0f0f0;
+}
+
+.content__img{
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
 }

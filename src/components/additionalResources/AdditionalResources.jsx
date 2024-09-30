@@ -1,7 +1,7 @@
 import React from 'react'
 import img1_1 from "../../assets/TestResultsOneImg/1.png";
 const AdditionalResources = ({ addRes }) => {
-    console.log(addRes, "addRes")
+    /* console.log(addRes, "addRes") */
     return (
         <>
             <div className="border d-flex p-4 soft-img-container">

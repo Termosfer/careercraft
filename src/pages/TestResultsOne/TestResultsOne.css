@@ -48,11 +48,6 @@
 
 }
 
-/* .TestResultsOne .container .border .w-25 {
-  width: 15% !important;
-  height: 15%;
-} */
-
 .TestResultsOne .container .border h5,
 .TestResultsOne .container .border h4 {
   color: #0f77ff;
@@ -115,5 +110,57 @@
   .p2{
     font-size: 12px;
     font-weight: 500;
+  }
+}
+
+.TestResultsOne .skeleton-loader {
+  margin-top: 50px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  /* background-color: #e0e0e0; Light grey background */
+  background: linear-gradient(90deg, #e0e0e0 25%, #c0c0c0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s infinite;
+}
+
+
+.TestResultsOne .skeleton-section {
+  margin-bottom: 16px;
+}
+
+ 
+.TestResultsOne .skeleton-header {
+  margin-top: 70px;
+  width: 100%;
+  height: 24px;
+  background-color: #c0c0c0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #c0c0c0 25%, #c0c0c0 50%, #c0c0c0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s infinite;
+}
+
+
+.TestResultsOne .skeleton-content {
+  margin-top: 8px;
+}
+
+
+.TestResultsOne .skeleton-line {
+  width: 100%;
+  height: 16px;
+  background-color: #d0d0d0; /* Lighter grey for content lines */
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+
+@keyframes shimmer {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
   }
 }

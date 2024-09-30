@@ -12,38 +12,39 @@ import pack2 from "../../assets/img/pack1.png"
 const Packages = () => {
   return (
     <div className="packages">
-      <Container>
+      <Container className="w-75 px-5">
         <div className="package-header ">
-          <h2 className="text-center pb-5">
-            Unlock Your Full Potential with <span className="title-cc">CareerCraft</span> Premium
-          </h2>
-          <div className="row gap-2 packages-boxes justify-content-center">
-            <Card className="mt-5">
+          <h3 className="text-center pb-5 fs-1">
+            Unlock Your Full Potential with <span className="title-cc fs-1">CareerCraft</span> Premium
+          </h3>
+          <div className="d-flex align-items-center justify-content-between packages-boxes">
+            <Card className="mt-5" style={{ width: "320px", height:'500px' }}>
+              {/* <Card.Title className="text-center">Free Plan</Card.Title> */}
               <Card.Body className="d-flex flex-column justify-content-between">
-                <Card.Title className="text-center">Free Plan</Card.Title>
-                <div>
-                  <h3 className="text-center">
-                    $0<span>/month</span>
-                  </h3>
-                  <ul>
+                  <div>
+                    <h4 className="text-center">Free Plan</h4>
+                    <h3 className="text-center">
+                      $0<span>/month</span>
+                    </h3>
+                  </div>
+                  <ul >
                     <li>
                       <QushSVG />
                       Key soft skills assessment
                     </li>
-                    <li>
+                    <li >
                       <QushSVG />
                       Personalized soft skills guidance
                     </li>
-                    <li>
+                    <li >
                       <QushSVG />
                       Access to soft skills resources
                     </li>
-                    <li>
+                    <li >
                       <QushSVG />
                       Career plan for soft skills improvement
                     </li>
                   </ul>
-                </div>
                 <div className="">
                   <button className="btn btn-outline-primary w-100">
                     Get Started
@@ -52,10 +53,11 @@ const Packages = () => {
               </Card.Body>
             </Card>
 
-            <Card className="mb-5">
+            <Card className="mb-5 " style={{ width: "320px", height:"500px" }}>
               <Card.Body className="d-flex flex-column justify-content-between">
-                <Card.Title className="text-center">Pro Plan</Card.Title>
+                {/* <Card.Title className="text-center">Pro Plan</Card.Title> */}
                 <div>
+                  <h4 className="text-center">Pro Plan</h4>
                   <h3 className="text-center">
                     $29<sup>.99</sup>
                     <span>/month</span>
@@ -87,10 +89,11 @@ const Packages = () => {
               </Card.Body>
             </Card>
 
-            <Card className="mt-5">
+            <Card className="mt-5" style={{ width: "320px", height:"500px"}}>
               <Card.Body className="d-flex flex-column justify-content-between">
-                <Card.Title className="text-center">Premium Plan</Card.Title>
+                {/* <Card.Title className="text-center">Premium Plan</Card.Title> */}
                 <div>
+                  <h4 className="text-center">Premium Plan</h4>
                   <h3 className="text-center">
                     $99<sup>.99</sup>
                     <span>/month</span>
@@ -123,7 +126,7 @@ const Packages = () => {
 
 
           <div className="elevate-cont">
-            <Card className="elevate-card" style={{ width: "50rem" }}>
+            <Card className="elevate-card" >
               <Card.Img variant="top" src="" />
               <Card.Body>
                 <div className="text-img row">
@@ -152,7 +155,7 @@ const Packages = () => {
                   <img className="col-1" src={pack1} alt="" />
                   <img className="pack2" src={pack2} alt="" />
                 </div>
-                <Button variant="primary">Buy now</Button>
+                <Button variant="primary" className="px-4">Buy now</Button>
               </Card.Body>
             </Card>
 
@@ -210,7 +213,7 @@ const Packages = () => {
       </div>
 
       <div className="faq-section">
-        <Container className="text-center">
+        <Container className="text-center  px-5">
           <h4 className="pb-5 fw-bold">FAQ</h4>
 
           <div className="questions">
