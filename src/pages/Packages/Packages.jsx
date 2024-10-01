@@ -1,50 +1,63 @@
-import React from "react";
+import React, { useRef } from "react";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { FaPlus } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import "./packages.css";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";
-import { FaPlus } from "react-icons/fa6";
-import pack1 from "../../assets/img/pack2.png"
-import pack2 from "../../assets/img/pack1.png"
+import pack1 from "../../assets/img/pack2.png";
+import pack2 from "../../assets/img/pack1.png";
 
 const Packages = () => {
+  const topRef = useRef(null);
+
+  // Scroll to the top of the page when the button is clicked
+  const handleScrollToTop = () => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="packages">
+      <div ref={topRef}></div>
+
       <Container className="w-75 px-5">
         <div className="package-header ">
           <h3 className="text-center pb-5 fs-1">
-            Unlock Your Full Potential with <span className="title-cc fs-1">CareerCraft</span> Premium
+            Unlock Your Full Potential with{" "}
+            <span className="title-cc fs-1">CareerCraft</span> Premium
           </h3>
           <div className="d-flex align-items-center justify-content-between packages-boxes">
-            <Card className="mt-5" style={{ width: "320px", height:'500px' }}>
+            <Card className="mt-5">
               {/* <Card.Title className="text-center">Free Plan</Card.Title> */}
               <Card.Body className="d-flex flex-column justify-content-between">
-                  <div>
-                    <h4 className="text-center">Free Plan</h4>
-                    <h3 className="text-center">
-                      $0<span>/month</span>
-                    </h3>
-                  </div>
-                  <ul >
-                    <li>
-                      <QushSVG />
-                      Key soft skills assessment
-                    </li>
-                    <li >
-                      <QushSVG />
-                      Personalized soft skills guidance
-                    </li>
-                    <li >
-                      <QushSVG />
-                      Access to soft skills resources
-                    </li>
-                    <li >
-                      <QushSVG />
-                      Career plan for soft skills improvement
-                    </li>
-                  </ul>
+                <div>
+                  <h4 className="text-center">Free Plan</h4>
+                  <h3 className="text-center">
+                    $0<span>/month</span>
+                  </h3>
+                </div>
+                <ul>
+                  <li>
+                    <QushSVG />
+                    Key soft skills assessment
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Personalized soft skills guidance
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Access to soft skills resources
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Career plan for soft skills improvement
+                  </li>
+                </ul>
                 <div className="">
                   <button className="btn btn-outline-primary w-100">
                     Get Started
@@ -53,7 +66,7 @@ const Packages = () => {
               </Card.Body>
             </Card>
 
-            <Card className="mb-5 " style={{ width: "320px", height:"500px" }}>
+            <Card className="mb-5 ">
               <Card.Body className="d-flex flex-column justify-content-between">
                 {/* <Card.Title className="text-center">Pro Plan</Card.Title> */}
                 <div>
@@ -85,11 +98,15 @@ const Packages = () => {
                     </li>
                   </ul>
                 </div>
-                <Button variant="primary" className="w-100">Get started</Button>
+                <Link to="/freetest/hard-skill-test-result">
+                  <Button variant="primary" className="w-100">
+                    Get started
+                  </Button>
+                </Link>
               </Card.Body>
             </Card>
 
-            <Card className="mt-5" style={{ width: "320px", height:"500px"}}>
+            <Card className="mt-5">
               <Card.Body className="d-flex flex-column justify-content-between">
                 {/* <Card.Title className="text-center">Premium Plan</Card.Title> */}
                 <div>
@@ -124,14 +141,15 @@ const Packages = () => {
             </Card>
           </div>
 
-
           <div className="elevate-cont">
-            <Card className="elevate-card" >
+            <Card className="elevate-card">
               <Card.Img variant="top" src="" />
               <Card.Body>
                 <div className="text-img row">
                   <div className="col-7">
-                    <Card.Title className="elevate-h">Elevate Premium</Card.Title>
+                    <Card.Title className="elevate-h">
+                      Elevate Premium
+                    </Card.Title>
                     <p>
                       Elevate your career by gaining full access to advanced
                       skill assessments and personalized growth recommendations.{" "}
@@ -155,10 +173,15 @@ const Packages = () => {
                   <img className="col-1" src={pack1} alt="" />
                   <img className="pack2" src={pack2} alt="" />
                 </div>
-                <Button variant="primary" className="px-4">Buy now</Button>
+                <Button
+                  variant="primary"
+                  className="px-4"
+                  onClick={handleScrollToTop}
+                >
+                  Buy now
+                </Button>
               </Card.Body>
             </Card>
-
           </div>
         </div>
       </Container>
@@ -176,7 +199,6 @@ const Packages = () => {
                 “CareerCraft has transformed the way we approach skill
                 development. The platform has cut down our training time by 50%,
                 allowing us to focus on scaling with precision.”
-
                 <div className="position">
                   <h6>– Jane Doe</h6>
                   <p>Talent Development Manager</p>
@@ -201,7 +223,6 @@ const Packages = () => {
               <div className="txt-p py-4">
                 “CareerCraft helped us centralize all our training materials and
                 resources, offering guidance on how to upskill effectively.”
-
                 <div className="position ">
                   <h6>– Sarah Lee</h6>
                   <p>Operations Manager</p>
@@ -249,14 +270,16 @@ const Packages = () => {
       <div className="package-bottom-section w-100">
         <Container className="bottom-cont w-75">
           <div className="h3-p">
-            <h3 className="title-career">
-              Ready to Elevate Your Career?
-            </h3>
+            <h3 className="title-career">Ready to Elevate Your Career?</h3>
             <p>
-              Unlock your potential with CareerCraft’s personalized skill development packages. Tailor your learning journey and stand out in your profession with expert guidance and resources.
+              Unlock your potential with CareerCraft’s personalized skill
+              development packages. Tailor your learning journey and stand out
+              in your profession with expert guidance and resources.
             </p>
           </div>
-          <Button variant="primary">Get Started Now</Button>
+          <Link to="/freetest">
+          <Button variant="outline-light">Get Started Now</Button>
+          </Link>
         </Container>
       </div>
     </div>

@@ -5,21 +5,17 @@ import { baseURL } from "./api";
 const initialState = {
   username: {},
   loading: false,
-  error: ""
-}
+  error: "",
+};
 
 export const userData = createAsyncThunk("auth/userData", async (token) => {
   if (token) {
     try {
-      const response = await axios.get(
-        `${baseURL}/api/customers/info`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
+      const response = await axios.get(`${baseURL}/api/customers/info`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       return response.data;
     } catch (error) {
       console.log(error);
@@ -27,26 +23,28 @@ export const userData = createAsyncThunk("auth/userData", async (token) => {
   }
 });
 
+export const userEdited = createAsyncThunk(
+  "auth/userEdit",
+  async ({ token, editUser }) => {
+    if (token) {
+      try {
+        const response = await axios.put(
+          `${baseURL}/api/customers/update`,
+          editUser,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
-export const userEdited = createAsyncThunk("auth/userEdit", async ({ token, editUser }) => {
-  if (token) {
-    try {
-      const response = await axios.put(
-        `${baseURL}/api/customers/update`, editUser,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      return response.data;
-    } catch (error) {
-      console.log(error);
+        return response.data;
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
-});
-
+);
 
 const authUser = createSlice({
   name: "user",
@@ -62,7 +60,7 @@ const authUser = createSlice({
         state.loading = false;
       })
       .addCase(userData.rejected, (state) => {
-        state.error = "Error"
+        state.error = "Error";
       })
       .addCase(userEdited.pending, (state) => {
         state.loading = true;
@@ -72,10 +70,9 @@ const authUser = createSlice({
         state.loading = false;
       })
       .addCase(userEdited.rejected, (state) => {
-        state.error = "Error"
-      })
-  }
-})
+        state.error = "Error";
+      });
+  },
+});
 
-
-export default authUser.reducer
+export default authUser.reducer;

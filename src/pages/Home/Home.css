@@ -3,6 +3,7 @@
     background: url(../../assets/img/img1.png);
     background-attachment: fixed;
     overflow: hidden;
+    background-color: #f8f8f8;
     .btnone:hover {
       border: 1px solid #3f8fff;
       background-color: #3f8fff;

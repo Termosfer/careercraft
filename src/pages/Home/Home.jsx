@@ -12,6 +12,7 @@ import S_3_img1 from "../../assets/img/S-3-img1.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 import image from "../../assets/img/homeimage.png";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Home = () => {
   return (
@@ -28,14 +29,14 @@ const Home = () => {
           <p className="fw-semibold">
             Forge Stronger Teams: Revolutionize Soft Skills Learning
           </p>
-          <Link to="/free-trial" className="btnone btn btn-primary me-3 px-3">
+          <Link to="/packages" className="btnone btn btn-primary me-3 px-3">
             Book a Demo
           </Link>
-          <Link to='/freetest' className="btntwo btn btn-outline-primary px-3">
+          <Link to="/freetest" className="btntwo btn btn-outline-primary px-3">
             Start Free Test
           </Link>
           <div style={{ marginBottom: "0" }} className="pt-5">
-            <img className="w-75" src={image} alt="/" />
+            <img className="w-75" src={image} alt="image" />
           </div>
         </div>
       </section>
@@ -199,12 +200,18 @@ const Home = () => {
                 Unlock your potential with CareerCraft's personalized training
                 solutions.
               </p>
-              <button className="btnone btn btn-light text-primary me-2 px-3">
+              <Link
+                to="/packages"
+                className="btnone btn btn-light text-primary me-2 px-3 fw-semibold"
+              >
                 Book a Demo
-              </button>
-              <button className="btntwo btn btn-outline-light ms-2 px-3">
+              </Link>
+              <Link
+                to="/freetest"
+                className="btntwo btn btn-outline-light ms-2 px-3"
+              >
                 Start Free Test
-              </button>
+              </Link>
             </div>
           </div>
         </div>
