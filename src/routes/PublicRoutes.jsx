@@ -19,6 +19,7 @@ import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 import Packages from '../pages/Packages/Packages'
 import UserProfile from '../pages/UserProfile/UserProfile'
 import TestResultsTwo from '../pages/TestResultsTwo/TestResultsTwo'
+import Example from '../pages/Example/Example'
 
 
 const PublicRoutes = () => {
@@ -46,6 +47,7 @@ const PublicRoutes = () => {
         <Route path="/testresultsone" element={<TestResultsOne />} />
         <Route path="/testresultstwo" element={<TestResultsTwo />} />
         <Route path="/userprofile" element={<UserProfile/>} />
+        <Route path='/example' element={<Example/>}/>
       </Routes>
     </PublicLayout>
   );
