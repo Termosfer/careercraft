@@ -78,6 +78,7 @@
     /* background-color: (64, 143, 255, 0.75); */
     border-radius: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .content__border,
@@ -88,7 +89,7 @@
 
 .ul__li{
     font-size: 14px;
-    line-height: 5px;
+    line-height: 15px;
 }
 
 .skillNames__1:hover {

@@ -1,38 +1,26 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Table,
-  ProgressBar,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap";
+import "./hardskill.css";
 import ChartAxe from "../chartAxe/ChartAxe";
 import star from "../../assets/img/star.png";
 import { Gauge, gaugeClasses } from "@mui/x-charts";
-import "./hardskill.css";
 import { Link } from "react-router-dom";
 import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
-import {
-  getHardSkillReport,
-  getHardSkillReports,
-} from "../../config/authReport";
+import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
 import { useDispatch, useSelector } from "react-redux";
+import { getDownload } from "../../config/download";
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
-  const { hardSkillRaport, hardSkillRaports } = useSelector(
-    (state) => state.report
-  );
-  console.log(hardSkillRaport, "hard");
-  console.log(hardSkillRaports, "hardSkill");
+  const { hardSkillRaport, hardSkillRaports } = useSelector((state) => state.report);
   useEffect(() => {
     dispatch(getHardSkillReport());
     dispatch(getHardSkillReports());
   }, [dispatch]);
-  const value =
-    hardSkillRaport && hardSkillRaport[0]
-      ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0)
-      : "";
+  const onButtonClick = () => {
+    dispatch(getDownload(2))
+  };
+  const value = hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0) : "";
+
   return (
     <>
       <Container className="w-75 px-5">
@@ -49,7 +37,7 @@ const HardSkillTestResult = () => {
                 % (
                 {hardSkillRaport && hardSkillRaport[0]
                   ? hardSkillRaport[0].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaport[0].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaport[0].skillLevel.slice(1).toLowerCase()
                   : ""}
                 )
               </span>
@@ -138,7 +126,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[7]
                   ? hardSkillRaports[7].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -164,7 +152,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[5]
                   ? hardSkillRaports[5].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -190,7 +178,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[8]
                   ? hardSkillRaports[8].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -215,7 +203,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[6]
                   ? hardSkillRaports[6].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -240,7 +228,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[4]
                   ? hardSkillRaports[4].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -266,7 +254,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[3]
                   ? hardSkillRaports[3].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -292,7 +280,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[2]
                   ? hardSkillRaports[2].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -318,7 +306,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[1]
                   ? hardSkillRaports[1].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -344,7 +332,7 @@ const HardSkillTestResult = () => {
                 />
                 {hardSkillRaports && hardSkillRaports[0]
                   ? hardSkillRaports[0].skillLevel.charAt(0).toUpperCase() +
-                    hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
+                  hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
                   : ""}
               </td>
               <td>
@@ -399,9 +387,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[7]
                         ? hardSkillRaports[7].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -436,9 +424,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[5]
                         ? hardSkillRaports[5].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -473,9 +461,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[8]
                         ? hardSkillRaports[8].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -507,9 +495,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[6]
                         ? hardSkillRaports[6].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -544,9 +532,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[4]
                         ? hardSkillRaports[4].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -581,9 +569,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[3]
                         ? hardSkillRaports[3].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -618,9 +606,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[2]
                         ? hardSkillRaports[2].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -655,9 +643,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[1]
                         ? hardSkillRaports[1].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -692,9 +680,9 @@ const HardSkillTestResult = () => {
                     <span>
                       {hardSkillRaports && hardSkillRaports[0]
                         ? hardSkillRaports[0].skillLevel
-                            .charAt(0)
-                            .toUpperCase() +
-                          hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
+                          .charAt(0)
+                          .toUpperCase() +
+                        hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
                         : ""}
                     </span>
                   </div>
@@ -702,17 +690,15 @@ const HardSkillTestResult = () => {
               </div>
             </Col>
           </Row>
-          <div className=" d-flex justify-content-evenly pt-5 text-center">
-            <Link to="/freetest/testresultstwo">
+          <div className="d-flex justify-content-center gap-3 pt-5">
+            <Link to="/freetest/hard-skill-test-result/testresultstwo">
               <Button variant="outline-primary" className="px-4">
-                Read more
+                View Details
               </Button>
             </Link>
-            <Link>
-              <Button variant="outline-primary" className="px-4">
-                Download
-              </Button>
-            </Link>
+            <Button variant="outline-primary" className="px-4" onClick={onButtonClick}>
+              Download Report
+            </Button>
           </div>
         </Container>
       </div>

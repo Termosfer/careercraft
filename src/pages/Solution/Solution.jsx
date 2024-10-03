@@ -35,13 +35,13 @@ const Solution = () => {
 
             <div className="text-center py-5 category">
               <Link to="/packages">
-                <Button type="btn" className="btn btn-primary px-4 py-2">
+                <Button variant="primary" className=" px-4 py-2">
                   Start Your Journey
                 </Button>
               </Link>
             </div>
-            <div className="d-flex justify-content-center gap-4  category">
-              <div className=" bg-category">
+            <div className="category d-flex justify-content-center gap-4 ">
+              <div className="bg-category">
                 <div className="bg_img  d-flex align-items-center justify-content-center">
                   <img src={img__22} alt="img__22" className="img__22" />
                 </div>
@@ -67,7 +67,7 @@ const Solution = () => {
                 </div>
                 <span>Data Analyst</span>
               </div>
-              <div className=" bg-category">
+              <div className="bg-category">
                 <div className="bg_img  d-flex align-items-center justify-content-center">
                   <img src={img__24} alt="img__22" className="img__22" />
                 </div>

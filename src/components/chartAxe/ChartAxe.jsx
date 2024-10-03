@@ -5,7 +5,6 @@ var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const ChartAxe = ({hardSkillRaports}) => {
-console.log(hardSkillRaports, "hardskillasda")
 
   const options = {
     animationEnabled: true,

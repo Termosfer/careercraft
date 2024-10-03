@@ -7,25 +7,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllReports, getReports } from "../../config/authReport";
 import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
-import axios from "axios";
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
   const allReport = useSelector((state) => state.report.allreport);
-  const error = useSelector((state) => state.report.error);
   const user = useSelector((state) => state.user.username);
-  const file = useSelector((state) => state.downloadFile.download);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
   useEffect(() => {
     if (totalReport) {
       if (
-        totalReport[0].averagePercentageCorrect > 33 &&
-        totalReport[0].averagePercentageCorrect < 66
+        totalReport[0].averagePercentageCorrect > 60 &&
+        totalReport[0].averagePercentageCorrect < 80
       ) {
         setColor("#0f77ff");
         setScoreName("medium");
-      } else if (totalReport[0].averagePercentageCorrect >= 66) {
+      } else if (totalReport[0].averagePercentageCorrect >= 80) {
         setColor("#094799");
         setScoreName("high");
       }
@@ -36,44 +33,10 @@ const TestResult = () => {
     dispatch(getAllReports());
   }, [dispatch]);
 
-  //   const handlerDownload = async () => {
-  //     try {
-  //       const url = window.URL.createObjectURL(new Blob([response.data]));
-  //       const link = document.createElement("a");
-  //       link.href = url;
-  //       link.setAttribute("download", reports.pdf);
-  //       document.body.appendChild(link);
-  //       link.click();
-  //     } catch (error) {
-  //       console.error("Error during download", error);
-  //     }
-  //   };
-  const handlerDownload = async () => {
-    try {
-      const response = await dispatch(getDownload()).unwrap(); // Unwrap ile payload'u alın
-  
-      const url = window.URL.createObjectURL(response); // Blob'ı kullanın
-      const link = document.createElement("a");
-  
-      // Dosya adını content-disposition başlığından alın
-      const contentDisposition = response.headers['content-disposition'];
-      const filename = contentDisposition
-        ? contentDisposition.split('filename=')[1].replace(/"/g, '')
-        : 'report.pdf'; // Varsayılan dosya adı
-  
-      link.href = url;
-      link.setAttribute("download", filename);
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      window.URL.revokeObjectURL(url); // Oluşturulan URL'yi temizle
-    } catch (error) {
-      console.error("Error during download", error);
-    }
+  const onButtonClick = () => {
+    dispatch(getDownload(1))
   };
-  
 
-  //   console.log(totalReport, "totalReport");
   return (
     <>
       <Container className="w-75 p-5">
@@ -341,9 +304,9 @@ const TestResult = () => {
             </Col>
           </Row>
           <div className=" d-flex justify-content-evenly pt-5 text-center">
-            <Link to="/freetest/testresultsone">
+            <Link to="/freetest/test-result/testresultsone">
               <Button variant="outline-primary" className="px-4">
-                Read more
+                View Details
               </Button>
             </Link>
             <Link to="/packages">
@@ -351,15 +314,13 @@ const TestResult = () => {
                 View Hard Skills
               </Button>
             </Link>
-            <Link>
-              <Button
-                variant="outline-primary"
-                className="px-4"
-                onClick={handlerDownload}
-              >
-                Download
-              </Button>
-            </Link>
+            <Button
+              variant="outline-primary"
+              className="px-4"
+              onClick={onButtonClick}
+            >
+              Download Report
+            </Button>
           </div>
         </Container>
       </div>

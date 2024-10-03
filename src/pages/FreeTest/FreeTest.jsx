@@ -107,8 +107,13 @@ const FreeTest = () => {
           </div>
         </div>
         <div className="text-center py-5">
-          <Button variant="primary" className="px-4">Start Assessment</Button>
-    
+          <Link
+            to={token ? "/free-trial" : "/auth/login"}
+            className="btn btn-primary px-4"
+          >
+            Start Assessment
+          </Link>
+
         </div>
       </section>
     </main>
