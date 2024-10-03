@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import EditSVG from "../../components/SVG/EditSVG";
 import "./Profile.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Graph from "../../assets/img/Graph.png";
 import Graph2 from "../../assets/img/Graph2.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import ModalChanges from "../../components/modal/ModalChanges";
 import { LogOutSVG } from "../../components/SVG/LogOutSVG";
-
-
+import { logout } from "../../config/authLogin";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const [show, setShow] = useState(false);
+  const [active, setActive] = useState(false);
+  const [modalType, setModalType] = useState("");
   const user = useSelector((state) => state.user.username);
   const infofromLocal = JSON.parse(localStorage.getItem("userInfo")) || {
     gender: "-",
@@ -23,23 +23,24 @@ const Profile = () => {
     phone: "-",
     position: "-",
     country: "-",
-    city: "-"
+    city: "-",
   };
 
 
-  const [show, setShow] = useState(false)
-  const [modalType, setModalType] = useState('');
-
   const handleShowPersonal = () => {
-    setModalType('personal');
+    setModalType("personal");
     setShow(true);
   };
 
   const handleShowAddress = () => {
-    setModalType('address');
+    setModalType("address");
     setShow(true);
   };
-
+  const handlerLogout = () => {
+    dispatch(logout());
+    setActive(false);
+    navigate("/");
+  };
 
   return (
     <div className="profile-cont">
@@ -51,7 +52,7 @@ const Profile = () => {
               <h1 className="profile-h1">
                 {user.name && user.surname
                   ? user.name.slice(0, 1).toUpperCase() +
-                  user.surname.slice(0, 1).toUpperCase()
+                    user.surname.slice(0, 1).toUpperCase()
                   : ""}
               </h1>
             </div>
@@ -133,7 +134,10 @@ const Profile = () => {
               <h4 className="pers-info-h4 fw-semibold">Address</h4>
             </Col>
             <Col className="d-flex justify-content-end">
-              <Button onClick={handleShowAddress} className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end">
+              <Button
+                onClick={handleShowAddress}
+                className=" btn-edit px-3 py-2 border-0 bg-primary text-light text-end"
+              >
                 Edit
                 <EditSVG />
               </Button>
@@ -197,7 +201,9 @@ const Profile = () => {
             className="mt-4 px-4 py-2 button-view"
           >
             <LogOutSVG />
-            <span className="ms-2">Log Out</span>
+            <span className="ms-2" onClick={handlerLogout}>
+              Log Out
+            </span>
           </Button>
         </div>
       </Container>

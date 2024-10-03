@@ -5,7 +5,8 @@ import loginReducer from "./authLogin";
 import questionReducer from "./authQuestions";
 import userReducer from "./authUser";
 import reportReducer from "./authReport";
-import softSkillReducer from "./getSoftSkillResults"
+import softSkillReducer from "./getSoftSkillResults";
+import downloadReducer from "./download";
 export const store = configureStore({
   reducer: {
     auth: authReducer,
@@ -14,6 +15,7 @@ export const store = configureStore({
     user: userReducer,
     questions: questionReducer,
     report: reportReducer,
-    softSkillResult: softSkillReducer
+    softSkillResult: softSkillReducer,
+    downloadFile: downloadReducer,
   },
 });

@@ -50,7 +50,7 @@ function CollapsibleExample() {
             <Link to="/solutions" className="text-decoration-none text-dark">
               Solutions
             </Link>
-          
+
             <Link to="/packages" className="text-decoration-none text-dark">
               Pricing
             </Link>
@@ -61,7 +61,7 @@ function CollapsibleExample() {
           <Nav className="d-flex justify-content-md-between justify-content-between align-items-md-center align-items-center column-gap-2 mt-2 mt-lg-0 text-nowrap">
             {user ? (
               <div className="d-flex align-items-center gap-2">
-                <Link to="/free-trial" className="ms-1 login">
+                <Link to="/packages" className="ms-1 login">
                   Book a Demo
                 </Link>
                 <div className="position-relative">
@@ -69,10 +69,7 @@ function CollapsibleExample() {
                     className="d-flex align-items-center  gap-1 cursor-pointer"
                     onClick={handlerClick}
                   >
-                    <h1
-                      className="rounded-circle"
-                      id="dropdown-basic"
-                    >
+                    <h1 className="rounded-circle" id="dropdown-basic">
                       {user.name && user.surname
                         ? user.name.slice(0, 1).toUpperCase() +
                           user.surname.slice(0, 1).toUpperCase()
@@ -107,11 +104,11 @@ function CollapsibleExample() {
                       </div>
                       <div className="px-1 pt-2 d-flex flex-column gap-2 bottom ">
                         <div className="d-flex align-items-center gap-1  p-1 action-item">
-                          <UserSVG />
                           <Link
-                            to={"/profile"}
-                            className="fs text-decoration-none text-dark"
+                            to="/profile"
+                            className="fs text-decoration-none text-dark d-flex align-items-center gap-1 "
                           >
+                            <UserSVG />
                             Profile
                           </Link>
                         </div>

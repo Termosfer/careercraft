@@ -561,6 +561,25 @@ const TestResultsOne = () => {
       
     </>
   );
+  const renderSkeletonImage = () => <div className="skeleton-image" />;
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [showImage, setShowImage] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      const timer = setTimeout(() => {
+        setShowImage(true);
+      }, 1500); // 1.5 saniye gecikme
+
+      return () => clearTimeout(timer);
+    }
+  }, [imageLoaded]);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
 
   const renderContentBySkill = (skillIndex) => {
     const skillItem = allReport[skillIndex];
@@ -590,7 +609,18 @@ const TestResultsOne = () => {
                   (
                     <div>
                       <div className="border d-flex p-4">
-                        <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" />
+                        {/* <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" /> */}
+                        {!showImage ? (
+                          renderSkeletonImage()
+                        ) : (
+                          <img
+                            className="me-3 soft__img"
+                            src={ssDat.imageUrl}
+                            alt="imageUrl"
+                            onLoad={handleImageLoad}
+                            style={{ display: showImage ? "block" : "none" }}
+                          />
+                        )}
                         <div>
                           <h5>{ssDat.description}</h5>
                           <p><span>Action:</span> {ssDat.action}</p>

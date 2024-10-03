@@ -43,9 +43,8 @@
   margin-bottom: 25px;
 }
 
-.soft-img-container{
+.soft-img-container {
   align-items: flex-start;
-
 }
 
 .TestResultsOne .container .border h5,
@@ -89,25 +88,24 @@
   color: #fff;
   border-radius: 8px;
 }
-.soft__img{
+.soft__img {
   width: 15%;
   border-radius: 18px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
-.soft__img1{
+.soft__img1 {
   width: 25%;
   border-radius: 18px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
-
 .section1 {
-  .low{
+  .low {
     border: none !important;
   }
 
-  .p2{
+  .p2 {
     font-size: 12px;
     font-weight: 500;
   }
@@ -124,28 +122,25 @@
   animation: shimmer 3.5s infinite;
 }
 
-
 .TestResultsOne .skeleton-section {
   margin-bottom: 16px;
 }
 
- 
 .TestResultsOne .skeleton-header {
   margin-top: 70px;
-  width: 100%;
+  width: 50%;
   height: 24px;
   background-color: #c0c0c0;
   border-radius: 4px;
   background: linear-gradient(90deg, #c0c0c0 25%, #c0c0c0 50%, #c0c0c0 75%);
   background-size: 200% 100%;
   animation: shimmer 3.5s infinite;
+  padding: 20px 0;
 }
-
 
 .TestResultsOne .skeleton-content {
   margin-top: 8px;
 }
-
 
 .TestResultsOne .skeleton-line {
   width: 100%;
@@ -155,7 +150,6 @@
   border-radius: 4px;
 }
 
-
 @keyframes shimmer {
   0% {
     background-position: 100%;
@@ -163,4 +157,11 @@
   100% {
     background-position: -100%;
   }
+}
+
+.skeleton-image {
+  width: 300px; /* Skeleton loader genişliği */
+  height: 200px; /* Skeleton loader yüksekliği */
+  background-color: #ccc; /* Skeleton loader arka plan rengi */
+  border-radius: 4px; /* Skeleton loader köşe yuvarlaklığı */
 }
