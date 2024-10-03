@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
+import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import "./packages.css";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";

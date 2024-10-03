@@ -16,10 +16,6 @@ const FreeTrial = () => {
   const [button, setButton] = useState("Next")
   const count = useSelector((state) => state.questions.value);
   const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
-  console.log(question.id, "question")
-  console.log(count, "count")
-  console.log(totalCount, "totalCount")
-  console.log(orderValue, "answerId")
   useEffect(()=>{
     if (count < totalCount) {
       setButton("Next")
