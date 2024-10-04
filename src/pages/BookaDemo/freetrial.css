@@ -35,12 +35,12 @@
   border: 1px solid #0f77ff;
 }
 
-.progress {
-  border-start-start-radius: 0px !important;
+.progress-div > .progress {
+  height: 12px !important;
+  border-radius: 0px !important;
 }
 
-.progress-bar {
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  /* box-shadow: -1px 0 7px 5px #0000ff6b; */
+.progress-div> .progress >  .progress-bar {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important; 
 }

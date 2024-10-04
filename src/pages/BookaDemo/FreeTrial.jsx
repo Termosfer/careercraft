@@ -91,7 +91,9 @@ const FreeTrial = () => {
           </h2>
         </Container>
       </div>
+      <div className="progress-div">
       <ProgressBar variant="primary" now={progress} />
+      </div>
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
           <span style={{ color: "#0F77FF" }}>Question {question.id}</span> Out of <span>{totalCount}</span>

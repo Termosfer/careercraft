@@ -85,17 +85,17 @@ const TestResult = () => {
                 <ProgressBar
                   now={
                     totalReport && totalReport[0]
-                      ? totalReport[0].averagePercentageCorrect
-                      : ""
+                    ? totalReport[0].averagePercentageCorrect
+                    : ""
                   }
-                  className="w-75 m-auto progressbar-test"
+                  className="w-75  progressbar-test"
                   style={{ backgroundColor: `${color} !important` }}
-                />
+                  />
+                  </div>
                 <p className="fw-bold fs-4" style={{ color: `${color}` }}>
                   {scoreName}
                 </p>
               </div>
-            </div>
           </Col>
           <Col className="pt-5">
             <div className="d-flex gap-5">
