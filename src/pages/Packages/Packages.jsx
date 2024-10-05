@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
@@ -20,14 +20,28 @@ const Packages = () => {
     }
   };
 
+  const [open, setOpen] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+  });
+
+  const toggle = (index) => {
+    setOpen((prevOpen) => ({
+      ...prevOpen,
+      [index]: !prevOpen[index],
+    }));
+  };
+
   return (
     <div className="packages">
       <div ref={topRef}></div>
-
       <Container className="w-75 px-5">
         <div className="package-header ">
           <h3 className="text-center pb-5 fs-1">
-            Unlock Your Full Potential with{" "}
+            Unlock Your Full Potential with
             <span className="title-cc fs-1">CareerCraft</span> Premium
           </h3>
           <div className="d-flex align-items-center justify-content-between packages-boxes">
@@ -152,7 +166,7 @@ const Packages = () => {
                     </Card.Title>
                     <p>
                       Elevate your career by gaining full access to advanced
-                      skill assessments and personalized growth recommendations.{" "}
+                      skill assessments and personalized growth recommendations.
                     </p>
                     <ul>
                       <li>
@@ -236,33 +250,83 @@ const Packages = () => {
       <div className="faq-section">
         <Container className="text-center  px-5">
           <h4 className="pb-5 fw-bold">FAQ</h4>
-
           <div className="questions">
-            <p>
-              <FaPlus />
-              Can I upgrade my package after enrolling in a lower-tier plan?
-            </p>
-            <hr />
-            <p>
-              <FaPlus /> Are the courses self-paced or instructor-led?
-            </p>
-            <hr />
-            <p>
-              <FaPlus /> Is there a trial version available for CareerCraft
-              packages?
-            </p>
-            <hr />
-            <p>
-              <FaPlus />
-              Can I cancel my subscription at any time?
-            </p>
-            <hr />
-            <p>
-              <FaPlus />
-              Are CareerCraft packages suitable for professionals at all career
-              levels?
-            </p>
-            <hr />
+            <div>
+              <p onClick={() => toggle(1)}>
+                <span className={`icon ${open[1] ? "rotate" : ""}`}>
+                  <FaPlus />
+                </span>
+                Can I upgrade my package after enrolling in a lower-tier plan?
+              </p>
+              <div className={`question-answer ${open[1] ? "open" : ""}`}>
+                <p>
+                  Absolutely. You can upgrade to a higher-tier package at any
+                  time.
+                </p>
+              </div>
+              <hr />
+            </div>
+            <div>
+              <p onClick={() => toggle(2)}>
+                <span className={`icon ${open[2] ? "rotate" : ""}`}>
+                  <FaPlus />
+                </span>
+                Are the courses self-paced or instructor-led?
+              </p>
+              <div className={`question-answer ${open[2] ? "open" : ""}`}>
+                <p>
+                  We offer a mix of self-paced and instructor-led courses,
+                  tailored to your selected package.
+                </p>
+              </div>
+              <hr />
+            </div>
+            <div>
+              <p onClick={() => toggle(3)}>
+                <span className={`icon ${open[3] ? "rotate" : ""}`}>
+                  <FaPlus />
+                </span>
+                Is there a trial version available for CareerCraft packages?
+              </p>
+              <div className={`question-answer ${open[3] ? "open" : ""}`}>
+                <p>
+                  Yes, we provide a free trial for select packages, allowing you
+                  to explore our offerings before committing.
+                </p>
+              </div>
+              <hr />
+            </div>
+            <div>
+              <p onClick={() => toggle(4)}>
+                <span className={`icon ${open[4] ? "rotate" : ""}`}>
+                  <FaPlus />
+                </span>
+                Can I cancel my subscription at any time?
+              </p>
+              <div className={`question-answer ${open[4] ? "open" : ""}`}>
+                <p>
+                  Yes, you may cancel your subscription at any time, with no
+                  additional fees or penalties.
+                </p>
+              </div>
+              <hr />
+            </div>
+            <div>
+              <p onClick={() => toggle(5)}>
+                <span className={`icon ${open[5] ? "rotate" : ""}`}>
+                  <FaPlus />
+                </span>
+                Are CareerCraft packages suitable for professionals at all
+                career levels?
+              </p>
+              <div className={`question-answer ${open[5] ? "open" : ""}`}>
+                <p>
+                  Yes, our packages are designed to support professionals across
+                  all career stages, from entry-level to experienced executives.
+                </p>
+              </div>
+              <hr />
+            </div>
           </div>
         </Container>
       </div>
@@ -278,7 +342,7 @@ const Packages = () => {
             </p>
           </div>
           <Link to="/freetest">
-          <Button variant="outline-light">Get Started Now</Button>
+            <Button variant="outline-light">Get Started Now</Button>
           </Link>
         </Container>
       </div>
