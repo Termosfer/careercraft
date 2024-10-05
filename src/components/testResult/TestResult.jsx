@@ -10,14 +10,16 @@ import { getDownload } from "../../config/download";
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
+  console.log(totalReport)
   const allReport = useSelector((state) => state.report.allreport);
+  console.log(allReport, "allreport")
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
   useEffect(() => {
     if (totalReport) {
       if (
-        totalReport[0].averagePercentageCorrect > 60 &&
+        totalReport[0].averagePercentageCorrect >= 60 &&
         totalReport[0].averagePercentageCorrect < 80
       ) {
         setColor("#0f77ff");
@@ -28,6 +30,9 @@ const TestResult = () => {
       }
     }
   }, [totalReport]);
+  const score = allReport?.map(score => score.percentageCorrect)
+  console.log(score, "asd")
+
   useEffect(() => {
     dispatch(getReports());
     dispatch(getAllReports());
@@ -85,17 +90,16 @@ const TestResult = () => {
                 <ProgressBar
                   now={
                     totalReport && totalReport[0]
-                    ? totalReport[0].averagePercentageCorrect
-                    : ""
+                      ? totalReport[0].averagePercentageCorrect
+                      : ""
                   }
-                  className="w-75  progressbar-test"
-                  style={{ backgroundColor: `${color} !important` }}
-                  />
-                  </div>
-                <p className="fw-bold fs-4" style={{ color: `${color}` }}>
-                  {scoreName}
-                </p>
+                  className="w-75  mx-auto progressbar-test"
+                />
               </div>
+              <p className="fw-bold fs-4" style={{ color: `${color}` }}>
+                {scoreName}
+              </p>
+            </div>
           </Col>
           <Col className="pt-5">
             <div className="d-flex gap-5">
