@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllReports, getReports } from "../../config/authReport";
 import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
+import arrow from "../../assets/img/top-arrow.png"
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
@@ -303,15 +304,10 @@ const TestResult = () => {
               </div>
             </Col>
           </Row>
-          <div className=" d-flex justify-content-evenly pt-5 text-center">
+          <div className=" d-flex justify-content-center gap-3 pt-5 ">
             <Link to="/freetest/test-result/testresultsone">
-              <Button variant="outline-primary" className="px-4">
+              <Button variant="outline-primary" className="px-5">
                 View Details
-              </Button>
-            </Link>
-            <Link to="/packages">
-              <Button variant="outline-primary" className="px-4 btn">
-                View Hard Skills
               </Button>
             </Link>
             <Button
@@ -321,6 +317,23 @@ const TestResult = () => {
             >
               Download Report
             </Button>
+          </div>
+        </Container>
+      </div>
+      <div className="hard__skill_bgColor">
+        <img src={arrow} alt="top-arrow" className="top__arrow" />
+        <img src={arrow} alt="top-arrow" className="top__arrow1" />
+        <Container className="w-75 p-5 text-center text-light d-grid gap-5">
+          <div>
+            <h1 className="pb-2 h1__hard-skill">Transform Your Career with In-Demand Hard Skills</h1>
+            <p className="w-75 m-auto">Unlock your potential with tailored hard skills training designed for today’s job market. From data analysis to software development, our expert-led courses empower you to excel and stand out.</p>
+          </div>
+          <div className="pt-4">
+            <Link to="/packages">
+              <Button variant="outline-light" className="px-4 py-2">
+                View Hard Skills
+              </Button>
+            </Link>
           </div>
         </Container>
       </div>

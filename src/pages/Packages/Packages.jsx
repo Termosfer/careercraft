@@ -42,7 +42,7 @@ const Packages = () => {
         <div className="package-header ">
           <h3 className="text-center pb-5 fs-1">
             Unlock Your Full Potential with
-            <span className="title-cc fs-1">CareerCraft</span> Premium
+            <span className="title-cc fs-1"> CareerCraft</span> Premium
           </h3>
           <div className="d-flex align-items-center justify-content-between packages-boxes">
             <Card className="mt-5">
