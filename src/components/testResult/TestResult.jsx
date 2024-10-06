@@ -8,12 +8,13 @@ import { getAllReports, getReports } from "../../config/authReport";
 import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
 import arrow from "../../assets/img/top-arrow.png"
+import data from "../../data/ssdata.json"
+console.log(data.newdata, "data")
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
-  console.log(totalReport)
   const allReport = useSelector((state) => state.report.allreport);
-  console.log(allReport, "allreport")
+  console.log(allReport, "all")
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
@@ -31,8 +32,7 @@ const TestResult = () => {
       }
     }
   }, [totalReport]);
-  const score = allReport?.map(score => score.percentageCorrect)
-  console.log(score, "asd")
+
 
   useEffect(() => {
     dispatch(getReports());
@@ -138,6 +138,7 @@ const TestResult = () => {
             </Col>
           </Row>
           <Row>
+
             <Col lg={4} className="mb-3">
               <div className="skills-result-page pb-4">
                 <div className="d-flex flex-column">
@@ -165,7 +166,7 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{scoreName}</span>
+                    <span>{allReport && allReport[4] ? allReport[4].skillLevel.slice(0,1) + allReport[4].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -199,7 +200,7 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{scoreName}</span>
+                    <span>{allReport && allReport[3] ? allReport[3].skillLevel.slice(0,1) + allReport[3].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -233,7 +234,7 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{scoreName}</span>
+                    <span>{allReport && allReport[2] ? allReport[2].skillLevel.slice(0,1) + allReport[2].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -268,7 +269,7 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{scoreName}</span>
+                    <span>{allReport && allReport[1] ? allReport[1].skillLevel.slice(0,1) + allReport[1].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
@@ -302,7 +303,7 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{scoreName}</span>
+                    <span>{allReport && allReport[0] ? allReport[0].skillLevel.slice(0,1) + allReport[0].skillLevel.slice(1).toLowerCase() : ""}</span>
                   </div>
                 </div>
               </div>
