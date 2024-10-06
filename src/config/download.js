@@ -35,14 +35,6 @@ const initialState = {
 const sliceDownload = createSlice({
   name: "downloadFile",
   initialState,
-  /* reducers: {
-    increaseValue: (state) => {
-      state.value = state.value + 1
-    },
-    decreaseValue: (state) => {
-      state.value = state.value - 1
-    }
-  } */
   extraReducers: (builder) => {
     builder
       .addCase(getDownload.pending, (state) => {

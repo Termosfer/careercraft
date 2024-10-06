@@ -18,9 +18,6 @@
 //     dispatch(getAllReports())
 //   }, [dispatch])
 
-
-
-
 //   useEffect(() => {
 //     if (allReport && allReport.length > 0) {
 //       setSkill((skill) =>
@@ -57,7 +54,6 @@
 //                 <p className="p2"> { allReport && allReport[4].skillLevel.slice(0,1) + allReport[4].skillLevel.slice(1).toLowerCase()}</p>
 //               </div>
 //             </div>
-
 
 //             {skill?.map((skillItem) => (
 //               <div key={skillItem.skillId}>
@@ -142,7 +138,6 @@
 //               </div>
 //             </div>
 
-
 //             {skill?.map((skillItem) => (
 //               <div key={skillItem.skillId}>
 //                 {ssData?.map((ssDat) => (
@@ -225,7 +220,6 @@
 //                 <p className="p2"> { allReport && allReport[2].skillLevel.slice(0,1) + allReport[2].skillLevel.slice(1).toLowerCase()}</p>
 //               </div>
 //             </div>
-
 
 //             {skill?.map((skillItem) => (
 //               <div key={skillItem.skillId}>
@@ -310,7 +304,6 @@
 //               </div>
 //             </div>
 
-
 //             {skill?.map((skillItem) => (
 //               <div key={skillItem.skillId}>
 //                 {ssData?.map((ssDat) => (
@@ -393,7 +386,6 @@
 //                 <p className="p2"> { allReport && allReport[0].skillLevel.slice(0,1) + allReport[0].skillLevel.slice(1).toLowerCase()}</p>
 //               </div>
 //             </div>
-
 
 //             {skill?.map((skillItem) => (
 //               <div key={skillItem.skillId}>
@@ -505,7 +497,6 @@
 
 // export default TestResultsOne;
 
-
 // =========================================================================================================================================================
 
 import React, { useEffect, useState } from "react";
@@ -517,8 +508,8 @@ import { getAllReports } from "../../config/authReport";
 
 const TestResultsOne = () => {
   const dispatch = useDispatch();
-  const ssData = useSelector(state => state.softSkillResult.softResult);
-  const allReport = useSelector(state => state.report.allreport);
+  const ssData = useSelector((state) => state.softSkillResult.softResult);
+  const allReport = useSelector((state) => state.report.allreport);
   const [skill, setSkill] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -533,10 +524,12 @@ const TestResultsOne = () => {
 
   useEffect(() => {
     if (allReport && allReport.length > 0) {
-      setSkill(allReport.map(allRep => ({
-        skillId: allRep.skillId,
-        skillLevel: allRep.skillLevel,
-      })));
+      setSkill(
+        allReport.map((allRep) => ({
+          skillId: allRep.skillId,
+          skillLevel: allRep.skillLevel,
+        }))
+      );
     }
   }, [allReport]);
 
@@ -558,38 +551,25 @@ const TestResultsOne = () => {
   const renderSkeletonn = () => (
     <>
       <div className="skeleton-header"></div>
-      
     </>
   );
-  const renderSkeletonImage = () => <div className="skeleton-image" />;
-
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [showImage, setShowImage] = useState(false);
-
-  useEffect(() => {
-    if (imageLoaded) {
-      const timer = setTimeout(() => {
-        setShowImage(true);
-      }, 1500); // 1.5 saniye gecikme
-
-      return () => clearTimeout(timer);
-    }
-  }, [imageLoaded]);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
 
   const renderContentBySkill = (skillIndex) => {
     const skillItem = allReport[skillIndex];
-    const skillLevel = skillItem.skillLevel.charAt(0).toUpperCase() + skillItem.skillLevel.slice(1).toLowerCase();
+    const skillLevel =
+      skillItem.skillLevel.charAt(0).toUpperCase() +
+      skillItem.skillLevel.slice(1).toLowerCase();
 
     return (
-      <div className={`section ${skillItem.skillName.toLowerCase().replace(" ", "-")}`}>
+      <div
+        className={`section ${skillItem.skillName
+          .toLowerCase()
+          .replace(" ", "-")}`}
+      >
         <div className="section1 my-5">
           <h3 className="fw-semibold">
-            {skillItem.skillName} <span className="text-primary">{skillLevel}</span>{" "} Level
+            {skillItem.skillName}{" "}
+            <span className="text-primary">{skillLevel}</span> Level
           </h3>
           <div className="low text-primary text-center">
             <p className="fw-bold p1">
@@ -605,36 +585,48 @@ const TestResultsOne = () => {
           <div key={skillItem.skillId}>
             {ssData?.map((ssDat) => (
               <div key={ssDat.id}>
-                {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === skillIndex + 1 &&
-                  (
+                {ssDat.level === skillItem.skillLevel &&
+                  ssDat.skillId === skillItem.skillId &&
+                  ssDat.skillId === skillIndex + 1 && (
                     <div>
                       <div className="border d-flex p-4">
-                        {/* <img className="me-3 soft__img" src={ssDat.imageUrl} alt="imageUrl" /> */}
-                        {!showImage ? (
-                          renderSkeletonImage()
-                        ) : (
-                          <img
-                            className="me-3 soft__img"
-                            src={ssDat.imageUrl}
-                            alt="imageUrl"
-                            onLoad={handleImageLoad}
-                            style={{ display: showImage ? "block" : "none" }}
-                          />
-                        )}
+                        <img
+                          className="me-3 soft__img"
+                          src={ssDat.imageUrl}
+                          alt="imageUrl"
+                        />
                         <div>
                           <h5>{ssDat.description}</h5>
-                          <p><span>Action:</span> {ssDat.action}</p>
+                          <p>
+                            <span>Action:</span> {ssDat.action}
+                          </p>
                           <p>
                             <span>Courses:</span>
-                            {ssDat.additionalResources.courses.slice(0, 2).map((c, index) => (
-                              <span key={index} className="text-secondary-emphasis fw-normal">{c}<br /></span>
-                            ))}
+                            {ssDat.additionalResources.courses
+                              .slice(0, 2)
+                              .map((c, index) => (
+                                <span
+                                  key={index}
+                                  className="text-secondary-emphasis fw-normal"
+                                >
+                                  {c}
+                                  <br />
+                                </span>
+                              ))}
                           </p>
                           <p>
                             <span>Blogs:</span>
-                            {ssDat.additionalResources.blogs.slice(0, 2).map((c, index) => (
-                              <span key={index} className="text-secondary-emphasis fw-normal">{c}<br /></span>
-                            ))}
+                            {ssDat.additionalResources.blogs
+                              .slice(0, 2)
+                              .map((c, index) => (
+                                <span
+                                  key={index}
+                                  className="text-secondary-emphasis fw-normal"
+                                >
+                                  {c}
+                                  <br />
+                                </span>
+                              ))}
                           </p>
                         </div>
                       </div>
@@ -642,7 +634,6 @@ const TestResultsOne = () => {
                   )}
               </div>
             ))}
-
           </div>
         ))}
 
@@ -653,8 +644,9 @@ const TestResultsOne = () => {
           <div key={skillItem.skillId}>
             {ssData?.map((ssDat) => (
               <div key={ssDat.id}>
-                {ssDat.level === skillItem.skillLevel && ssDat.skillId === skillItem.skillId && ssDat.skillId === skillIndex + 1 &&
-                  (
+                {ssDat.level === skillItem.skillLevel &&
+                  ssDat.skillId === skillItem.skillId &&
+                  ssDat.skillId === skillIndex + 1 && (
                     <AdditionalResources addRes={ssDat} />
                   )}
               </div>
@@ -678,12 +670,18 @@ const TestResultsOne = () => {
     }
 
     switch (activeSection) {
-      case "Communication": return renderContentBySkill(4);
-      case "Personal Qualities": return renderContentBySkill(3);
-      case "Critical Thinking": return renderContentBySkill(2);
-      case "Leadership": return renderContentBySkill(1);
-      case "Teamwork": return renderContentBySkill(0);
-      default: return null;
+      case "Communication":
+        return renderContentBySkill(4);
+      case "Personal Qualities":
+        return renderContentBySkill(3);
+      case "Critical Thinking":
+        return renderContentBySkill(2);
+      case "Leadership":
+        return renderContentBySkill(1);
+      case "Teamwork":
+        return renderContentBySkill(0);
+      default:
+        return null;
     }
   };
 
@@ -691,7 +689,13 @@ const TestResultsOne = () => {
     <div className="TestResultsOne">
       <div className="container w-75 px-5">
         <div className="toggle mt-5">
-          {["Communication", "Personal Qualities", "Critical Thinking", "Leadership", "Teamwork"].map(section => (
+          {[
+            "Communication",
+            "Personal Qualities",
+            "Critical Thinking",
+            "Leadership",
+            "Teamwork",
+          ].map((section) => (
             <div
               key={section}
               onClick={() => setActiveSection(section)}
