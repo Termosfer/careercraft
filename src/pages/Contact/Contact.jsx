@@ -44,8 +44,8 @@ const Contact = () => {
                   <img src={img__36} alt="img__36" className="img__34" />
                 </div>
                 <div className="d-flex flex-column">
-                  <span>Email</span>
-                  <span>info@careercraft.com</span>
+                  <span>Phone</span>
+                  <span>+994 000 00 00 00</span>
                 </div>
               </div>
             </div>
