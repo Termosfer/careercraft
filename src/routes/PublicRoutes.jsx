@@ -15,14 +15,15 @@ import TestResult from "../components/testResult/TestResult";
 import HardSkillTestResult from "../components/hardSkillTestResult/HardSkillTestResult";
 import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 import Packages from '../pages/Packages/Packages'
-import UserProfile from '../pages/UserProfile/UserProfile'
 import TestResultsTwo from '../pages/TestResultsTwo/TestResultsTwo'
 import Example from '../pages/Example/Example'
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 
 const PublicRoutes = () => {
   return (
     <PublicLayout>
+      {/* <UserProfile/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -42,7 +43,6 @@ const PublicRoutes = () => {
         />
         <Route path="/freetest/test-result/testresultsone" element={<TestResultsOne />} />
         <Route path="/freetest/hard-skill-test-result/testresultstwo" element={<TestResultsTwo />} />
-        <Route path="/userprofile" element={<UserProfile/>} />
         <Route path='/example' element={<Example/>}/>
       </Routes>
     </PublicLayout>

@@ -1,34 +1,14 @@
-import React from 'react'
-import data from "../../data/data.json"
-import img__100 from "../../assets/img/comm-p.png"
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const UserProfile = () => {
+    const { pathname } = useLocation();
 
-  const dataSkill = data.data
-  console.log(dataSkill);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
-  return (
-    <div className='data'>
-      {
-        dataSkill.map(dat =>
-        (
-          <>
-            {dat.context.map(skill =>
-            (
-              <div>
-                <img src={skill.img} alt="" />
-                <h3>{skill.title}</h3>
-                <p><span color='blue'>Action:</span> {skill.action}</p>
-              </div>
-            )
-            )}
-            <img src={img__100} />
-          </>
-        )
-        )
-      }
+    return null;
+};
 
-    </div>
-  )
-}
-
-export default UserProfile
+export default UserProfile;
