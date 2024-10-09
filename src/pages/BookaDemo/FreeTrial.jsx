@@ -2,15 +2,8 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import {
-  getQuestion,
-  getQuestionsCount,
-  getAnswer,
-} from "../../config/authQuestions";
-import {
-  changeIncrease,
-  currentAnswerOrderValue,
-} from "../../config/authQuestions";
+import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
+import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
