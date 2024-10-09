@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
 import arrow from "../../assets/img/top-arrow.png";
 import data from "../../data/ssdata.json";
-console.log(data.newdata, "data");
+console.log(data, "data");
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
@@ -18,6 +18,7 @@ const TestResult = () => {
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
+
   useEffect(() => {
     if (totalReport) {
       if (
@@ -136,200 +137,48 @@ const TestResult = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">
-                    {allReport && allReport[4] ? allReport[4].skillName : ""}
-                  </p>
-                  <span>
-                    The ability to clearly and effectively convey ideas,
-                    ensuring that your message is understood by others.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      allReport && allReport[4]
-                        ? allReport[4].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {allReport && allReport[4]
-                        ? allReport[4].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {allReport && allReport[4]
-                        ? allReport[4].skillLevel.slice(0, 1) +
-                          allReport[4].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
+            {allReport?.slice(0, 3).map((reports) => {
+              const description = data.find(item => item.skillId === reports.skillId)?.description;
+              return (
+                <Col lg={4} className="mb-3" key={reports.skillId}>
+                  <div className="skills-result-page pb-4">
+                    <div className="d-flex flex-column">
+                      <p className="fw-bolder">{reports.skillName}</p>
+                      <span>{description}</span>
+                    </div>
+                    <div className="d-flex flex-column">
+                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
+                      <div className="d-flex justify-content-between text-primary fw-bolder">
+                        <span>{reports.percentageCorrect}%</span>
+                        <span>{reports.skillLevel}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">
-                    {allReport && allReport[3] ? allReport[3].skillName : ""}
-                  </p>
-                  <span>
-                    The character traits such as integrity, resilience, and
-                    adaptability that influence how you approach challenges and
-                    interact with others.
-                  </span>
-                </div>
-
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      allReport && allReport[3]
-                        ? allReport[3].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {allReport && allReport[3]
-                        ? allReport[3].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {allReport && allReport[3]
-                        ? allReport[3].skillLevel.slice(0, 1) +
-                          allReport[3].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
+                </Col>
+              );
+            })}
+          </Row>
+          <Row className="d-flex justify-content-center">
+            {allReport?.slice(3, 5).map((reports) => {
+              const description = data.find(item => item.skillId === reports.skillId)?.description;
+              return (
+                <Col lg={4} className="mb-3" key={reports.skillId}>
+                  <div className="skills-result-page pb-4">
+                    <div className="d-flex flex-column">
+                      <p className="fw-bolder">{reports.skillName}</p>
+                      <span>{description}</span>
+                    </div>
+                    <div className="d-flex flex-column">
+                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
+                      <div className="d-flex justify-content-between text-primary fw-bolder">
+                        <span>{reports.percentageCorrect}%</span>
+                        <span>{reports.skillLevel}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">
-                    {allReport && allReport[2] ? allReport[2].skillName : ""}
-                  </p>
-                  <span>
-                    The capacity to objectively analyze information, assess
-                    different perspectives, and make informed decisions.
-                  </span>
-                </div>
-
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      allReport && allReport[2]
-                        ? allReport[2].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {allReport && allReport[2]
-                        ? allReport[2].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {allReport && allReport[2]
-                        ? allReport[2].skillLevel.slice(0, 1) +
-                          allReport[2].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={2} className="mb-3"></Col>
-
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">
-                    {allReport && allReport[1] ? allReport[1].skillName : ""}
-                  </p>
-                  <span>
-                    The ability to inspire, guide, and influence others towards
-                    achieving shared goals.
-                  </span>
-                </div>
-
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      allReport && allReport[1]
-                        ? allReport[1].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {allReport && allReport[1]
-                        ? allReport[1].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {allReport && allReport[1]
-                        ? allReport[1].skillLevel.slice(0, 1) +
-                          allReport[1].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">
-                    {allReport && allReport[0] ? allReport[0].skillName : ""}
-                  </p>
-                  <span>
-                    The ability to work collaboratively with others,
-                    contributing to group objectives and supporting team
-                    members.
-                  </span>
-                </div>
-
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      allReport && allReport[0]
-                        ? allReport[0].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {allReport && allReport[0]
-                        ? allReport[0].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {allReport && allReport[0]
-                        ? allReport[0].skillLevel.slice(0, 1) +
-                          allReport[0].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
+                </Col>
+              );
+            })}
           </Row>
           <div className=" d-flex justify-content-center gap-3 pt-5 ">
             <Link to="/freetest/test-result/testresultsone">
@@ -337,11 +186,7 @@ const TestResult = () => {
                 View Details
               </Button>
             </Link>
-            <Button
-              variant="outline-primary"
-              className="px-4"
-              onClick={onButtonClick}
-            >
+            <Button variant="outline-primary" className="px-4" onClick={onButtonClick}>
               Download Report
             </Button>
           </div>

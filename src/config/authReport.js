@@ -55,7 +55,7 @@ export const getHardSkillReports = createAsyncThunk('hardSkillReports', async ()
 
 const initialState = {
     raport: null,
-    allreport: null,
+    allreport: [],
     loading: false,
     error: null,
     hardSkillRaport: null,
