@@ -1,24 +1,24 @@
 {
-    "newdata": [
-        {
-            "skillId":"5",
-            "description":"The ability to clearly and effectively convey ideas,ensuring that your message is understood by others."
-        },
-        {
-            "skillId":"4",
-            "description":"The character traits such as integrity, resilience, and adaptability that influence how you approach challenges andinteract with others."
-        },
-        {
-            "skillId":"3",
-            "description":"The capacity to objectively analyze information, assess different perspectives, and make informed decisions."
-        },
-        {
-            "skillId":"2",
-            "description":"The ability to inspire, guide, and influence others towards achieving shared goals."
-        },
-        {
-            "skillId":"1",
-            "description":"The ability to work collaboratively with others,contributing to group objectives and supporting team members."
-        }
-    ]
+  "newdata": [
+    {
+      "skillId": "5",
+      "description": "The ability to clearly and effectively convey ideas,ensuring that your message is understood by others."
+    },
+    {
+      "skillId": "4",
+      "description": "The character traits such as integrity, resilience, and adaptability that influence how you approach challenges andinteract with others."
+    },
+    {
+      "skillId": "3",
+      "description": "The capacity to objectively analyze information, assess different perspectives, and make informed decisions."
+    },
+    {
+      "skillId": "2",
+      "description": "The ability to inspire, guide, and influence others towards achieving shared goals."
+    },
+    {
+      "skillId": "1",
+      "description": "The ability to work collaboratively with others,contributing to group objectives and supporting team members."
+    }
+  ]
 }
