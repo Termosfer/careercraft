@@ -18,7 +18,6 @@ const TestResult = () => {
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
-
   useEffect(() => {
     if (totalReport) {
       if (
@@ -139,6 +138,15 @@ const TestResult = () => {
           <Row>
             {allReport?.slice(0, 3).map((reports) => {
               const description = data.find(item => item.skillId === reports.skillId)?.description;
+              let scoreName;
+
+              if (reports.percentageCorrect < 60) {
+                scoreName = "Low"
+              } else if (reports.percentageCorrect >= 60 && reports.percentageCorrect < 80) {
+                scoreName = "Medium"
+              } else {
+                scoreName = "High"
+              }
               return (
                 <Col lg={4} className="mb-3" key={reports.skillId}>
                   <div className="skills-result-page pb-4">
@@ -150,7 +158,7 @@ const TestResult = () => {
                       <ProgressBar variant="primary" now={reports.percentageCorrect} />
                       <div className="d-flex justify-content-between text-primary fw-bolder">
                         <span>{reports.percentageCorrect}%</span>
-                        <span>{reports.skillLevel}</span>
+                        <span>{scoreName}</span>
                       </div>
                     </div>
                   </div>
@@ -161,6 +169,15 @@ const TestResult = () => {
           <Row className="d-flex justify-content-center">
             {allReport?.slice(3, 5).map((reports) => {
               const description = data.find(item => item.skillId === reports.skillId)?.description;
+              let scoreName;
+
+              if (reports.percentageCorrect < 60) {
+                scoreName = "Low"
+              } else if (reports.percentageCorrect >= 60 && reports.percentageCorrect < 80) {
+                scoreName = "Medium"
+              } else {
+                scoreName = "High"
+              }
               return (
                 <Col lg={4} className="mb-3" key={reports.skillId}>
                   <div className="skills-result-page pb-4">
@@ -172,7 +189,7 @@ const TestResult = () => {
                       <ProgressBar variant="primary" now={reports.percentageCorrect} />
                       <div className="d-flex justify-content-between text-primary fw-bolder">
                         <span>{reports.percentageCorrect}%</span>
-                        <span>{reports.skillLevel}</span>
+                        <span>{scoreName}</span>
                       </div>
                     </div>
                   </div>
