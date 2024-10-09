@@ -154,48 +154,40 @@ const Packages = () => {
               </Card.Body>
             </Card>
           </div>
+          <div className="elevate-cont border mt-5">
+            <div className="left___side">
+              <h1>Elevate Premium</h1>
+              <p>
+                Elevate your career by gaining full access to advanced skill
+                assessments and personalized growth recommendations.{" "}
+              </p>
+              <ul>
+                <li>
+                  <QushSVG />
+                  Advanced hard skills insights
+                </li>
+                <li>
+                  <QushSVG />
+                  Personalized learning paths
+                </li>
 
-          <div className="elevate-cont">
-            <Card className="elevate-card">
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <div className="text-img row">
-                  <div className="col-7">
-                    <Card.Title className="elevate-h">
-                      Elevate Premium
-                    </Card.Title>
-                    <p>
-                      Elevate your career by gaining full access to advanced
-                      skill assessments and personalized growth recommendations.
-                    </p>
-                    <ul>
-                      <li>
-                        <QushSVG />
-                        Advanced hard skills insights
-                      </li>
-                      <li>
-                        <QushSVG />
-                        Personalized learning paths
-                      </li>
-
-                      <li>
-                        <QushSVG />
-                        Exclusive career resources
-                      </li>
-                    </ul>
-                  </div>
-                  <img className="col-1" src={pack1} alt="" />
-                  <img className="pack2" src={pack2} alt="" />
-                </div>
-                <Button
-                  variant="primary"
-                  className="px-4"
-                  onClick={handleScrollToTop}
-                >
-                  Buy now
-                </Button>
-              </Card.Body>
-            </Card>
+                <li>
+                  <QushSVG />
+                  Exclusive career resources
+                </li>
+              </ul>
+              <Button
+                variant="primary"
+                className="px-4 w-25"
+                onClick={handleScrollToTop}
+              >
+                Buy now
+              </Button>
+            </div>
+            <div className="right___side">
+              <img className="pack1" src={pack1} alt="pack1" />
+              <img className="pack2" src={pack2} alt="pack2" />
+            </div>
           </div>
         </div>
       </Container>

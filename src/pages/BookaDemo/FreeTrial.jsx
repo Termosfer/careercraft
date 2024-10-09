@@ -2,57 +2,60 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
-import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
+import {
+  getQuestion,
+  getQuestionsCount,
+  getAnswer,
+} from "../../config/authQuestions";
+import {
+  changeIncrease,
+  currentAnswerOrderValue,
+} from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const [button, setButton] = useState("Next")
+  const [button, setButton] = useState("Next");
   const count = useSelector((state) => state.questions.value);
-  const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
-  useEffect(()=>{
+  const { question, loading, error, totalCount, orderValue } = useSelector(
+    (state) => state.questions
+  );
+  useEffect(() => {
     if (count < totalCount) {
-      setButton("Next")
+      setButton("Next");
     } else if (count === totalCount) {
-      setButton("Finish")
+      setButton("Finish");
     }
-  },[count])
- 
+  }, [count]);
+
   useEffect(() => {
     dispatch(getQuestion(count));
-    dispatch(getQuestionsCount())
-
+    dispatch(getQuestionsCount());
   }, [dispatch, count]);
 
   useEffect(() => {
     if (question) {
-      const progressPercentage = Math.round(
-        (question.id / totalCount) * 100
-      );
+      const progressPercentage = Math.round((question.id / totalCount) * 100);
       setProgress(progressPercentage);
     }
-
   }, [question]);
 
-
-
   const handleAnswerChange = (e) => {
-    dispatch(currentAnswerOrderValue(e.currentTarget.value))
+    dispatch(currentAnswerOrderValue(e.currentTarget.value));
   };
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     if (orderValue) {
-      const answer = { orderValue, questionId: question.id }
-      dispatch(getAnswer(answer));
-      dispatch(changeIncrease());
+      const answer = { orderValue, questionId: question.id };
+      await dispatch(getAnswer(answer));
+      await dispatch(changeIncrease());
       if (button === "Finish") {
-        navigate("/freetest/test-result"); 
+        navigate("/freetest/test-result");
       }
     }
 
@@ -78,8 +81,6 @@ const FreeTrial = () => {
       );
 
     if (error) return <div>Error: {error}</div>;
-
-
   };
   return (
     <>
@@ -92,14 +93,17 @@ const FreeTrial = () => {
         </Container>
       </div>
       <div className="progress-div">
-      <ProgressBar variant="primary" now={progress} />
+        <ProgressBar variant="primary" now={progress} />
       </div>
       <Container className="w-75 px-5 py-4 mt-5">
         <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
-          <span style={{ color: "#0F77FF" }}>Question {question.id}</span> Out of <span>{totalCount}</span>
+          <span style={{ color: "#0F77FF" }}>Question {question.id}</span> Out
+          of <span>{totalCount}</span>
         </h2>
         <div>
-          <h2 className="text-center my-5 fw-semibold" key={question.id}>{question.text}</h2>
+          <h2 className="text-center my-5 fw-semibold" key={question.id}>
+            {question.text}
+          </h2>
           <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
             <ul className="list-unstyled">
               {question.answers?.map((answer) => (
@@ -117,17 +121,17 @@ const FreeTrial = () => {
               ))}
             </ul>
             <div className="text-center">
-            <Button
-                    type="submit"
-                    style={{ background: "#0F77FF" }}
-                    className="px-5 fs-6"
-                  >
-                    {button}
-                  </Button>
+              <Button
+                type="submit"
+                style={{ background: "#0F77FF" }}
+                className="px-5 fs-6"
+              >
+                {button}
+              </Button>
             </div>
           </Form>
-        </div >
-      </Container >
+        </div>
+      </Container>
     </>
   );
 };

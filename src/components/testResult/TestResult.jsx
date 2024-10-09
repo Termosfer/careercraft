@@ -7,14 +7,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllReports, getReports } from "../../config/authReport";
 import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
-import arrow from "../../assets/img/top-arrow.png"
-import data from "../../data/ssdata.json"
-console.log(data.newdata, "data")
+import arrow from "../../assets/img/top-arrow.png";
+import data from "../../data/ssdata.json";
+console.log(data.newdata, "data");
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
   const allReport = useSelector((state) => state.report.allreport);
-  console.log(allReport, "all")
+  console.log(allReport, "all");
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("low");
@@ -33,16 +33,14 @@ const TestResult = () => {
     }
   }, [totalReport]);
 
-
   useEffect(() => {
     dispatch(getReports());
     dispatch(getAllReports());
   }, [dispatch]);
 
   const onButtonClick = () => {
-    dispatch(getDownload(1))
+    dispatch(getDownload(1));
   };
-
   return (
     <>
       <Container className="w-75 p-5">
@@ -138,7 +136,6 @@ const TestResult = () => {
             </Col>
           </Row>
           <Row>
-
             <Col lg={4} className="mb-3">
               <div className="skills-result-page pb-4">
                 <div className="d-flex flex-column">
@@ -166,7 +163,12 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{allReport && allReport[4] ? allReport[4].skillLevel.slice(0,1) + allReport[4].skillLevel.slice(1).toLowerCase() : ""}</span>
+                    <span>
+                      {allReport && allReport[4]
+                        ? allReport[4].skillLevel.slice(0, 1) +
+                          allReport[4].skillLevel.slice(1).toLowerCase()
+                        : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -200,7 +202,12 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{allReport && allReport[3] ? allReport[3].skillLevel.slice(0,1) + allReport[3].skillLevel.slice(1).toLowerCase() : ""}</span>
+                    <span>
+                      {allReport && allReport[3]
+                        ? allReport[3].skillLevel.slice(0, 1) +
+                          allReport[3].skillLevel.slice(1).toLowerCase()
+                        : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -234,7 +241,12 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{allReport && allReport[2] ? allReport[2].skillLevel.slice(0,1) + allReport[2].skillLevel.slice(1).toLowerCase() : ""}</span>
+                    <span>
+                      {allReport && allReport[2]
+                        ? allReport[2].skillLevel.slice(0, 1) +
+                          allReport[2].skillLevel.slice(1).toLowerCase()
+                        : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -269,7 +281,12 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{allReport && allReport[1] ? allReport[1].skillLevel.slice(0,1) + allReport[1].skillLevel.slice(1).toLowerCase() : ""}</span>
+                    <span>
+                      {allReport && allReport[1]
+                        ? allReport[1].skillLevel.slice(0, 1) +
+                          allReport[1].skillLevel.slice(1).toLowerCase()
+                        : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -303,7 +320,12 @@ const TestResult = () => {
                         : ""}
                       %
                     </span>
-                    <span>{allReport && allReport[0] ? allReport[0].skillLevel.slice(0,1) + allReport[0].skillLevel.slice(1).toLowerCase() : ""}</span>
+                    <span>
+                      {allReport && allReport[0]
+                        ? allReport[0].skillLevel.slice(0, 1) +
+                          allReport[0].skillLevel.slice(1).toLowerCase()
+                        : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -330,8 +352,15 @@ const TestResult = () => {
         <img src={arrow} alt="top-arrow" className="top__arrow1" />
         <Container className="w-75 p-5 text-center text-light d-grid gap-5">
           <div>
-            <h1 className="pb-2 h1__hard-skill">Transform Your Career with In-Demand Hard Skills</h1>
-            <p className="w-75 m-auto">Unlock your potential with tailored hard skills training designed for today’s job market. From data analysis to software development, our expert-led courses empower you to excel and stand out.</p>
+            <h1 className="pb-2 h1__hard-skill">
+              Transform Your Career with In-Demand Hard Skills
+            </h1>
+            <p className="w-75 m-auto">
+              Unlock your potential with tailored hard skills training designed
+              for today’s job market. From data analysis to software
+              development, our expert-led courses empower you to excel and stand
+              out.
+            </p>
           </div>
           <div className="pt-4">
             <Link to="/packages">
