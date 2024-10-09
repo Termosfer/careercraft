@@ -23,7 +23,7 @@ import UserProfile from "../pages/UserProfile/UserProfile";
 const PublicRoutes = () => {
   return (
     <PublicLayout>
-      {/* <UserProfile/> */}
+      <UserProfile/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
