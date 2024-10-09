@@ -17,7 +17,7 @@ const TestResult = () => {
   console.log(allReport, "all");
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
-  const [scoreName, setScoreName] = useState("low");
+  const [scoreName, setScoreName] = useState("Low");
   useEffect(() => {
     if (totalReport) {
       if (
@@ -25,10 +25,10 @@ const TestResult = () => {
         totalReport[0].averagePercentageCorrect < 80
       ) {
         setColor("#0f77ff");
-        setScoreName("medium");
+        setScoreName("Medium");
       } else if (totalReport[0].averagePercentageCorrect >= 80) {
         setColor("#094799");
-        setScoreName("high");
+        setScoreName("High");
       }
     }
   }, [totalReport]);
@@ -170,7 +170,6 @@ const TestResult = () => {
             {allReport?.slice(3, 5).map((reports) => {
               const description = data.find(item => item.skillId === reports.skillId)?.description;
               let scoreName;
-
               if (reports.percentageCorrect < 60) {
                 scoreName = "Low"
               } else if (reports.percentageCorrect >= 60 && reports.percentageCorrect < 80) {
