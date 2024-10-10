@@ -12,6 +12,7 @@ import data from "../../data/ssdata.json";
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
+  console.log(totalReport,"ads")
   const allReport = useSelector((state) => state.report.allreport);
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");

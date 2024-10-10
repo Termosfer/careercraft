@@ -5,10 +5,7 @@ import right from "../../assets/TestResultsOneImg/right-arrow.png";
 import left from "../../assets/TestResultsOneImg/left-arrow.png";
 import "./textresulttwo.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getHardSkillReport,
-  getHardSkillReports,
-} from "../../config/authReport";
+import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
 import { Container } from "react-bootstrap";
 
 const TestResultsTwo = () => {
@@ -46,9 +43,8 @@ const TestResultsTwo = () => {
             <div
               key={index}
               ref={(el) => (skillRefs.current[index] = el)}
-              className={`skillNames__1 ${
-                index === activeIndex ? "skillNames-active" : ""
-              }`}
+              className={`skillNames__1 ${index === activeIndex ? "skillNames-active" : ""
+                }`}
               onClick={() => setActiveIndex(index)}
             >
               {skill.skillName}
