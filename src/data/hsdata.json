@@ -1,18 +1,18 @@
 [
     {
-        "skillId": 6,
+        "skillId": 13,
         "description": "The ability to gather and analyze data to uncover insights and identify opportunities for innovation."
     },
     {
-        "skillId": 7,
+        "skillId": 11,
         "description": "The skill to interpret data related to product performance and user behavior to inform strategic decisions."
     },
     {
-        "skillId": 8,
+        "skillId": 14,
         "description": "The capability to develop strategies and roadmaps for product development and market entry."
     },
     {
-        "skillId": 9,
+        "skillId": 12,
         "description": "Enhancing customer satisfaction and loyalty."
     },
     {
@@ -20,19 +20,19 @@
         "description": "Knowledge of industry trends, market dynamics, and competitive landscape to drive strategic decisions."
     },
     {
-        "skillId":11,
+        "skillId":9,
         "description": "Developing business models and understanding economic impacts."
     },
     {
-        "skillId": 12,
+        "skillId": 8,
         "description": "The skill to create and execute strategies for promoting products and driving sales growth."
     },
     {
-        "skillId": 13,
+        "skillId": 7,
         "description": "The ability to create functional and aesthetically pleasing product designs that meet user needs."
     },
     {
-        "skillId": 14,
+        "skillId": 6,
         "description": "The skill to manage and execute the development process, ensuring timely and quality product delivery."
     }
 ]
