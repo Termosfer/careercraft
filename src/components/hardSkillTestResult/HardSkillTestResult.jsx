@@ -14,7 +14,7 @@ const HardSkillTestResult = () => {
   const dispatch = useDispatch();
   const { hardSkillRaport, hardSkillRaports } = useSelector((state) => state.report);
   console.log(hardSkillRaports, "asd")
-  console.log(data, "da")
+  console.log(data.table, "da")
   useEffect(() => {
     dispatch(getHardSkillReport());
     dispatch(getHardSkillReports());
@@ -108,7 +108,7 @@ const HardSkillTestResult = () => {
             <tr>
               <th>
                 Hard Skills{" "}
-                <span className="border rounded-pill px-3 py-1">9</span>
+                <span className="border rounded-pill px-3 py-1">{hardSkillRaports?.length}</span>
               </th>
               <th>Current Skill Level</th>
               <th width={420}>Personalized Recommendations</th>
@@ -116,238 +116,22 @@ const HardSkillTestResult = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Research & Discovery</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[7]
-                      ? hardSkillRaports[7].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[7]
-                  ? hardSkillRaports[7].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Focus on conducting longitudinal studies and exploring advanced
-                ethnographic techniques to uncover deeper consumer insights.
-              </td>
-              <td>
-                Apply these techniques in real-world projects, particularly in
-                untapped market segments. Consider collaborating with industry
-                experts to refine your approach.
-              </td>
-            </tr>
-            <tr>
-              <td>Product Analytics</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[5]
-                      ? hardSkillRaports[5].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[5]
-                  ? hardSkillRaports[5].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Enhance your skills in predictive analytics and data
-                storytelling.
-              </td>
-              <td>
-                Integrate advanced analytics tools like Power BI or Looker into
-                your workflow. Participate in online forums or communities to
-                stay updated on best practices.
-              </td>
-            </tr>
-            <tr>
-              <td>Product Planning</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[8]
-                      ? hardSkillRaports[8].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[8]
-                  ? hardSkillRaports[8].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Dive into advanced Agile frameworks and portfolio management.
-              </td>
-              <td>
-                Experiment with lean planning techniques for more flexible,
-                rapid iteration cycles. Share your strategies with peers for
-                feedback and improvement.
-              </td>
-            </tr>
-            <tr>
-              <td>Customer Experience Management</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[6]
-                      ? hardSkillRaports[6].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[6]
-                  ? hardSkillRaports[6].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Create detailed customer journey maps and identify pain points.
-              </td>
-              <td>
-                Run a customer journey workshop with cross-functional teams.
-                Implement feedback loops to continuously improve the customer
-                experience.
-              </td>
-            </tr>
-            <tr>
-              <td>Business Domain</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[4]
-                      ? hardSkillRaports[4].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[4]
-                  ? hardSkillRaports[4].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Deepen your understanding of industry trends and competitive
-                landscape.
-              </td>
-              <td>
-                Stay updated on industry reports and news. Network with
-                professionals in your field to exchange insights and enhance
-                your knowledge.
-              </td>
-            </tr>
-            <tr>
-              <td>Business Model & Economy</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[3]
-                      ? hardSkillRaports[3].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[3]
-                  ? hardSkillRaports[3].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Strengthen your economic analysis and identify revenue streams
-                in emerging markets.
-              </td>
-              <td>
-                Test different business models through case studies or
-                simulations. Analyze how various economic conditions impact
-                these models.
-              </td>
-            </tr>
-            <tr>
-              <td>Sales & Marketing</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[2]
-                      ? hardSkillRaports[2].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[2]
-                  ? hardSkillRaports[2].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Enhance your data-driven marketing tactics and conversion rate
-                optimization.
-              </td>
-              <td>
-                Run A/B tests on your campaigns to refine your messaging. Engage
-                with a mentor to review your strategies and identify new
-                opportunities.
-              </td>
-            </tr>
-            <tr>
-              <td>Product Design</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[1]
-                      ? hardSkillRaports[1].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[1]
-                  ? hardSkillRaports[1].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Explore voice and gesture-based design, focusing on
-                micro-interactions and seamless transitions.
-              </td>
-              <td>
-                Work on VUI projects or design prototypes incorporating AR/VR.
-                Share your designs in design communities to get feedback and
-                refine your approach.
-              </td>
-            </tr>
-            <tr>
-              <td>Development & Delivery</td>
-              <td>
-                <ProgressBar
-                  variant="primary"
-                  now={
-                    hardSkillRaports && hardSkillRaports[0]
-                      ? hardSkillRaports[0].percentageCorrect
-                      : ""
-                  }
-                />
-                {hardSkillRaports && hardSkillRaports[0]
-                  ? hardSkillRaports[0].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
-                  : ""}
-              </td>
-              <td>
-                Gain further exposure to DevOps and CI/CD processes for faster,
-                reliable product delivery.
-              </td>
-              <td>
-                Set up a CI/CD pipeline on a small-scale project and optimize it
-                for faster deployment cycles. Document your process and share
-                insights with your team.
-              </td>
-            </tr>
+            {
+              hardSkillRaports?.map(reports => {
+                const description = data.table.find(item => item.skillId === reports.skillId);
+                return (
+                  <tr key={reports.skillId}>
+                    <td>{reports.skillName}</td>
+                    <td>
+                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
+                      {reports.skillLevel.slice(0,1) + reports.skillLevel.slice(1).toLowerCase()}
+                    </td>
+                    <td>{description.recommendations}</td>
+                    <td>{description.action}</td>
+                  </tr>
+                )
+              })
+            }
           </tbody>
         </Table>
       </Container>
@@ -364,19 +148,19 @@ const HardSkillTestResult = () => {
           <Row>
             {
               hardSkillRaports?.map(raports => {
-                const description = data.find(item=>item.skillId === raports.skillId)?.description;
+                const description = data.skill.find(item => item.skillId === raports.skillId);
                 return (
-                  <Col lg={4} className="mb-3">
+                  <Col lg={4} className="mb-3" key={raports.skillId}>
                     <div className="skills-result-page pb-4">
                       <div className="d-flex flex-column">
                         <p className="fw-bolder">{raports.skillName}</p>
-                        <span>{description}</span>
+                        <span>{description.description}</span>
                       </div>
                       <div className="d-flex flex-column">
-                        <ProgressBar variant="primary" now={raports.percentageCorrect}/>
+                        <ProgressBar variant="primary" now={raports.percentageCorrect} />
                         <div className="d-flex justify-content-between text-primary fw-bolder">
                           <span>{raports.percentageCorrect}%</span>
-                          <span>{raports.skillLevel.slice(0,1) + raports.skillLevel.slice(1).toLowerCase()}</span>
+                          <span>{raports.skillLevel.slice(0, 1) + raports.skillLevel.slice(1).toLowerCase()}</span>
                         </div>
                       </div>
                     </div>

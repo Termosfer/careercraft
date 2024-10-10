@@ -1,38 +1,87 @@
-[
-    {
-        "skillId": 13,
-        "description": "The ability to gather and analyze data to uncover insights and identify opportunities for innovation."
-    },
-    {
-        "skillId": 11,
-        "description": "The skill to interpret data related to product performance and user behavior to inform strategic decisions."
-    },
-    {
-        "skillId": 14,
-        "description": "The capability to develop strategies and roadmaps for product development and market entry."
-    },
-    {
-        "skillId": 12,
-        "description": "Enhancing customer satisfaction and loyalty."
-    },
-    {
-        "skillId": 10,
-        "description": "Knowledge of industry trends, market dynamics, and competitive landscape to drive strategic decisions."
-    },
-    {
-        "skillId":9,
-        "description": "Developing business models and understanding economic impacts."
-    },
-    {
-        "skillId": 8,
-        "description": "The skill to create and execute strategies for promoting products and driving sales growth."
-    },
-    {
-        "skillId": 7,
-        "description": "The ability to create functional and aesthetically pleasing product designs that meet user needs."
-    },
-    {
-        "skillId": 6,
-        "description": "The skill to manage and execute the development process, ensuring timely and quality product delivery."
-    }
-]
+{
+    "skill": [
+        {
+            "skillId": 6,
+            "description": "The skill to manage and execute the development process, ensuring timely and quality product delivery."
+        },
+        {
+            "skillId": 7,
+            "description": "The ability to create functional and aesthetically pleasing product designs that meet user needs."
+        },
+        {
+            "skillId": 8,
+            "description": "The skill to create and execute strategies for promoting products and driving sales growth."
+        },
+        {
+            "skillId": 9,
+            "description": "Developing business models and understanding economic impacts."
+        },
+        {
+            "skillId": 10,
+            "description": "Knowledge of industry trends, market dynamics, and competitive landscape to drive strategic decisions."
+        },
+        {
+            "skillId": 11,
+            "description": "The skill to interpret data related to product performance and user behavior to inform strategic decisions."
+        },
+        {
+            "skillId": 12,
+            "description": "Enhancing customer satisfaction and loyalty."
+        },
+        {
+            "skillId": 13,
+            "description": "The ability to gather and analyze data to uncover insights and identify opportunities for innovation."
+        },
+        {
+            "skillId": 14,
+            "description": "The capability to develop strategies and roadmaps for product development and market entry."
+        }
+    ],
+    "table": [
+        {
+            "skillId": 6,
+            "recommendations": "Gain further exposure to DevOps and CI/CD processes for faster, reliable product delivery.",
+            "action": "Set up a CI/CD pipeline on a small-scale project and optimize it for faster deployment cycles. Document your process and share insights with your team."
+        },
+        {
+            "skillId": 7,
+            "recommendations": "Explore voice and gesture-based design, focusing on micro-interactions and seamless transitions.",
+            "action": "Work on VUI projects or design prototypes incorporating AR/VR. Share your designs in design communities to get feedback and refine your approach."
+        },
+        {
+            "skillId": 8,
+            "recommendations": "Enhance your data-driven marketing tactics and conversion rate optimization.",
+            "action": "Run A/B tests on your campaigns to refine your messaging. Engage with a mentor to review your strategies and identify new opportunities."
+        },
+        {
+            "skillId": 9,
+            "recommendations": "Strengthen your economic analysis and identify revenue streams in emerging markets.",
+            "action": "Test different business models through case studies or simulations. Analyze how various economic conditions impact these models."
+        },
+        {
+            "skillId": 10,
+            "recommendations": "Deepen your understanding of industry trends and competitive landscape.",
+            "action": "Stay updated on industry reports and news. Network with professionals in your field to exchange insights and enhance your knowledge."
+        },
+        {
+            "skillId": 12,
+            "recommendations": "Create detailed customer journey maps and identify pain points.",
+            "action": "Run a customer journey workshop with cross-functional teams. Implement feedback loops to continuously improve the customer experience."
+        },
+        {
+            "skillId": 11,
+            "recommendations": "Enhance your skills in predictive analytics and data storytelling.",
+            "action": "Integrate advanced analytics tools like Power BI or Looker into your workflow. Participate in online forums or communities to stay updated on best practices."
+        },
+        {
+            "skillId": 13,
+            "recommendations": "Focus on conducting longitudinal studies and exploring advanced ethnographic techniques to uncover deeper consumer insights.",
+            "action": "Apply these techniques in real-world projects, particularly in untapped market segments. Consider collaborating with industry experts to refine your approach."
+        },
+        {
+            "skillId": 14,
+            "recommendations": "Dive into advanced Agile frameworks and portfolio management.",
+            "action": "Experiment with lean planning techniques for more flexible, rapid iteration cycles. Share your strategies with peers for feedback and improvement."
+        }
+    ]
+}
