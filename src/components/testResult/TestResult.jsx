@@ -9,12 +9,10 @@ import { Link } from "react-router-dom";
 import { getDownload } from "../../config/download";
 import arrow from "../../assets/img/top-arrow.png";
 import data from "../../data/ssdata.json";
-console.log(data, "data");
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
   const allReport = useSelector((state) => state.report.allreport);
-  console.log(allReport, "all");
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("Low");

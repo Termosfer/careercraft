@@ -9,9 +9,12 @@ import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
 import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
 import { useDispatch, useSelector } from "react-redux";
 import { getDownload } from "../../config/download";
+import data from "../../data/hsdata.json"
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
   const { hardSkillRaport, hardSkillRaports } = useSelector((state) => state.report);
+  console.log(hardSkillRaports, "asd")
+  console.log(data, "da")
   useEffect(() => {
     dispatch(getHardSkillReport());
     dispatch(getHardSkillReports());
@@ -359,336 +362,28 @@ const HardSkillTestResult = () => {
             <span className="text-primary">Professional Domains</span>
           </h1>
           <Row>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Research & Discovery</p>
-                  <span>
-                    The ability to gather and analyze data to uncover insights
-                    and identify opportunities for innovation.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[7]
-                        ? hardSkillRaports[7].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[7]
-                        ? hardSkillRaports[7].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[7]
-                        ? hardSkillRaports[7].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[7].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Product Analytics</p>
-                  <span>
-                    The skill to interpret data related to product performance
-                    and user behavior to inform strategic decisions.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[5]
-                        ? hardSkillRaports[5].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[5]
-                        ? hardSkillRaports[5].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[5]
-                        ? hardSkillRaports[5].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[5].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Product Planning</p>
-                  <span>
-                    The capability to develop strategies and roadmaps for
-                    product development and market entry.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[8]
-                        ? hardSkillRaports[8].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[8]
-                        ? hardSkillRaports[8].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[8]
-                        ? hardSkillRaports[8].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[8].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Customer Experience Management</p>
-                  <span>Enhancing customer satisfaction and loyalty.</span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[6]
-                        ? hardSkillRaports[6].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[6]
-                        ? hardSkillRaports[6].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[6]
-                        ? hardSkillRaports[6].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[6].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Business Domain</p>
-                  <span>
-                    Knowledge of industry trends, market dynamics, and
-                    competitive landscape to drive strategic decisions.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[4]
-                        ? hardSkillRaports[4].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[4]
-                        ? hardSkillRaports[4].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[4]
-                        ? hardSkillRaports[4].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[4].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Business Model & Economy</p>
-                  <span>
-                    Developing business models and understanding economic
-                    impacts.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[3]
-                        ? hardSkillRaports[3].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[3]
-                        ? hardSkillRaports[3].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[3]
-                        ? hardSkillRaports[3].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[3].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Sales & Marketing</p>
-                  <span>
-                    The skill to create and execute strategies for promoting
-                    products and driving sales growth.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[2]
-                        ? hardSkillRaports[2].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[2]
-                        ? hardSkillRaports[2].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[2]
-                        ? hardSkillRaports[2].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[2].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Product Design</p>
-                  <span>
-                    The ability to create functional and aesthetically pleasing
-                    product designs that meet user needs.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[1]
-                        ? hardSkillRaports[1].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[1]
-                        ? hardSkillRaports[1].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[1]
-                        ? hardSkillRaports[1].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[1].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} className="mb-3">
-              <div className="skills-result-page pb-4">
-                <div className="d-flex flex-column">
-                  <p className="fw-bolder">Development & Delivery</p>
-                  <span>
-                    The skill to manage and execute the development process,
-                    ensuring timely and quality product delivery.
-                  </span>
-                </div>
-                <div className="d-flex flex-column">
-                  <ProgressBar
-                    variant="primary"
-                    now={
-                      hardSkillRaports && hardSkillRaports[0]
-                        ? hardSkillRaports[0].percentageCorrect
-                        : ""
-                    }
-                  />
-                  <div className="d-flex justify-content-between text-primary fw-bolder">
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[0]
-                        ? hardSkillRaports[0].percentageCorrect
-                        : ""}
-                      %
-                    </span>
-                    <span>
-                      {hardSkillRaports && hardSkillRaports[0]
-                        ? hardSkillRaports[0].skillLevel
-                          .charAt(0)
-                          .toUpperCase() +
-                        hardSkillRaports[0].skillLevel.slice(1).toLowerCase()
-                        : ""}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Col>
+            {
+              hardSkillRaports?.map(raports => {
+                const description = data.find(item=>item.skillId === raports.skillId)?.description;
+                return (
+                  <Col lg={4} className="mb-3">
+                    <div className="skills-result-page pb-4">
+                      <div className="d-flex flex-column">
+                        <p className="fw-bolder">{raports.skillName}</p>
+                        <span>{description}</span>
+                      </div>
+                      <div className="d-flex flex-column">
+                        <ProgressBar variant="primary" now={raports.percentageCorrect}/>
+                        <div className="d-flex justify-content-between text-primary fw-bolder">
+                          <span>{raports.percentageCorrect}%</span>
+                          <span>{raports.skillLevel.slice(0,1) + raports.skillLevel.slice(1).toLowerCase()}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                )
+              })
+            }
           </Row>
           <div className="d-flex justify-content-center gap-3 pt-5">
             <Link to="/freetest/hard-skill-test-result/testresultstwo">
