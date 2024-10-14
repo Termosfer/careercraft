@@ -84,7 +84,6 @@ const Login = () => {
                     style={{ outline: "none", boxShadow: "none" }}
                     type={show ? "text" : "password"}
                     placeholder="Enter your password"
-                    autoFocus
                     onChange={(e) =>
                       setUserLogged({ ...userLogged, password: e.target.value })
                     }
