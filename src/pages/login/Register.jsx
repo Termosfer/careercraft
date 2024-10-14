@@ -128,6 +128,7 @@ function Register() {
                     onChange={handleChangeName}
                     value={name}
                     className="shadow-none"
+                    autoFocus
                   />
                 </Form.Group>
                 <Form.Group as={Col} md="12" controlId="validationCustom02">

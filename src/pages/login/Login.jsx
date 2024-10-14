@@ -54,7 +54,6 @@ const Login = () => {
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     className="field-input"
-                    style={{ outline: "none", boxShadow: "none" }}
                     type="email"
                     placeholder="Enter your email"
                     autoFocus
@@ -81,7 +80,6 @@ const Login = () => {
                   </Form.Label>
                   <Form.Control
                     className="field-input"
-                    style={{ outline: "none", boxShadow: "none" }}
                     type={show ? "text" : "password"}
                     placeholder="Enter your password"
                     onChange={(e) =>

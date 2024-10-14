@@ -86,7 +86,6 @@ const Contact = () => {
                   className="field__input"
                   type="email"
                   placeholder="example@gmail.com"
-                  autoFocus
                 />
               </Form.Group>
               {<Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
