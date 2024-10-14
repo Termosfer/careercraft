@@ -45,7 +45,7 @@ const Contact = () => {
                 </div>
                 <div className="d-flex flex-column">
                   <span>Phone</span>
-                  <span>+994 000 00 00 00</span>
+                  <span>+994 00 000 00 00</span>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                 <Form.Label className="label">Full Name</Form.Label>
                 <Form.Control
                   className="field__input"
-                  type="email"
+                  type="text"
                   placeholder="Enter full name"
                   autoFocus
 
