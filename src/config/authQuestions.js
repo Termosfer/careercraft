@@ -10,12 +10,13 @@ const initialState = {
   totalCount: null,
   orderValue: null,
   
+
 };
 
+const token = localStorage.getItem("token")
 export const getQuestion = createAsyncThunk(
   "questions/getQuestion",
   async (count) => {
-    const token = localStorage.getItem("token")
     if (token) {
       const response = await axios.get(
         `${baseURL}/questions/${count}`, {
@@ -32,7 +33,6 @@ export const getQuestion = createAsyncThunk(
 
 
 export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount", async () => {
-  const token = localStorage.getItem("token")
   if (token) {
     const response = await axios.get(`${baseURL}/questions/count`, {
       headers: {
@@ -44,8 +44,7 @@ export const getQuestionsCount = createAsyncThunk("questions/getQuestionsCount",
 
 })
 
-export const getAnswer = createAsyncThunk("questions/getAnswer", async(answer) => {
-  const token = localStorage.getItem("token")
+export const getAnswer = createAsyncThunk("questions/getAnswer", async (answer) => {
   if (token) {
     const response = await axios.post(`${baseURL}/user-answers/answer`, answer, {
       headers: {
@@ -89,6 +88,6 @@ const questionsSlice = createSlice({
 
   },
 });
-export const { changeIncrease, currentAnswer, currentAnswerOrderValue, currentAnswerId } = questionsSlice.actions;
 
+export const { changeIncrease, currentAnswer, currentAnswerOrderValue, currentAnswerId } = questionsSlice.actions;
 export default questionsSlice.reducer;

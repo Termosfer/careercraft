@@ -57,7 +57,7 @@ const initialState = {
     raport: null,
     allreport: [],
     loading: false,
-    error: null,
+    error: "",
     hardSkillRaport: null,
     hardSkillRaports: null,
 }
@@ -73,14 +73,14 @@ const authReport = createSlice({
             })
             .addCase(getReports.fulfilled, (state, action) => {
                 state.raport = action.payload,
-                    state.loading = false
-            }).addCase(getReports.rejected, (state, action) => {
-                state.error = action.payload
+                state.loading = false
+            }).addCase(getReports.rejected, (state) => {
+                state.error = "Something is wrong"
             }).addCase(getAllReports.pending, (state) => {
                 state.loading = true
             }).addCase(getAllReports.fulfilled, (state, action) => {
                 state.loading = false,
-                    state.allreport = action.payload
+                state.allreport = action.payload
             }).addCase(getAllReports.rejected, (state) => {
                 state.error = "Something is wrong";
             }).addCase(getHardSkillReport.pending, (state) => {

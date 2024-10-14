@@ -12,31 +12,31 @@ import data from "../../data/ssdata.json";
 const TestResult = () => {
   const dispatch = useDispatch();
   const totalReport = useSelector((state) => state.report.raport);
-  console.log(totalReport, "ads")
   const allReport = useSelector((state) => state.report.allreport);
   const user = useSelector((state) => state.user.username);
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("Low");
-  useEffect(() => {
-    if (totalReport) {
-      if (
-        totalReport[0].averagePercentageCorrect >= 50 &&
-        totalReport[0].averagePercentageCorrect < 80
-      ) {
-        setColor("#0f77ff");
-        setScoreName("Medium");
-      } else if (totalReport.averagePercentageCorrect >= 80) {
-        setColor("#094799");
-        setScoreName("High");
-      }
-    }
-  }, [totalReport]);
+
 
   useEffect(() => {
     dispatch(getReports());
     dispatch(getAllReports());
   }, [dispatch]);
 
+  useEffect(() => {
+    if (totalReport) {
+      if (
+        totalReport[0].averagePercentageCorrect >= 60 &&
+        totalReport[0].averagePercentageCorrect < 80
+      ) {
+        setColor("#0f77ff");
+        setScoreName("Medium");
+      } else if (totalReport[0].averagePercentageCorrect >= 80) {
+        setColor("#094799");
+        setScoreName("High");
+      }
+    }
+  }, [totalReport]);
   const onButtonClick = () => {
     dispatch(getDownload(1));
   };
@@ -79,14 +79,12 @@ const TestResult = () => {
             <div className="right-side">
               <div className="w-75 text-center">
                 <span className="fw-bold fs-5">YOUR OVERALL SCORE</span>
-                {totalReport?.map(result => (
-                  <h1 style={{ color: `${color}` }} key={result.categoryId}>
-                    {result.averagePercentageCorrect}%
+                  <h1 style={{ color: `${color}` }}>
+                    {totalReport && totalReport[0].averagePercentageCorrect}%
                   </h1>
 
-                ))}
                 <ProgressBar
-                  now={totalReport && totalReport[0].averagePercentageCorrect}
+                  now={totalReport && totalReport[0]?.averagePercentageCorrect}
                   className="w-75  mx-auto progressbar-test"
                 />
               </div>

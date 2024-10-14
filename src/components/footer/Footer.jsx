@@ -1,28 +1,21 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import "./style.css";
+import {Container, Row, Col} from "react-bootstrap/";
+import "./footer.css";
 import logo from "../../assets/img/footerLogo.png";
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div style={{ background: "#ffffff" }} className="py-4 footer">
       <Container className="w-75 p-5">
         <Row>
           <Col xs={12} md={12} lg={3} className="mb-4 mb-md-3">
-            <div className="d-flex flex-column align-items-lg-start align-items-md-center align-items-center pt-2">
+            <div className="d-flex flex-column align-items-lg-start align-items-md-center align-items-center ">
               <img src={logo} className="logo mb-3" alt="logo" />
               <div
-                className=" text-md-start text-nowrap"
+                className="text-md-start text-nowrap"
                 style={{ color: "#838383" }}
               >
                 <p className="my-0 ">Empowering Growth Through</p>
@@ -32,11 +25,11 @@ const Footer = () => {
                 className="d-flex justify-content-lg-between justify-content-md-center justify-content-between gap-md-4 gap-4 text-nowrap"
                 style={{ color: "#0F77FF" }}
               >
-                <FaFacebookF className="" />
-                <FaTwitter className="" />
-                <FaInstagram className="" />
-                <FaLinkedinIn className="" />
-                <FaYoutube className="" />
+                <Link><FaFacebookF className="" /></Link>
+                <Link><FaTwitter className="" /></Link>
+                <Link><FaInstagram className="" /></Link>
+                <Link><FaLinkedinIn className="" /></Link>
+                <Link><FaYoutube className="" /></Link>
               </div>
             </div>
           </Col>
@@ -48,11 +41,11 @@ const Footer = () => {
               <h4 className="mb-4" style={{ color: "#0F77FF" }}>
                 Product
               </h4>
-              <span>Features</span>
-              <span>Pricing</span>
-              <span>Case Studies</span>
-              <span>Reviews</span>
-              <span>Updates</span>
+              <Link>Features</Link>
+              <Link>Pricing</Link>
+              <Link>Case Studies</Link>
+              <Link>Reviews</Link>
+              <Link>Updates</Link>
             </div>
           </Col>
           <Col xs={12} md={6} lg={2} className="mb-4 mb-md-0">
@@ -63,9 +56,9 @@ const Footer = () => {
               <h4 className="mb-4" style={{ color: "#0F77FF" }}>
                 Company
               </h4>
-              <span>About</span>
-              <span>Contact us</span>
-              <span>Blog</span>
+              <Link>About</Link>
+              <Link>Contact us</Link>
+              <Link>Blog</Link>
             </div>
           </Col>
           <Col xs={12} md={6} lg={2} className="mb-4 mb-md-0">
@@ -76,10 +69,10 @@ const Footer = () => {
               <h4 className="mb-4" style={{ color: "#0F77FF" }}>
                 Support
               </h4>
-              <span>Getting Started</span>
-              <span>Help Center</span>
-              <span>Report a bug</span>
-              <span>Chat support</span>
+              <Link>Getting Started</Link>
+              <Link>Help Center</Link>
+              <Link>Report a bug</Link>
+              <Link>Chat support</Link>
             </div>
           </Col>
           <Col xs={12} md={6} lg={3} className="mb-4 mb-md-0">
@@ -90,15 +83,15 @@ const Footer = () => {
               <h4 className="mb-4" style={{ color: "#0F77FF" }}>
                 Contact us
               </h4>
-              <span>
+              <Link>
                 <CiMail /> contact@company.com
-              </span>
-              <span>
+              </Link>
+              <Link>
                 <BsTelephone /> (+994)000 00 00
-              </span>
-              <span>
+              </Link>
+              <Link>
                 <CiLocationOn /> Baku, Azerbaijan
-              </span>
+              </Link>
             </div>
           </Col>
         </Row>
