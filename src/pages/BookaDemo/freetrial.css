@@ -14,7 +14,9 @@
   height: 100%;
   background-color: rgba(15, 119, 255, 0.25);
 }
-
+.bg-freetrial{
+  background-color: #f8f8f8;
+}
 .text-position {
   position: absolute;
   color: #fff;
