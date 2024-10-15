@@ -70,7 +70,7 @@ const Contact = () => {
               id="login__f"
             >
               <h2 className="login-header">Let’s Chat, Reach Out to Us</h2>
-              <Form.Group className="mb-2" controlId="formEmail">
+              <Form.Group className="mb-2">
                 <Form.Label className="label">Full Name</Form.Label>
                 <Form.Control
                   className="field__input"
@@ -80,7 +80,7 @@ const Contact = () => {
 
                 />
               </Form.Group>
-              < className="" controlId="formEmail">
+              <Form.Group>
                 <Form.Label className="label">Email</Form.Label>
                 <Form.Control
                   className="field__input"

@@ -6,6 +6,7 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { changeConfirmPass, changeNewPass } from "../../config/authSlice";
 import { resetPass } from "../../config/authLogin";
+import "./resetpass.css"
 const ResetPass = () => {
   const [show1, setShow1] = useState(false); // Şifre görünürlüğünü kontrol eden state
   const [show, setShow] = useState(false); // Şifre görünürlüğünü kontrol eden state
@@ -110,9 +111,8 @@ const ResetPass = () => {
                 </Form.Label>
                 <Form.Control
                   className="field-input"
-                  style={{ outline: "none", boxShadow: "none" }}
                   type={show1 ? "text" : "password"}
-                  placeholder="Enter your password"
+                  placeholder="new password"
                   autoFocus
                   onChange={changenewPass}
                 />
@@ -135,13 +135,10 @@ const ResetPass = () => {
                 <Form.Control
                   className="field-input"
                   style={{
-                    outline: "none",
-                    boxShadow: "none",
                     borderColor: active ? "#dee2e6" : "red",
                   }}
                   type={show ? "text" : "password"}
-                  placeholder="Enter your password"
-                  autoFocus
+                  placeholder="confirm password"
                   onChange={changeconfirmPass}
                 />
                 {active ? (
@@ -165,15 +162,8 @@ const ResetPass = () => {
               </div>
               <div className="d-flex align-items-center justify-content-around">
                 <Form.Control
-                  className="field-input text-center"
-                  style={{
-                    outline: "none",
-                    boxShadow: "none",
-                    width: "50px",
-                    height: "50px",
-                  }}
+                  className="field-input text-center max__input"
                   type="text"
-                  autoFocus
                   maxLength={1}
                   onChange={(e) => {
                     setInputs({ ...inputs, input1: e.target.value });
@@ -183,15 +173,8 @@ const ResetPass = () => {
                   value={inputs.input1}
                 />
                 <Form.Control
-                  className="field-input text-center"
-                  style={{
-                    outline: "none",
-                    boxShadow: "none",
-                    width: "50px",
-                    height: "50px",
-                  }}
+                  className="field-input text-center  max__input"
                   type="text"
-                  autoFocus
                   maxLength={1}
                   onChange={(e) => {
                     setInputs({ ...inputs, input2: e.target.value });
@@ -201,16 +184,8 @@ const ResetPass = () => {
                   value={inputs.input2}
                 />
                 <Form.Control
-                  className="field-input text-center"
-                  style={{
-                    outline: "none",
-                    boxShadow: "none",
-                    width: "50px",
-                    height: "50px",
-                  }}
+                  className="field-input text-center  max__input"
                   type="text"
-                  placeholder=""
-                  autoFocus
                   maxLength={1}
                   onChange={(e) => {
                     setInputs({ ...inputs, input3: e.target.value });
@@ -220,16 +195,8 @@ const ResetPass = () => {
                   value={inputs.input3}
                 />
                 <Form.Control
-                  className="field-input text-center"
-                  style={{
-                    outline: "none",
-                    boxShadow: "none",
-                    width: "50px",
-                    height: "50px",
-                  }}
+                  className="field-input text-center  max__input"
                   type="text"
-                  placeholder=""
-                  autoFocus
                   maxLength={1}
                   onChange={(e) => {
                     setInputs({ ...inputs, input4: e.target.value });
@@ -241,7 +208,7 @@ const ResetPass = () => {
               </div>
 
               <Button
-                /* onClick={handleLogin} */ type="submit"
+                type="submit"
                 className="w-100 log-btn"
                 variant="primary"
               >
