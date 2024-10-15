@@ -80,14 +80,14 @@ const Contact = () => {
 
                 />
               </Form.Group>
-              <Form.Group className="" controlId="formEmail">
+              < className="" controlId="formEmail">
                 <Form.Label className="label">Email</Form.Label>
                 <Form.Control
                   className="field__input"
                   type="email"
                   placeholder="example@gmail.com"
                 />
-              </Form.Group>
+              </>
               {<Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="label">Message</Form.Label>
                 <Form.Control
