@@ -6,23 +6,27 @@ import star from "../../assets/img/star.png";
 import { Gauge, gaugeClasses } from "@mui/x-charts";
 import { Link } from "react-router-dom";
 import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
-import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
 import { useDispatch, useSelector } from "react-redux";
 import { getDownload } from "../../config/download";
 import data from "../../data/hsdata.json"
+import { getAllReports, getReports } from "../../config/authReport";
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
-  const { hardSkillRaport, hardSkillRaports } = useSelector((state) => state.report);
-  console.log(hardSkillRaports, "asd")
-  console.log(data.table, "da")
+  const allReport = useSelector((state) => state.report.allreport);
+  const totalReport = useSelector((state) => state.report.raport);
+  console.log(totalReport, "total")
+  console.log(allReport, "asd")
   useEffect(() => {
-    dispatch(getHardSkillReport());
-    dispatch(getHardSkillReports());
+    const fetch = async () => {
+      await dispatch(getReports(2));
+      await dispatch(getAllReports(2));
+    }
+    fetch()
   }, [dispatch]);
   const onButtonClick = () => {
     dispatch(getDownload(2))
   };
-  const value = hardSkillRaport && hardSkillRaport[0] ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0) : "";
+  const value = totalReport && totalReport[0] ? totalReport[0].averagePercentageCorrect.toFixed(0) : "";
 
   return (
     <>
@@ -34,13 +38,13 @@ const HardSkillTestResult = () => {
             <span>
               Your overall score is{" "}
               <span className="text-primary fw-bolder">
-                {hardSkillRaport && hardSkillRaport[0]
-                  ? hardSkillRaport[0].averagePercentageCorrect.toFixed(0)
+                {totalReport && totalReport[0]
+                  ? totalReport[0].averagePercentageCorrect.toFixed(0)
                   : ""}
                 % (
-                {hardSkillRaport && hardSkillRaport[0]
-                  ? hardSkillRaport[0].skillLevel.charAt(0).toUpperCase() +
-                  hardSkillRaport[0].skillLevel.slice(1).toLowerCase()
+                {totalReport && totalReport[0]
+                  ? totalReport[0].skillLevel.slice(0, 1) +
+                  totalReport[0].skillLevel.slice(1).toLowerCase()
                   : ""}
                 )
               </span>
@@ -59,7 +63,7 @@ const HardSkillTestResult = () => {
                 width={400}
                 height={170}
                 value={value}
-                formatValue={(value) => `${value}%`}
+                /* formatValue={(value) => `${value}%`} */
                 startAngle={-90}
                 endAngle={90}
                 sx={{
@@ -83,7 +87,7 @@ const HardSkillTestResult = () => {
             levels against industry averages. This helps you understand where
             you stand and identify areas for further development.
           </p>
-          <ChartAxe hardSkillRaports={hardSkillRaports} />
+          <ChartAxe allReport={allReport} />
           <div className="star-div d-flex align-items-center justify-content-center border mx-auto rounded mt-4 py-2 px-1 gap-1">
             <img src={star} width={20} height={20} alt="star" />
             <span>
@@ -96,7 +100,7 @@ const HardSkillTestResult = () => {
       </Container>
       <div className=" d-flex flex-column align-items-center">
         <h2 className="text-center pt-5">Here’s Your Results...</h2>
-        <HardSkillRadarChart allReport={hardSkillRaports} />
+        <HardSkillRadarChart allReport={allReport} />
       </div>
       <Container className="p-5">
         <h1 className="text-center pb-5">
@@ -108,7 +112,7 @@ const HardSkillTestResult = () => {
             <tr>
               <th>
                 Hard Skills{" "}
-                <span className="border rounded-pill px-3 py-1">{hardSkillRaports?.length}</span>
+                <span className="border rounded-pill px-3 py-1">{allReport?.length}</span>
               </th>
               <th>Current Skill Level</th>
               <th width={420}>Personalized Recommendations</th>
@@ -117,17 +121,17 @@ const HardSkillTestResult = () => {
           </thead>
           <tbody>
             {
-              hardSkillRaports?.map(reports => {
+              allReport?.map(reports => {
                 const description = data.table.find(item => item.skillId === reports.skillId);
                 return (
                   <tr key={reports.skillId}>
                     <td>{reports.skillName}</td>
                     <td>
                       <ProgressBar variant="primary" now={reports.percentageCorrect} />
-                      {reports.skillLevel.slice(0,1) + reports.skillLevel.slice(1).toLowerCase()}
+                      {reports.skillLevel.slice(0, 1) + reports.skillLevel.slice(1).toLowerCase()}
                     </td>
-                    <td>{description.recommendations}</td>
-                    <td>{description.action}</td>
+                    <td>{description?.recommendations}</td>
+                    <td>{description?.action}</td>
                   </tr>
                 )
               })
@@ -147,20 +151,21 @@ const HardSkillTestResult = () => {
           </h1>
           <Row>
             {
-              hardSkillRaports?.map(raports => {
-                const description = data.skill.find(item => item.skillId === raports.skillId);
+              allReport?.map(reports => {
+                const description = data.skill.find(item => item.skillId === reports.skillId);
+                console.log(description,"asdfg")
                 return (
-                  <Col lg={4} className="mb-3" key={raports.skillId}>
+                  <Col lg={4} className="mb-3" key={reports.skillId}>
                     <div className="skills-result-page pb-4">
                       <div className="d-flex flex-column">
-                        <p className="fw-bolder">{raports.skillName}</p>
-                        <span>{description.description}</span>
+                        <p className="fw-bolder">{reports.skillName}</p>
+                        <span>{description?.description}</span>
                       </div>
                       <div className="d-flex flex-column">
-                        <ProgressBar variant="primary" now={raports.percentageCorrect} />
+                        <ProgressBar variant="primary" now={reports.percentageCorrect} />
                         <div className="d-flex justify-content-between text-primary fw-bolder">
-                          <span>{raports.percentageCorrect}%</span>
-                          <span>{raports.skillLevel.slice(0, 1) + raports.skillLevel.slice(1).toLowerCase()}</span>
+                          <span>{reports.percentageCorrect}%</span>
+                          <span>{reports.skillLevel.slice(0, 1) + reports.skillLevel.slice(1).toLowerCase()}</span>
                         </div>
                       </div>
                     </div>

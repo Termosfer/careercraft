@@ -182,7 +182,7 @@ const Profile = () => {
                 Unlock detailed insights on your technical skills and
                 professional growth.
               </p>
-              <Link to="/freetest/hard-skill-test-result">
+              <Link to="/packages">
                 <Button
                   type="submit"
                   variant="primary"

@@ -4,7 +4,7 @@ import CanvasJSReact from "@canvasjs/react-charts";
 const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const ChartAxe = ({hardSkillRaports}) => {
+const ChartAxe = ({allReport}) => {
 
   const options = {
     animationEnabled: true,
@@ -44,15 +44,15 @@ const ChartAxe = ({hardSkillRaports}) => {
         yValueFormatString: "",
         color: "rgba(15, 119, 255, 0.3)",
         dataPoints: [
-          { label: "Research & Discovery", y: hardSkillRaports && hardSkillRaports[7] ? hardSkillRaports[7].percentageCorrect : "" },
-          { label: "Product Analytics", y: hardSkillRaports && hardSkillRaports[5] ? hardSkillRaports[5].percentageCorrect : "" },
-          { label: "Product Planning", y: hardSkillRaports && hardSkillRaports[8] ? hardSkillRaports[8].percentageCorrect : "" },
-          { label: "Customer Experience Management", y: hardSkillRaports && hardSkillRaports[6] ? hardSkillRaports[6].percentageCorrect : "" },
-          { label: "Business Domain", y: hardSkillRaports && hardSkillRaports[4] ? hardSkillRaports[4].percentageCorrect : "" },
-          { label: "Business Model & Economy", y: hardSkillRaports && hardSkillRaports[3] ? hardSkillRaports[3].percentageCorrect : "" },
-          { label: "Sales & Marketing", y: hardSkillRaports && hardSkillRaports[2] ? hardSkillRaports[2].percentageCorrect : "" },
-          { label: "Product Design", y: hardSkillRaports && hardSkillRaports[1] ? hardSkillRaports[1].percentageCorrect : "" },
-          { label: "Development & Delivery", y: hardSkillRaports && hardSkillRaports[0] ? hardSkillRaports[0].percentageCorrect : "" },
+          { label: "Research & Discovery", y: allReport && allReport[7] ? allReport[7].percentageCorrect : "" },
+          { label: "Product Analytics", y: allReport && allReport[5] ? allReport[5].percentageCorrect : "" },
+          { label: "Product Planning", y: allReport && allReport[8] ? allReport[8].percentageCorrect : "" },
+          { label: "Customer Experience Management", y: allReport && allReport[6] ? allReport[6].percentageCorrect : "" },
+          { label: "Business Domain", y: allReport && allReport[4] ? allReport[4].percentageCorrect : "" },
+          { label: "Business Model & Economy", y: allReport && allReport[3] ? allReport[3].percentageCorrect : "" },
+          { label: "Sales & Marketing", y: allReport && allReport[2] ? allReport[2].percentageCorrect : "" },
+          { label: "Product Design", y: allReport && allReport[1] ? allReport[1].percentageCorrect : "" },
+          { label: "Development & Delivery", y: allReport && allReport[0] ? allReport[0].percentageCorrect : "" },
         ],
       },
     ],

@@ -17,10 +17,10 @@ const TestResult = () => {
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("Low");
 
-
+console.log(totalReport,"asd")
   useEffect(() => {
-    dispatch(getReports());
-    dispatch(getAllReports());
+    dispatch(getReports(1));
+    dispatch(getAllReports(1));
   }, [dispatch]);
 
   useEffect(() => {

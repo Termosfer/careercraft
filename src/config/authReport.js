@@ -5,9 +5,9 @@ import { baseURL } from "./api";
 
 
 const token = localStorage.getItem("token")
-export const getReports = createAsyncThunk("raport", async () => {
+export const getReports = createAsyncThunk("raport", async (value) => {
     if (token) {
-        const response = await axios.get(`${baseURL}/reports?categoryId=1`, {
+        const response = await axios.get(`${baseURL}/reports?categoryId=${value}`, {
 
             headers: {
                 Authorization: `Bearer ${token}`
@@ -18,9 +18,9 @@ export const getReports = createAsyncThunk("raport", async () => {
 
 })
 
-export const getAllReports = createAsyncThunk('allreport', async () => {
+export const getAllReports = createAsyncThunk('allreport', async (value) => {
     if (token) {
-        const response = await axios.get(`${baseURL}/reports/category/1`, {
+        const response = await axios.get(`${baseURL}/reports/category/${value}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -28,38 +28,13 @@ export const getAllReports = createAsyncThunk('allreport', async () => {
         return response.data
     }
 })
-export const getHardSkillReport = createAsyncThunk("hardSkillReport", async () => {
-    if (token) {
-        const response = await axios.get(`${baseURL}/reports?categoryId=2`, {
-
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        return response.data
-    }
-
-})
-
-export const getHardSkillReports = createAsyncThunk('hardSkillReports', async () => {
-    if (token) {
-        const response = await axios.get(`${baseURL}/reports/category/2`, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-        return response.data
-    }
-})
-
 
 const initialState = {
     raport: null,
     allreport: [],
     loading: false,
     error: "",
-    hardSkillRaport: null,
-    hardSkillRaports: null,
+    
 }
 
 const authReport = createSlice({
@@ -82,20 +57,6 @@ const authReport = createSlice({
                 state.loading = false,
                 state.allreport = action.payload
             }).addCase(getAllReports.rejected, (state) => {
-                state.error = "Something is wrong";
-            }).addCase(getHardSkillReport.pending, (state) => {
-                state.loading = true;
-            }).addCase(getHardSkillReport.fulfilled, (state, action) => {
-                state.loading = false;
-                state.hardSkillRaport = action.payload
-            }).addCase(getHardSkillReport.rejected, (state) => {
-                state.error = "Something is wrong";
-            }).addCase(getHardSkillReports.pending, (state) => {
-                state.loading = true;
-            }).addCase(getHardSkillReports.fulfilled, (state, action) => {
-                state.loading = false;
-                state.hardSkillRaports = action.payload
-            }).addCase(getHardSkillReports.rejected, (state) => {
                 state.error = "Something is wrong";
             })
     }

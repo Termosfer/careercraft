@@ -5,8 +5,9 @@ import right from "../../assets/TestResultsOneImg/right-arrow.png";
 import left from "../../assets/TestResultsOneImg/left-arrow.png";
 import "./textresulttwo.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getHardSkillReport, getHardSkillReports } from "../../config/authReport";
+/* import { getHardSkillReport, getHardSkillReports } from "../../config/authReport"; */
 import { Container } from "react-bootstrap";
+import { getAllReports, getReports } from "../../config/authReport";
 
 const TestResultsTwo = () => {
   const dispatch = useDispatch();
@@ -15,8 +16,10 @@ const TestResultsTwo = () => {
   const skillRefs = useRef([]);
 
   useEffect(() => {
-    dispatch(getHardSkillReport());
-    dispatch(getHardSkillReports());
+   /*  dispatch(getHardSkillReport());
+    dispatch(getHardSkillReports()); */
+    /* dispatch(getReports(2));
+    dispatch(getAllReports(2)); */
   }, [dispatch]);
 
   useEffect(() => {
