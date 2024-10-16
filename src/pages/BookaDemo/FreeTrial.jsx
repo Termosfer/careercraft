@@ -18,18 +18,21 @@ const FreeTrial = () => {
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
+
   useEffect(() => {
-      if (count <= 70) {
-        dispatch(getQuestion(count));
-        dispatch(getQuestionsCount());
-      } else {
-        navigate("/freetest/test-result")
-      }
+    const bool = localStorage.getItem("bool");
+    if (bool === "false") {
+      navigate("/freetest/test-result");
+    } else if (count <= 70) {
+      dispatch(getQuestion(count));
+      dispatch(getQuestionsCount());
+    } else {
+      navigate("/freetest/test-result");
+    }
+  }, [dispatch, count, navigate]);
 
-  }, [dispatch, count, totalCount]);
 
 
-  
   useEffect(() => {
     if (question) {
       const progressPercentage = Math.round((question.id / totalCount) * 100);
@@ -46,7 +49,11 @@ const FreeTrial = () => {
       const answer = { orderValue, questionId: question.id };
       await dispatch(getAnswer(answer));
       await dispatch(changeIncrease());
-      
+      if (count === totalCount) {
+        localStorage.setItem("bool", false)
+        navigate("/freetest/test-result")
+      }
+
     }
     if (loading)
       return (
@@ -112,29 +119,13 @@ const FreeTrial = () => {
                 ))}
               </ul>
               <div className="text-center">
-                {
-                  count < totalCount ? (
-                    <Button
-                      type="submit"
-                      style={{ background: "#0F77FF" }}
-                      className="px-5 fs-6"
-                    >
-                      {/* {button} */}
-                      Next
-                    </Button>
-                  ) : (
-                    <Button
-                      type="submit"
-                      style={{ background: "#0F77FF" }}
-                      className="px-5 fs-6"
-                    >
-                      {/* <Link to="/freetest/test-result" style={{ textDecoration: "none", color: "white" }}>
-                      </Link> */}
-                      Finish
-                    </Button>
-                  )
-                }
-
+                <Button
+                  type="submit"
+                  style={{ background: "#0F77FF" }}
+                  className="px-5 fs-6"
+                >
+                  {count < totalCount ? "Next" : "Finish"}
+                </Button>
               </div>
             </Form>
           </div>
