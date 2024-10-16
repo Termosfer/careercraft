@@ -54,6 +54,7 @@ export const resetPass = createAsyncThunk(
 
 export const logout = createAsyncThunk("auth/logout", async () => {
   localStorage.removeItem("token");
+  localStorage.removeItem("bool")
 });
 
 const authLogin = createSlice({
