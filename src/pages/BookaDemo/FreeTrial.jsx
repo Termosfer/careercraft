@@ -8,29 +8,32 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
 import { Link, useNavigate } from "react-router-dom";
+import { getAllReports, getReports } from "../../config/authReport";
 
 const FreeTrial = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
-  const [button, setButton] = useState("Next");
   const count = useSelector((state) => state.questions.value);
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
+  localStorage.setItem("check", false)
   useEffect(() => {
-    if (count < totalCount) {
-      setButton("Next");
-    } else if (count === totalCount) {
-      setButton("Finish");
+    const active = localStorage.getItem("check") === "false";
+    if (!active) {
+      if (count <= 70) {
+        dispatch(getQuestion(count));
+        dispatch(getQuestionsCount());
+      } else {
+        navigate("/freetest/test-result")
+      }
     }
-  }, [count]);
 
-  useEffect(() => {
-    dispatch(getQuestion(count));
-    dispatch(getQuestionsCount());
-  }, [dispatch, count]);
+  }, [dispatch, count, totalCount]);
 
+
+  
   useEffect(() => {
     if (question) {
       const progressPercentage = Math.round((question.id / totalCount) * 100);
@@ -47,11 +50,10 @@ const FreeTrial = () => {
       const answer = { orderValue, questionId: question.id };
       await dispatch(getAnswer(answer));
       await dispatch(changeIncrease());
-      if (button === "Finish") {
-        navigate("/freetest/test-result");
+      if (count == 70) {
+        localStorage.setItem("check", true); 
       }
     }
-
     if (loading)
       return (
         <div className="">
@@ -86,22 +88,22 @@ const FreeTrial = () => {
         </Container>
       </div>
       <div className="bg-freetrial">
-      <div className="progress-div">
-        <ProgressBar variant="primary" now={progress} />
-      </div>
+        <div className="progress-div">
+          <ProgressBar variant="primary" now={progress} />
+        </div>
 
         <Container className="w-75 px-5 py-4 mt-5">
           <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
-            <span style={{ color: "#0F77FF" }}>Question {question.id}</span> Out
+            <span style={{ color: "#0F77FF" }}>Question {question?.id}</span> Out
             of <span>{totalCount}</span>
           </h2>
           <div>
-            <h2 className="text-center my-5 fw-semibold" key={question.id}>
-              {question.text}
+            <h2 className="text-center my-5 fw-semibold" key={question?.id}>
+              {question?.text}
             </h2>
             <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
               <ul className="list-unstyled">
-                {question.answers?.map((answer) => (
+                {question && question.answers?.map((answer) => (
                   <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
                     <input
                       value={answer.orderValue}
@@ -116,13 +118,29 @@ const FreeTrial = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <Button
-                  type="submit"
-                  style={{ background: "#0F77FF" }}
-                  className="px-5 fs-6"
-                >
-                  {button}
-                </Button>
+                {
+                  count < totalCount ? (
+                    <Button
+                      type="submit"
+                      style={{ background: "#0F77FF" }}
+                      className="px-5 fs-6"
+                    >
+                      {/* {button} */}
+                      Next
+                    </Button>
+                  ) : (
+                    <Button
+                      type="submit"
+                      style={{ background: "#0F77FF" }}
+                      className="px-5 fs-6"
+                    >
+                      {/* <Link to="/freetest/test-result" style={{ textDecoration: "none", color: "white" }}>
+                      </Link> */}
+                      Finish
+                    </Button>
+                  )
+                }
+
               </div>
             </Form>
           </div>

@@ -17,11 +17,8 @@ const HardSkillTestResult = () => {
   console.log(totalReport, "total")
   console.log(allReport, "asd")
   useEffect(() => {
-    const fetch = async () => {
-      await dispatch(getReports(2));
-      await dispatch(getAllReports(2));
-    }
-    fetch()
+     dispatch(getReports(2));
+     dispatch(getAllReports(2));
   }, [dispatch]);
   const onButtonClick = () => {
     dispatch(getDownload(2))
@@ -153,7 +150,6 @@ const HardSkillTestResult = () => {
             {
               allReport?.map(reports => {
                 const description = data.skill.find(item => item.skillId === reports.skillId);
-                console.log(description,"asdfg")
                 return (
                   <Col lg={4} className="mb-3" key={reports.skillId}>
                     <div className="skills-result-page pb-4">
