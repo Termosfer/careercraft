@@ -18,17 +18,13 @@ const FreeTrial = () => {
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
-  localStorage.setItem("check", false)
   useEffect(() => {
-    const active = localStorage.getItem("check") === "false";
-    if (!active) {
       if (count <= 70) {
         dispatch(getQuestion(count));
         dispatch(getQuestionsCount());
       } else {
         navigate("/freetest/test-result")
       }
-    }
 
   }, [dispatch, count, totalCount]);
 
@@ -50,9 +46,7 @@ const FreeTrial = () => {
       const answer = { orderValue, questionId: question.id };
       await dispatch(getAnswer(answer));
       await dispatch(changeIncrease());
-      if (count == 70) {
-        localStorage.setItem("check", true); 
-      }
+      
     }
     if (loading)
       return (
