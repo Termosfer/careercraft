@@ -3,13 +3,13 @@ import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap
 import "./hardskill.css";
 import ChartAxe from "../chartAxe/ChartAxe";
 import star from "../../assets/img/star.png";
-import { Gauge, gaugeClasses } from "@mui/x-charts";
 import { Link } from "react-router-dom";
 import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
 import { useDispatch, useSelector } from "react-redux";
 import { getDownload } from "../../config/download";
 import data from "../../data/hsdata.json"
 import { getAllReports, getReports } from "../../config/authReport";
+import SemiCircleChart from "../semiCircleChart/SemiCircleChart";
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
   const allReport = useSelector((state) => state.report.allreport);
@@ -17,20 +17,29 @@ const HardSkillTestResult = () => {
   console.log(totalReport, "total")
   console.log(allReport, "asd")
   useEffect(() => {
-     dispatch(getReports(2));
-     dispatch(getAllReports(2));
+    dispatch(getReports(2));
+    dispatch(getAllReports(2));
   }, [dispatch]);
   const onButtonClick = () => {
     dispatch(getDownload(2))
   };
-  const value = totalReport && totalReport[0] ? totalReport[0].averagePercentageCorrect.toFixed(0) : "";
+  const value = totalReport && totalReport[0]?.averagePercentageCorrect;
+  const dataa = {
+    "initial": {
+      "value": 2
+    },
+    "remaining": {
+      "value": value
+    },
 
+  };
   return (
     <>
+
       <Container className="w-75 px-5">
         <h1 className="text-center py-5">Your Detailed Hard Skills Results</h1>
-        <Row className="pb-5">
-          <Col lg={7}>
+        <Row className="pb-5 ">
+          <Col lg={7} style={{ fontSize: "18px" }}>
             <p>Congratulations! </p>
             <span>
               Your overall score is{" "}
@@ -54,23 +63,11 @@ const HardSkillTestResult = () => {
             <p className="mt-3">Keep up the great work! 🌟</p>
           </Col>
           <Col lg={5}>
-            <div className="">
+            <div className="semicirc">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <Gauge
-                width={400}
-                height={170}
-                value={value}
-                /* formatValue={(value) => `${value}%`} */
-                startAngle={-90}
-                endAngle={90}
-                sx={{
-                  [`& .${gaugeClasses.valueText}`]: {
-                    fontSize: 50,
-                    transform: "translate(0px, -40px)",
-                    fontWeight: "bold",
-                  },
-                }}
-              />
+              <SemiCircleChart /* min={0} */
+                max={dataa.initial.value}
+                value={dataa.remaining.value} />
             </div>
           </Col>
         </Row>
@@ -182,6 +179,7 @@ const HardSkillTestResult = () => {
           </div>
         </Container>
       </div>
+
     </>
   );
 };

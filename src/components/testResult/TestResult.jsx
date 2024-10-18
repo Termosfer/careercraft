@@ -80,7 +80,7 @@ console.log(totalReport,"asd")
               <div className="w-75 text-center">
                 <span className="fw-bold fs-5">YOUR OVERALL SCORE</span>
                   <h1 style={{ color: `${color}` }}>
-                    {totalReport && totalReport[0].averagePercentageCorrect}%
+                    {totalReport && totalReport[0].averagePercentageCorrect.toFixed(0)}%
                   </h1>
 
                 <ProgressBar
