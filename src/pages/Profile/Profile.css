@@ -41,17 +41,24 @@
 .cont-prof {
   .text-end {
     position: relative;
+
     button {
       path {
         stroke: #0f77ff !important;
       }
     }
+
     button:hover {
       path {
         stroke: #fff !important;
         transition: all 0.15s ease-in-out;
       }
     }
+
+  }
+
+  .rounded-4 {
+    margin-top: 100px;
   }
 }
 
@@ -63,17 +70,16 @@
   align-items: flex-end;
 }
 
-.rounded-4 {
-  margin-top: 100px;
-}
 
 .personal-cont {
   padding: 36px;
+
+  label {
+    color: #838383;
+  }
 }
 
-label {
-  color: #838383;
-}
+
 
 .prof-p p {
   margin-bottom: 22px;
@@ -93,6 +99,7 @@ label {
   left: 0;
   width: 100%;
 }
+
 .graph-img2 {
   position: absolute;
   top: 140px;
@@ -102,7 +109,8 @@ label {
 
 .softSkill-info {
   position: relative;
-  h1{
+
+  h1 {
     font-size: 32px;
   }
 }

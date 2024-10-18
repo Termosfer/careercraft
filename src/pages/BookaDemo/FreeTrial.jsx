@@ -106,15 +106,17 @@ const FreeTrial = () => {
               <ul className="list-unstyled">
                 {question && question.answers?.map((answer) => (
                   <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
-                    <input
-                      value={answer.orderValue}
-                      onChange={handleAnswerChange}
-                      className="radio"
-                      type="radio"
-                      name="name"
-                      required
-                    />{" "}
-                    {answer.text}
+                    <label  className="w-100 d-flex align-items-center gap-2">
+                      <input
+                        value={answer.orderValue}
+                        onChange={handleAnswerChange}
+                        className="radio"
+                        type="radio"
+                        name="name"
+                        required
+                      />{" "}
+                      {answer.text}
+                    </label>
                   </li>
                 ))}
               </ul>

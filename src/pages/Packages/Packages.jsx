@@ -13,7 +13,6 @@ import pack2 from "../../assets/img/pack1.png";
 const Packages = () => {
   const topRef = useRef(null);
 
-  // Scroll to the top of the page when the button is clicked
   const handleScrollToTop = () => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });

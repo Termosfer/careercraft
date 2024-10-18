@@ -42,13 +42,13 @@ console.log(totalReport,"asd")
   };
   return (
     <>
-      <Container className="w-75 p-5">
+      <Container className="w-75 test-res-cont p-5">
         <Row>
           <Col lg={12} className="py-4">
             <h1 className=" text-center pb-4">
               Thank you for completing the Soft Skills Assessment!
             </h1>
-            <p className="fw-bolder" style={{ fontSize: "19px" }}>
+            <p className="text-center email-notif" >
               Your detailed report has been emailed to{" "}
               <span className="text-primary">{user.email}</span>. If you don’t
               see it in your inbox, please check your spam/junk folder.

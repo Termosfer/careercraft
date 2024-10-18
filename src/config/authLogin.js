@@ -42,6 +42,9 @@ export const resetPass = createAsyncThunk(
   async (reset, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${baseURL}/api/password/reset`, reset);
+      toast.success(
+        "Your password was successfully changed!"
+      );
       return response.data;
     } catch (error) {
       if (error.response) {
@@ -54,6 +57,7 @@ export const resetPass = createAsyncThunk(
 
 export const logout = createAsyncThunk("auth/logout", async () => {
   localStorage.removeItem("token");
+  localStorage.removeItem("userInfo")
   localStorage.removeItem("bool")
 });
 

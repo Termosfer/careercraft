@@ -87,6 +87,7 @@ const ResetPass = () => {
   };
   const handlePassword = () => {
     setShow(!show); // Şifre görünürlüğünü kontrol eden fonksiyon
+    
   };
 
   return (

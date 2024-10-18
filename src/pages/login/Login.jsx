@@ -26,7 +26,10 @@ const Login = () => {
   };
 
   const handleForgot = async () => {
-    dispatch(fortgotHandle(userLogged.email));
+    const forgotPass= await dispatch(fortgotHandle(userLogged.email));
+    if (fortgotHandle.fulfilled.match(forgotPass)) {
+      navigate("/auth/password/reset");
+    }
   };
 
   const handleLogin = async (e) => {
