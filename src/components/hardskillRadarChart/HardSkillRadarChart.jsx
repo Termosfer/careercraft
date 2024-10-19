@@ -52,13 +52,13 @@ const HardSkillRadarChart = ({ allReport }) => {
       data={data}
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="name" />
-      <PolarRadiusAxis
+      {<PolarAngleAxis dataKey="name" />}
+      {<PolarRadiusAxis
         angle={90}
         ticks={[0, 20, 40, 60, 80, 100]}
         domain={[0, 0]}
         tickFormatter={(value) => value}
-      />
+      />}
       <Radar
         dataKey="x"
         stroke="#0F77FF"

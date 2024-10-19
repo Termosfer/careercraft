@@ -28,6 +28,7 @@ const FreeTrial = () => {
 
   useEffect(() => {
     const bool = localStorage.getItem("bool");
+    console.log(typeof bool,"sad")
     if (bool === "false") {
       navigate("/freetest/test-result");
     } else if (count <= 70) {
