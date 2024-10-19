@@ -10,11 +10,13 @@ import { getAllReports } from "../../config/authReport";
 
 const TestResultsTwo = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [skillName, setSkillName] = useState([]);
+  const [level, setLevel] = useState();
+  const [percent, setPercent] = useState("");
   const activeSkill = data.data[activeIndex];
   const skillRefs = useRef([]);
   const dispatch = useDispatch();
   const allreports = useSelector((state) => state.report.allreport);
-  console.log(allreports);
   useEffect(() => {
     dispatch(getAllReports(2));
   }, [dispatch]);
@@ -25,8 +27,25 @@ const TestResultsTwo = () => {
         inline: "center",
       });
     }
-  }, [activeIndex]);
 
+    const index = allreports.find(
+      (item) => item.skillId === activeSkill.skillId
+    );
+    setSkillName(index);
+    if (skillName && skillName.skillLevel) {
+      const level =
+        skillName.skillLevel.slice(0, 1) +
+        skillName.skillLevel.slice(1).toLowerCase();
+      setLevel(level);
+      if (level == "Intermediate") {
+        setPercent("<80%");
+      } else if (level == "Advanced") {
+        setPercent(">80%");
+      } else {
+        setPercent("<60%");
+      }
+    }
+  }, [activeIndex, allreports, skillName]);
   const clickLeftArrow = () => {
     setActiveIndex(activeIndex === 0 ? data.data.length - 1 : activeIndex - 1);
   };
@@ -34,7 +53,6 @@ const TestResultsTwo = () => {
   const clickRightArrow = () => {
     setActiveIndex(activeIndex === data.data.length - 1 ? 0 : activeIndex + 1);
   };
-  console.log(data, "data");
   return (
     <Container className="w-75 p-5">
       <div className="skillNames">
@@ -68,21 +86,16 @@ const TestResultsTwo = () => {
             onClick={clickRightArrow}
           />
         </div>
-        {allreports &&
-          allreports?.map((itemm) => {
-            const items = data.data.find(
-              (item) => item.skillName === itemm.skillName
-            );
-            console.log(items,"a");
-            return <h3>{itemm.skillName}</h3>;
-          })}
-        {/* <div className="section1 my-4 d-flex justify-content-between align-items-center">
-          <h3 className="fw-semibold">{activeSkill.skillName}  level</h3>
+        <div className="section1 my-4 d-flex justify-content-between align-items-center">
+          <h3 className="fw-semibold">
+            {skillName?.skillName} <span className="text-primary">{level}</span>{" "}
+            level
+          </h3>
           <div className="low text-primary text-center">
-            <span className="fw-bold">{"<50%"}</span>
-            <p className="p__level fw-normal">Beginner</p>
+            <span className="fw-bold">{percent}</span>
+            <p className="p__level fw-normal">{level}</p>
           </div>
-        </div> */}
+        </div>
         <div className="section1 my-4">
           {activeSkill.context.map((content, index) => {
             return (

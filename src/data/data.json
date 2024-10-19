@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "skillID": "1",
+      "skillId": 13,
       "skillName": "Research & discovery",
       "context": [
         {
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "skillID": "2",
+      "skillId": 11,
       "skillName": "Product Analytics",
       "context": [
         {
@@ -214,7 +214,7 @@
       ]
     },
     {
-      "skillID": "3",
+      "skillId": 14,
       "skillName": "Product Planning",
       "context": [
         {
@@ -328,7 +328,7 @@
       ]
     },
     {
-      "skillID": "4",
+      "skillId": 12,
       "skillName": "Customer Experience",
       "context": [
         {
@@ -438,7 +438,7 @@
       ]
     },
     {
-      "skillID": "5",
+      "skillId": 10,
       "skillName": "Business Domain",
       "context": [
         {
@@ -533,7 +533,7 @@
       ]
     },
     {
-      "skillID": "6",
+      "skillId": 9,
       "skillName": "Business Model & Economy",
       "context": [
         {
@@ -633,7 +633,7 @@
       ]
     },
     {
-      "skillID": "7",
+      "skillId": 8,
       "skillName": "Sales & Marketing",
       "context": [
         {
@@ -733,7 +733,7 @@
       ]
     },
     {
-      "skillID": "8",
+      "skillId": 7,
       "skillName": "Product Design",
       "context": [
         {
@@ -828,7 +828,7 @@
       ]
     },
     {
-      "skillID": "9",
+      "skillId": 6,
       "skillName": "Development & Delivery",
       "context": [
         {

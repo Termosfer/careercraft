@@ -1,103 +1,102 @@
 .h3-skillName {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .h5-title {
-    font-size: 22px;
-    color: #0F77FF;
+  font-size: 22px;
+  color: #0f77ff;
 }
 
 .span-title {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .p-title {
-    color: #0F77FF;
-    font-size: 18px;
-    margin-right: 5px;
+  color: #0f77ff;
+  font-size: 18px;
+  margin-right: 5px;
 }
 
 .comm-p {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 .skillNames {
-    border: 1px solid #0F77FF;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 8px;
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    column-gap: 5px;
-    gap: 10px;
-    white-space: nowrap;
+  border: 1px solid #0f77ff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 5px;
+  gap: 10px;
+  white-space: nowrap;
 }
 
 .skillNames__1 {
-    color: #408fff;
-    padding: 8px 28px;
-    border-radius: 8px;
-    min-width: max-content;
-    margin-bottom: 0;
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  color: #408fff;
+  padding: 8px 28px;
+  border-radius: 8px;
+  min-width: max-content;
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .skillNames-active {
-    background-color: #0F77FF;
-    color: white;
-    font-weight: bold;
+  background-color: #0f77ff;
+  color: white;
+  font-weight: bold;
 }
 
 .section1 .low {
-    padding: 8px 24px;
-    background: rgba(61, 141, 255, 0.25);
-    border-radius: 8px;
-    
+  padding: 8px 24px;
+  background: rgba(61, 141, 255, 0.25);
+  border-radius: 8px;
 }
 
 .p__level {
-    margin-bottom: 0 !important;
-    font-size: 12px;
+  margin-bottom: 0 !important;
+  font-size: 12px;
 }
 
 .arrow {
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    margin-top: 15px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .arrow1 {
-    width: 40px;
-    height: 40px;
-    background-color: #0F77FF;
-    /* background-color: (64, 143, 255, 0.75); */
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #0f77ff;
+  /* background-color: (64, 143, 255, 0.75); */
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .content__border,
 .communicate {
-    border: 1px solid #e8e8e9;
-    border-radius: 18px;
+  border: 1px solid #e8e8e9;
+  border-radius: 18px;
 }
 
-.ul__li{
-    font-size: 14px;
-    line-height: 15px;
+.ul__li {
+  font-size: 14px;
+  line-height: 15px;
 }
 
 .skillNames__1:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
-.content__img{
-    width: 200px;
-    height: 250px;
-    object-fit: contain;
+.content__img {
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
 }

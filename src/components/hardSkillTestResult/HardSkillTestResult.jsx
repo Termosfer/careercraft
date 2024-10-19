@@ -1,41 +1,48 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Table,
+  ProgressBar,
+  Button,
+} from "react-bootstrap";
 import "./hardskill.css";
 import ChartAxe from "../chartAxe/ChartAxe";
 import star from "../../assets/img/star.png";
 import { Link } from "react-router-dom";
-import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
+// import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
 import { useDispatch, useSelector } from "react-redux";
 import { getDownload } from "../../config/download";
-import data from "../../data/hsdata.json"
+import data from "../../data/hsdata.json";
 import { getAllReports, getReports } from "../../config/authReport";
 import SemiCircleChart from "../semiCircleChart/SemiCircleChart";
+import RChart from "../radarChart/RadarChart";
+
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
   const allReport = useSelector((state) => state.report.allreport);
   const totalReport = useSelector((state) => state.report.raport);
-  console.log(totalReport, "total")
-  console.log(allReport, "asd")
+  console.log(totalReport, "total");
+  console.log(allReport, "asd");
   useEffect(() => {
     dispatch(getReports(2));
     dispatch(getAllReports(2));
   }, [dispatch]);
   const onButtonClick = () => {
-    dispatch(getDownload(2))
+    dispatch(getDownload(2));
   };
   const value = totalReport && totalReport[0]?.averagePercentageCorrect;
   const dataa = {
-    "initial": {
-      "value": 2
+    initial: {
+      value: 2,
     },
-    "remaining": {
-      "value": value
+    remaining: {
+      value: value,
     },
-
   };
   return (
     <>
-
       <Container className="w-75 px-5">
         <h1 className="text-center py-5">Your Detailed Hard Skills Results</h1>
         <Row className="pb-5 ">
@@ -50,7 +57,7 @@ const HardSkillTestResult = () => {
                 % (
                 {totalReport && totalReport[0]
                   ? totalReport[0].skillLevel.slice(0, 1) +
-                  totalReport[0].skillLevel.slice(1).toLowerCase()
+                    totalReport[0].skillLevel.slice(1).toLowerCase()
                   : ""}
                 )
               </span>
@@ -67,7 +74,8 @@ const HardSkillTestResult = () => {
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
               <SemiCircleChart /* min={0} */
                 max={dataa.initial.value}
-                value={dataa.remaining.value} />
+                value={dataa.remaining.value}
+              />
             </div>
           </Col>
         </Row>
@@ -94,7 +102,8 @@ const HardSkillTestResult = () => {
       </Container>
       <div className=" d-flex flex-column align-items-center">
         <h2 className="text-center pt-5">Here’s Your Results...</h2>
-        <HardSkillRadarChart allReport={allReport} />
+        {/* <HardSkillRadarChart allReport={allReport} /> */}
+        <RChart allReport={allReport} />
       </div>
       <Container className="p-5">
         <h1 className="text-center pb-5">
@@ -106,7 +115,9 @@ const HardSkillTestResult = () => {
             <tr>
               <th>
                 Hard Skills{" "}
-                <span className="border rounded-pill px-3 py-1">{allReport?.length}</span>
+                <span className="border rounded-pill px-3 py-1">
+                  {allReport?.length}
+                </span>
               </th>
               <th>Current Skill Level</th>
               <th width={420}>Personalized Recommendations</th>
@@ -114,22 +125,26 @@ const HardSkillTestResult = () => {
             </tr>
           </thead>
           <tbody>
-            {
-              allReport?.map(reports => {
-                const description = data.table.find(item => item.skillId === reports.skillId);
-                return (
-                  <tr key={reports.skillId}>
-                    <td>{reports.skillName}</td>
-                    <td>
-                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
-                      {reports.skillLevel.slice(0, 1) + reports.skillLevel.slice(1).toLowerCase()}
-                    </td>
-                    <td>{description?.recommendations}</td>
-                    <td>{description?.action}</td>
-                  </tr>
-                )
-              })
-            }
+            {allReport?.map((reports) => {
+              const description = data.table.find(
+                (item) => item.skillId === reports.skillId
+              );
+              return (
+                <tr key={reports.skillId}>
+                  <td>{reports.skillName}</td>
+                  <td>
+                    <ProgressBar
+                      variant="primary"
+                      now={reports.percentageCorrect}
+                    />
+                    {reports.skillLevel.slice(0, 1) +
+                      reports.skillLevel.slice(1).toLowerCase()}
+                  </td>
+                  <td>{description?.recommendations}</td>
+                  <td>{description?.action}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </Table>
       </Container>
@@ -144,28 +159,34 @@ const HardSkillTestResult = () => {
             <span className="text-primary">Professional Domains</span>
           </h1>
           <Row>
-            {
-              allReport?.map(reports => {
-                const description = data.skill.find(item => item.skillId === reports.skillId);
-                return (
-                  <Col lg={4} className="mb-3" key={reports.skillId}>
-                    <div className="skills-result-page pb-4">
-                      <div className="d-flex flex-column">
-                        <p className="fw-bolder">{reports.skillName}</p>
-                        <span>{description?.description}</span>
-                      </div>
-                      <div className="d-flex flex-column">
-                        <ProgressBar variant="primary" now={reports.percentageCorrect} />
-                        <div className="d-flex justify-content-between text-primary fw-bolder">
-                          <span>{reports.percentageCorrect}%</span>
-                          <span>{reports.skillLevel.slice(0, 1) + reports.skillLevel.slice(1).toLowerCase()}</span>
-                        </div>
+            {allReport?.map((reports) => {
+              const description = data.skill.find(
+                (item) => item.skillId === reports.skillId
+              );
+              return (
+                <Col lg={4} className="mb-3" key={reports.skillId}>
+                  <div className="skills-result-page pb-4">
+                    <div className="d-flex flex-column">
+                      <p className="fw-bolder">{reports.skillName}</p>
+                      <span>{description?.description}</span>
+                    </div>
+                    <div className="d-flex flex-column">
+                      <ProgressBar
+                        variant="primary"
+                        now={reports.percentageCorrect}
+                      />
+                      <div className="d-flex justify-content-between text-primary fw-bolder">
+                        <span>{reports.percentageCorrect}%</span>
+                        <span>
+                          {reports.skillLevel.slice(0, 1) +
+                            reports.skillLevel.slice(1).toLowerCase()}
+                        </span>
                       </div>
                     </div>
-                  </Col>
-                )
-              })
-            }
+                  </div>
+                </Col>
+              );
+            })}
           </Row>
           <div className="d-flex justify-content-center gap-3 pt-5">
             <Link to="/freetest/hard-skill-test-result/testresultstwo">
@@ -173,13 +194,16 @@ const HardSkillTestResult = () => {
                 View Details
               </Button>
             </Link>
-            <Button variant="outline-primary" className="px-4" onClick={onButtonClick}>
+            <Button
+              variant="outline-primary"
+              className="px-4"
+              onClick={onButtonClick}
+            >
               Download Report
             </Button>
           </div>
         </Container>
       </div>
-
     </>
   );
 };
