@@ -12,6 +12,7 @@ import pack2 from "../../assets/img/pack1.png";
 
 const Packages = () => {
   const topRef = useRef(null);
+  const token = localStorage.getItem("token");
 
   const handleScrollToTop = () => {
     if (topRef.current) {
@@ -111,7 +112,7 @@ const Packages = () => {
                     </li>
                   </ul>
                 </div>
-                <Link to="/freetest/hard-skill-test-result">
+                <Link to={token ? "/freetest/hard-skill-test-result" : "/auth/login"}>
                   <Button variant="primary" className="w-100">
                     Get started
                   </Button>

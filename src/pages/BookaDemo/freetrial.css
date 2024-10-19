@@ -14,7 +14,7 @@
   height: 100%;
   background-color: rgba(15, 119, 255, 0.25);
 }
-.bg-freetrial{
+.bg-freetrial {
   background-color: #f8f8f8;
 }
 .text-position {
@@ -42,7 +42,14 @@
   border-radius: 0px !important;
 }
 
-.progress-div> .progress >  .progress-bar {
+.progress-div > .progress > .progress-bar {
   border-bottom-left-radius: 0px !important;
-  border-top-left-radius: 0px !important; 
+  border-top-left-radius: 0px !important;
+}
+
+.bg-freetrial .list-unstyled label:hover {
+  cursor: pointer;
+  color: #0f77ff;
+  background-color: #eeeeee;
+  border-radius: 18px;
 }

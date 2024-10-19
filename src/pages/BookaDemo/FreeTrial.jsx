@@ -110,8 +110,8 @@ const FreeTrial = () => {
               <ul className="list-unstyled">
                 {question &&
                   question.answers?.map((answer) => (
-                    <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
-                      <label className="w-100 d-flex align-items-center gap-2">
+                    <li key={answer.id} className="d-flex  my-3 gap-2 li">
+                      <label className="w-100 d-flex align-items-center gap-2 p-2">
                         <input
                           value={answer.orderValue}
                           onChange={handleAnswerChange}

@@ -4,24 +4,20 @@ import img from "../../assets/img/comm-p.png";
 import right from "../../assets/TestResultsOneImg/right-arrow.png";
 import left from "../../assets/TestResultsOneImg/left-arrow.png";
 import "./textresulttwo.css";
-import { useDispatch, useSelector } from "react-redux";
-/* import { getHardSkillReport, getHardSkillReports } from "../../config/authReport"; */
 import { Container } from "react-bootstrap";
-import { getAllReports, getReports } from "../../config/authReport";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllReports } from "../../config/authReport";
 
 const TestResultsTwo = () => {
-  const dispatch = useDispatch();
   const [activeIndex, setActiveIndex] = useState(0);
   const activeSkill = data.data[activeIndex];
   const skillRefs = useRef([]);
-
+  const dispatch = useDispatch();
+  const allreports = useSelector((state) => state.report.allreport);
+  console.log(allreports);
   useEffect(() => {
-   /*  dispatch(getHardSkillReport());
-    dispatch(getHardSkillReports()); */
-    /* dispatch(getReports(2));
-    dispatch(getAllReports(2)); */
+    dispatch(getAllReports(2));
   }, [dispatch]);
-
   useEffect(() => {
     if (skillRefs.current[activeIndex]) {
       skillRefs.current[activeIndex].scrollIntoView({
@@ -38,6 +34,7 @@ const TestResultsTwo = () => {
   const clickRightArrow = () => {
     setActiveIndex(activeIndex === data.data.length - 1 ? 0 : activeIndex + 1);
   };
+  console.log(data, "data");
   return (
     <Container className="w-75 p-5">
       <div className="skillNames">
@@ -46,8 +43,9 @@ const TestResultsTwo = () => {
             <div
               key={index}
               ref={(el) => (skillRefs.current[index] = el)}
-              className={`skillNames__1 ${index === activeIndex ? "skillNames-active" : ""
-                }`}
+              className={`skillNames__1 ${
+                index === activeIndex ? "skillNames-active" : ""
+              }`}
               onClick={() => setActiveIndex(index)}
             >
               {skill.skillName}
@@ -70,13 +68,21 @@ const TestResultsTwo = () => {
             onClick={clickRightArrow}
           />
         </div>
-        <div className="section1 my-4 d-flex justify-content-between align-items-center">
-          <h3 className="fw-semibold">{activeSkill.skillName}</h3>
+        {allreports &&
+          allreports?.map((itemm) => {
+            const items = data.data.find(
+              (item) => item.skillName === itemm.skillName
+            );
+            console.log(items,"a");
+            return <h3>{itemm.skillName}</h3>;
+          })}
+        {/* <div className="section1 my-4 d-flex justify-content-between align-items-center">
+          <h3 className="fw-semibold">{activeSkill.skillName}  level</h3>
           <div className="low text-primary text-center">
             <span className="fw-bold">{"<50%"}</span>
             <p className="p__level fw-normal">Beginner</p>
           </div>
-        </div>
+        </div> */}
         <div className="section1 my-4">
           {activeSkill.context.map((content, index) => {
             return (

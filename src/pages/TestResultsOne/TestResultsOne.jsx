@@ -38,6 +38,7 @@ const TestResultsOne = () => {
   const renderSkeleton = () => (
     <>
       <div className="skeleton-loader">
+        <div className="skeleton-img"></div>
         <div className="skeleton-section">
           <div className="skeleton-header" />
           <div className="skeleton-content">
@@ -50,13 +51,15 @@ const TestResultsOne = () => {
   );
   const renderSkeletonn = () => (
     <>
-      <div className="skeleton-header"></div>
+      <div className="skeleton-header mt-5"></div>
     </>
   );
 
   const renderContentBySkill = (skillIndex) => {
     const skillItem = allReport[skillIndex];
-    const skillLevel = skillItem.skillLevel.slice(0,1) + skillItem.skillLevel.slice(1).toLowerCase();
+    const skillLevel =
+      skillItem.skillLevel.slice(0, 1) +
+      skillItem.skillLevel.slice(1).toLowerCase();
     return (
       <div
         className={`section ${skillItem.skillName
