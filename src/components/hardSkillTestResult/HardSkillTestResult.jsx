@@ -32,10 +32,11 @@ const HardSkillTestResult = () => {
   const onButtonClick = () => {
     dispatch(getDownload(2));
   };
-  const value = totalReport && totalReport[0]?.averagePercentageCorrect;
+  const value =
+    totalReport && totalReport[0]?.averagePercentageCorrect.toFixed(0);
   const dataa = {
     initial: {
-      value: 2,
+      value: 100,
     },
     remaining: {
       value: value,
