@@ -2,8 +2,15 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
-import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
+import {
+  getQuestion,
+  getQuestionsCount,
+  getAnswer,
+} from "../../config/authQuestions";
+import {
+  changeIncrease,
+  currentAnswerOrderValue,
+} from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
@@ -31,8 +38,6 @@ const FreeTrial = () => {
     }
   }, [dispatch, count, navigate]);
 
-
-
   useEffect(() => {
     if (question) {
       const progressPercentage = Math.round((question.id / totalCount) * 100);
@@ -50,10 +55,9 @@ const FreeTrial = () => {
       await dispatch(getAnswer(answer));
       await dispatch(changeIncrease());
       if (count === totalCount) {
-        localStorage.setItem("bool", false)
-        navigate("/freetest/test-result")
+        localStorage.setItem("bool", false);
+        navigate("/freetest/test-result");
       }
-
     }
     if (loading)
       return (
@@ -95,8 +99,8 @@ const FreeTrial = () => {
 
         <Container className="w-75 px-5 py-4 mt-5">
           <h2 className="text-center fw-bold" style={{ color: "#838383" }}>
-            <span style={{ color: "#0F77FF" }}>Question {question?.id}</span> Out
-            of <span>{totalCount}</span>
+            <span style={{ color: "#0F77FF" }}>Question {question?.id}</span>{" "}
+            Out of <span>{totalCount}</span>
           </h2>
           <div>
             <h2 className="text-center my-5 fw-semibold" key={question?.id}>
@@ -104,21 +108,22 @@ const FreeTrial = () => {
             </h2>
             <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
               <ul className="list-unstyled">
-                {question && question.answers?.map((answer) => (
-                  <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
-                    <label  className="w-100 d-flex align-items-center gap-2">
-                      <input
-                        value={answer.orderValue}
-                        onChange={handleAnswerChange}
-                        className="radio"
-                        type="radio"
-                        name="name"
-                        required
-                      />{" "}
-                      {answer.text}
-                    </label>
-                  </li>
-                ))}
+                {question &&
+                  question.answers?.map((answer) => (
+                    <li key={answer.id} className="d-flex  my-3 p-2 gap-2 li">
+                      <label className="w-100 d-flex align-items-center gap-2">
+                        <input
+                          value={answer.orderValue}
+                          onChange={handleAnswerChange}
+                          className="radio"
+                          type="radio"
+                          name="name"
+                          required
+                        />
+                        {answer.text}
+                      </label>
+                    </li>
+                  ))}
               </ul>
               <div className="text-center">
                 <Button
