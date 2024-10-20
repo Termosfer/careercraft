@@ -7,28 +7,6 @@ import {
   PolarRadiusAxis,
 } from "recharts";
 const RChart = ({ allReport }) => {
-  // const data = [
-  //   {
-  //     name: "Communication",
-  //     x: allReport && allReport[4] ? allReport[4].percentageCorrect : "",
-  //   },
-  //   {
-  //     name: "Personal Qualities",
-  //     x: allReport && allReport[3] ? allReport[3].percentageCorrect : "",
-  //   },
-  //   {
-  //     name: "Critical Thinking",
-  //     x: allReport && allReport[2] ? allReport[2].percentageCorrect : "",
-  //   },
-  //   {
-  //     name: "Leadership",
-  //     x: allReport && allReport[1] ? allReport[1].percentageCorrect : "",
-  //   },
-  //   {
-  //     name: "Teamwork",
-  //     x: allReport && allReport[0] ? allReport[0].percentageCorrect : "",
-  //   },
-  // ];
   const data = allReport?.map((report) => ({
     name: report.skillName,
     x: report.percentageCorrect,

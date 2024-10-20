@@ -1,23 +1,15 @@
 import React, { useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Table,
-  ProgressBar,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap";
 import "./hardskill.css";
-import ChartAxe from "../chartAxe/ChartAxe";
 import star from "../../assets/img/star.png";
 import { Link } from "react-router-dom";
-// import HardSkillRadarChart from "../hardskillRadarChart/HardSkillRadarChart";
 import { useDispatch, useSelector } from "react-redux";
 import { getDownload } from "../../config/download";
 import data from "../../data/hsdata.json";
 import { getAllReports, getReports } from "../../config/authReport";
 import SemiCircleChart from "../semiCircleChart/SemiCircleChart";
 import RChart from "../radarChart/RadarChart";
+import AreaChartExample from "../chartAxe/ChartArea";
 
 const HardSkillTestResult = () => {
   const dispatch = useDispatch();
@@ -58,7 +50,7 @@ const HardSkillTestResult = () => {
                 % (
                 {totalReport && totalReport[0]
                   ? totalReport[0].skillLevel.slice(0, 1) +
-                    totalReport[0].skillLevel.slice(1).toLowerCase()
+                  totalReport[0].skillLevel.slice(1).toLowerCase()
                   : ""}
                 )
               </span>
@@ -73,10 +65,7 @@ const HardSkillTestResult = () => {
           <Col lg={5}>
             <div className="semicirc">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <SemiCircleChart /* min={0} */
-                max={dataa.initial.value}
-                value={dataa.remaining.value}
-              />
+              <SemiCircleChart max={dataa.initial.value} value={dataa.remaining.value} />
             </div>
           </Col>
         </Row>
@@ -90,7 +79,7 @@ const HardSkillTestResult = () => {
             levels against industry averages. This helps you understand where
             you stand and identify areas for further development.
           </p>
-          <ChartAxe allReport={allReport} />
+                  <AreaChartExample  allReport={allReport}/>
           <div className="star-div d-flex align-items-center justify-content-center border mx-auto rounded mt-4 py-2 px-1 gap-1">
             <img src={star} width={20} height={20} alt="star" />
             <span>
@@ -103,7 +92,6 @@ const HardSkillTestResult = () => {
       </Container>
       <div className=" d-flex flex-column align-items-center">
         <h2 className="text-center pt-5">Here’s Your Results...</h2>
-        {/* <HardSkillRadarChart allReport={allReport} /> */}
         <RChart allReport={allReport} />
       </div>
       <Container className="p-5">

@@ -24,7 +24,7 @@ const Solution = () => {
         <img src={img__21} alt="" className="img__21" />
         <Container className="w-75 p-5 ">
           <div className="pb-5 d-flex flex-column  gap-4">
-            <h1 className="w-50 text-center mx-auto">
+            <h1 className="w-50 text-center mx-auto fw-semibold">
               Empower Your <span className="text-primary">Career</span> with{" "}
               <span className="text-primary">Tailored</span> Growth Paths
             </h1>
