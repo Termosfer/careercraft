@@ -26,18 +26,18 @@ const PublicRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/solutions" element={<Solution />} />
-        <Route path="/auth/register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/packages" element={<Packages />} />
         <Route path="/auth/login" element={<Login />} />
-        <Route path="/free-trial" element={<FreeTrial />} />
+        <Route path="/auth/register" element={<Register />} />
+        <Route path="/auth/password/reset" element={<ResetPass />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route path="/auth/password/reset" element={<ResetPass />} />
-        <Route path="/packages" element={<Packages />} />
-        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path="/freetest/test-result/testresultsone" element={<TestResultsOne />} />
+        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path="/freetest/hard-skill-test-result/testresultstwo" element={<TestResultsTwo />} />
       </Routes>
     </PublicLayout>
