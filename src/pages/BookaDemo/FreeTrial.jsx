@@ -25,18 +25,17 @@ const FreeTrial = () => {
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
+  
 
   useEffect(() => {
     const bool = localStorage.getItem("bool");
-    console.log(typeof bool,"sad")
     if (bool === "false") {
       navigate("/freetest/test-result");
-    } else if (count <= 70) {
+    } else {
       dispatch(getQuestion(count));
       dispatch(getQuestionsCount());
-    } else {
-      navigate("/freetest/test-result");
     }
+    
   }, [dispatch, count, navigate]);
 
   useEffect(() => {
