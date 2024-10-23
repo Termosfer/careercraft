@@ -6,13 +6,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../config/authRegister";
-import {
-  changeName,
-  changeLastName,
-  changeEmail,
-  changePassword,
-  clearInput,
-} from "../../config/authSlice";
+import { changeName, changeLastName, changeEmail, changePassword, clearInput} from "../../config/authSlice";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 function Register() {
   const dispatch = useDispatch();

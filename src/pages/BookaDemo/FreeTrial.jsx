@@ -2,20 +2,12 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import {
-  getQuestion,
-  getQuestionsCount,
-  getAnswer,
-} from "../../config/authQuestions";
-import {
-  changeIncrease,
-  currentAnswerOrderValue,
-} from "../../config/authQuestions";
+import { getQuestion, getQuestionsCount, getAnswer} from "../../config/authQuestions";
+import { changeIncrease, currentAnswerOrderValue} from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
-import { Link, useNavigate } from "react-router-dom";
-import { getAllReports, getReports } from "../../config/authReport";
+import {  useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
   const navigate = useNavigate();
@@ -29,7 +21,7 @@ const FreeTrial = () => {
 
   useEffect(() => {
     const bool = localStorage.getItem("bool");
-    if (bool === "false") {
+    if (bool) {
       navigate("/freetest/test-result");
     } else {
       dispatch(getQuestion(count));

@@ -20,7 +20,7 @@ const About = () => {
   return (
     <>
     <Container className="w-75 py-5 px-3">
-      <h1 className="text-center about-h1">Transform Your <span className="text-primary">Career Journey</span> with Cutting-Edge <span className="text-primary">AI Technology</span></h1>
+      {<h3 className="about-h1 mb-5">Transform Your <span className="text-primary">Career Journey</span> with Cutting-Edge <span className="text-primary">AI Technology</span></h3>}
       <Row className="px-3 py-5">
         <Col className="mb-3 pt-5 text-center"><img src={img__1} alt="img__1" className="img__1" /></Col>
         <Col className="mb-3 text-center"><img src={img__2} alt="img__2" className="img__1" /></Col>

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Card, Button, Container } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import photo1 from "../../assets/img/photo1.png";

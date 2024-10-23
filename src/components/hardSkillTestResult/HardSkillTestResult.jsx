@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap";
 import "./hardskill.css";
 import star from "../../assets/img/star.png";

@@ -1,5 +1,4 @@
-import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import img__20 from "../../assets/solutionImg/img__20.png";
 import img__21 from "../../assets/solutionImg/img__21.png";
 import img__22 from "../../assets/solutionImg/img__22.png";

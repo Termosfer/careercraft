@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./Home.css";
 import "axios";
 import S_2_img1 from "../../assets/img/S-2-img1.png";
@@ -12,7 +11,6 @@ import S_3_img1 from "../../assets/img/S-3-img1.png";
 import S_4_img1 from "../../assets/img/S-4-img1.jpg";
 import image from "../../assets/img/homeimage.png";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 const Home = () => {
   return (
