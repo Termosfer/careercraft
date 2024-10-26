@@ -17,6 +17,7 @@ import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
 import Packages from '../pages/Packages/Packages'
 import TestResultsTwo from '../pages/TestResultsTwo/TestResultsTwo'
 import UserProfile from "../pages/UserProfile/UserProfile";
+import ErrorNotFound from "../pages/Error/ErrorNotFound";
 
 
 const PublicRoutes = () => {
@@ -39,6 +40,7 @@ const PublicRoutes = () => {
         <Route path="/freetest/test-result/testresultsone" element={<TestResultsOne />} />
         <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
         <Route path="/freetest/hard-skill-test-result/testresultstwo" element={<TestResultsTwo />} />
+        <Route path="*" element={<ErrorNotFound/>}></Route>
       </Routes>
     </PublicLayout>
   );

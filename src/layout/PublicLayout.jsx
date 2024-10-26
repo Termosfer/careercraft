@@ -8,9 +8,9 @@ const PublicLayout = ({children}) => {
       className="d-flex flex-column justify-content-between"
       style={{ height: "100vh" }}
     >
-      <Header />
+      {/* <Header /> */}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
