@@ -25,7 +25,6 @@ const FreeTrial = () => {
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
-  
 
   useEffect(() => {
     const bool = localStorage.getItem("bool");
@@ -35,7 +34,6 @@ const FreeTrial = () => {
       dispatch(getQuestion(count));
       dispatch(getQuestionsCount());
     }
-    
   }, [dispatch, count, navigate]);
 
   useEffect(() => {
@@ -56,6 +54,7 @@ const FreeTrial = () => {
       await dispatch(changeIncrease());
       if (count === totalCount) {
         localStorage.setItem("bool", false);
+        sessionStorage.setItem("shouldReload", "true");
         navigate("/freetest/test-result");
       }
     }

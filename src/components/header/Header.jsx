@@ -107,6 +107,7 @@ function CollapsibleExample() {
                           <Link
                             to="/profile"
                             className="fs text-decoration-none text-dark d-flex align-items-center gap-1 "
+                            onClick={handlerClick}
                           >
                             <UserSVG />
                             Profile

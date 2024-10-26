@@ -3,7 +3,7 @@ import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";
@@ -13,7 +13,7 @@ import pack2 from "../../assets/img/pack1.png";
 const Packages = () => {
   const topRef = useRef(null);
   const token = localStorage.getItem("token");
-
+  const navigate = useNavigate();
   const handleScrollToTop = () => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });
@@ -34,7 +34,14 @@ const Packages = () => {
       [index]: !prevOpen[index],
     }));
   };
-
+  const handleClick = () => {
+    if (token) {
+      sessionStorage.setItem("shouldReload", "true");
+      navigate("/freetest/hard-skill-test-result");
+    } else {
+      navigate("/auth/login");
+    }
+  };
   return (
     <div className="packages">
       <div ref={topRef}></div>
@@ -112,11 +119,14 @@ const Packages = () => {
                     </li>
                   </ul>
                 </div>
-                <Link to={token ? "/freetest/hard-skill-test-result" : "/auth/login"}>
-                  <Button variant="primary" className="w-100">
-                    Get started
-                  </Button>
-                </Link>
+
+                <Button
+                  onClick={handleClick}
+                  variant="primary"
+                  className="w-100"
+                >
+                  Get started
+                </Button>
               </Card.Body>
             </Card>
 

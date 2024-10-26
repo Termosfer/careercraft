@@ -14,7 +14,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const token = useSelector((state) => state.login.token);
@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   const handleForgot = async () => {
-    const forgotPass= await dispatch(fortgotHandle(userLogged.email));
+    const forgotPass = await dispatch(fortgotHandle(userLogged.email));
     if (fortgotHandle.fulfilled.match(forgotPass)) {
       navigate("/auth/password/reset");
     }

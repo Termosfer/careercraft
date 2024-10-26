@@ -17,7 +17,6 @@ const TestResult = () => {
   const [color, setColor] = useState("#6FADFF");
   const [scoreName, setScoreName] = useState("Low");
 
-console.log(totalReport,"asd")
   useEffect(() => {
     dispatch(getReports(1));
     dispatch(getAllReports(1));
@@ -40,6 +39,13 @@ console.log(totalReport,"asd")
   const onButtonClick = () => {
     dispatch(getDownload(1));
   };
+  useEffect(() => {
+    const shouldReload = sessionStorage.getItem("shouldReload");
+    if (shouldReload) {
+      sessionStorage.removeItem("shouldReload");
+      window.location.reload();
+    }
+  }, []);
   return (
     <>
       <Container className="w-75 test-res-cont p-5">
@@ -48,7 +54,7 @@ console.log(totalReport,"asd")
             <h1 className=" text-center pb-4">
               Thank you for completing the Soft Skills Assessment!
             </h1>
-            <p className="text-center email-notif" >
+            <p className="text-center email-notif">
               Your detailed report has been emailed to{" "}
               <span className="text-primary">{user.email}</span>. If you don’t
               see it in your inbox, please check your spam/junk folder.
@@ -79,9 +85,11 @@ console.log(totalReport,"asd")
             <div className="right-side">
               <div className="w-75 text-center">
                 <span className="fw-bold fs-5">YOUR OVERALL SCORE</span>
-                  <h1 style={{ color: `${color}` }}>
-                    {totalReport && totalReport[0].averagePercentageCorrect.toFixed(0)}%
-                  </h1>
+                <h1 style={{ color: `${color}` }}>
+                  {totalReport &&
+                    totalReport[0].averagePercentageCorrect.toFixed(0)}
+                  %
+                </h1>
 
                 <ProgressBar
                   now={totalReport && totalReport[0]?.averagePercentageCorrect}
@@ -130,15 +138,20 @@ console.log(totalReport,"asd")
           </Row>
           <Row>
             {allReport?.slice(0, 3).map((reports) => {
-              const description = data.find(item => item.skillId === reports.skillId)?.description;
+              const description = data.find(
+                (item) => item.skillId === reports.skillId
+              )?.description;
               let scoreName;
 
               if (reports.percentageCorrect < 60) {
-                scoreName = "Low"
-              } else if (reports.percentageCorrect >= 60 && reports.percentageCorrect < 80) {
-                scoreName = "Medium"
+                scoreName = "Low";
+              } else if (
+                reports.percentageCorrect >= 60 &&
+                reports.percentageCorrect < 80
+              ) {
+                scoreName = "Medium";
               } else {
-                scoreName = "High"
+                scoreName = "High";
               }
               return (
                 <Col lg={4} className="mb-3" key={reports.skillId}>
@@ -148,7 +161,10 @@ console.log(totalReport,"asd")
                       <span>{description}</span>
                     </div>
                     <div className="d-flex flex-column">
-                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
+                      <ProgressBar
+                        variant="primary"
+                        now={reports.percentageCorrect}
+                      />
                       <div className="d-flex justify-content-between text-primary fw-bolder">
                         <span>{reports.percentageCorrect}%</span>
                         <span>{scoreName}</span>
@@ -161,14 +177,19 @@ console.log(totalReport,"asd")
           </Row>
           <Row className="d-flex justify-content-center">
             {allReport?.slice(3, 5).map((reports) => {
-              const description = data.find(item => item.skillId === reports.skillId)?.description;
+              const description = data.find(
+                (item) => item.skillId === reports.skillId
+              )?.description;
               let scoreName;
               if (reports.percentageCorrect < 60) {
-                scoreName = "Low"
-              } else if (reports.percentageCorrect >= 60 && reports.percentageCorrect < 80) {
-                scoreName = "Medium"
+                scoreName = "Low";
+              } else if (
+                reports.percentageCorrect >= 60 &&
+                reports.percentageCorrect < 80
+              ) {
+                scoreName = "Medium";
               } else {
-                scoreName = "High"
+                scoreName = "High";
               }
               return (
                 <Col lg={4} className="mb-3" key={reports.skillId}>
@@ -178,7 +199,10 @@ console.log(totalReport,"asd")
                       <span>{description}</span>
                     </div>
                     <div className="d-flex flex-column">
-                      <ProgressBar variant="primary" now={reports.percentageCorrect} />
+                      <ProgressBar
+                        variant="primary"
+                        now={reports.percentageCorrect}
+                      />
                       <div className="d-flex justify-content-between text-primary fw-bolder">
                         <span>{reports.percentageCorrect}%</span>
                         <span>{scoreName}</span>
@@ -195,7 +219,11 @@ console.log(totalReport,"asd")
                 View Details
               </Button>
             </Link>
-            <Button variant="outline-primary" className="px-4" onClick={onButtonClick}>
+            <Button
+              variant="outline-primary"
+              className="px-4"
+              onClick={onButtonClick}
+            >
               Download Report
             </Button>
           </div>
