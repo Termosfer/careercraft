@@ -1,5 +1,12 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col, Table, ProgressBar, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Table,
+  ProgressBar,
+  Button,
+} from "react-bootstrap";
 import "./hardskill.css";
 import star from "../../assets/img/star.png";
 import { Link } from "react-router-dom";
@@ -34,6 +41,13 @@ const HardSkillTestResult = () => {
       value: value,
     },
   };
+  useEffect(() => {
+    const shouldReload = sessionStorage.getItem("shouldReload");
+    if (shouldReload) {
+      sessionStorage.removeItem("shouldReload");
+      window.location.reload();
+    }
+  }, []);
   return (
     <>
       <Container className="w-75 px-5">
@@ -50,7 +64,7 @@ const HardSkillTestResult = () => {
                 % (
                 {totalReport && totalReport[0]
                   ? totalReport[0].skillLevel.slice(0, 1) +
-                  totalReport[0].skillLevel.slice(1).toLowerCase()
+                    totalReport[0].skillLevel.slice(1).toLowerCase()
                   : ""}
                 )
               </span>
@@ -65,7 +79,10 @@ const HardSkillTestResult = () => {
           <Col lg={5}>
             <div className="semicirc">
               <p className="text-center fw-bolder fs-5">Your Overall Score</p>
-              <SemiCircleChart max={dataa.initial.value} value={dataa.remaining.value} />
+              <SemiCircleChart
+                max={dataa.initial.value}
+                value={dataa.remaining.value}
+              />
             </div>
           </Col>
         </Row>
@@ -79,7 +96,7 @@ const HardSkillTestResult = () => {
             levels against industry averages. This helps you understand where
             you stand and identify areas for further development.
           </p>
-                  <AreaChartExample  allReport={allReport}/>
+          <AreaChartExample allReport={allReport} />
           <div className="star-div d-flex align-items-center justify-content-center border mx-auto rounded mt-4 py-2 px-1 gap-1">
             <img src={star} width={20} height={20} alt="star" />
             <span>

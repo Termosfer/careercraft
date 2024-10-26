@@ -5,14 +5,14 @@ import "./Profile.css";
 import { useDispatch, useSelector } from "react-redux";
 import Graph from "../../assets/img/Graph.png";
 import Graph2 from "../../assets/img/Graph2.png";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalChanges from "../../components/modal/ModalChanges";
 import { LogOutSVG } from "../../components/SVG/LogOutSVG";
 import { logout } from "../../config/authLogin";
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [active, setActive] = useState(false);
   const [modalType, setModalType] = useState("");
@@ -25,7 +25,6 @@ const Profile = () => {
     country: "-",
     city: "-",
   };
-
 
   const handleShowPersonal = () => {
     setModalType("personal");
@@ -41,7 +40,10 @@ const Profile = () => {
     setActive(false);
     navigate("/");
   };
-
+  const handleClick = () => {
+    sessionStorage.setItem("shouldReload", "true");
+    navigate("/freetest/test-result");
+  };
   return (
     <div className="profile-cont">
       <div className="bg-profile"></div>
@@ -163,15 +165,16 @@ const Profile = () => {
                 Review your performance across key areas to enhance your
                 professional abilities.
               </p>
-              <Link to="/freetest/test-result">
-                <Button
-                  type="submit"
-                  variant="primary"
-                  className="mt-5 px-4 button-view"
-                >
-                  View Results
-                </Button>
-              </Link>
+              {/* <Link> */}
+              <Button
+                type="submit"
+                variant="primary"
+                className="mt-5 px-4 button-view"
+                onClick={handleClick}
+              >
+                View Results
+              </Button>
+              {/* </Link> */}
             </div>
           </div>
           <div className="bgColor-softSkill text-white">
