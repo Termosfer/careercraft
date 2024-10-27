@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { Chart, registerables } from "chart.js";
+import  { useEffect, useRef } from 'react';
+import { Chart, registerables } from 'chart.js';
 
-// Register the necessary components
 Chart.register(...registerables);
 
 const AreaChartExample = ({ allReport }) => {
@@ -80,11 +79,10 @@ const AreaChartExample = ({ allReport }) => {
       },
     });
 
-    // Cleanup to prevent memory leaks
-    return () => {
-      myChart.destroy();
-    };
-  }, [allReport]);
+        return () => {
+            myChart.destroy();
+        };
+    }, [allReport]);
 
   return (
     <div>

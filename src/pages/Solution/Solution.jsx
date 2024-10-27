@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import img__20 from "../../assets/solutionImg/img__20.png";
 import img__21 from "../../assets/solutionImg/img__21.png";
 import img__22 from "../../assets/solutionImg/img__22.png";
@@ -14,13 +14,12 @@ import img__30 from "../../assets/solutionImg/img__30.png";
 import img__31 from "../../assets/solutionImg/img__31.png";
 import img__32 from "../../assets/solutionImg/img__32.png";
 import "./solution.css";
-import { Link } from "react-router-dom";
 const Solution = () => {
   return (
     <>
       <div className="bg-solutions">
-        <img src={img__20} alt="" className="img__20" />
-        <img src={img__21} alt="" className="img__21" />
+        <img src={img__20} alt="img__20" className="img__20" />
+        <img src={img__21} alt="img__21" className="img__21" />
         <Container className="w-75 p-5 ">
           <div className="pb-5 d-flex flex-column  gap-4">
             <h1 className="text-center w-50 mx-auto">

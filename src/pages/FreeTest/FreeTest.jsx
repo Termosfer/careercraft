@@ -1,11 +1,9 @@
-import React from "react";
 import "./freetest.css";
 import img1 from "../../assets/img/imgg1.png";
 import img2 from "../../assets/img/imgg2.png";
 import img3 from "../../assets/img/imgg3.png";
 import img4 from "../../assets/img/imgg4.png";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 const FreeTest = () => {
   const token = localStorage.getItem("token");
   return (

@@ -1,6 +1,5 @@
-import React from "react";
 import "./contact.css"
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import img__34 from "../../assets/contactImg/img__34.png"
 import img__35 from "../../assets/contactImg/img__35.png"
 import img__36 from "../../assets/contactImg/img__36.png"
@@ -8,8 +7,6 @@ import img__37 from "../../assets/contactImg/img__37.png"
 import img__38 from "../../assets/contactImg/img__38.png"
 import img__39 from "../../assets/contactImg/img__39.png"
 import img__40 from "../../assets/contactImg/img__40.png"
-import Form from 'react-bootstrap/Form';
-import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="bg-contact">

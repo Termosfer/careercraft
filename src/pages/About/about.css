@@ -1,86 +1,113 @@
-.about-h1{
-  font-size: 38px;
+.container .about-h1 {
+  font-size: 36px;
   font-weight: 600;
+  text-align: center;
 }
-.img__1 {
+
+.container .row .img__1 {
   width: 230px;
   height: 400px;
 }
 
-.bg-about {
+.container .bg-about {
   border-radius: 18px;
   background-color: #408fff;
 }
-.logo__about {
+
+.container .bg-about .logo__about {
   width: 113px;
   height: 40px;
 }
 
-.three-img{
-  display: flex;
-  gap: 30px;
-}
-.three-img-grid{
-  display: grid;
-  gap: 30px;
-}
-
-.img__7 {
+.container .grid-container .img__7 {
   width: 595px;
   height: 730px;
 }
 
-.img__5 {
+.container .grid-container .img__5 {
   width: 430px;
   height: 350px;
 }
-.h1-text{
+
+.container .grid-container {
+  display: grid;
+  column-gap: 20px;
+}
+
+
+.container .grid-container .item1 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.container .grid-container .item2 {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.container .grid-container .item3 {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+}
+
+.container .h1-text {
   font-size: 50px;
   font-weight: 700;
 }
-.img__8 {
-  width: 570px;
+
+.container .row .col-md-6 .img__8 {
+  width: 500px;
   height: 440px;
 }
-.p {
-  font-size: 18px;
-}
-.second-p {
+
+.container .col .second-p {
   font-size: 20px;
 }
-.third-p {
+
+.container .row .col-md-6 .third-p {
   font-size: 18px;
   width: 95%;
 }
-.bg__img {
+
+.container .bg__img {
   background-image: url("../../assets/AboutUsImg/img__9.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 1200px;
   padding-top: 100px;
   width: 100%;
-  p{
-    font-size: 14px;
-    color: #838383;
-  }
 }
-.img-div {
-  width: 66px;
-  height: 58px;
+
+.container .bg__img p {
+  font-size: 14px;
+  color: #838383;
 }
-.div-border {
+
+.container .bg__img .row .div-border {
   border: 1.5px solid #eef5ff;
   border-radius: 18px;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
 }
-.h3-text{
+
+.container .bg__img .row .div-border .img-div {
+  width: 66px;
+  height: 58px;
+}
+
+.container .bg__img .row .div-border .text__div {
+  display: grid;
+  height: 120px;
+}
+
+.container .bg__img .row .div-border .text__div .h3-text {
   font-size: 26px;
   color: #0F77FF;
   font-weight: 600;
 }
-.img__11 {
+
+.container .bg__img .row .div-border .img-div .img__11 {
   width: 30px;
   height: 38px;
   object-fit: contain;
