@@ -1,42 +1,36 @@
 .notfound {
-
-    a {
-        color: #0084ff !important;
-        text-decoration: none !important;
-
-    }
-
-    a:hover {
-        text-decoration: underline !important;
-    }
-
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.notfound a {
+  color: #0084ff !important;
+  text-decoration: none !important;
+}
+
+.notfound a:hover {
+  text-decoration: underline !important;
+}
 
 .notF-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ebf4ff;
+}
 
-    .w-75 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+.notF-page .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
 }
 
 .p404 {
-    font-size: 150px;
-    font-weight: bolder;
-    font-family: "Outfit", sans-serif;
-    color: #0084ff;
-
-
+  font-size: 150px;
+  font-weight: bolder;
+  font-family: "Outfit", sans-serif;
+  color: #0084ff;
 }

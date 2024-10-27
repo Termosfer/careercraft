@@ -14,16 +14,15 @@ import FreeTest from "../pages/FreeTest/FreeTest";
 import TestResult from "../components/testResult/TestResult";
 import HardSkillTestResult from "../components/hardSkillTestResult/HardSkillTestResult";
 import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
-import Packages from '../pages/Packages/Packages'
-import TestResultsTwo from '../pages/TestResultsTwo/TestResultsTwo'
+import Packages from "../pages/Packages/Packages";
+import TestResultsTwo from "../pages/TestResultsTwo/TestResultsTwo";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import ErrorNotFound from "../pages/Error/ErrorNotFound";
-
 
 const PublicRoutes = () => {
   return (
     <PublicLayout>
-      <UserProfile/>
+      <UserProfile />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,10 +36,19 @@ const PublicRoutes = () => {
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route path="/freetest/test-result/testresultsone" element={<TestResultsOne />} />
-        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />} />
-        <Route path="/freetest/hard-skill-test-result/testresultstwo" element={<TestResultsTwo />} />
-        <Route path="*" element={<ErrorNotFound/>}></Route>
+        <Route
+          path="/freetest/test-result/testresultsone"
+          element={<TestResultsOne />}
+        />
+        <Route
+          path="/freetest/hard-skill-test-result"
+          element={<HardSkillTestResult />}
+        />
+        <Route
+          path="/freetest/hard-skill-test-result/testresultstwo"
+          element={<TestResultsTwo />}
+        />
+        <Route path="*" element={<ErrorNotFound />}></Route>
       </Routes>
     </PublicLayout>
   );
