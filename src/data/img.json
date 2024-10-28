@@ -1,0 +1,74 @@
+[
+    {
+      "skillId": 5,
+      "imageurl": "/assets/softSkills/Communication/Negotiation Skills.jpg"
+    },
+    {
+      "skillId": 5,
+      "imageurl": "/assets/softSkills/Communication/Active Listening & Conflict Resolution.jpg"
+    },
+    {
+      "skillId": 5,
+      "imageurl": "/assets/softSkills/Communication/Communication Skills.jpg"
+    },
+    {
+      "skillId": 5,
+      "imageurl": "/assets/softSkills/Communication/Leadership & Collaboration.jpg"
+    },
+    {
+      "skillId": 5,
+      "imageurl": "/assets/softSkills/Communication/Public Speaking & Presentation Skills.jpg"
+    },
+    {
+      "skillId": 4,
+      "imageurl": "/assets/softSkills/PersonalQualities/Autonomous Action.jpg"
+    },
+    {
+      "skillId": 4,
+      "imageurl": "/assets/softSkills/PersonalQualities/Project Ownership.jpg"
+    },
+    {
+      "skillId": 4,
+      "imageurl": "/assets/softSkills/PersonalQualities/Self-Awareness.jpg"
+    },
+    {
+      "skillId": 3,
+      "imageurl": "/assets/softSkills/CriticalThinking/Adaptability to Change.jpg"
+    },
+    {
+      "skillId": 3,
+      "imageurl": "/assets/softSkills/CriticalThinking/Learnability.jpg"
+    },
+    {
+      "skillId": 3,
+      "imageurl": "/assets/softSkills/CriticalThinking/Problem Solving.jpg"
+    },
+    {
+      "skillId": 2,
+      "imageurl": "/assets/softSkills/Leadership/Decision-Making.jpg"
+    },
+    {
+      "skillId": 2,
+      "imageurl": "/assets/softSkills/Leadership/Delegation.jpg"
+    },
+    {
+      "skillId": 2,
+      "imageurl": "/assets/softSkills/Leadership/Informal Influence.jpg"
+    },
+    {
+      "skillId": 2,
+      "imageurl": "/assets/softSkills/Leadership/Meeting Productivity.jpg"
+    },
+    {
+      "skillId": 1,
+      "imageurl": "/assets/softSkills/Teamwork/Empathy & Support.jpg"
+    },
+    {
+      "skillId": 1,
+      "imageurl": "/assets/softSkills/Teamwork/Team Problem-Solving.jpg"
+    },
+    {
+      "skillId": 1,
+      "imageurl": "/assets/softSkills/Teamwork/Trust & Relationship Management.jpg"
+    }
+  ]

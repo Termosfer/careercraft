@@ -22,8 +22,6 @@ const HardSkillTestResult = () => {
   const dispatch = useDispatch();
   const allReport = useSelector((state) => state.report.allreport);
   const totalReport = useSelector((state) => state.report.raport);
-  console.log(totalReport, "total");
-  console.log(allReport, "asd");
   useEffect(() => {
     dispatch(getReports(2));
     dispatch(getAllReports(2));
