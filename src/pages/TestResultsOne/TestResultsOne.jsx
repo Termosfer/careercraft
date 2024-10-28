@@ -11,12 +11,12 @@ const TestResultsOne = () => {
   const allReport = useSelector((state) => state.report.allreport);
   const [skill, setSkill] = useState([]);
   const [loading, setLoading] = useState(true);
-
+console.log(ssData, "ssdata")
+console.log(allReport,"allreport")
   useEffect(() => {
     const fetchData = async () => {
       await dispatch(getSSResults());
       await dispatch(getAllReports(1));
-      await dispatch(getReports(1));
       setLoading(false);
     };
     fetchData();

@@ -18,6 +18,7 @@ import Packages from "../pages/Packages/Packages";
 import TestResultsTwo from "../pages/TestResultsTwo/TestResultsTwo";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import ErrorNotFound from "../pages/Error/ErrorNotFound";
+import Test from "../pages/TestResultsOne/Test";
 
 const PublicRoutes = () => {
   return (
@@ -36,18 +37,10 @@ const PublicRoutes = () => {
         <Route path="/free-trial" element={<FreeTrial />} />
         <Route path="/freetest" element={<FreeTest />} />
         <Route path="/freetest/test-result" element={<TestResult />} />
-        <Route
-          path="/freetest/test-result/testresultsone"
-          element={<TestResultsOne />}
-        />
-        <Route
-          path="/freetest/hard-skill-test-result"
-          element={<HardSkillTestResult />}
-        />
-        <Route
-          path="/freetest/hard-skill-test-result/testresultstwo"
-          element={<TestResultsTwo />}
-        />
+        {/* <Route path="/test" element={<TestResultsOne />}/> */}
+        <Route path="/freetest/hard-skill-test-result" element={<HardSkillTestResult />}/>
+        <Route path="/freetest/hard-skill-test-result/testresultstwo" element={<TestResultsTwo />}/>
+        <Route path="//freetest/test-result/testresultsone" element={<Test />}></Route>
         <Route path="*" element={<ErrorNotFound />}></Route>
       </Routes>
     </PublicLayout>

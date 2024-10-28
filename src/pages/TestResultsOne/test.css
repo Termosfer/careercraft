@@ -1,0 +1,47 @@
+.container .switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.container .switcher .switcher-button {
+    cursor: pointer;
+    text-align: center;
+    width: 19%;
+}
+.container .switcher-button.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+}
+.container .low {
+    display: grid;
+    text-align: center;
+    padding: 0 20px;
+    background: rgba(61, 141, 255, 0.25);
+    color: #0f77ff;
+    border-radius: 8px;
+    width: 10%;
+}
+
+.container .low .low-span1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container .low .low-span2 {
+    font-size: 10px;
+}
+
+.container .info__border {
+    border-radius: 18px;
+}
+
+.container .info__border .soft__img {
+    width: 18%;
+    height: 250px;
+}
+
+

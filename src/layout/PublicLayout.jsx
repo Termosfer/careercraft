@@ -23,6 +23,7 @@ const PublicLayout = ({ children }) => {
     "/freetest/test-result/testresultsone",
     "/freetest/hard-skill-test-result",
     "/freetest/hard-skill-test-result/testresultstwo",
+    "/test"
   ];
 
   const isValidPath = validPaths.includes(location.pathname);
