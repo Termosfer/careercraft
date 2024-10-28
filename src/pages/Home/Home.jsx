@@ -17,9 +17,8 @@ const Home = () => {
     <div className="homepage">
       <section className="section1">
         <div
-          className="text-center pt-5"
-          data-aos="fade-up"
-          data-aos-duration="1000"
+          className="text-center pt-5 hide"
+          
         >
           <p className="fw-bold fs-2">
             Transform Your Workforce with <br /> Next-Gen Soft Skills Training
