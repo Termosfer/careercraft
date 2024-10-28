@@ -167,8 +167,8 @@
 
 
 .hide {
-animation-name: anime;
-animation-duration: 3s;
+  animation-name: anime;
+  animation-duration: 3s;
 }
 
 @keyframes anime {
@@ -179,6 +179,6 @@ animation-duration: 3s;
 
   to {
     opacity: 1;
-transform: translateY(0px);    
+    transform: translateY(0);
   }
 }
