@@ -38,7 +38,7 @@ const About = () => {
           <h1 className="pb-3 pt-5 h1-text">Our <span className="text-primary">Mission</span></h1>
           <p className="second-p">We are dedicated to putting our customers at the center of everything we do, providing tailored skill assessments and personalized career guidance. Using AI and advanced technology, we craft individualized learning paths that align with each person’s unique goals, ensuring continuous growth and success in their professional journey.</p>
         </Col>
-        <div class="grid-container pb-5 mx-3">
+        <div className="grid-container pb-5 mx-3">
           <img src={img__7} alt="img__7" className="img__7  item1 " />
           <img src={img__5} alt="img__7" className="img__5 item2" />
           <img src={img__6} alt="img__7" className="img__5  item3" />
