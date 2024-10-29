@@ -72,9 +72,9 @@ const TestResultsTwo = () => {
       </div>
       <div className="communication">
         <div className="arrow">
-        <span className="arrow1 " onClick={clickLeftArrow}>{"<"}</span>
-        <span className="arrow1 " onClick={clickRightArrow}>{">"}</span>
-         {/*  <img
+        {/* <span className="arrow1 " onClick={clickLeftArrow}>{"<"}</span>
+        <span className="arrow1 " onClick={clickRightArrow}>{">"}</span> */}
+          <img
             src={left}
             alt="left-arrow"
             className="arrow1"
@@ -85,7 +85,7 @@ const TestResultsTwo = () => {
             alt="right-arrow"
             className="arrow1"
             onClick={clickRightArrow}
-          /> */}
+          />
         </div>
         <div className="section1 my-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-semibold">
