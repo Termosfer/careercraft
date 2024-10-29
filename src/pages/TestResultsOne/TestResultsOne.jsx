@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./TestResultsOne.css";
 import AdditionalResources from "../../components/additionalResources/AdditionalResources";
 import { useDispatch, useSelector } from "react-redux";
 import { getSSResults } from "../../config/getSoftSkillResults";
-import { getAllReports, getReports } from "../../config/authReport";
+import { getAllReports } from "../../config/authReport";
 
 const TestResultsOne = () => {
   const dispatch = useDispatch();
@@ -11,8 +11,7 @@ const TestResultsOne = () => {
   const allReport = useSelector((state) => state.report.allreport);
   const [skill, setSkill] = useState([]);
   const [loading, setLoading] = useState(true);
-console.log(ssData, "ssdata")
-console.log(allReport,"allreport")
+  
   useEffect(() => {
     const fetchData = async () => {
       await dispatch(getSSResults());

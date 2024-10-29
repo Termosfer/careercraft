@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import data from "../../data/data.json";
 import img from "../../assets/img/comm-p.png";
 import right from "../../assets/TestResultsOneImg/right-arrow.png";
@@ -45,7 +45,7 @@ const TestResultsTwo = () => {
         setPercent("<60%");
       }
     }
-  }, [activeIndex, allreports, skillName]);
+  }, [activeIndex, allreports, skillName, activeSkill.skillId]);
   const clickLeftArrow = () => {
     setActiveIndex(activeIndex === 0 ? data.data.length - 1 : activeIndex - 1);
   };
@@ -61,9 +61,8 @@ const TestResultsTwo = () => {
             <div
               key={index}
               ref={(el) => (skillRefs.current[index] = el)}
-              className={`skillNames__1 ${
-                index === activeIndex ? "skillNames-active" : ""
-              }`}
+              className={`skillNames__1 ${index === activeIndex ? "skillNames-active" : ""
+                }`}
               onClick={() => setActiveIndex(index)}
             >
               {skill.skillName}
@@ -73,7 +72,9 @@ const TestResultsTwo = () => {
       </div>
       <div className="communication">
         <div className="arrow">
-          <img
+        <span className="arrow1 " onClick={clickLeftArrow}>{"<"}</span>
+        <span className="arrow1 " onClick={clickRightArrow}>{">"}</span>
+         {/*  <img
             src={left}
             alt="left-arrow"
             className="arrow1"
@@ -84,7 +85,7 @@ const TestResultsTwo = () => {
             alt="right-arrow"
             className="arrow1"
             onClick={clickRightArrow}
-          />
+          /> */}
         </div>
         <div className="section1 my-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-semibold">

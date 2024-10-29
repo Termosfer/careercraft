@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import EditSVG from "../../components/SVG/EditSVG";
 import "./Profile.css";

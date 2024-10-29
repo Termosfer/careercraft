@@ -19,7 +19,7 @@ function CollapsibleExample() {
   const token = localStorage.getItem("token");
   useEffect(() => {
     dispatch(userData(token));
-  }, [token]);
+  }, [token,dispatch]);
 
   const handlerClick = () => {
     setActive(!active);
@@ -31,7 +31,7 @@ function CollapsibleExample() {
     navigate("/");
   };
   return (
-    <Navbar collapseOnSelect expand="lg" id="bg-nav" className="bgColor-navbar">
+    <Navbar collapseOnSelect expand="lg" id="bg-nav">
       <Container className="d-flex align-items-center justify-content-center justify-content-md-between w-75 px-md-5 px-3 header-cont">
         <div className="d-flex align-items-center justify-content-md-between justify-content-between gap-md-4 gap-4 mx-auto">
           <Link to="/" className="d-flex align-items-center">

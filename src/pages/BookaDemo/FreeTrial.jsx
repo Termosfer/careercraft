@@ -1,13 +1,13 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
-import { getQuestion, getQuestionsCount, getAnswer} from "../../config/authQuestions";
-import { changeIncrease, currentAnswerOrderValue} from "../../config/authQuestions";
+import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
+import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
   const navigate = useNavigate();
@@ -17,14 +17,13 @@ const FreeTrial = () => {
   const { question, loading, error, totalCount, orderValue } = useSelector(
     (state) => state.questions
   );
-
   useEffect(() => {
     const bool = localStorage.getItem("bool");
-    if (bool) {
-      navigate("/freetest/test-result");
-    } else {
-      dispatch(getQuestion(count));
-      dispatch(getQuestionsCount());
+     if (bool) {
+       navigate("/freetest/test-result");
+     } else {
+    dispatch(getQuestion(count));
+    dispatch(getQuestionsCount());
     }
   }, [dispatch, count, navigate]);
 
@@ -33,7 +32,7 @@ const FreeTrial = () => {
       const progressPercentage = Math.round((question.id / totalCount) * 100);
       setProgress(progressPercentage);
     }
-  }, [question]);
+  }, [question,totalCount]);
 
   const handleAnswerChange = (e) => {
     dispatch(currentAnswerOrderValue(e.currentTarget.value));
@@ -100,21 +99,25 @@ const FreeTrial = () => {
             <Form onSubmit={submitHandler} className="w-75 px-5 m-auto">
               <ul className="list-unstyled">
                 {question &&
-                  question.answers?.map((answer) => (
-                    <li key={answer.id} className="d-flex  my-3 gap-2 li">
-                      <label className="w-100 d-flex align-items-center gap-2 p-2">
-                        <input
-                          value={answer.orderValue}
-                          onChange={handleAnswerChange}
-                          className="radio"
-                          type="radio"
-                          name="name"
-                          required
-                        />
-                        {answer.text}
-                      </label>
-                    </li>
-                  ))}
+                  question.answers?.map((answer) => {
+                    return (
+                      (
+                        <li key={answer.id} className="d-flex  my-3 gap-2 li">
+                          <label className="w-100 d-flex align-items-center gap-2 p-2">
+                            <input
+                              value={answer.orderValue}
+                              onChange={handleAnswerChange}
+                              className="radio"
+                              type="radio"
+                              name="name"
+                              required
+                            />
+                            {answer.text}
+                          </label>
+                        </li>
+                      ))
+                  })
+                }
               </ul>
               <div className="text-center">
                 <Button

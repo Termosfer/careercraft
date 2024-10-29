@@ -42,6 +42,7 @@
 .container .info__border .soft__img {
     width: 18%;
     height: 250px;
+    border-radius: 18px;
 }
 
 

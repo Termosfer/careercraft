@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/img/simon-lee-zft-W1kVEhg-unsplash.jpg";
@@ -56,7 +56,7 @@ const ResetPass = () => {
     } else {
       navigate("/");
     }
-  }, [time]);
+  }, [time,navigate]);
 
   const inputRefs = useRef([]);
 
@@ -145,7 +145,7 @@ const ResetPass = () => {
                 {active ? (
                   ""
                 ) : (
-                  <span className="text-danger">Passwords don't match</span>
+                  <span className="text-danger">Passwords don&apos;t match</span>
                 )}
                 <div className="icon-cont" onClick={handlePassword}>
                   {show ? (

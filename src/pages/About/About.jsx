@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import logo from "../../assets/AboutUsImg/Logo.png";
 import img__1 from "../../assets/AboutUsImg/img__1.png";
@@ -36,7 +35,7 @@ const About = () => {
         </Col>
         <Col className="py-5 mx-3">
           <h1 className="pb-3 pt-5 h1-text">Our <span className="text-primary">Mission</span></h1>
-          <p className="second-p">We are dedicated to putting our customers at the center of everything we do, providing tailored skill assessments and personalized career guidance. Using AI and advanced technology, we craft individualized learning paths that align with each person’s unique goals, ensuring continuous growth and success in their professional journey.</p>
+          <p className="second-p">We are dedicated to putting our customers at the center of everything we do, providing tailored skill assessments and personalized career guidance. Using AI and advanced technology, we craft individualized learning paths that align with each person&apos;s unique goals, ensuring continuous growth and success in their professional journey.</p>
         </Col>
         <div className="grid-container pb-5 mx-3">
           <img src={img__7} alt="img__7" className="img__7  item1 " />
@@ -64,7 +63,7 @@ const About = () => {
                 </div>
                 <div className="text__div px-2">
                   <h3 className="h3-text">Innovation</h3>
-                  <p>We embrace creativity and technology, constantly pushing the boundaries of what’s possible in soft skills development.</p>
+                  <p>We embrace creativity and technology, constantly pushing the boundaries of what&apos;s possible in soft skills development.</p>
                 </div>
               </div>
             </Col>
@@ -86,7 +85,7 @@ const About = () => {
                 </div>
                 <div className="text__div px-2">
                   <h3 className="h3-text">Accessibility</h3>
-                  <p>Learning is for everyone. We're committed to creating user-friendly, inclusive platforms that reach all learners.</p>
+                  <p>Learning is for everyone. We&apos;re committed to creating user-friendly, inclusive platforms that reach all learners.</p>
                 </div>
               </div>
             </Col>

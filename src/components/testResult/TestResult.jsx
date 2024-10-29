@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./testresult.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -56,7 +56,7 @@ const TestResult = () => {
             </h1>
             <p className="text-center email-notif">
               Your detailed report has been emailed to{" "}
-              <span className="text-primary">{user.email}</span>. If you don’t
+              <span className="text-primary">{user.email}</span>. If you don&apos;t
               see it in your inbox, please check your spam/junk folder.
             </p>
           </Col>
@@ -75,7 +75,7 @@ const TestResult = () => {
                 <span>Elevate Your Potential:</span>
                 <p>
                   Your score is a starting point. Explore each skill to see
-                  where you excel and where there's room for improvement. Every
+                  where you excel and where there&apos;s room for improvement. Every
                   small step forward makes a difference.
                 </p>
               </div>
@@ -120,7 +120,7 @@ const TestResult = () => {
         </Row>
       </Container>
       <div className="chart-bg-color d-flex flex-column align-items-center">
-        <h2 className="text-center pt-5">Here’s Your Results...</h2>
+        <h2 className="text-center pt-5">Here&apos;s Your Results...</h2>
         <RChart allReport={allReport} />
       </div>
       <div className="skills-bg-color">
@@ -128,7 +128,7 @@ const TestResult = () => {
           <Row>
             <Col className="pb-5">
               <h1 className="text-center pt-5">
-                We've Evaluated Your Soft Skills{" "}
+                We&apos;ve Evaluated Your Soft Skills{" "}
               </h1>
               <h1 className="text-center">
                 Across Key Areas for{" "}
@@ -239,7 +239,7 @@ const TestResult = () => {
             </h1>
             <p className="w-75 m-auto">
               Unlock your potential with tailored hard skills training designed
-              for today’s job market. From data analysis to software
+              for today&apos;s job market. From data analysis to software
               development, our expert-led courses empower you to excel and stand
               out.
             </p>

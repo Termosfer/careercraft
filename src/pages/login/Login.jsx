@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/img/simon-lee-zft-W1kVEhg-unsplash.jpg";
@@ -15,8 +15,6 @@ const Login = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const token = useSelector((state) => state.login.token);
-  const message = useSelector((state) => state.login.message);
   const errormessage = useSelector((state) => state.login.errorMessage);
 
   const handlePassword = () => {
@@ -107,7 +105,7 @@ const Login = () => {
                 <span className="text-danger text-center">{errormessage}</span>
 
                 <div className="text-center dont-acc pb-2">
-                  Don't Have An Account?{" "}
+                  Don&apos;t Have An Account?{" "}
                   <Link
                     to="/auth/register"
                     className="text-decoration-none pb-2"

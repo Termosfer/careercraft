@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./test.css";
 import AdditionalResources from "../../components/additionalResources/AdditionalResources";
 import { useDispatch, useSelector } from "react-redux";
 import { getSSResults } from "../../config/getSoftSkillResults";
 import { getAllReports } from "../../config/authReport";
 import { Container } from "react-bootstrap";
-import data from "../../data/img.json"
 const Test = () => {
     const dispatch = useDispatch();
-    const [loading, setLoading] = useState(true);
     const ssData = useSelector((state) => state.softSkillResult.softResult);
     const allReport = useSelector((state) => state.report.allreport);
     const [selectedSkill, setSelectedSkill] = useState(allReport[0]?.skillName || "Teamwork");
@@ -26,7 +24,6 @@ const Test = () => {
         const fetchData = async () => {
             await dispatch(getSSResults());
             await dispatch(getAllReports(1));
-            setLoading(false);
         };
         fetchData();
     }, [dispatch]);
@@ -56,7 +53,7 @@ const Test = () => {
                 return (
                     <div key={report.skillId}>
                         {ssData?.filter(data => data.skillId === report.skillId && data.level === report.skillLevel).map((info, index) => {
-                            return (
+                           return (
                                 <div key={index} className="border d-flex p-3 gap-3 my-4 info__border">
                                     <img src={info.imageUrl} alt="image" className="soft__img" />
                                     <div className="info__text">

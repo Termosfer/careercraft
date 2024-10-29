@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { baseURL } from "./api";
 import toast from "react-hot-toast";
 
@@ -77,7 +76,7 @@ const authLogin = createSlice({
         state.user = null;
         state.errorMessage = null;
       })
-      .addCase(loginUser.rejected, (state, action) => {
+      .addCase(loginUser.rejected, (state) => {
         state.loading = false;
         state.token = null;
         state.user = null;

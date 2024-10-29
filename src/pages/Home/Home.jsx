@@ -18,7 +18,6 @@ const Home = () => {
       <section className="section1">
         <div
           className="text-center pt-5 hide"
-          
         >
           <p className="fw-bold fs-2">
             Transform Your Workforce with <br /> Next-Gen Soft Skills Training
@@ -49,7 +48,7 @@ const Home = () => {
             <div className="response bg-white rounded d-flex p-5">
               <div className="w-50 pe-4">
                 <p className="fw-medium fs-3">
-                  AI-Driven Performance Analysis and Recommendations 
+                  AI-Driven Performance Analysis and Recommendations
                 </p>
                 <hr />
                 <span>
@@ -194,7 +193,7 @@ const Home = () => {
                 Start Your Soft Skills Journey Today
               </p>
               <p>
-                Unlock your potential with CareerCraft's personalized training
+                Unlock your potential with CareerCraft&apos;s personalized training
                 solutions.
               </p>
               <Link

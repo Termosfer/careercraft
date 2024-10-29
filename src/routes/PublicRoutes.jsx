@@ -1,4 +1,3 @@
-import React from "react";
 import PublicLayout from "../layout/PublicLayout";
 import { Routes, Route } from "react-router-dom";
 import Register from "../pages/login/Register";
@@ -13,7 +12,7 @@ import ResetPass from "../pages/ResetPass/ResetPass";
 import FreeTest from "../pages/FreeTest/FreeTest";
 import TestResult from "../components/testResult/TestResult";
 import HardSkillTestResult from "../components/hardSkillTestResult/HardSkillTestResult";
-import TestResultsOne from "../pages/TestResultsOne/TestResultsOne";
+/* import TestResultsOne from "../pages/TestResultsOne/TestResultsOne"; */
 import Packages from "../pages/Packages/Packages";
 import TestResultsTwo from "../pages/TestResultsTwo/TestResultsTwo";
 import UserProfile from "../pages/UserProfile/UserProfile";

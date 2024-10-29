@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   Container,
   Row,
@@ -66,7 +66,7 @@ const HardSkillTestResult = () => {
                   : ""}
                 )
               </span>
-              , reflecting your strong proficiency across key areas. You’re
+              , reflecting your strong proficiency across key areas. You&apos;re
               excelling in Product Design and Sales & Marketing, with room to
               grow in Business Domain and Product Analytics. Continue leveraging
               your strengths and focus on the areas for improvement to reach
@@ -106,7 +106,7 @@ const HardSkillTestResult = () => {
         </Col>
       </Container>
       <div className=" d-flex flex-column align-items-center">
-        <h2 className="text-center pt-5">Here’s Your Results...</h2>
+        <h2 className="text-center pt-5">Here&apos;s Your Results...</h2>
         <RChart allReport={allReport} />
       </div>
       <Container className="p-5">
@@ -155,7 +155,7 @@ const HardSkillTestResult = () => {
       <div className="bgColor-container">
         <Container className="w-75 p-5">
           <h1 className="text-center">
-            We've <span className="text-primary">Assessed</span> Your Hard
+            We&apos;ve <span className="text-primary">Assessed</span> Your Hard
             Skills
           </h1>
           <h1 className="text-center pb-5">

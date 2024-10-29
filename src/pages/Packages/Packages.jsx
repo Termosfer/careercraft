@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container } from "react-bootstrap";
@@ -216,7 +216,7 @@ const Packages = () => {
                 development. The platform has cut down our training time by 50%,
                 allowing us to focus on scaling with precision.”
                 <div className="position">
-                  <h6>– Jane Doe</h6>
+                  <h6>&ndash; Jane Doe</h6>
                   <p>Talent Development Manager</p>
                 </div>
               </div>
@@ -225,10 +225,10 @@ const Packages = () => {
             <div className="profiles-p pp-2">
               <img src={photo2} alt="" />
               <div className="txt-p py-4">
-                “CareerCraft has streamlined our team's learning process,
+                “CareerCraft has streamlined our team&apos;s learning process,
                 helping us improve both efficiency and consistency.”
                 <div className="position">
-                  <h6>– Mark Johnson</h6>
+                  <h6>&ndash; Mark Johnson</h6>
                   <p>Learning & Development Lead</p>
                 </div>
               </div>
@@ -240,7 +240,7 @@ const Packages = () => {
                 “CareerCraft helped us centralize all our training materials and
                 resources, offering guidance on how to upskill effectively.”
                 <div className="position ">
-                  <h6>– Sarah Lee</h6>
+                  <h6>&ndash; Sarah Lee</h6>
                   <p>Operations Manager</p>
                 </div>
               </div>

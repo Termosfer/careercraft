@@ -85,10 +85,10 @@ const Solution = () => {
           </h1>
           <p className="p__text">
             Our AI-powered assessments analyze your unique skill set and deliver
-            actionable insights to drive your growth. Whether you're starting
+            actionable insights to drive your growth. Whether you&apos;re starting
             out or advancing your career, CareerCraft identifies skill gaps and
             provides the right tools, courses, and resources to bridge them.
-            With personalized guidance, you'll strengthen key areas, enhance
+            With personalized guidance, you&apos;ll strengthen key areas, enhance
             your expertise, and stay on track to achieve your career goals.
           </p>
         </div>
@@ -210,7 +210,7 @@ const Solution = () => {
             <div className="h3-p">
               <h3 className="title-career">Ready to Elevate Your Career?</h3>
               <p>
-                Unlock your potential with CareerCraft’s personalized skill
+                Unlock your potential with CareerCraft&apos;s personalized skill
                 development packages. Tailor your learning journey and stand out
                 in your profession with expert guidance and resources.
               </p>

@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { useLocation } from "react-router-dom";
@@ -6,7 +5,6 @@ import { useLocation } from "react-router-dom";
 const PublicLayout = ({ children }) => {
   const location = useLocation();
 
-  // Define all valid paths
   const validPaths = [
     "/",
     "/about",

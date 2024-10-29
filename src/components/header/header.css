@@ -13,8 +13,8 @@ a {
   height: 55px;
   width: 115px;
 }
-.bgColor-navbar{
-  background-color: #f8f8f8;
+#bg-nav{
+  background-color: #f8f8f8 !important;
 }
 .logo {
   height: 62px;
