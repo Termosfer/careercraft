@@ -38,10 +38,12 @@
     border-radius: 12px;
     background-color: #fff;
 }
-.bg-category .bg-category-span{
+
+.bg-category .bg-category-span {
     font-size: 14px;
-    
+
 }
+
 .bg_img {
     width: 50px;
     height: 50px;
@@ -61,7 +63,6 @@
 }
 
 .bgColor {
-    width: 510px;
     height: 340px;
     border-radius: 18px;
     background: #237EF3;
@@ -71,6 +72,7 @@
 .img__28 {
     position: absolute;
     width: 100%;
+    left: 0;
     bottom: 0;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;

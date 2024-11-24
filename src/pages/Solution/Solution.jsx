@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import img__20 from "../../assets/solutionImg/img__20.png";
 import img__21 from "../../assets/solutionImg/img__21.png";
 import img__22 from "../../assets/solutionImg/img__22.png";
@@ -92,7 +92,8 @@ const Solution = () => {
             your expertise, and stay on track to achieve your career goals.
           </p>
         </div>
-        <div className="card__img pt-4 d-flex justify-content-between">
+        <Row className="card__img pt-4">
+          <Col>
           <div className="bgColor">
             <img src={img__30} alt="" className="img__30" />
             <div className="p-4">
@@ -103,7 +104,8 @@ const Solution = () => {
             </div>
             <img src={img__28} alt="img__28" className="img__28" />
           </div>
-          <div>
+          </Col>
+            <Col>
             <div className="bgColor">
               <img src={img__30} alt="" className="img__30" />
               <div className="p-4">
@@ -115,8 +117,8 @@ const Solution = () => {
               </div>
               <img src={img__29} alt="img__29" className="img__29" />
             </div>
-          </div>
-        </div>
+            </Col>
+        </Row>
 
         <div className="py-5">
           <h1>
