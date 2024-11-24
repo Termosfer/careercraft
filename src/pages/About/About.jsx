@@ -18,7 +18,7 @@ import "./about.css"
 const About = () => {
   return (
     <>
-      <Container className="w-75 pt-5 px-3 ">
+      <Container className="w-75 pt-5 px-3">
         <h3 className="about-h1 mb-5 ">Transform Your <span className="text-primary">Career Journey</span> with Cutting-Edge <span className="text-primary">AI Technology</span></h3>
         <Row className="py-5 mx-0">
           <Col lg={3} md={6} className="mb-3 pt-5 text-center"><img src={img__1} alt="img__1" className="img__1" /></Col>
