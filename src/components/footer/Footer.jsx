@@ -1,9 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap/";
 import "./footer.css";
 import logo from "../../assets/img/footerLogo.png";
-import { CiMail, CiLocationOn } from "react-icons/ci";
-import { BsTelephone } from "react-icons/bs";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import email from "../../assets/profileImg/email.png"
+import phone from "../../assets/profileImg/phone.png"
+import location from "../../assets/profileImg/location.png"
+import fa from "../../assets/profileImg/Facebook.webp"
+import twit from "../../assets/profileImg/Twitter.webp"
+import ins from "../../assets/profileImg/Instagram.webp"
+import linked from "../../assets/profileImg/LinkedIn.webp"
+import you from "../../assets/profileImg/YouTube.webp"
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -20,14 +25,13 @@ const Footer = () => {
                 <p>Personalized Learning Solutions</p>
               </div>
               <div
-                className="d-flex justify-content-lg-between justify-content-md-center justify-content-between gap-md-4 gap-4 text-nowrap"
-                style={{ color: "#0F77FF" }}
+                className="div__text2 d-flex justify-content-lg-between justify-content-md-center justify-content-between gap-md-4 gap-4 text-nowrap"
               >
-                <Link to={"https://www.facebook.com/"} aria-label="Facebook"><FaFacebookF /></Link>
-                <Link to={"https://x.com/"} aria-label="Twitter"><FaTwitter /></Link>
-                <Link to={"https://www.instagram.com/"} aria-label="Instagram"><FaInstagram /></Link>
-                <Link to={"www.linkedin.com/"} aria-label="LinkedIn"><FaLinkedinIn /></Link>
-                <Link to={"https://www.youtube.com/"} aria-label="Youtube"><FaYoutube /></Link>
+                <Link to={"https://www.facebook.com/"} aria-label="Facebook"><img src={fa} alt="facebook" className="fa"/></Link>
+                <Link to={"https://x.com/"} aria-label="Twitter"><img src={twit} alt="twitter" /></Link>
+                <Link to={"https://www.instagram.com/"} aria-label="Instagram"><img src={ins} alt="instagram" /></Link>
+                <Link to={"www.linkedin.com/"} aria-label="LinkedIn"><img src={linked} alt="linkedin" /></Link>
+                <Link to={"https://www.youtube.com/"} aria-label="Youtube"><img src={you} alt="youtube" className="you"/></Link>
               </div>
             </div>
           </Col>
@@ -79,13 +83,13 @@ const Footer = () => {
                 Contact us
               </h4>
               <Link to={"/"} aria-label="contact">
-                <CiMail /> contact@company.com
+                <img src={email} alt=""  /> contact@company.com
               </Link>
               <Link to={"/"} aria-label="Phone">
-                <BsTelephone /> (+994)000 00 00
+                <img src={phone} alt=""  /> (+994)000 00 00
               </Link>
               <Link to={"/"} aria-label="Baku">
-                <CiLocationOn /> Baku, Azerbaijan
+                <img src={location} alt=""  /> Baku, Azerbaijan
               </Link>
             </div>
           </Col>

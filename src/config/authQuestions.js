@@ -9,17 +9,17 @@ const initialState = {
   value: 1,
   totalCount: null,
   orderValue: null,
-  
+
 
 };
 
 const token = localStorage.getItem("token")
 export const getQuestion = createAsyncThunk(
   "questions/getQuestion",
-  async (count) => {
+  async (value) => {
     if (token) {
       const response = await axios.get(
-        `${baseURL}/questions/${count}`, {
+        `${baseURL}/questions/${value}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }

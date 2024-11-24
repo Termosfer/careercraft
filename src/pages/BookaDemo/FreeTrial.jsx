@@ -1,30 +1,25 @@
-import ProgressBar from "react-bootstrap/ProgressBar";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Form, Button } from "react-bootstrap";
 import { getQuestion, getQuestionsCount, getAnswer } from "../../config/authQuestions";
 import { changeIncrease, currentAnswerOrderValue } from "../../config/authQuestions";
+import ProgressBar from "react-bootstrap/ProgressBar";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./freetrial.css";
-import { useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
   const count = useSelector((state) => state.questions.value);
-  const { question, loading, error, totalCount, orderValue } = useSelector(
-    (state) => state.questions
-  );
+  const { question, loading, error, totalCount, orderValue } = useSelector((state) => state.questions);
+  console.log(question, "question")
+  console.log(question.completed, "question")
   useEffect(() => {
-    const bool = localStorage.getItem("bool");
-     if (bool) {
-       navigate("/freetest/test-result");
-     } else {
     dispatch(getQuestion(count));
     dispatch(getQuestionsCount());
-    }
   }, [dispatch, count, navigate]);
 
   useEffect(() => {
@@ -32,7 +27,7 @@ const FreeTrial = () => {
       const progressPercentage = Math.round((question.id / totalCount) * 100);
       setProgress(progressPercentage);
     }
-  }, [question,totalCount]);
+  }, [question, totalCount]);
 
   const handleAnswerChange = (e) => {
     dispatch(currentAnswerOrderValue(e.currentTarget.value));
@@ -43,9 +38,8 @@ const FreeTrial = () => {
       const answer = { orderValue, questionId: question.id };
       await dispatch(getAnswer(answer));
       await dispatch(changeIncrease());
+
       if (count === totalCount) {
-        localStorage.setItem("bool", false);
-        sessionStorage.setItem("shouldReload", "true");
         navigate("/freetest/test-result");
       }
     }

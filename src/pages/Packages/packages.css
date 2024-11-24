@@ -194,18 +194,21 @@
 }
 
 .faq-section {
-  .question-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: 1.5s ease-in-out;
-    p {
-      color: #838383;
-      font-size: 12px !important;
-      margin-left: 25px !important;
-      margin-top: 5px !important;
-      text-align: start;
-    }
+  .questions{
+    text-align: justify;
   }
+    .question-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: 1.5s ease-in-out;
+      p {
+        color: #838383;
+        font-size: 12px !important;
+        margin-left: 25px !important;
+        margin-top: 5px !important;
+        text-align: start;
+      }
+    }
 
   .question-answer.open {
     max-height: 200px;
@@ -214,9 +217,13 @@
   .icon {
     display: inline-block;
     transition: transform 0.5s ease-in-out;
+    margin-right: 10px;
   }
 
   .icon.rotate {
     transform: rotate(45deg);
   }
+}
+.faq-section .container .questions .plus{
+  width: 12px;
 }

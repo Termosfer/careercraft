@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="text-white d-flex flex-column gap-3">
               <div className="d-flex align-items-center gap-2">
                 <div className="bg-img__34">
-                  <img src={img__34} alt="img__34" className="img__34" />
+                  <img src={img__34} alt="img__34" loading="lazy" className="img__34" />
                 </div>
                 <div className="d-flex flex-column">
                   <span>Email</span>
@@ -29,7 +29,7 @@ const Contact = () => {
               </div>
               <div className="d-flex align-items-center gap-2">
                 <div className="bg-img__34">
-                  <img src={img__35} alt="img__35" className="img__34" />
+                  <img src={img__35} alt="img__35" loading="lazy" className="img__34" />
                 </div>
                 <div className="d-flex flex-column">
                   <span>Address</span>
@@ -38,7 +38,7 @@ const Contact = () => {
               </div>
               <div className="d-flex align-items-center gap-2">
                 <div className="bg-img__34">
-                  <img src={img__36} alt="img__36" className="img__34" />
+                  <img src={img__36} alt="img__36" loading="lazy" className="img__34" />
                 </div>
                 <div className="d-flex flex-column">
                   <span>Phone</span>
@@ -48,16 +48,16 @@ const Contact = () => {
             </div>
             <div className="d-flex gap-4">
               <div className="bg-img__34">
-                <img src={img__37} alt="img__37" className="img__34" />
+                <img src={img__37} alt="img__37" loading="lazy" className="img__34" />
               </div>
               <div className="bg-img__34">
-                <img src={img__38} alt="img__38" className="img__34" />
+                <img src={img__38} alt="img__38" loading="lazy" className="img__34" />
               </div>
               <div className="bg-img__34">
-                <img src={img__39} alt="img__39" className="img__34" />
+                <img src={img__39} alt="img__39" loading="lazy" className="img__34" />
               </div>
               <div className="bg-img__34">
-                <img src={img__40} alt="img__40" className="img__34" />
+                <img src={img__40} alt="img__40" loading="lazy" className="img__34" />
               </div>
             </div>
           </div>

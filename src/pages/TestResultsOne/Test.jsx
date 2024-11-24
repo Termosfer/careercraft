@@ -55,7 +55,7 @@ const Test = () => {
                         {ssData?.filter(data => data.skillId === report.skillId && data.level === report.skillLevel).map((info, index) => {
                            return (
                                 <div key={index} className="border d-flex p-3 gap-3 my-4 info__border">
-                                    <img src={info.imageUrl} alt="image" className="soft__img" />
+                                    <img src={info.imageUrl} alt="image" className="soft__img" loading="lazy"/>
                                     <div className="info__text">
                                         <h4 className="text-primary">{info.description}</h4>
                                         <div>

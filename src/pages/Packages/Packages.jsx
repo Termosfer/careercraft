@@ -2,14 +2,13 @@ import { useRef, useState } from "react";
 import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
 import { Card, Button, Container } from "react-bootstrap";
-import { FaPlus } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";
 import pack1 from "../../assets/img/pack2.png";
 import pack2 from "../../assets/img/pack1.png";
-
+import plus from "../../assets/img/plus.png"
 const Packages = () => {
   const topRef = useRef(null);
   const token = localStorage.getItem("token");
@@ -254,12 +253,12 @@ const Packages = () => {
           <h4 className="pb-5 fw-bold">FAQ</h4>
           <div className="questions">
             <div>
-              <p onClick={() => toggle(1)}>
-                <span className={`icon ${open[1] ? "rotate" : ""}`}>
-                  <FaPlus />
-                </span>
+              <div onClick={() => toggle(1)}>
+                <div className={`icon ${open[1] ? "rotate" : ""}`}>
+                  <img src={plus} alt="plus" className="plus"/>
+                </div>
                 Can I upgrade my package after enrolling in a lower-tier plan?
-              </p>
+              </div>
               <div className={`question-answer ${open[1] ? "open" : ""}`}>
                 <p>
                   Absolutely. You can upgrade to a higher-tier package at any
@@ -269,12 +268,12 @@ const Packages = () => {
               <hr />
             </div>
             <div>
-              <p onClick={() => toggle(2)}>
-                <span className={`icon ${open[2] ? "rotate" : ""}`}>
-                  <FaPlus />
-                </span>
+              <div onClick={() => toggle(2)}>
+                <div className={`icon ${open[2] ? "rotate" : ""}`}>
+                  <img src={plus} alt="plus" className="plus"/>
+                </div>
                 Are the courses self-paced or instructor-led?
-              </p>
+              </div>
               <div className={`question-answer ${open[2] ? "open" : ""}`}>
                 <p>
                   We offer a mix of self-paced and instructor-led courses,
@@ -284,12 +283,12 @@ const Packages = () => {
               <hr />
             </div>
             <div>
-              <p onClick={() => toggle(3)}>
-                <span className={`icon ${open[3] ? "rotate" : ""}`}>
-                  <FaPlus />
-                </span>
+              <div onClick={() => toggle(3)}>
+                <div className={`icon ${open[3] ? "rotate" : ""}`}>
+                  <img src={plus} alt="plus" className="plus"/>
+                </div>
                 Is there a trial version available for CareerCraft packages?
-              </p>
+              </div>
               <div className={`question-answer ${open[3] ? "open" : ""}`}>
                 <p>
                   Yes, we provide a free trial for select packages, allowing you
@@ -299,12 +298,12 @@ const Packages = () => {
               <hr />
             </div>
             <div>
-              <p onClick={() => toggle(4)}>
-                <span className={`icon ${open[4] ? "rotate" : ""}`}>
-                  <FaPlus />
-                </span>
+              <div onClick={() => toggle(4)}>
+                <div className={`icon ${open[4] ? "rotate" : ""}`}>
+                  <img src={plus} alt="plus" className="plus"/>
+                </div>
                 Can I cancel my subscription at any time?
-              </p>
+              </div>
               <div className={`question-answer ${open[4] ? "open" : ""}`}>
                 <p>
                   Yes, you may cancel your subscription at any time, with no
@@ -314,13 +313,13 @@ const Packages = () => {
               <hr />
             </div>
             <div>
-              <p onClick={() => toggle(5)}>
-                <span className={`icon ${open[5] ? "rotate" : ""}`}>
-                  <FaPlus />
-                </span>
+              <div onClick={() => toggle(5)}>
+                <div className={`icon ${open[5] ? "rotate" : ""}`}>
+                  <img src={plus} alt="plus" className="plus"/>
+                </div>
                 Are CareerCraft packages suitable for professionals at all
                 career levels?
-              </p>
+              </div>
               <div className={`question-answer ${open[5] ? "open" : ""}`}>
                 <p>
                   Yes, our packages are designed to support professionals across

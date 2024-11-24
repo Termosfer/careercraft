@@ -5,12 +5,14 @@ import logo from "../../assets/img/Logo.png";
 import Image from "react-bootstrap/Image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+/* import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"; */
 import { logout } from "../../config/authLogin";
 import { userData } from "../../config/authUser";
 import UserSVG from "../SVG/UserSVG";
 import SettingsSVG from "../SVG/SettingsSVG";
 import { LogOutSVG } from "../SVG/LogOutSVG";
+import uparrow from "../../assets/profileImg/uparrow.png"
+import downarrow from "../../assets/profileImg/downarrow.png"
 function CollapsibleExample() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -75,7 +77,7 @@ function CollapsibleExample() {
                           user.surname.slice(0, 1).toUpperCase()
                         : ""}
                     </h1>
-                    {active ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
+                    {active ? <img src={uparrow} alt="uparrow" className="uparrow"/>: <img src={downarrow} alt="downarrow" className="downarrow"/> }
                   </div>
                   {active && (
                     <div className="position-absolute p-3">

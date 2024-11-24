@@ -18,8 +18,8 @@ const Solution = () => {
   return (
     <>
       <div className="bg-solutions">
-        <img src={img__20} alt="img__20" className="img__20" />
-        <img src={img__21} alt="img__21" className="img__21" />
+        <img src={img__20} alt="img__20" className="img__20" loading="lazy"/>
+        <img src={img__21} alt="img__21" className="img__21" loading="lazy"/>
         <Container className="w-75 p-5 ">
           <div className="pb-5 d-flex flex-column  gap-4">
             <h1 className="text-center w-50 mx-auto">
