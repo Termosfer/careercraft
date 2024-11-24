@@ -5,8 +5,9 @@
 }
 
 .container .row .img__1 {
-  width: 230px;
+  width: 100%;
   height: 400px;
+
 }
 
 .container .bg-about {
@@ -19,13 +20,15 @@
   height: 40px;
 }
 
+
 .container .grid-container .img__7 {
-  width: 595px;
+  width: 100%;
   height: 730px;
 }
 
+
 .container .grid-container .img__5 {
-  width: 430px;
+  width: 100%;
   height: 350px;
 }
 
@@ -56,9 +59,11 @@
 }
 
 .container .row .col-md-6 .img__8 {
-  width: 500px;
+  width: 100%;
   height: 440px;
+  margin-left: 12px;
 }
+
 
 .container .col .second-p {
   font-size: 20px;

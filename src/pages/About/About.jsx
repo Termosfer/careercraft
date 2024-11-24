@@ -18,42 +18,42 @@ import "./about.css"
 const About = () => {
   return (
     <>
-      <Container className="w-75 py-5 px-3">
-        <h3 className="about-h1 mb-5">Transform Your <span className="text-primary">Career Journey</span> with Cutting-Edge <span className="text-primary">AI Technology</span></h3>
-        <Row className="px-4 py-5">
-          <Col lg={3} md={5} className="mb-3 pt-5 text-center"><img src={img__1} alt="img__1" className="img__1" /></Col>
-          <Col lg={3} md={5} className="mb-3 text-center"><img src={img__2} alt="img__2" className="img__1" /></Col>
-          <Col lg={3} md={5} className="mb-3 pt-5 text-center"><img src={img__3} alt="img__3" className="img__1" /></Col>
-          <Col lg={3} md={5} className="mb-3 text-center"><img src={img__4} alt="img__4" className="img__1" /></Col>
+      <Container className="w-75 pt-5 px-3 ">
+        <h3 className="about-h1 mb-5 ">Transform Your <span className="text-primary">Career Journey</span> with Cutting-Edge <span className="text-primary">AI Technology</span></h3>
+        <Row className="py-5 mx-0">
+          <Col lg={3} md={6} className="mb-3 pt-5 text-center"><img src={img__1} alt="img__1" className="img__1" /></Col>
+          <Col lg={3} md={6} className="mb-3 text-center"><img src={img__2} alt="img__2" className="img__1" /></Col>
+          <Col lg={3} md={6} className="mb-3 pt-5 text-center"><img src={img__3} alt="img__3" className="img__1" /></Col>
+          <Col lg={3} md={6} className="mb-3 text-center"><img src={img__4} alt="img__4" className="img__1" /></Col>
         </Row>
-        <Col className="p-5 mx-4 bg-about">
-          <div className="d-flex justify-content-between text-white pb-3">
-            <h2 className="about-h2 fw-bold">Who We Are</h2>
-            <img src={logo} className="logo__about" alt="logo" />
-          </div>
-          <p className="text-white p">CareerCraft Company revolutionizes skill enhancement with our innovative platform that integrates AI and advanced assessments. We provide personalized learning experiences and career guidance, designed to support individuals and organizations in achieving their unique goals. Our focus on cutting-edge technology and user-centric solutions drives continuous growth and ensures impactful professional development.</p>
-        </Col>
-        <Col className="py-5 mx-3">
+          <Col className="p-5 bg-about">
+            <div className="d-flex justify-content-between text-white pb-3">
+              <h2 className="about-h2 fw-bold">Who We Are</h2>
+              <img src={logo} className="logo__about" alt="logo" />
+            </div>
+            <p className="text-white p">CareerCraft Company revolutionizes skill enhancement with our innovative platform that integrates AI and advanced assessments. We provide personalized learning experiences and career guidance, designed to support individuals and organizations in achieving their unique goals. Our focus on cutting-edge technology and user-centric solutions drives continuous growth and ensures impactful professional development.</p>
+          </Col>
+        <Col className="py-5">
           <h1 className="pb-3 pt-5 h1-text">Our <span className="text-primary">Mission</span></h1>
           <p className="second-p">We are dedicated to putting our customers at the center of everything we do, providing tailored skill assessments and personalized career guidance. Using AI and advanced technology, we craft individualized learning paths that align with each person&apos;s unique goals, ensuring continuous growth and success in their professional journey.</p>
         </Col>
-        <div className="grid-container pb-5 mx-3">
+        <div className="grid-container pb-5">
           <img src={img__7} alt="img__7" className="img__7  item1 " />
           <img src={img__5} alt="img__7" className="img__5 item2" />
           <img src={img__6} alt="img__7" className="img__5  item3" />
         </div>
-        <Row className="py-5 px-3">
-          <Col md={6} className="d-flex flex-column gap-5">
+        <Row className="mx-0 py-5">
+          <Col  md={6} className="d-flex flex-column gap-5 p-0">
             <h1 className="h1-text">Our <span className="text-primary">Vision</span></h1>
             <span className="third-p">To empower every individual with personalized skill development and career guidance, creating opportunities for success through tailored, data-driven insights that meet their unique needs and aspirations.</span>
             <span className="third-p">By leveraging advanced technologies and in-depth analysis, we ensure that every user receives guidance and support specifically designed to help them achieve their full potential.</span>
           </Col>
-          <Col  md={6}>
+          <Col md={6}>
             <img src={img__8} alt="img__8" className="img__8" />
           </Col>
         </Row>
 
-        <h1 className="h1-text px-3">Core <span className="text-primary">Values</span></h1>
+        <h1 className="h1-text pt-5">Core <span className="text-primary">Values</span></h1>
         <div className="bg__img">
           <Row className="w-75 mx-auto py-5">
             <Col lg={6} className="pb-4">
