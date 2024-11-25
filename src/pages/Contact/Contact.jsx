@@ -10,7 +10,7 @@ import img__40 from "../../assets/contactImg/img__40.png"
 const Contact = () => {
   return (
     <div className="bg-contact">
-      <Container className="w-75 p-5">
+      <Container className="w-75 pt-5">
         <div className="d-flex gap-5">
           <div className="left__side">
             <div className="text-white">
