@@ -78,7 +78,7 @@ const Solution = () => {
           </div>
         </Container>
       </div>
-      <Container className="w-75 pt-5">
+      <Container className="w-75 py-5">
         <div>
           <h1>
             Skill & Career <span className="text-primary">Assessments</span>
