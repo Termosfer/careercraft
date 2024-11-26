@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 import "./packages.css";
 import QushSVG from "../../components/SVG/QushSVG";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import photo1 from "../../assets/img/photo1.png";
 import photo2 from "../../assets/img/photo2.png";
 import photo3 from "../../assets/img/photo3.png";
-import pack1 from "../../assets/img/pack2.png";
-import pack2 from "../../assets/img/pack1.png";
+import pack2 from "../../assets/img/pack2.png";
+import pack1 from "../../assets/img/pack1.webp";
 import plus from "../../assets/img/plus.png"
 const Packages = () => {
   const topRef = useRef(null);
@@ -44,21 +44,18 @@ const Packages = () => {
   return (
     <div className="packages">
       <div ref={topRef}></div>
-      <Container className="w-75 px-5">
-        <div className="package-header ">
-          <h3 className="text-center pb-5 fs-1">
+      <Container className="w-75">
+        <div className="package-header pt-5 px-4">
+          <h1 className="text-center pb-5">
             Unlock Your Full Potential with
-            <span className="title-cc fs-1"> CareerCraft</span> Premium
-          </h3>
-          <div className="d-flex align-items-center justify-content-between packages-boxes">
-            <Card className="mt-5">
-              {/* <Card.Title className="text-center">Free Plan</Card.Title> */}
-              <Card.Body className="d-flex flex-column justify-content-between">
+            <span className="title-cc"> CareerCraft</span> Premium
+          </h1>
+          <Row className="py-5">
+            <Col md={4} className="pt-5">
+              <div className="packages-boxes py-4">
                 <div>
-                  <h4 className="text-center">Free Plan</h4>
-                  <h3 className="text-center">
-                    $0<span>/month</span>
-                  </h3>
+                  <h5 className="text-center">Free Plan</h5>
+                  <h3 className="text-center">$0<span>/month</span></h3>
                 </div>
                 <ul>
                   <li>
@@ -78,126 +75,129 @@ const Packages = () => {
                     Career plan for soft skills improvement
                   </li>
                 </ul>
-                <div className="">
-                  <button className="btn btn-outline-primary w-100">
+                <div>
+                  <button className="btn btn-outline-primary w-100 py-2">
                     Get Started
                   </button>
                 </div>
-              </Card.Body>
-            </Card>
-
-            <Card className="mb-5 ">
-              <Card.Body className="d-flex flex-column justify-content-between">
-                {/* <Card.Title className="text-center">Pro Plan</Card.Title> */}
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="packages-boxes boxes  py-4">
                 <div>
-                  <h4 className="text-center">Pro Plan</h4>
-                  <h3 className="text-center">
-                    $29<sup>.99</sup>
-                    <span>/month</span>
+                  <h5 className="text-center">Pro Plan</h5>
+                  <h3 className="text-center">$29<sup>.99</sup><span>/month</span>
                   </h3>
-                  <ul>
-                    <li>
-                      <QushSVG />
-                      50% hard skills assessment
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Personalized guidance based on results
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Resources for improving 50% of hard skills
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Unlimited progress tracking
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Priority support
-                    </li>
-                  </ul>
                 </div>
+                <ul>
+                  <li>
+                    <QushSVG />
+                    50% hard skills assessment
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Personalized guidance based on results
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Resources for improving 50% of hard skills
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Unlimited progress tracking
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Priority support
+                  </li>
+                </ul>
+                <div>
+                  <button
+                    onClick={handleClick}
+                    className="btn btn-primary w-100 py-2"
+                  >
+                    Get started
+                  </button>
+                </div>
+              </div>
+            </Col>
+            <Col md={4} className="pt-5">
+              <div className="packages-boxes 
+              py-4">
+                <div>
+                  <h5 className="text-center">Premium Plan</h5>
+                  <h3 className="text-center">$79<sup>.99</sup><span>/month</span>
+                  </h3>
+                </div>
+                <ul>
+                  <li>
+                    <QushSVG />
+                    Product management assessment
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Tailored career guidance for all hard skills
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Access to a curated hard skills resource library
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Personalized mentorship sessions
+                  </li>
+                </ul>
+                <div>
+                  <button className="btn btn-outline-primary w-100 py-2">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <Row className="elevate p-5">
+            <Col lg={6} className="">
+              <div className="left___side">
+                  <h1>Elevate Premium</h1>
+                  <p className="w-100">
+                    Elevate your career by gaining full access to advanced skill
+                    assessments and personalized growth recommendations.{" "}
+                  </p>
+                <ul>
+                  <li>
+                    <QushSVG />
+                    Advanced hard skills insights
+                  </li>
+                  <li>
+                    <QushSVG />
+                    Personalized learning paths
+                  </li>
 
+                  <li>
+                    <QushSVG />
+                    Exclusive career resources
+                  </li>
+                </ul>
+
+                <div>
                 <Button
-                  onClick={handleClick}
                   variant="primary"
-                  className="w-100"
-                >
-                  Get started
+                  className=" w-25 py-2"
+                  onClick={handleScrollToTop}
+                  >
+                  Buy now
                 </Button>
-              </Card.Body>
-            </Card>
-
-            <Card className="mt-5">
-              <Card.Body className="d-flex flex-column justify-content-between">
-                {/* <Card.Title className="text-center">Premium Plan</Card.Title> */}
-                <div>
-                  <h4 className="text-center">Premium Plan</h4>
-                  <h3 className="text-center">
-                    $99<sup>.99</sup>
-                    <span>/month</span>
-                  </h3>
-                  <ul>
-                    <li>
-                      <QushSVG />
-                      Product management assessment
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Tailored career guidance for all hard skills
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Access to a curated hard skills resource library
-                    </li>
-                    <li>
-                      <QushSVG />
-                      Personalized mentorship sessions
-                    </li>
-                  </ul>
-                </div>
-                <button className="btn btn-outline-primary w-100">
-                  Get Started
-                </button>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="elevate-cont border mt-5">
-            <div className="left___side">
-              <h1>Elevate Premium</h1>
-              <p>
-                Elevate your career by gaining full access to advanced skill
-                assessments and personalized growth recommendations.{" "}
-              </p>
-              <ul>
-                <li>
-                  <QushSVG />
-                  Advanced hard skills insights
-                </li>
-                <li>
-                  <QushSVG />
-                  Personalized learning paths
-                </li>
-
-                <li>
-                  <QushSVG />
-                  Exclusive career resources
-                </li>
-              </ul>
-              <Button
-                variant="primary"
-                className="px-4 w-25"
-                onClick={handleScrollToTop}
-              >
-                Buy now
-              </Button>
-            </div>
-            <div className="right___side">
-              <img className="pack1" src={pack1} alt="pack1" />
-              <img className="pack2" src={pack2} alt="pack2" />
-            </div>
-          </div>
+                  </div>
+              </div>
+            </Col>
+            <Col lg={6} className="">
+              <div className="right___side ms-5">
+                <img className="pack2" src={pack2} alt="pack1" />
+                <img className="pack1" src={pack1} alt="pack2" />
+              </div>
+            </Col>
+          </Row>
+          
         </div>
       </Container>
 
@@ -255,7 +255,7 @@ const Packages = () => {
             <div>
               <div onClick={() => toggle(1)}>
                 <div className={`icon ${open[1] ? "rotate" : ""}`}>
-                  <img src={plus} alt="plus" className="plus"/>
+                  <img src={plus} alt="plus" className="plus" />
                 </div>
                 Can I upgrade my package after enrolling in a lower-tier plan?
               </div>
@@ -270,7 +270,7 @@ const Packages = () => {
             <div>
               <div onClick={() => toggle(2)}>
                 <div className={`icon ${open[2] ? "rotate" : ""}`}>
-                  <img src={plus} alt="plus" className="plus"/>
+                  <img src={plus} alt="plus" className="plus" />
                 </div>
                 Are the courses self-paced or instructor-led?
               </div>
@@ -285,7 +285,7 @@ const Packages = () => {
             <div>
               <div onClick={() => toggle(3)}>
                 <div className={`icon ${open[3] ? "rotate" : ""}`}>
-                  <img src={plus} alt="plus" className="plus"/>
+                  <img src={plus} alt="plus" className="plus" />
                 </div>
                 Is there a trial version available for CareerCraft packages?
               </div>
@@ -300,7 +300,7 @@ const Packages = () => {
             <div>
               <div onClick={() => toggle(4)}>
                 <div className={`icon ${open[4] ? "rotate" : ""}`}>
-                  <img src={plus} alt="plus" className="plus"/>
+                  <img src={plus} alt="plus" className="plus" />
                 </div>
                 Can I cancel my subscription at any time?
               </div>
@@ -315,7 +315,7 @@ const Packages = () => {
             <div>
               <div onClick={() => toggle(5)}>
                 <div className={`icon ${open[5] ? "rotate" : ""}`}>
-                  <img src={plus} alt="plus" className="plus"/>
+                  <img src={plus} alt="plus" className="plus" />
                 </div>
                 Are CareerCraft packages suitable for professionals at all
                 career levels?

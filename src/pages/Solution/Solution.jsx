@@ -22,16 +22,18 @@ const Solution = () => {
         <img src={img__21} alt="img__21" className="img__21" loading="lazy"/>
         <Container className="w-75 pt-5 ">
           <div className="pb-5 d-flex flex-column  gap-4">
-            <h1 className="text-center w-50 mx-auto">
+            <div className="text-center m-auto d-flex flex-column align-items-center pb-5">
+            <h1 className=" pb-3 w-50">
               Empower Your <span className="text-primary">Career</span> with{" "}
               <span className="text-primary">Tailored</span> Growth Paths
             </h1>
-            <p className="w-75 mx-auto text-center p-text">
+            <p className=" pb-2 w-75  p-text">
               Revolutionize your personal and professional development with
               AI-driven assessments, customized learning, and career guidance.
             </p>
+            </div>
 
-            <div className="text-center py-5 category">
+            <div className="text-center pb-5 category">
                 <Link to="/packages" className="px-4 py-2 btn btn-primary">
                   Start Your Journey
                 </Link>
